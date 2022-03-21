@@ -1008,11 +1008,12 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _page = require("./Page");
+var _stylesCss = require("./styles.css");
 const container = document.getElementById("container");
 _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_page.Page, {
 }, void 0, false, {
     fileName: "index.js",
-    lineNumber: 5,
+    lineNumber: 6,
     columnNumber: 17
 }, undefined), container);
 
@@ -1021,7 +1022,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_page.Page, 
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","./Page":"37UYl","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","./Page":"37UYl","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","./styles.css":"7N9bM"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -22768,21 +22769,51 @@ module.exports = require('./cjs/scheduler-tracing.development.js');
 })();
 
 },{}],"37UYl":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9310 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$9310.prelude(module);
+
+try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Page", ()=>Page
 );
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
 function Page() {
-    return `Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
-    exercitationem? Possimus, eligendi? Cupiditate impedit hic expedita
-    incidunt! Aspernatur fugit ipsam rem excepturi eligendi quos, minima vero!
-    Iste praesentium suscipit molestiae?`;
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
+                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, exercitationem? Possimus, eligendi? Cupiditate impedit hic expedita incidunt! Aspernatur fugit ipsam rem excepturi eligendi quos, minima vero! Iste praesentium suscipit molestiae?"
+            }, void 0, false, {
+                fileName: "Page.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h4", {
+                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, exercitationem? Possimus, eligendi? Cupiditate impedit hic expedita incidunt! Aspernatur fugit ipsam rem excepturi eligendi quos, minima vero! Iste praesentium suscipit molestiae?"
+            }, void 0, false, {
+                fileName: "Page.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "Page.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, this));
 }
 _c = Page;
 var _c;
 $RefreshReg$(_c, "Page");
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"4kfJz":[function(require,module,exports) {
+  $parcel$ReactRefreshHelpers$9310.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"4kfJz":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -22932,6 +22963,6 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"iorOX"}]},["haZVB","b17wO","bB7Pu"], "bB7Pu", "parcelRequire2041")
+},{"react-refresh/runtime":"iorOX"}],"7N9bM":[function() {},{}]},["haZVB","b17wO","bB7Pu"], "bB7Pu", "parcelRequire2041")
 
 //# sourceMappingURL=index.3d214d75.js.map
