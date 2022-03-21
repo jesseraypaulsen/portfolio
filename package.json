@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "predeploy": "rm -rf dist && parcel build index.html --public-url https://github.com/jesseraypaulsen/portfolio",
+    "predeploy": "rm -rf dist && parcel build index.html --public-url https://jesseraypaulsen.github.io/portfolio",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
