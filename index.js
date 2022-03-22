@@ -5,7 +5,7 @@ import "./styles.css";
 
 const container = document.getElementById("container");
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Page />
   </BrowserRouter>,
   container
