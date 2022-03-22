@@ -22799,7 +22799,7 @@ function Page() {
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
             }, void 0, false, {
                 fileName: "Page.js",
-                lineNumber: 11,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
@@ -22808,16 +22808,10 @@ function Page() {
                         exact: true,
                         path: "/",
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
-                        }, void 0, false, void 0, void 0),
-                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
-                        }, void 0, false, {
-                            fileName: "Page.js",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, this)
+                        }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 13,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -22826,7 +22820,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 16,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -22835,7 +22829,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 17,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -22844,19 +22838,19 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 18,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Page.js",
-                lineNumber: 12,
+                lineNumber: 18,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Page.js",
-        lineNumber: 10,
+        lineNumber: 16,
         columnNumber: 5
     }, this));
 }
