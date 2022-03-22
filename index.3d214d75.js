@@ -22805,9 +22805,16 @@ function Page() {
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
                 children: [
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        exact: true,
                         path: "/",
                         element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
-                        }, void 0, false, void 0, void 0)
+                        }, void 0, false, void 0, void 0),
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
+                        }, void 0, false, {
+                            fileName: "Page.js",
+                            lineNumber: 14,
+                            columnNumber: 11
+                        }, this)
                     }, void 0, false, {
                         fileName: "Page.js",
                         lineNumber: 13,
@@ -22819,7 +22826,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 14,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -22828,7 +22835,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 15,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -22837,7 +22844,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 16,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, this)
                 ]
