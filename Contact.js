@@ -34,7 +34,7 @@ export function Contact() {
             class="mdc-text-field__input"
             rows="8"
             cols="40"
-            maxlength="500"
+            maxLength="500"
           ></textarea>
           <div class="mdc-notched-outline">
             <div class="mdc-notched-outline__leading"></div>
