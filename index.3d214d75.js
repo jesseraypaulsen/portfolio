@@ -1012,6 +1012,7 @@ var _page = require("./Page");
 var _stylesCss = require("./styles.css");
 const container = document.getElementById("container");
 _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
+    basename: undefined,
     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_page.Page, {
     }, void 0, false, {
         fileName: "index.js",
@@ -25313,7 +25314,7 @@ function Work() {
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                class: "mdc-typography--headline2 centered",
+                className: "mdc-typography--headline2 centered",
                 children: "Work"
             }, void 0, false, {
                 fileName: "Work.js",
@@ -25321,13 +25322,13 @@ function Work() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
-                class: "cardList",
+                className: "cardList",
                 children: [
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-card card",
+                        className: "mdc-card card",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/project",
-                            class: "mdc-card__primary-action",
+                            className: "mdc-card__primary-action",
                             tabindex: "0",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -25339,10 +25340,10 @@ function Work() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                    class: "cardContent",
+                                    className: "cardContent",
                                     children: [
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
-                                            class: "mdc-typography mdc-typography--overline cardCategory",
+                                            className: "mdc-typography mdc-typography--overline cardCategory",
                                             children: "Photography"
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25350,7 +25351,7 @@ function Work() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                                            class: "mdc-typography mdc-typography--headline6 cardTitle",
+                                            className: "mdc-typography mdc-typography--headline6 cardTitle",
                                             children: "Flowers of Amsterdam"
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25358,7 +25359,7 @@ function Work() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                            class: "demo-card__secondary mdc-typography mdc-typography--body2",
+                                            className: "demo-card__secondary mdc-typography mdc-typography--body2",
                                             children: "Flowers are an essential part of nature. Here they mix with city life."
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25383,10 +25384,10 @@ function Work() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-card card",
+                        className: "mdc-card card",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/project",
-                            class: "mdc-card__primary-action",
+                            className: "mdc-card__primary-action",
                             tabindex: "0",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -25398,10 +25399,10 @@ function Work() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                    class: "cardContent",
+                                    className: "cardContent",
                                     children: [
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
-                                            class: "mdc-typography mdc-typography--overline cardCategory",
+                                            className: "mdc-typography mdc-typography--overline cardCategory",
                                             children: "Photography"
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25409,7 +25410,7 @@ function Work() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                                            class: "mdc-typography mdc-typography--headline6 cardTitle",
+                                            className: "mdc-typography mdc-typography--headline6 cardTitle",
                                             children: "Flowers of Amsterdam"
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25417,7 +25418,7 @@ function Work() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                            class: "demo-card__secondary mdc-typography mdc-typography--body2",
+                                            className: "demo-card__secondary mdc-typography mdc-typography--body2",
                                             children: "Flowers are an essential part of nature. Here they mix with city life."
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25442,10 +25443,10 @@ function Work() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-card card",
+                        className: "mdc-card card",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/project",
-                            class: "mdc-card__primary-action",
+                            className: "mdc-card__primary-action",
                             tabindex: "0",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -25457,10 +25458,10 @@ function Work() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                    class: "cardContent",
+                                    className: "cardContent",
                                     children: [
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
-                                            class: "mdc-typography mdc-typography--overline cardCategory",
+                                            className: "mdc-typography mdc-typography--overline cardCategory",
                                             children: "Photography"
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25468,7 +25469,7 @@ function Work() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                                            class: "mdc-typography mdc-typography--headline6 cardTitle",
+                                            className: "mdc-typography mdc-typography--headline6 cardTitle",
                                             children: "Flowers of Amsterdam"
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25476,7 +25477,7 @@ function Work() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                            class: "demo-card__secondary mdc-typography mdc-typography--body2",
+                                            className: "demo-card__secondary mdc-typography mdc-typography--body2",
                                             children: "Flowers are an essential part of nature. Here they mix with city life."
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25501,10 +25502,10 @@ function Work() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-card card",
+                        className: "mdc-card card",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/project",
-                            class: "mdc-card__primary-action",
+                            className: "mdc-card__primary-action",
                             tabindex: "0",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -25516,10 +25517,10 @@ function Work() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                    class: "cardContent",
+                                    className: "cardContent",
                                     children: [
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
-                                            class: "mdc-typography mdc-typography--overline cardCategory",
+                                            className: "mdc-typography mdc-typography--overline cardCategory",
                                             children: "Photography"
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25527,7 +25528,7 @@ function Work() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
-                                            class: "mdc-typography mdc-typography--headline6 cardTitle",
+                                            className: "mdc-typography mdc-typography--headline6 cardTitle",
                                             children: "Flowers of Amsterdam"
                                         }, void 0, false, {
                                             fileName: "Work.js",
@@ -25535,7 +25536,7 @@ function Work() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                            class: "demo-card__secondary mdc-typography mdc-typography--body2",
+                                            className: "demo-card__secondary mdc-typography mdc-typography--body2",
                                             children: "Flowers are an essential part of nature. Here they mix with city life."
                                         }, void 0, false, {
                                             fileName: "Work.js",
