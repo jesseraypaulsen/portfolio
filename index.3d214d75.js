@@ -1011,17 +1011,23 @@ var _reactRouterDom = require("react-router-dom");
 var _page = require("./Page");
 var _stylesCss = require("./styles.css");
 const container = document.getElementById("container");
-_reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.BrowserRouter, {
-    basename: undefined,
+/*
+ReactDOM.render(
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Page />
+  </BrowserRouter>,
+  container
+);
+*/ _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.HashRouter, {
     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_page.Page, {
     }, void 0, false, {
         fileName: "index.js",
-        lineNumber: 9,
+        lineNumber: 18,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "index.js",
-    lineNumber: 8,
+    lineNumber: 17,
     columnNumber: 3
 }, undefined), container);
 
@@ -1030,7 +1036,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouter
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","./Page":"37UYl","./styles.css":"7N9bM","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","react-router-dom":"fdOAw"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","react-router-dom":"fdOAw","./Page":"37UYl","./styles.css":"7N9bM","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -22776,377 +22782,6 @@ module.exports = require('./cjs/scheduler-tracing.development.js');
     exports.unstable_wrap = unstable_wrap;
 })();
 
-},{}],"37UYl":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9310 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9310.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Page", ()=>Page
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _header = require("./Header");
-var _work = require("./Work");
-var _about = require("./About");
-var _contact = require("./Contact");
-var _project = require("./Project");
-var _reactRouterDom = require("react-router-dom");
-function Page() {
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
-            }, void 0, false, {
-                fileName: "Page.js",
-                lineNumber: 17,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        exact: true,
-                        path: "/",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "about",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_about.About, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 20,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "contact",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_contact.Contact, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "project",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_project.Project, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 22,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "Page.js",
-                lineNumber: 18,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "Page.js",
-        lineNumber: 16,
-        columnNumber: 5
-    }, this));
-}
-_c = Page;
-var _c;
-$RefreshReg$(_c, "Page");
-
-  $parcel$ReactRefreshHelpers$9310.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./Header":"8bVnH","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","react-router-dom":"fdOAw","./About":"2rsUE","./Contact":"23MUH","./Work":"7s2mh","./Project":"03vJm"}],"8bVnH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7785 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7785.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Header", ()=>Header
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-function Header() {
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("header", {
-        className: "mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-has-action-item",
-        style: {
-            top: "0px"
-        },
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-            className: "mdc-top-app-bar__row",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
-                    className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-start",
-                    children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                            href: "/#",
-                            className: "material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded",
-                            children: "gesture"
-                        }, void 0, false, {
-                            fileName: "Header.js",
-                            lineNumber: 11,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                            className: "mdc-top-app-bar__title",
-                            children: "My Portfolio"
-                        }, void 0, false, {
-                            fileName: "Header.js",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "Header.js",
-                    lineNumber: 10,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
-                    className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-end",
-                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
-                        className: "navList",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                                className: "navListItem",
-                                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                                    className: "navListLink mdc-typography--button",
-                                    to: "/",
-                                    children: "Work"
-                                }, void 0, false, {
-                                    fileName: "Header.js",
-                                    lineNumber: 22,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "Header.js",
-                                lineNumber: 21,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                                className: "navListItem",
-                                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                                    className: "navListLink mdc-typography--button",
-                                    to: "/about",
-                                    children: "About"
-                                }, void 0, false, {
-                                    fileName: "Header.js",
-                                    lineNumber: 27,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "Header.js",
-                                lineNumber: 26,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                                className: "navListItem",
-                                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                                    className: "navListLink mdc-typography--button",
-                                    to: "/contact",
-                                    children: "Contact"
-                                }, void 0, false, {
-                                    fileName: "Header.js",
-                                    lineNumber: 32,
-                                    columnNumber: 15
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "Header.js",
-                                lineNumber: 31,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Header.js",
-                        lineNumber: 20,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "Header.js",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "Header.js",
-            lineNumber: 9,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "Header.js",
-        lineNumber: 5,
-        columnNumber: 5
-    }, this));
-}
-_c = Header;
-var _c;
-$RefreshReg$(_c, "Header");
-
-  $parcel$ReactRefreshHelpers$7785.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","react-router-dom":"fdOAw"}],"7nTYm":[function(require,module,exports) {
-"use strict";
-var Refresh = require('react-refresh/runtime');
-function debounce(func, delay) {
-    var args1;
-    var timeout = undefined;
-    return function(args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module.id + ' ' + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module) {
-    if (isReactRefreshBoundary(module.exports)) {
-        registerExportsForReactRefresh(module);
-        if (module.hot) {
-            module.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module.exports;
-            });
-            module.hot.accept(function(getParents) {
-                var prevExports = module.hot.data.prevExports;
-                var nextExports = module.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module) {
-    var exports = module.exports, id = module.id;
-    Refresh.register(exports, id + ' %exports%');
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + ' %exports% ' + key);
-    }
-}
-
-},{"react-refresh/runtime":"iorOX"}],"4kfJz":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
 },{}],"fdOAw":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -24166,7 +23801,37 @@ function _extends() {
 }
 exports.default = _extends;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"btA8E":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"4kfJz":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"btA8E":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "NavigationType", ()=>_history.Action
@@ -24981,323 +24646,348 @@ const normalizeSearch = (search)=>!search || search === "?" ? "" : search.starts
 const normalizeHash = (hash)=>!hash || hash === "#" ? "" : hash.startsWith("#") ? hash : "#" + hash
 ; ///////////////////////////////////////////////////////////////////////////////
 
-},{"react":"21dqq","history":"iE5Zp","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"2rsUE":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react":"21dqq","history":"iE5Zp","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"37UYl":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$9310 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4a55.prelude(module);
+$parcel$ReactRefreshHelpers$9310.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "About", ()=>About
+parcelHelpers.export(exports, "Page", ()=>Page
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function About() {
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
+var _header = require("./Header");
+var _work = require("./Work");
+var _about = require("./About");
+var _contact = require("./Contact");
+var _project = require("./Project");
+var _reactRouterDom = require("react-router-dom");
+function Page() {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                className: "mdc-typography--headline2 centered",
-                children: "About Me"
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
             }, void 0, false, {
-                fileName: "About.js",
-                lineNumber: 4,
+                fileName: "Page.js",
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                className: "aboutMe",
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
                 children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("figure", {
-                        className: "selfPortrait",
-                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fbarcelona1.jpg?1558558467346",
-                            alt: ""
-                        }, void 0, false, {
-                            fileName: "About.js",
-                            lineNumber: 7,
-                            columnNumber: 11
-                        }, this)
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        exact: true,
+                        path: "/",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
+                        }, void 0, false, void 0, void 0)
                     }, void 0, false, {
-                        fileName: "About.js",
-                        lineNumber: 6,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                        children: [
-                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur. Odio? Magnam asperiores impedit fuga",
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
-                            }, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 17,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
-                            }, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 18,
-                                columnNumber: 11
-                            }, this),
-                            "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
-                            }, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 22,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
-                            }, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 23,
-                                columnNumber: 11
-                            }, this),
-                            "Tempora aperiam nobis asperiores consequatur cumque, sed nisi perferendis laudantium a odit excepturi quo distinctio incidunt molestiae, dicta quia saepe laborum perspiciatis odio alias aspernatur quis. Quam corrupti error recusandae. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem."
-                        ]
-                    }, void 0, true, {
-                        fileName: "About.js",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "About.js",
-                lineNumber: 5,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "About.js",
-        lineNumber: 3,
-        columnNumber: 5
-    }, this));
-}
-_c = About;
-var _c;
-$RefreshReg$(_c, "About");
-
-  $parcel$ReactRefreshHelpers$4a55.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"23MUH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c69d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c69d.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Contact", ()=>Contact
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-function Contact() {
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
-        class: "contactPage",
-        children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                class: "mdc-typography--headline2 centered",
-                children: "Contact Me"
-            }, void 0, false, {
-                fileName: "Contact.js",
-                lineNumber: 4,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                class: "contactText",
-                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur."
-            }, void 0, false, {
-                fileName: "Contact.js",
-                lineNumber: 5,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
-                class: "contactForm",
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                        class: "mdc-text-field mdc-text-field--name",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                type: "text",
-                                id: "my-name-field",
-                                class: "mdc-text-field__input"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 13,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
-                                class: "mdc-floating-label",
-                                for: "my-name-field",
-                                children: "Name"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 14,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                class: "mdc-line-ripple"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 17,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Contact.js",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                        class: "mdc-text-field mdc-text-field--email",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                type: "text",
-                                id: "my-email-field",
-                                class: "mdc-text-field__input"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 20,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
-                                class: "mdc-floating-label",
-                                for: "my-email-field",
-                                children: "Email"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 25,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                class: "mdc-line-ripple"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 28,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Contact.js",
+                        fileName: "Page.js",
                         lineNumber: 19,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                        class: "mdc-text-field mdc-text-field--textarea mdc-text-field--message",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                class: "mdc-text-field-character-counter",
-                                children: "0 / 500"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 31,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("textarea", {
-                                id: "textarea",
-                                class: "mdc-text-field__input",
-                                rows: "8",
-                                cols: "40",
-                                maxlength: "500"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 32,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                class: "mdc-notched-outline",
-                                children: [
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                        class: "mdc-notched-outline__leading"
-                                    }, void 0, false, {
-                                        fileName: "Contact.js",
-                                        lineNumber: 40,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                        class: "mdc-notched-outline__notch",
-                                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
-                                            for: "textarea",
-                                            class: "mdc-floating-label",
-                                            children: "Textarea Label"
-                                        }, void 0, false, {
-                                            fileName: "Contact.js",
-                                            lineNumber: 42,
-                                            columnNumber: 15
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "Contact.js",
-                                        lineNumber: 41,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                        class: "mdc-notched-outline__trailing"
-                                    }, void 0, false, {
-                                        fileName: "Contact.js",
-                                        lineNumber: 46,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "Contact.js",
-                                lineNumber: 39,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Contact.js",
-                        lineNumber: 30,
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "about",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_about.About, {
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "Page.js",
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                        class: "mdc-button mdc-button--raised submitButton",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                                class: "mdc-button__label",
-                                children: "Submit"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 50,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
-                                class: "material-icons mdc-button__icon",
-                                "aria-hidden": "true",
-                                children: "favorite"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 51,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Contact.js",
-                        lineNumber: 49,
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "contact",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_contact.Contact, {
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "Page.js",
+                        lineNumber: 21,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "project",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_project.Project, {
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "Page.js",
+                        lineNumber: 22,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "Contact.js",
-                lineNumber: 11,
+                fileName: "Page.js",
+                lineNumber: 18,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "Contact.js",
-        lineNumber: 3,
+        fileName: "Page.js",
+        lineNumber: 16,
         columnNumber: 5
     }, this));
 }
-_c = Contact;
+_c = Page;
 var _c;
-$RefreshReg$(_c, "Contact");
+$RefreshReg$(_c, "Page");
 
-  $parcel$ReactRefreshHelpers$c69d.postlude(module);
+  $parcel$ReactRefreshHelpers$9310.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"7s2mh":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./Header":"8bVnH","./Work":"7s2mh","./About":"2rsUE","./Contact":"23MUH","./Project":"03vJm","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"8bVnH":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7785 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7785.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Header", ()=>Header
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+function Header() {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("header", {
+        className: "mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-has-action-item",
+        style: {
+            top: "0px"
+        },
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+            className: "mdc-top-app-bar__row",
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
+                    className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-start",
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                            href: "/#",
+                            className: "material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded",
+                            children: "gesture"
+                        }, void 0, false, {
+                            fileName: "Header.js",
+                            lineNumber: 11,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                            className: "mdc-top-app-bar__title",
+                            children: "My Portfolio"
+                        }, void 0, false, {
+                            fileName: "Header.js",
+                            lineNumber: 17,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "Header.js",
+                    lineNumber: 10,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
+                    className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-end",
+                    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
+                        className: "navList",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
+                                className: "navListItem",
+                                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                                    className: "navListLink mdc-typography--button",
+                                    to: "/",
+                                    children: "Work"
+                                }, void 0, false, {
+                                    fileName: "Header.js",
+                                    lineNumber: 22,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "Header.js",
+                                lineNumber: 21,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
+                                className: "navListItem",
+                                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                                    className: "navListLink mdc-typography--button",
+                                    to: "/about",
+                                    children: "About"
+                                }, void 0, false, {
+                                    fileName: "Header.js",
+                                    lineNumber: 27,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "Header.js",
+                                lineNumber: 26,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
+                                className: "navListItem",
+                                children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                                    className: "navListLink mdc-typography--button",
+                                    to: "/contact",
+                                    children: "Contact"
+                                }, void 0, false, {
+                                    fileName: "Header.js",
+                                    lineNumber: 32,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "Header.js",
+                                lineNumber: 31,
+                                columnNumber: 13
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Header.js",
+                        lineNumber: 20,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "Header.js",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "Header.js",
+            lineNumber: 9,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "Header.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this));
+}
+_c = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$7785.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"7nTYm":[function(require,module,exports) {
+"use strict";
+var Refresh = require('react-refresh/runtime');
+function debounce(func, delay) {
+    var args1;
+    var timeout = undefined;
+    return function(args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args);
+        }, delay);
+    };
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module.id + ' ' + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module) {
+    if (isReactRefreshBoundary(module.exports)) {
+        registerExportsForReactRefresh(module);
+        if (module.hot) {
+            module.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module.exports;
+            });
+            module.hot.accept(function(getParents) {
+                var prevExports = module.hot.data.prevExports;
+                var nextExports = module.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module) {
+    var exports = module.exports, id = module.id;
+    Refresh.register(exports, id + ' %exports%');
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + ' %exports% ' + key);
+    }
+}
+
+},{"react-refresh/runtime":"iorOX"}],"7s2mh":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$352a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25582,7 +25272,323 @@ $RefreshReg$(_c, "Work");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"03vJm":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"2rsUE":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$4a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$4a55.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "About", ()=>About
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function About() {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                className: "mdc-typography--headline2 centered",
+                children: "About Me"
+            }, void 0, false, {
+                fileName: "About.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "aboutMe",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("figure", {
+                        className: "selfPortrait",
+                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
+                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fbarcelona1.jpg?1558558467346",
+                            alt: ""
+                        }, void 0, false, {
+                            fileName: "About.js",
+                            lineNumber: 7,
+                            columnNumber: 11
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "About.js",
+                        lineNumber: 6,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                        children: [
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur. Odio? Magnam asperiores impedit fuga",
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
+                            }, void 0, false, {
+                                fileName: "About.js",
+                                lineNumber: 17,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
+                            }, void 0, false, {
+                                fileName: "About.js",
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, this),
+                            "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
+                            }, void 0, false, {
+                                fileName: "About.js",
+                                lineNumber: 22,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
+                            }, void 0, false, {
+                                fileName: "About.js",
+                                lineNumber: 23,
+                                columnNumber: 11
+                            }, this),
+                            "Tempora aperiam nobis asperiores consequatur cumque, sed nisi perferendis laudantium a odit excepturi quo distinctio incidunt molestiae, dicta quia saepe laborum perspiciatis odio alias aspernatur quis. Quam corrupti error recusandae. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem."
+                        ]
+                    }, void 0, true, {
+                        fileName: "About.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "About.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "About.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, this));
+}
+_c = About;
+var _c;
+$RefreshReg$(_c, "About");
+
+  $parcel$ReactRefreshHelpers$4a55.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"23MUH":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c69d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c69d.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Contact", ()=>Contact
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+function Contact() {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
+        class: "contactPage",
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                class: "mdc-typography--headline2 centered",
+                children: "Contact Me"
+            }, void 0, false, {
+                fileName: "Contact.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                class: "contactText",
+                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur."
+            }, void 0, false, {
+                fileName: "Contact.js",
+                lineNumber: 5,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
+                class: "contactForm",
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        class: "mdc-text-field mdc-text-field--name",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "text",
+                                id: "my-name-field",
+                                class: "mdc-text-field__input"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 13,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                                class: "mdc-floating-label",
+                                for: "my-name-field",
+                                children: "Name"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 14,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                class: "mdc-line-ripple"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 17,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Contact.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        class: "mdc-text-field mdc-text-field--email",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "text",
+                                id: "my-email-field",
+                                class: "mdc-text-field__input"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 20,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                                class: "mdc-floating-label",
+                                for: "my-email-field",
+                                children: "Email"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 25,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                class: "mdc-line-ripple"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 28,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Contact.js",
+                        lineNumber: 19,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        class: "mdc-text-field mdc-text-field--textarea mdc-text-field--message",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                class: "mdc-text-field-character-counter",
+                                children: "0 / 500"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 31,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("textarea", {
+                                id: "textarea",
+                                class: "mdc-text-field__input",
+                                rows: "8",
+                                cols: "40",
+                                maxLength: "500"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 32,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                class: "mdc-notched-outline",
+                                children: [
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        class: "mdc-notched-outline__leading"
+                                    }, void 0, false, {
+                                        fileName: "Contact.js",
+                                        lineNumber: 40,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        class: "mdc-notched-outline__notch",
+                                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                                            for: "textarea",
+                                            class: "mdc-floating-label",
+                                            children: "Textarea Label"
+                                        }, void 0, false, {
+                                            fileName: "Contact.js",
+                                            lineNumber: 42,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "Contact.js",
+                                        lineNumber: 41,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        class: "mdc-notched-outline__trailing"
+                                    }, void 0, false, {
+                                        fileName: "Contact.js",
+                                        lineNumber: 46,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "Contact.js",
+                                lineNumber: 39,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Contact.js",
+                        lineNumber: 30,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                        class: "mdc-button mdc-button--raised submitButton",
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                class: "mdc-button__label",
+                                children: "Submit"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 50,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
+                                class: "material-icons mdc-button__icon",
+                                "aria-hidden": "true",
+                                children: "favorite"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 51,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Contact.js",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "Contact.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "Contact.js",
+        lineNumber: 3,
+        columnNumber: 5
+    }, this));
+}
+_c = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$c69d.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"03vJm":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$76ff = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
