@@ -10,7 +10,9 @@ export function Page() {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<Work />} />
+        <Route exact path="/" element={<Work />}>
+          <Work />
+        </Route>
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="project" element={<Project />} />
