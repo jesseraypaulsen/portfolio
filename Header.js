@@ -20,7 +20,7 @@ export function Header() {
             to="/"
             className="material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
           >
-            gesture
+            emoji_people
           </Link>
           <span className="mdc-top-app-bar__title">My Portfolio</span>
         </section>
