@@ -11,7 +11,7 @@ export function Contact() {
       <form class="contactForm">
         <div class="mdc-text-field mdc-text-field--name">
           <input type="text" id="my-name-field" class="mdc-text-field__input" />
-          <label class="mdc-floating-label" for="my-name-field">
+          <label class="mdc-floating-label" htmlFor="my-name-field">
             Name
           </label>
           <div class="mdc-line-ripple"></div>
@@ -22,7 +22,7 @@ export function Contact() {
             id="my-email-field"
             class="mdc-text-field__input"
           />
-          <label class="mdc-floating-label" for="my-email-field">
+          <label class="mdc-floating-label" htmlFor="my-email-field">
             Email
           </label>
           <div class="mdc-line-ripple"></div>
@@ -39,7 +39,7 @@ export function Contact() {
           <div class="mdc-notched-outline">
             <div class="mdc-notched-outline__leading"></div>
             <div class="mdc-notched-outline__notch">
-              <label for="textarea" class="mdc-floating-label">
+              <label htmlFor="textarea" class="mdc-floating-label">
                 Textarea Label
               </label>
             </div>
