@@ -7,7 +7,8 @@ export function Header() {
   useEffect(() => {
     const topAppBar = new MDCTopAppBar(topAppBarElement.current);
   }, []); // <-- empty array means 'run once'
-
+  //https://material.io/components/app-bars-top/web#other-variants
+  //https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar
   return (
     <header
       className="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-has-action-item"
@@ -16,19 +17,20 @@ export function Header() {
     >
       <div className="mdc-top-app-bar__row">
         <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <Link
-            to="/"
+          {/* hard coding the home url due to complications with React Router and Github Pages*/}
+          <a
+            href="https://jesseraypaulsen.github.io/portfolio"
             className="material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
           >
-            emoji_people
-          </Link>
+            gesture
+          </a>
           <span className="mdc-top-app-bar__title">My Portfolio</span>
         </section>
         <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
           <ul className="navList">
             <li className="navListItem">
               <Link className="navListLink mdc-typography--button" to="/">
-                Work
+                Projects
               </Link>
             </li>
             <li className="navListItem">

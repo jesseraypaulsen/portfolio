@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export function Work() {
   return (
     <main>
-      <h1 className="mdc-typography--headline2 centered">Work</h1>
+      <h1 className="mdc-typography--headline2 centered">Projects</h1>
       <ul className="cardList">
         <li className="mdc-card card">
           <Link to="/project" className="mdc-card__primary-action" tabIndex="0">
