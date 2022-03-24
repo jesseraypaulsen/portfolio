@@ -24750,6 +24750,8 @@ function Header() {
     _react.useEffect(()=>{
         const topAppBar = new _index.MDCTopAppBar(topAppBarElement.current);
     }, []); // <-- empty array means 'run once'
+    //https://material.io/components/app-bars-top/web#other-variants
+    //https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("header", {
         className: "mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-has-action-item",
         style: {
@@ -24762,13 +24764,13 @@ function Header() {
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
                     className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-start",
                     children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            to: "/",
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
+                            href: "https://jesseraypaulsen.github.io/portfolio",
                             className: "material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded",
                             children: "gesture"
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 19,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
@@ -24776,13 +24778,13 @@ function Header() {
                             children: "My Portfolio"
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 25,
+                            lineNumber: 27,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "Header.js",
-                    lineNumber: 18,
+                    lineNumber: 19,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
@@ -24795,15 +24797,15 @@ function Header() {
                                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                                     className: "navListLink mdc-typography--button",
                                     to: "/",
-                                    children: "Work"
+                                    children: "Projects"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 30,
+                                    lineNumber: 32,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 29,
+                                lineNumber: 31,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -24814,12 +24816,12 @@ function Header() {
                                     children: "About"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 35,
+                                    lineNumber: 37,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 34,
+                                lineNumber: 36,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -24830,34 +24832,34 @@ function Header() {
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 40,
+                                    lineNumber: 42,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 39,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Header.js",
-                        lineNumber: 28,
+                        lineNumber: 30,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Header.js",
-                    lineNumber: 27,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Header.js",
-            lineNumber: 17,
+            lineNumber: 18,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Header.js",
-        lineNumber: 12,
+        lineNumber: 13,
         columnNumber: 5
     }, this));
 }
@@ -24871,127 +24873,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","react":"21dqq","@material/top-app-bar/index":"gjVJK"}],"7nTYm":[function(require,module,exports) {
-"use strict";
-var Refresh = require('react-refresh/runtime');
-function debounce(func, delay) {
-    var args1;
-    var timeout = undefined;
-    return function(args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module.id + ' ' + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module) {
-    if (isReactRefreshBoundary(module.exports)) {
-        registerExportsForReactRefresh(module);
-        if (module.hot) {
-            module.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module.exports;
-            });
-            module.hot.accept(function(getParents) {
-                var prevExports = module.hot.data.prevExports;
-                var nextExports = module.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module) {
-    var exports = module.exports, id = module.id;
-    Refresh.register(exports, id + ' %exports%');
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + ' %exports% ' + key);
-    }
-}
-
-},{"react-refresh/runtime":"iorOX"}],"gjVJK":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","@material/top-app-bar/index":"gjVJK","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"gjVJK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -27138,7 +27020,127 @@ var MDCShortTopAppBarFoundation = function(_super) {
 }(_foundation.MDCTopAppBarBaseFoundation);
 exports.default = MDCShortTopAppBarFoundation;
 
-},{"tslib":"lRdW5","../constants":"52gAM","../foundation":"dHcUo","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"7s2mh":[function(require,module,exports) {
+},{"tslib":"lRdW5","../constants":"52gAM","../foundation":"dHcUo","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"7nTYm":[function(require,module,exports) {
+"use strict";
+var Refresh = require('react-refresh/runtime');
+function debounce(func, delay) {
+    var args1;
+    var timeout = undefined;
+    return function(args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args);
+        }, delay);
+    };
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module.id + ' ' + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module) {
+    if (isReactRefreshBoundary(module.exports)) {
+        registerExportsForReactRefresh(module);
+        if (module.hot) {
+            module.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module.exports;
+            });
+            module.hot.accept(function(getParents) {
+                var prevExports = module.hot.data.prevExports;
+                var nextExports = module.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module) {
+    var exports = module.exports, id = module.id;
+    Refresh.register(exports, id + ' %exports%');
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + ' %exports% ' + key);
+    }
+}
+
+},{"react-refresh/runtime":"iorOX"}],"7s2mh":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$352a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27156,7 +27158,7 @@ function Work() {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                 className: "mdc-typography--headline2 centered",
-                children: "Work"
+                children: "Projects"
             }, void 0, false, {
                 fileName: "Work.js",
                 lineNumber: 6,
@@ -27170,7 +27172,7 @@ function Work() {
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/project",
                             className: "mdc-card__primary-action",
-                            tabindex: "0",
+                            tabIndex: "0",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
                                     src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507",
@@ -27229,7 +27231,7 @@ function Work() {
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/project",
                             className: "mdc-card__primary-action",
-                            tabindex: "0",
+                            tabIndex: "0",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
                                     src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers5.jpg?1558558462565",
@@ -27288,7 +27290,7 @@ function Work() {
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/project",
                             className: "mdc-card__primary-action",
-                            tabindex: "0",
+                            tabIndex: "0",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
                                     src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg?1558558462683",
@@ -27347,7 +27349,7 @@ function Work() {
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
                             to: "/project",
                             className: "mdc-card__primary-action",
-                            tabindex: "0",
+                            tabIndex: "0",
                             children: [
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
                                     src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg?1558558462200",
@@ -27533,154 +27535,72 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Contact", ()=>Contact
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _textfield = require("@material/textfield");
+var _characterCounter = require("@material/textfield/character-counter");
+var _ripple = require("@material/ripple");
+var _s = $RefreshSig$();
 function Contact() {
+    _s();
+    const nameField = _react.useRef(null);
+    const emailField = _react.useRef(null);
+    const messageField = _react.useRef(null);
+    const characterCounter = _react.useRef(null);
+    const button = _react.useRef(null);
+    _react.useEffect(()=>{
+        new _textfield.MDCTextField(nameField.current);
+        new _textfield.MDCTextField(emailField.current);
+        new _textfield.MDCTextField(messageField.current);
+        new _characterCounter.MDCTextFieldCharacterCounter(characterCounter.current);
+        new _ripple.MDCRipple(button.current);
+    }, []);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
-        class: "contactPage",
+        className: "contactPage",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                class: "mdc-typography--headline2 centered",
+                className: "mdc-typography--headline2 centered",
                 children: "Contact Me"
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 4,
+                lineNumber: 22,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                class: "contactText",
+                className: "contactText",
                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur."
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 5,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
-                class: "contactForm",
+                className: "contactForm",
                 children: [
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                        class: "mdc-text-field mdc-text-field--name",
+                        className: "mdc-text-field mdc-text-field--name",
+                        ref: nameField,
                         children: [
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
                                 type: "text",
                                 id: "my-name-field",
-                                class: "mdc-text-field__input"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 13,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
-                                class: "mdc-floating-label",
-                                htmlFor: "my-name-field",
-                                children: "Name"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 14,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                class: "mdc-line-ripple"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 17,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Contact.js",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                        class: "mdc-text-field mdc-text-field--email",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
-                                type: "text",
-                                id: "my-email-field",
-                                class: "mdc-text-field__input"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 20,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
-                                class: "mdc-floating-label",
-                                htmlFor: "my-email-field",
-                                children: "Email"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 25,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                class: "mdc-line-ripple"
-                            }, void 0, false, {
-                                fileName: "Contact.js",
-                                lineNumber: 28,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "Contact.js",
-                        lineNumber: 19,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                        class: "mdc-text-field mdc-text-field--textarea mdc-text-field--message",
-                        children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                class: "mdc-text-field-character-counter",
-                                children: "0 / 500"
+                                className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
                                 lineNumber: 31,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("textarea", {
-                                id: "textarea",
-                                class: "mdc-text-field__input",
-                                rows: "8",
-                                cols: "40",
-                                maxLength: "500"
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                                className: "mdc-floating-label",
+                                htmlFor: "my-name-field",
+                                children: "Name"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 32,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                class: "mdc-notched-outline",
-                                children: [
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                        class: "mdc-notched-outline__leading"
-                                    }, void 0, false, {
-                                        fileName: "Contact.js",
-                                        lineNumber: 40,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                        class: "mdc-notched-outline__notch",
-                                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
-                                            htmlFor: "textarea",
-                                            class: "mdc-floating-label",
-                                            children: "Textarea Label"
-                                        }, void 0, false, {
-                                            fileName: "Contact.js",
-                                            lineNumber: 42,
-                                            columnNumber: 15
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "Contact.js",
-                                        lineNumber: 41,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                        class: "mdc-notched-outline__trailing"
-                                    }, void 0, false, {
-                                        fileName: "Contact.js",
-                                        lineNumber: 46,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                className: "mdc-line-ripple"
+                            }, void 0, false, {
                                 fileName: "Contact.js",
                                 lineNumber: 39,
                                 columnNumber: 11
@@ -27691,21 +27611,30 @@ function Contact() {
                         lineNumber: 30,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
-                        class: "mdc-button mdc-button--raised submitButton",
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "mdc-text-field mdc-text-field--email",
+                        ref: emailField,
                         children: [
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
-                                class: "mdc-button__label",
-                                children: "Submit"
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("input", {
+                                type: "text",
+                                id: "my-email-field",
+                                className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 50,
+                                lineNumber: 43,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
-                                class: "material-icons mdc-button__icon",
-                                "aria-hidden": "true",
-                                children: "favorite"
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                                className: "mdc-floating-label",
+                                htmlFor: "my-email-field",
+                                children: "Email"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 48,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
                                 lineNumber: 51,
@@ -27714,22 +27643,119 @@ function Contact() {
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 49,
+                        lineNumber: 42,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                        className: "mdc-text-field mdc-text-field--textarea mdc-text-field--message",
+                        ref: messageField,
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                className: "mdc-text-field-character-counter",
+                                ref: characterCounter,
+                                children: "0 / 500"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 58,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("textarea", {
+                                id: "textarea",
+                                className: "mdc-text-field__input",
+                                rows: "8",
+                                cols: "40",
+                                maxLength: "500"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 64,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                className: "mdc-notched-outline",
+                                children: [
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "mdc-notched-outline__leading"
+                                    }, void 0, false, {
+                                        fileName: "Contact.js",
+                                        lineNumber: 72,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "mdc-notched-outline__notch",
+                                        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
+                                            htmlFor: "textarea",
+                                            className: "mdc-floating-label",
+                                            children: "Textarea Label"
+                                        }, void 0, false, {
+                                            fileName: "Contact.js",
+                                            lineNumber: 74,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "Contact.js",
+                                        lineNumber: 73,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                                        className: "mdc-notched-outline__trailing"
+                                    }, void 0, false, {
+                                        fileName: "Contact.js",
+                                        lineNumber: 78,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "Contact.js",
+                                lineNumber: 71,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Contact.js",
+                        lineNumber: 54,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
+                        className: "mdc-button mdc-button--raised submitButton",
+                        ref: button,
+                        children: [
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
+                                className: "mdc-button__label",
+                                children: "Submit"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 86,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
+                                className: "material-icons mdc-button__icon",
+                                "aria-hidden": "true",
+                                children: "favorite"
+                            }, void 0, false, {
+                                fileName: "Contact.js",
+                                lineNumber: 87,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "Contact.js",
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Contact.js",
-                lineNumber: 11,
+                lineNumber: 29,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Contact.js",
-        lineNumber: 3,
+        lineNumber: 21,
         columnNumber: 5
     }, this));
 }
+_s(Contact, "STIC14wcaarM6fAZyu4CEYllw34=");
 _c = Contact;
 var _c;
 $RefreshReg$(_c, "Contact");
@@ -27739,7 +27765,2733 @@ $RefreshReg$(_c, "Contact");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"03vJm":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@material/textfield":"iAIQW","@material/textfield/character-counter":"8ibHT","@material/ripple":"jRAE3","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"iAIQW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _adapter = require("./adapter");
+parcelHelpers.exportAll(_adapter, exports);
+var _component = require("./component");
+parcelHelpers.exportAll(_component, exports);
+var _constants = require("./constants");
+parcelHelpers.exportAll(_constants, exports);
+var _foundation = require("./foundation");
+parcelHelpers.exportAll(_foundation, exports);
+var _types = require("./types");
+parcelHelpers.exportAll(_types, exports);
+var _index = require("./character-counter/index");
+parcelHelpers.exportAll(_index, exports);
+var _index1 = require("./helper-text/index");
+parcelHelpers.exportAll(_index1, exports);
+var _index2 = require("./icon/index");
+parcelHelpers.exportAll(_index2, exports);
+
+},{"./adapter":"9lQks","./component":"druY6","./constants":"wdBr4","./foundation":"2UHkh","./types":"4SZIS","./character-counter/index":"8ibHT","./helper-text/index":"j9yda","./icon/index":"82Zgi","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"9lQks":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"druY6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCTextField", ()=>MDCTextField
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _component = require("@material/base/component");
+var _events = require("@material/dom/events");
+var _ponyfill = require("@material/dom/ponyfill");
+var _component1 = require("@material/floating-label/component");
+var _component2 = require("@material/line-ripple/component");
+var _component3 = require("@material/notched-outline/component");
+var _component4 = require("@material/ripple/component");
+var _foundation = require("@material/ripple/foundation");
+var _component5 = require("./character-counter/component");
+var _foundation1 = require("./character-counter/foundation");
+var _constants = require("./constants");
+var _foundation2 = require("./foundation");
+var _component6 = require("./helper-text/component");
+var _foundation3 = require("./helper-text/foundation");
+var _component7 = require("./icon/component");
+var MDCTextField = function(_super) {
+    _tslib.__extends(MDCTextField1, _super);
+    function MDCTextField1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTextField1.attachTo = function(root) {
+        return new MDCTextField1(root);
+    };
+    MDCTextField1.prototype.initialize = function(rippleFactory, lineRippleFactory, helperTextFactory, characterCounterFactory, iconFactory, labelFactory, outlineFactory) {
+        if (rippleFactory === void 0) rippleFactory = function(el, foundation) {
+            return new _component4.MDCRipple(el, foundation);
+        };
+        if (lineRippleFactory === void 0) lineRippleFactory = function(el) {
+            return new _component2.MDCLineRipple(el);
+        };
+        if (helperTextFactory === void 0) helperTextFactory = function(el) {
+            return new _component6.MDCTextFieldHelperText(el);
+        };
+        if (characterCounterFactory === void 0) characterCounterFactory = function(el) {
+            return new _component5.MDCTextFieldCharacterCounter(el);
+        };
+        if (iconFactory === void 0) iconFactory = function(el) {
+            return new _component7.MDCTextFieldIcon(el);
+        };
+        if (labelFactory === void 0) labelFactory = function(el) {
+            return new _component1.MDCFloatingLabel(el);
+        };
+        if (outlineFactory === void 0) outlineFactory = function(el) {
+            return new _component3.MDCNotchedOutline(el);
+        };
+        this.input = this.root.querySelector(_constants.strings.INPUT_SELECTOR);
+        var labelElement = this.root.querySelector(_constants.strings.LABEL_SELECTOR);
+        this.label = labelElement ? labelFactory(labelElement) : null;
+        var lineRippleElement = this.root.querySelector(_constants.strings.LINE_RIPPLE_SELECTOR);
+        this.lineRipple = lineRippleElement ? lineRippleFactory(lineRippleElement) : null;
+        var outlineElement = this.root.querySelector(_constants.strings.OUTLINE_SELECTOR);
+        this.outline = outlineElement ? outlineFactory(outlineElement) : null;
+        // Helper text
+        var helperTextStrings = _foundation3.MDCTextFieldHelperTextFoundation.strings;
+        var nextElementSibling = this.root.nextElementSibling;
+        var hasHelperLine = nextElementSibling && nextElementSibling.classList.contains(_constants.cssClasses.HELPER_LINE);
+        var helperTextEl = hasHelperLine && nextElementSibling && nextElementSibling.querySelector(helperTextStrings.ROOT_SELECTOR);
+        this.helperText = helperTextEl ? helperTextFactory(helperTextEl) : null;
+        // Character counter
+        var characterCounterStrings = _foundation1.MDCTextFieldCharacterCounterFoundation.strings;
+        var characterCounterEl = this.root.querySelector(characterCounterStrings.ROOT_SELECTOR);
+        // If character counter is not found in root element search in sibling element.
+        if (!characterCounterEl && hasHelperLine && nextElementSibling) characterCounterEl = nextElementSibling.querySelector(characterCounterStrings.ROOT_SELECTOR);
+        this.characterCounter = characterCounterEl ? characterCounterFactory(characterCounterEl) : null;
+        // Leading icon
+        var leadingIconEl = this.root.querySelector(_constants.strings.LEADING_ICON_SELECTOR);
+        this.leadingIcon = leadingIconEl ? iconFactory(leadingIconEl) : null;
+        // Trailing icon
+        var trailingIconEl = this.root.querySelector(_constants.strings.TRAILING_ICON_SELECTOR);
+        this.trailingIcon = trailingIconEl ? iconFactory(trailingIconEl) : null;
+        // Prefix and Suffix
+        this.prefix = this.root.querySelector(_constants.strings.PREFIX_SELECTOR);
+        this.suffix = this.root.querySelector(_constants.strings.SUFFIX_SELECTOR);
+        this.ripple = this.createRipple(rippleFactory);
+    };
+    MDCTextField1.prototype.destroy = function() {
+        if (this.ripple) this.ripple.destroy();
+        if (this.lineRipple) this.lineRipple.destroy();
+        if (this.helperText) this.helperText.destroy();
+        if (this.characterCounter) this.characterCounter.destroy();
+        if (this.leadingIcon) this.leadingIcon.destroy();
+        if (this.trailingIcon) this.trailingIcon.destroy();
+        if (this.label) this.label.destroy();
+        if (this.outline) this.outline.destroy();
+        _super.prototype.destroy.call(this);
+    };
+    /**
+     * Initializes the Text Field's internal state based on the environment's
+     * state.
+     */ MDCTextField1.prototype.initialSyncWithDOM = function() {
+        this.disabled = this.input.disabled;
+    };
+    Object.defineProperty(MDCTextField1.prototype, "value", {
+        get: function() {
+            return this.foundation.getValue();
+        },
+        /**
+         * @param value The value to set on the input.
+         */ set: function(value) {
+            this.foundation.setValue(value);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "disabled", {
+        get: function() {
+            return this.foundation.isDisabled();
+        },
+        /**
+         * @param disabled Sets the Text Field disabled or enabled.
+         */ set: function(disabled) {
+            this.foundation.setDisabled(disabled);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "valid", {
+        get: function() {
+            return this.foundation.isValid();
+        },
+        /**
+         * @param valid Sets the Text Field valid or invalid.
+         */ set: function(valid) {
+            this.foundation.setValid(valid);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "required", {
+        get: function() {
+            return this.input.required;
+        },
+        /**
+         * @param required Sets the Text Field to required.
+         */ set: function(required) {
+            this.input.required = required;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "pattern", {
+        get: function() {
+            return this.input.pattern;
+        },
+        /**
+         * @param pattern Sets the input element's validation pattern.
+         */ set: function(pattern) {
+            this.input.pattern = pattern;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "minLength", {
+        get: function() {
+            return this.input.minLength;
+        },
+        /**
+         * @param minLength Sets the input element's minLength.
+         */ set: function(minLength) {
+            this.input.minLength = minLength;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "maxLength", {
+        get: function() {
+            return this.input.maxLength;
+        },
+        /**
+         * @param maxLength Sets the input element's maxLength.
+         */ set: function(maxLength) {
+            // Chrome throws exception if maxLength is set to a value less than zero
+            if (maxLength < 0) this.input.removeAttribute('maxLength');
+            else this.input.maxLength = maxLength;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "min", {
+        get: function() {
+            return this.input.min;
+        },
+        /**
+         * @param min Sets the input element's min.
+         */ set: function(min) {
+            this.input.min = min;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "max", {
+        get: function() {
+            return this.input.max;
+        },
+        /**
+         * @param max Sets the input element's max.
+         */ set: function(max) {
+            this.input.max = max;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "step", {
+        get: function() {
+            return this.input.step;
+        },
+        /**
+         * @param step Sets the input element's step.
+         */ set: function(step) {
+            this.input.step = step;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "helperTextContent", {
+        /**
+         * Sets the helper text element content.
+         */ set: function(content) {
+            this.foundation.setHelperTextContent(content);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "leadingIconAriaLabel", {
+        /**
+         * Sets the aria label of the leading icon.
+         */ set: function(label) {
+            this.foundation.setLeadingIconAriaLabel(label);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "leadingIconContent", {
+        /**
+         * Sets the text content of the leading icon.
+         */ set: function(content) {
+            this.foundation.setLeadingIconContent(content);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "trailingIconAriaLabel", {
+        /**
+         * Sets the aria label of the trailing icon.
+         */ set: function(label) {
+            this.foundation.setTrailingIconAriaLabel(label);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "trailingIconContent", {
+        /**
+         * Sets the text content of the trailing icon.
+         */ set: function(content) {
+            this.foundation.setTrailingIconContent(content);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "useNativeValidation", {
+        /**
+         * Enables or disables the use of native validation. Use this for custom validation.
+         * @param useNativeValidation Set this to false to ignore native input validation.
+         */ set: function(useNativeValidation) {
+            this.foundation.setUseNativeValidation(useNativeValidation);
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "prefixText", {
+        /**
+         * Gets the text content of the prefix, or null if it does not exist.
+         */ get: function() {
+            return this.prefix ? this.prefix.textContent : null;
+        },
+        /**
+         * Sets the text content of the prefix, if it exists.
+         */ set: function(prefixText) {
+            if (this.prefix) this.prefix.textContent = prefixText;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextField1.prototype, "suffixText", {
+        /**
+         * Gets the text content of the suffix, or null if it does not exist.
+         */ get: function() {
+            return this.suffix ? this.suffix.textContent : null;
+        },
+        /**
+         * Sets the text content of the suffix, if it exists.
+         */ set: function(suffixText) {
+            if (this.suffix) this.suffix.textContent = suffixText;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * Focuses the input element.
+     */ MDCTextField1.prototype.focus = function() {
+        this.input.focus();
+    };
+    /**
+     * Recomputes the outline SVG path for the outline element.
+     */ MDCTextField1.prototype.layout = function() {
+        var openNotch = this.foundation.shouldFloat;
+        this.foundation.notchOutline(openNotch);
+    };
+    MDCTextField1.prototype.getDefaultFoundation = function() {
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = _tslib.__assign(_tslib.__assign(_tslib.__assign(_tslib.__assign(_tslib.__assign({
+        }, this.getRootAdapterMethods()), this.getInputAdapterMethods()), this.getLabelAdapterMethods()), this.getLineRippleAdapterMethods()), this.getOutlineAdapterMethods());
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation2.MDCTextFieldFoundation(adapter, this.getFoundationMap());
+    };
+    MDCTextField1.prototype.getRootAdapterMethods = function() {
+        var _this = this;
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        return {
+            addClass: function(className) {
+                return _this.root.classList.add(className);
+            },
+            removeClass: function(className) {
+                return _this.root.classList.remove(className);
+            },
+            hasClass: function(className) {
+                return _this.root.classList.contains(className);
+            },
+            registerTextFieldInteractionHandler: function(evtType, handler) {
+                _this.listen(evtType, handler);
+            },
+            deregisterTextFieldInteractionHandler: function(evtType, handler) {
+                _this.unlisten(evtType, handler);
+            },
+            registerValidationAttributeChangeHandler: function(handler) {
+                var getAttributesList = function(mutationsList) {
+                    return mutationsList.map(function(mutation) {
+                        return mutation.attributeName;
+                    }).filter(function(attributeName) {
+                        return attributeName;
+                    });
+                };
+                var observer = new MutationObserver(function(mutationsList) {
+                    return handler(getAttributesList(mutationsList));
+                });
+                var config = {
+                    attributes: true
+                };
+                observer.observe(_this.input, config);
+                return observer;
+            },
+            deregisterValidationAttributeChangeHandler: function(observer) {
+                observer.disconnect();
+            }
+        };
+    // tslint:enable:object-literal-sort-keys
+    };
+    MDCTextField1.prototype.getInputAdapterMethods = function() {
+        var _this = this;
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        return {
+            getNativeInput: function() {
+                return _this.input;
+            },
+            setInputAttr: function(attr, value) {
+                _this.input.setAttribute(attr, value);
+            },
+            removeInputAttr: function(attr) {
+                _this.input.removeAttribute(attr);
+            },
+            isFocused: function() {
+                return document.activeElement === _this.input;
+            },
+            registerInputInteractionHandler: function(evtType, handler) {
+                _this.input.addEventListener(evtType, handler, _events.applyPassive());
+            },
+            deregisterInputInteractionHandler: function(evtType, handler) {
+                _this.input.removeEventListener(evtType, handler, _events.applyPassive());
+            }
+        };
+    // tslint:enable:object-literal-sort-keys
+    };
+    MDCTextField1.prototype.getLabelAdapterMethods = function() {
+        var _this = this;
+        return {
+            floatLabel: function(shouldFloat) {
+                _this.label && _this.label.float(shouldFloat);
+            },
+            getLabelWidth: function() {
+                return _this.label ? _this.label.getWidth() : 0;
+            },
+            hasLabel: function() {
+                return Boolean(_this.label);
+            },
+            shakeLabel: function(shouldShake) {
+                _this.label && _this.label.shake(shouldShake);
+            },
+            setLabelRequired: function(isRequired) {
+                _this.label && _this.label.setRequired(isRequired);
+            }
+        };
+    };
+    MDCTextField1.prototype.getLineRippleAdapterMethods = function() {
+        var _this = this;
+        return {
+            activateLineRipple: function() {
+                if (_this.lineRipple) _this.lineRipple.activate();
+            },
+            deactivateLineRipple: function() {
+                if (_this.lineRipple) _this.lineRipple.deactivate();
+            },
+            setLineRippleTransformOrigin: function(normalizedX) {
+                if (_this.lineRipple) _this.lineRipple.setRippleCenter(normalizedX);
+            }
+        };
+    };
+    MDCTextField1.prototype.getOutlineAdapterMethods = function() {
+        var _this = this;
+        return {
+            closeOutline: function() {
+                _this.outline && _this.outline.closeNotch();
+            },
+            hasOutline: function() {
+                return Boolean(_this.outline);
+            },
+            notchOutline: function(labelWidth) {
+                _this.outline && _this.outline.notch(labelWidth);
+            }
+        };
+    };
+    /**
+     * @return A map of all subcomponents to subfoundations.
+     */ MDCTextField1.prototype.getFoundationMap = function() {
+        return {
+            characterCounter: this.characterCounter ? this.characterCounter.foundationForTextField : undefined,
+            helperText: this.helperText ? this.helperText.foundationForTextField : undefined,
+            leadingIcon: this.leadingIcon ? this.leadingIcon.foundationForTextField : undefined,
+            trailingIcon: this.trailingIcon ? this.trailingIcon.foundationForTextField : undefined
+        };
+    };
+    MDCTextField1.prototype.createRipple = function(rippleFactory) {
+        var _this = this;
+        var isTextArea = this.root.classList.contains(_constants.cssClasses.TEXTAREA);
+        var isOutlined = this.root.classList.contains(_constants.cssClasses.OUTLINED);
+        if (isTextArea || isOutlined) return null;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = _tslib.__assign(_tslib.__assign({
+        }, _component4.MDCRipple.createAdapter(this)), {
+            isSurfaceActive: function() {
+                return _ponyfill.matches(_this.input, ':active');
+            },
+            registerInteractionHandler: function(evtType, handler) {
+                _this.input.addEventListener(evtType, handler, _events.applyPassive());
+            },
+            deregisterInteractionHandler: function(evtType, handler) {
+                _this.input.removeEventListener(evtType, handler, _events.applyPassive());
+            }
+        });
+        // tslint:enable:object-literal-sort-keys
+        return rippleFactory(this.root, new _foundation.MDCRippleFoundation(adapter));
+    };
+    return MDCTextField1;
+}(_component.MDCComponent);
+
+},{"tslib":"lRdW5","@material/base/component":"jLptS","@material/dom/events":"87xmx","@material/dom/ponyfill":"8pLcv","@material/floating-label/component":"larjq","@material/line-ripple/component":"4xpf3","@material/notched-outline/component":"ibiBS","@material/ripple/component":"035sE","@material/ripple/foundation":"7frpT","./character-counter/component":"hwtce","./character-counter/foundation":"dpux4","./constants":"wdBr4","./foundation":"2UHkh","./helper-text/component":"bX2wx","./helper-text/foundation":"5gLP0","./icon/component":"gn4Te","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"larjq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCFloatingLabel", ()=>MDCFloatingLabel
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _component = require("@material/base/component");
+var _ponyfill = require("@material/dom/ponyfill");
+var _foundation = require("./foundation");
+var MDCFloatingLabel = function(_super) {
+    _tslib.__extends(MDCFloatingLabel1, _super);
+    function MDCFloatingLabel1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCFloatingLabel1.attachTo = function(root) {
+        return new MDCFloatingLabel1(root);
+    };
+    /**
+     * Styles the label to produce the label shake for errors.
+     * @param shouldShake If true, shakes the label by adding a CSS class; otherwise, stops shaking by removing the class.
+     */ MDCFloatingLabel1.prototype.shake = function(shouldShake) {
+        this.foundation.shake(shouldShake);
+    };
+    /**
+     * Styles the label to float/dock.
+     * @param shouldFloat If true, floats the label by adding a CSS class; otherwise, docks it by removing the class.
+     */ MDCFloatingLabel1.prototype.float = function(shouldFloat) {
+        this.foundation.float(shouldFloat);
+    };
+    /**
+     * Styles the label as required.
+     * @param isRequired If true, adds an asterisk to the label, indicating that it is required.
+     */ MDCFloatingLabel1.prototype.setRequired = function(isRequired) {
+        this.foundation.setRequired(isRequired);
+    };
+    MDCFloatingLabel1.prototype.getWidth = function() {
+        return this.foundation.getWidth();
+    };
+    MDCFloatingLabel1.prototype.getDefaultFoundation = function() {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClass: function(className) {
+                return _this.root.classList.add(className);
+            },
+            removeClass: function(className) {
+                return _this.root.classList.remove(className);
+            },
+            getWidth: function() {
+                return _ponyfill.estimateScrollWidth(_this.root);
+            },
+            registerInteractionHandler: function(evtType, handler) {
+                return _this.listen(evtType, handler);
+            },
+            deregisterInteractionHandler: function(evtType, handler) {
+                return _this.unlisten(evtType, handler);
+            }
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation.MDCFloatingLabelFoundation(adapter);
+    };
+    return MDCFloatingLabel1;
+}(_component.MDCComponent);
+
+},{"tslib":"lRdW5","@material/base/component":"jLptS","@material/dom/ponyfill":"8pLcv","./foundation":"824lp","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"824lp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCFloatingLabelFoundation", ()=>MDCFloatingLabelFoundation
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("@material/base/foundation");
+var _constants = require("./constants");
+var MDCFloatingLabelFoundation = function(_super) {
+    _tslib.__extends(MDCFloatingLabelFoundation1, _super);
+    function MDCFloatingLabelFoundation1(adapter) {
+        var _this = _super.call(this, _tslib.__assign(_tslib.__assign({
+        }, MDCFloatingLabelFoundation1.defaultAdapter), adapter)) || this;
+        _this.shakeAnimationEndHandler = function() {
+            _this.handleShakeAnimationEnd();
+        };
+        return _this;
+    }
+    Object.defineProperty(MDCFloatingLabelFoundation1, "cssClasses", {
+        get: function() {
+            return _constants.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCFloatingLabelFoundation1, "defaultAdapter", {
+        /**
+         * See {@link MDCFloatingLabelAdapter} for typing information on parameters and return types.
+         */ get: function() {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function() {
+                    return undefined;
+                },
+                removeClass: function() {
+                    return undefined;
+                },
+                getWidth: function() {
+                    return 0;
+                },
+                registerInteractionHandler: function() {
+                    return undefined;
+                },
+                deregisterInteractionHandler: function() {
+                    return undefined;
+                }
+            };
+        // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCFloatingLabelFoundation1.prototype.init = function() {
+        this.adapter.registerInteractionHandler('animationend', this.shakeAnimationEndHandler);
+    };
+    MDCFloatingLabelFoundation1.prototype.destroy = function() {
+        this.adapter.deregisterInteractionHandler('animationend', this.shakeAnimationEndHandler);
+    };
+    /**
+     * Returns the width of the label element.
+     */ MDCFloatingLabelFoundation1.prototype.getWidth = function() {
+        return this.adapter.getWidth();
+    };
+    /**
+     * Styles the label to produce a shake animation to indicate an error.
+     * @param shouldShake If true, adds the shake CSS class; otherwise, removes shake class.
+     */ MDCFloatingLabelFoundation1.prototype.shake = function(shouldShake) {
+        var LABEL_SHAKE = MDCFloatingLabelFoundation1.cssClasses.LABEL_SHAKE;
+        if (shouldShake) this.adapter.addClass(LABEL_SHAKE);
+        else this.adapter.removeClass(LABEL_SHAKE);
+    };
+    /**
+     * Styles the label to float or dock.
+     * @param shouldFloat If true, adds the float CSS class; otherwise, removes float and shake classes to dock the label.
+     */ MDCFloatingLabelFoundation1.prototype.float = function(shouldFloat) {
+        var _a = MDCFloatingLabelFoundation1.cssClasses, LABEL_FLOAT_ABOVE = _a.LABEL_FLOAT_ABOVE, LABEL_SHAKE = _a.LABEL_SHAKE;
+        if (shouldFloat) this.adapter.addClass(LABEL_FLOAT_ABOVE);
+        else {
+            this.adapter.removeClass(LABEL_FLOAT_ABOVE);
+            this.adapter.removeClass(LABEL_SHAKE);
+        }
+    };
+    /**
+     * Styles the label as required.
+     * @param isRequired If true, adds an asterisk to the label, indicating that it is required.
+     */ MDCFloatingLabelFoundation1.prototype.setRequired = function(isRequired) {
+        var LABEL_REQUIRED = MDCFloatingLabelFoundation1.cssClasses.LABEL_REQUIRED;
+        if (isRequired) this.adapter.addClass(LABEL_REQUIRED);
+        else this.adapter.removeClass(LABEL_REQUIRED);
+    };
+    MDCFloatingLabelFoundation1.prototype.handleShakeAnimationEnd = function() {
+        var LABEL_SHAKE = MDCFloatingLabelFoundation1.cssClasses.LABEL_SHAKE;
+        this.adapter.removeClass(LABEL_SHAKE);
+    };
+    return MDCFloatingLabelFoundation1;
+}(_foundation.MDCFoundation);
+exports.default = MDCFloatingLabelFoundation;
+
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"agpve","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"agpve":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
+);
+var cssClasses = {
+    LABEL_FLOAT_ABOVE: 'mdc-floating-label--float-above',
+    LABEL_REQUIRED: 'mdc-floating-label--required',
+    LABEL_SHAKE: 'mdc-floating-label--shake',
+    ROOT: 'mdc-floating-label'
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"4xpf3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCLineRipple", ()=>MDCLineRipple
+);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _component = require("@material/base/component");
+var _foundation = require("./foundation");
+var MDCLineRipple = function(_super) {
+    _tslib.__extends(MDCLineRipple1, _super);
+    function MDCLineRipple1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCLineRipple1.attachTo = function(root) {
+        return new MDCLineRipple1(root);
+    };
+    /**
+     * Activates the line ripple
+     */ MDCLineRipple1.prototype.activate = function() {
+        this.foundation.activate();
+    };
+    /**
+     * Deactivates the line ripple
+     */ MDCLineRipple1.prototype.deactivate = function() {
+        this.foundation.deactivate();
+    };
+    /**
+     * Sets the transform origin given a user's click location.
+     * The `rippleCenter` is the x-coordinate of the middle of the ripple.
+     */ MDCLineRipple1.prototype.setRippleCenter = function(xCoordinate) {
+        this.foundation.setRippleCenter(xCoordinate);
+    };
+    MDCLineRipple1.prototype.getDefaultFoundation = function() {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClass: function(className) {
+                return _this.root.classList.add(className);
+            },
+            removeClass: function(className) {
+                return _this.root.classList.remove(className);
+            },
+            hasClass: function(className) {
+                return _this.root.classList.contains(className);
+            },
+            setStyle: function(propertyName, value) {
+                return _this.root.style.setProperty(propertyName, value);
+            },
+            registerEventHandler: function(evtType, handler) {
+                return _this.listen(evtType, handler);
+            },
+            deregisterEventHandler: function(evtType, handler) {
+                return _this.unlisten(evtType, handler);
+            }
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation.MDCLineRippleFoundation(adapter);
+    };
+    return MDCLineRipple1;
+}(_component.MDCComponent);
+
+},{"tslib":"lRdW5","@material/base/component":"jLptS","./foundation":"lo039","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"lo039":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCLineRippleFoundation", ()=>MDCLineRippleFoundation
+);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("@material/base/foundation");
+var _constants = require("./constants");
+var MDCLineRippleFoundation = function(_super) {
+    _tslib.__extends(MDCLineRippleFoundation1, _super);
+    function MDCLineRippleFoundation1(adapter) {
+        var _this = _super.call(this, _tslib.__assign(_tslib.__assign({
+        }, MDCLineRippleFoundation1.defaultAdapter), adapter)) || this;
+        _this.transitionEndHandler = function(evt) {
+            _this.handleTransitionEnd(evt);
+        };
+        return _this;
+    }
+    Object.defineProperty(MDCLineRippleFoundation1, "cssClasses", {
+        get: function() {
+            return _constants.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCLineRippleFoundation1, "defaultAdapter", {
+        /**
+         * See {@link MDCLineRippleAdapter} for typing information on parameters and return types.
+         */ get: function() {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function() {
+                    return undefined;
+                },
+                removeClass: function() {
+                    return undefined;
+                },
+                hasClass: function() {
+                    return false;
+                },
+                setStyle: function() {
+                    return undefined;
+                },
+                registerEventHandler: function() {
+                    return undefined;
+                },
+                deregisterEventHandler: function() {
+                    return undefined;
+                }
+            };
+        // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCLineRippleFoundation1.prototype.init = function() {
+        this.adapter.registerEventHandler('transitionend', this.transitionEndHandler);
+    };
+    MDCLineRippleFoundation1.prototype.destroy = function() {
+        this.adapter.deregisterEventHandler('transitionend', this.transitionEndHandler);
+    };
+    MDCLineRippleFoundation1.prototype.activate = function() {
+        this.adapter.removeClass(_constants.cssClasses.LINE_RIPPLE_DEACTIVATING);
+        this.adapter.addClass(_constants.cssClasses.LINE_RIPPLE_ACTIVE);
+    };
+    MDCLineRippleFoundation1.prototype.setRippleCenter = function(xCoordinate) {
+        this.adapter.setStyle('transform-origin', xCoordinate + "px center");
+    };
+    MDCLineRippleFoundation1.prototype.deactivate = function() {
+        this.adapter.addClass(_constants.cssClasses.LINE_RIPPLE_DEACTIVATING);
+    };
+    MDCLineRippleFoundation1.prototype.handleTransitionEnd = function(evt) {
+        // Wait for the line ripple to be either transparent or opaque
+        // before emitting the animation end event
+        var isDeactivating = this.adapter.hasClass(_constants.cssClasses.LINE_RIPPLE_DEACTIVATING);
+        if (evt.propertyName === 'opacity') {
+            if (isDeactivating) {
+                this.adapter.removeClass(_constants.cssClasses.LINE_RIPPLE_ACTIVE);
+                this.adapter.removeClass(_constants.cssClasses.LINE_RIPPLE_DEACTIVATING);
+            }
+        }
+    };
+    return MDCLineRippleFoundation1;
+}(_foundation.MDCFoundation);
+exports.default = MDCLineRippleFoundation;
+
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"a9qJj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"a9qJj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
+);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var cssClasses = {
+    LINE_RIPPLE_ACTIVE: 'mdc-line-ripple--active',
+    LINE_RIPPLE_DEACTIVATING: 'mdc-line-ripple--deactivating'
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"ibiBS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCNotchedOutline", ()=>MDCNotchedOutline
+);
+/**
+ * @license
+ * Copyright 2017 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _component = require("@material/base/component");
+var _foundation = require("@material/floating-label/foundation");
+var _constants = require("./constants");
+var _foundation1 = require("./foundation");
+var MDCNotchedOutline = function(_super) {
+    _tslib.__extends(MDCNotchedOutline1, _super);
+    function MDCNotchedOutline1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCNotchedOutline1.attachTo = function(root) {
+        return new MDCNotchedOutline1(root);
+    };
+    MDCNotchedOutline1.prototype.initialSyncWithDOM = function() {
+        this.notchElement = this.root.querySelector(_constants.strings.NOTCH_ELEMENT_SELECTOR);
+        var label = this.root.querySelector('.' + _foundation.MDCFloatingLabelFoundation.cssClasses.ROOT);
+        if (label) {
+            label.style.transitionDuration = '0s';
+            this.root.classList.add(_constants.cssClasses.OUTLINE_UPGRADED);
+            requestAnimationFrame(function() {
+                label.style.transitionDuration = '';
+            });
+        } else this.root.classList.add(_constants.cssClasses.NO_LABEL);
+    };
+    /**
+     * Updates classes and styles to open the notch to the specified width.
+     * @param notchWidth The notch width in the outline.
+     */ MDCNotchedOutline1.prototype.notch = function(notchWidth) {
+        this.foundation.notch(notchWidth);
+    };
+    /**
+     * Updates classes and styles to close the notch.
+     */ MDCNotchedOutline1.prototype.closeNotch = function() {
+        this.foundation.closeNotch();
+    };
+    MDCNotchedOutline1.prototype.getDefaultFoundation = function() {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClass: function(className) {
+                return _this.root.classList.add(className);
+            },
+            removeClass: function(className) {
+                return _this.root.classList.remove(className);
+            },
+            setNotchWidthProperty: function(width) {
+                _this.notchElement.style.setProperty('width', width + 'px');
+            },
+            removeNotchWidthProperty: function() {
+                _this.notchElement.style.removeProperty('width');
+            }
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation1.MDCNotchedOutlineFoundation(adapter);
+    };
+    return MDCNotchedOutline1;
+}(_component.MDCComponent);
+
+},{"tslib":"lRdW5","@material/base/component":"jLptS","@material/floating-label/foundation":"824lp","./constants":"3IcFA","./foundation":"6fuu9","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"3IcFA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
+);
+parcelHelpers.export(exports, "numbers", ()=>numbers
+);
+parcelHelpers.export(exports, "strings", ()=>strings
+);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var strings = {
+    NOTCH_ELEMENT_SELECTOR: '.mdc-notched-outline__notch'
+};
+var numbers = {
+    // This should stay in sync with $mdc-notched-outline-padding * 2.
+    NOTCH_ELEMENT_PADDING: 8
+};
+var cssClasses = {
+    NO_LABEL: 'mdc-notched-outline--no-label',
+    OUTLINE_NOTCHED: 'mdc-notched-outline--notched',
+    OUTLINE_UPGRADED: 'mdc-notched-outline--upgraded'
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"6fuu9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCNotchedOutlineFoundation", ()=>MDCNotchedOutlineFoundation
+);
+/**
+ * @license
+ * Copyright 2017 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("@material/base/foundation");
+var _constants = require("./constants");
+var MDCNotchedOutlineFoundation = function(_super) {
+    _tslib.__extends(MDCNotchedOutlineFoundation1, _super);
+    function MDCNotchedOutlineFoundation1(adapter) {
+        return _super.call(this, _tslib.__assign(_tslib.__assign({
+        }, MDCNotchedOutlineFoundation1.defaultAdapter), adapter)) || this;
+    }
+    Object.defineProperty(MDCNotchedOutlineFoundation1, "strings", {
+        get: function() {
+            return _constants.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCNotchedOutlineFoundation1, "cssClasses", {
+        get: function() {
+            return _constants.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCNotchedOutlineFoundation1, "numbers", {
+        get: function() {
+            return _constants.numbers;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCNotchedOutlineFoundation1, "defaultAdapter", {
+        /**
+         * See {@link MDCNotchedOutlineAdapter} for typing information on parameters and return types.
+         */ get: function() {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function() {
+                    return undefined;
+                },
+                removeClass: function() {
+                    return undefined;
+                },
+                setNotchWidthProperty: function() {
+                    return undefined;
+                },
+                removeNotchWidthProperty: function() {
+                    return undefined;
+                }
+            };
+        // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    /**
+     * Adds the outline notched selector and updates the notch width calculated based off of notchWidth.
+     */ MDCNotchedOutlineFoundation1.prototype.notch = function(notchWidth) {
+        var OUTLINE_NOTCHED = MDCNotchedOutlineFoundation1.cssClasses.OUTLINE_NOTCHED;
+        if (notchWidth > 0) notchWidth += _constants.numbers.NOTCH_ELEMENT_PADDING; // Add padding from left/right.
+        this.adapter.setNotchWidthProperty(notchWidth);
+        this.adapter.addClass(OUTLINE_NOTCHED);
+    };
+    /**
+     * Removes notched outline selector to close the notch in the outline.
+     */ MDCNotchedOutlineFoundation1.prototype.closeNotch = function() {
+        var OUTLINE_NOTCHED = MDCNotchedOutlineFoundation1.cssClasses.OUTLINE_NOTCHED;
+        this.adapter.removeClass(OUTLINE_NOTCHED);
+        this.adapter.removeNotchWidthProperty();
+    };
+    return MDCNotchedOutlineFoundation1;
+}(_foundation.MDCFoundation);
+exports.default = MDCNotchedOutlineFoundation;
+
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"3IcFA","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"hwtce":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCTextFieldCharacterCounter", ()=>MDCTextFieldCharacterCounter
+);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _component = require("@material/base/component");
+var _foundation = require("./foundation");
+var MDCTextFieldCharacterCounter = function(_super) {
+    _tslib.__extends(MDCTextFieldCharacterCounter1, _super);
+    function MDCTextFieldCharacterCounter1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTextFieldCharacterCounter1.attachTo = function(root) {
+        return new MDCTextFieldCharacterCounter1(root);
+    };
+    Object.defineProperty(MDCTextFieldCharacterCounter1.prototype, "foundationForTextField", {
+        // Provided for access by MDCTextField component
+        get: function() {
+            return this.foundation;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCTextFieldCharacterCounter1.prototype.getDefaultFoundation = function() {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        var adapter = {
+            setContent: function(content) {
+                _this.root.textContent = content;
+            }
+        };
+        return new _foundation.MDCTextFieldCharacterCounterFoundation(adapter);
+    };
+    return MDCTextFieldCharacterCounter1;
+}(_component.MDCComponent);
+
+},{"tslib":"lRdW5","@material/base/component":"jLptS","./foundation":"dpux4","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"dpux4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCTextFieldCharacterCounterFoundation", ()=>MDCTextFieldCharacterCounterFoundation
+);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("@material/base/foundation");
+var _constants = require("./constants");
+var MDCTextFieldCharacterCounterFoundation = function(_super) {
+    _tslib.__extends(MDCTextFieldCharacterCounterFoundation1, _super);
+    function MDCTextFieldCharacterCounterFoundation1(adapter) {
+        return _super.call(this, _tslib.__assign(_tslib.__assign({
+        }, MDCTextFieldCharacterCounterFoundation1.defaultAdapter), adapter)) || this;
+    }
+    Object.defineProperty(MDCTextFieldCharacterCounterFoundation1, "cssClasses", {
+        get: function() {
+            return _constants.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldCharacterCounterFoundation1, "strings", {
+        get: function() {
+            return _constants.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldCharacterCounterFoundation1, "defaultAdapter", {
+        /**
+         * See {@link MDCTextFieldCharacterCounterAdapter} for typing information on parameters and return types.
+         */ get: function() {
+            return {
+                setContent: function() {
+                    return undefined;
+                }
+            };
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCTextFieldCharacterCounterFoundation1.prototype.setCounterValue = function(currentLength, maxLength) {
+        currentLength = Math.min(currentLength, maxLength);
+        this.adapter.setContent(currentLength + " / " + maxLength);
+    };
+    return MDCTextFieldCharacterCounterFoundation1;
+}(_foundation.MDCFoundation);
+exports.default = MDCTextFieldCharacterCounterFoundation;
+
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"1cPx3","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"1cPx3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "strings", ()=>strings
+);
+parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
+);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var cssClasses = {
+    ROOT: 'mdc-text-field-character-counter'
+};
+var strings = {
+    ROOT_SELECTOR: "." + cssClasses.ROOT
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"wdBr4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
+);
+parcelHelpers.export(exports, "strings", ()=>strings
+);
+parcelHelpers.export(exports, "numbers", ()=>numbers
+);
+parcelHelpers.export(exports, "VALIDATION_ATTR_WHITELIST", ()=>VALIDATION_ATTR_WHITELIST
+);
+parcelHelpers.export(exports, "ALWAYS_FLOAT_TYPES", ()=>ALWAYS_FLOAT_TYPES
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var strings = {
+    ARIA_CONTROLS: 'aria-controls',
+    ARIA_DESCRIBEDBY: 'aria-describedby',
+    INPUT_SELECTOR: '.mdc-text-field__input',
+    LABEL_SELECTOR: '.mdc-floating-label',
+    LEADING_ICON_SELECTOR: '.mdc-text-field__icon--leading',
+    LINE_RIPPLE_SELECTOR: '.mdc-line-ripple',
+    OUTLINE_SELECTOR: '.mdc-notched-outline',
+    PREFIX_SELECTOR: '.mdc-text-field__affix--prefix',
+    SUFFIX_SELECTOR: '.mdc-text-field__affix--suffix',
+    TRAILING_ICON_SELECTOR: '.mdc-text-field__icon--trailing'
+};
+var cssClasses = {
+    DISABLED: 'mdc-text-field--disabled',
+    FOCUSED: 'mdc-text-field--focused',
+    HELPER_LINE: 'mdc-text-field-helper-line',
+    INVALID: 'mdc-text-field--invalid',
+    LABEL_FLOATING: 'mdc-text-field--label-floating',
+    NO_LABEL: 'mdc-text-field--no-label',
+    OUTLINED: 'mdc-text-field--outlined',
+    ROOT: 'mdc-text-field',
+    TEXTAREA: 'mdc-text-field--textarea',
+    WITH_LEADING_ICON: 'mdc-text-field--with-leading-icon',
+    WITH_TRAILING_ICON: 'mdc-text-field--with-trailing-icon',
+    WITH_INTERNAL_COUNTER: 'mdc-text-field--with-internal-counter'
+};
+var numbers = {
+    LABEL_SCALE: 0.75
+};
+/**
+ * Whitelist based off of
+ * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation
+ * under the "Validation-related attributes" section.
+ */ var VALIDATION_ATTR_WHITELIST = [
+    'pattern',
+    'min',
+    'max',
+    'required',
+    'step',
+    'minlength',
+    'maxlength', 
+];
+/**
+ * Label should always float for these types as they show some UI even if value
+ * is empty.
+ */ var ALWAYS_FLOAT_TYPES = [
+    'color',
+    'date',
+    'datetime-local',
+    'month',
+    'range',
+    'time',
+    'week', 
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"2UHkh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCTextFieldFoundation", ()=>MDCTextFieldFoundation
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("@material/base/foundation");
+var _constants = require("./constants");
+var POINTERDOWN_EVENTS = [
+    'mousedown',
+    'touchstart'
+];
+var INTERACTION_EVENTS = [
+    'click',
+    'keydown'
+];
+var MDCTextFieldFoundation = function(_super) {
+    _tslib.__extends(MDCTextFieldFoundation1, _super);
+    /**
+     * @param adapter
+     * @param foundationMap Map from subcomponent names to their subfoundations.
+     */ function MDCTextFieldFoundation1(adapter, foundationMap) {
+        if (foundationMap === void 0) foundationMap = {
+        };
+        var _this = _super.call(this, _tslib.__assign(_tslib.__assign({
+        }, MDCTextFieldFoundation1.defaultAdapter), adapter)) || this;
+        _this.isFocused = false;
+        _this.receivedUserInput = false;
+        _this.valid = true;
+        _this.useNativeValidation = true;
+        _this.validateOnValueChange = true;
+        _this.helperText = foundationMap.helperText;
+        _this.characterCounter = foundationMap.characterCounter;
+        _this.leadingIcon = foundationMap.leadingIcon;
+        _this.trailingIcon = foundationMap.trailingIcon;
+        _this.inputFocusHandler = function() {
+            _this.activateFocus();
+        };
+        _this.inputBlurHandler = function() {
+            _this.deactivateFocus();
+        };
+        _this.inputInputHandler = function() {
+            _this.handleInput();
+        };
+        _this.setPointerXOffset = function(evt) {
+            _this.setTransformOrigin(evt);
+        };
+        _this.textFieldInteractionHandler = function() {
+            _this.handleTextFieldInteraction();
+        };
+        _this.validationAttributeChangeHandler = function(attributesList) {
+            _this.handleValidationAttributeChange(attributesList);
+        };
+        return _this;
+    }
+    Object.defineProperty(MDCTextFieldFoundation1, "cssClasses", {
+        get: function() {
+            return _constants.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldFoundation1, "strings", {
+        get: function() {
+            return _constants.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldFoundation1, "numbers", {
+        get: function() {
+            return _constants.numbers;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldFoundation1.prototype, "shouldAlwaysFloat", {
+        get: function() {
+            var type = this.getNativeInput().type;
+            return _constants.ALWAYS_FLOAT_TYPES.indexOf(type) >= 0;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldFoundation1.prototype, "shouldFloat", {
+        get: function() {
+            return this.shouldAlwaysFloat || this.isFocused || !!this.getValue() || this.isBadInput();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldFoundation1.prototype, "shouldShake", {
+        get: function() {
+            return !this.isFocused && !this.isValid() && !!this.getValue();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldFoundation1, "defaultAdapter", {
+        /**
+         * See {@link MDCTextFieldAdapter} for typing information on parameters and
+         * return types.
+         */ get: function() {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function() {
+                    return undefined;
+                },
+                removeClass: function() {
+                    return undefined;
+                },
+                hasClass: function() {
+                    return true;
+                },
+                setInputAttr: function() {
+                    return undefined;
+                },
+                removeInputAttr: function() {
+                    return undefined;
+                },
+                registerTextFieldInteractionHandler: function() {
+                    return undefined;
+                },
+                deregisterTextFieldInteractionHandler: function() {
+                    return undefined;
+                },
+                registerInputInteractionHandler: function() {
+                    return undefined;
+                },
+                deregisterInputInteractionHandler: function() {
+                    return undefined;
+                },
+                registerValidationAttributeChangeHandler: function() {
+                    return new MutationObserver(function() {
+                        return undefined;
+                    });
+                },
+                deregisterValidationAttributeChangeHandler: function() {
+                    return undefined;
+                },
+                getNativeInput: function() {
+                    return null;
+                },
+                isFocused: function() {
+                    return false;
+                },
+                activateLineRipple: function() {
+                    return undefined;
+                },
+                deactivateLineRipple: function() {
+                    return undefined;
+                },
+                setLineRippleTransformOrigin: function() {
+                    return undefined;
+                },
+                shakeLabel: function() {
+                    return undefined;
+                },
+                floatLabel: function() {
+                    return undefined;
+                },
+                setLabelRequired: function() {
+                    return undefined;
+                },
+                hasLabel: function() {
+                    return false;
+                },
+                getLabelWidth: function() {
+                    return 0;
+                },
+                hasOutline: function() {
+                    return false;
+                },
+                notchOutline: function() {
+                    return undefined;
+                },
+                closeOutline: function() {
+                    return undefined;
+                }
+            };
+        // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCTextFieldFoundation1.prototype.init = function() {
+        var e_1, _a, e_2, _b;
+        if (this.adapter.hasLabel() && this.getNativeInput().required) this.adapter.setLabelRequired(true);
+        if (this.adapter.isFocused()) this.inputFocusHandler();
+        else if (this.adapter.hasLabel() && this.shouldFloat) {
+            this.notchOutline(true);
+            this.adapter.floatLabel(true);
+            this.styleFloating(true);
+        }
+        this.adapter.registerInputInteractionHandler('focus', this.inputFocusHandler);
+        this.adapter.registerInputInteractionHandler('blur', this.inputBlurHandler);
+        this.adapter.registerInputInteractionHandler('input', this.inputInputHandler);
+        try {
+            for(var POINTERDOWN_EVENTS_1 = _tslib.__values(POINTERDOWN_EVENTS), POINTERDOWN_EVENTS_1_1 = POINTERDOWN_EVENTS_1.next(); !POINTERDOWN_EVENTS_1_1.done; POINTERDOWN_EVENTS_1_1 = POINTERDOWN_EVENTS_1.next()){
+                var evtType = POINTERDOWN_EVENTS_1_1.value;
+                this.adapter.registerInputInteractionHandler(evtType, this.setPointerXOffset);
+            }
+        } catch (e_1_1) {
+            e_1 = {
+                error: e_1_1
+            };
+        } finally{
+            try {
+                if (POINTERDOWN_EVENTS_1_1 && !POINTERDOWN_EVENTS_1_1.done && (_a = POINTERDOWN_EVENTS_1.return)) _a.call(POINTERDOWN_EVENTS_1);
+            } finally{
+                if (e_1) throw e_1.error;
+            }
+        }
+        try {
+            for(var INTERACTION_EVENTS_1 = _tslib.__values(INTERACTION_EVENTS), INTERACTION_EVENTS_1_1 = INTERACTION_EVENTS_1.next(); !INTERACTION_EVENTS_1_1.done; INTERACTION_EVENTS_1_1 = INTERACTION_EVENTS_1.next()){
+                var evtType = INTERACTION_EVENTS_1_1.value;
+                this.adapter.registerTextFieldInteractionHandler(evtType, this.textFieldInteractionHandler);
+            }
+        } catch (e_2_1) {
+            e_2 = {
+                error: e_2_1
+            };
+        } finally{
+            try {
+                if (INTERACTION_EVENTS_1_1 && !INTERACTION_EVENTS_1_1.done && (_b = INTERACTION_EVENTS_1.return)) _b.call(INTERACTION_EVENTS_1);
+            } finally{
+                if (e_2) throw e_2.error;
+            }
+        }
+        this.validationObserver = this.adapter.registerValidationAttributeChangeHandler(this.validationAttributeChangeHandler);
+        this.setcharacterCounter(this.getValue().length);
+    };
+    MDCTextFieldFoundation1.prototype.destroy = function() {
+        var e_3, _a, e_4, _b;
+        this.adapter.deregisterInputInteractionHandler('focus', this.inputFocusHandler);
+        this.adapter.deregisterInputInteractionHandler('blur', this.inputBlurHandler);
+        this.adapter.deregisterInputInteractionHandler('input', this.inputInputHandler);
+        try {
+            for(var POINTERDOWN_EVENTS_2 = _tslib.__values(POINTERDOWN_EVENTS), POINTERDOWN_EVENTS_2_1 = POINTERDOWN_EVENTS_2.next(); !POINTERDOWN_EVENTS_2_1.done; POINTERDOWN_EVENTS_2_1 = POINTERDOWN_EVENTS_2.next()){
+                var evtType = POINTERDOWN_EVENTS_2_1.value;
+                this.adapter.deregisterInputInteractionHandler(evtType, this.setPointerXOffset);
+            }
+        } catch (e_3_1) {
+            e_3 = {
+                error: e_3_1
+            };
+        } finally{
+            try {
+                if (POINTERDOWN_EVENTS_2_1 && !POINTERDOWN_EVENTS_2_1.done && (_a = POINTERDOWN_EVENTS_2.return)) _a.call(POINTERDOWN_EVENTS_2);
+            } finally{
+                if (e_3) throw e_3.error;
+            }
+        }
+        try {
+            for(var INTERACTION_EVENTS_2 = _tslib.__values(INTERACTION_EVENTS), INTERACTION_EVENTS_2_1 = INTERACTION_EVENTS_2.next(); !INTERACTION_EVENTS_2_1.done; INTERACTION_EVENTS_2_1 = INTERACTION_EVENTS_2.next()){
+                var evtType = INTERACTION_EVENTS_2_1.value;
+                this.adapter.deregisterTextFieldInteractionHandler(evtType, this.textFieldInteractionHandler);
+            }
+        } catch (e_4_1) {
+            e_4 = {
+                error: e_4_1
+            };
+        } finally{
+            try {
+                if (INTERACTION_EVENTS_2_1 && !INTERACTION_EVENTS_2_1.done && (_b = INTERACTION_EVENTS_2.return)) _b.call(INTERACTION_EVENTS_2);
+            } finally{
+                if (e_4) throw e_4.error;
+            }
+        }
+        this.adapter.deregisterValidationAttributeChangeHandler(this.validationObserver);
+    };
+    /**
+     * Handles user interactions with the Text Field.
+     */ MDCTextFieldFoundation1.prototype.handleTextFieldInteraction = function() {
+        var nativeInput = this.adapter.getNativeInput();
+        if (nativeInput && nativeInput.disabled) return;
+        this.receivedUserInput = true;
+    };
+    /**
+     * Handles validation attribute changes
+     */ MDCTextFieldFoundation1.prototype.handleValidationAttributeChange = function(attributesList) {
+        var _this = this;
+        attributesList.some(function(attributeName) {
+            if (_constants.VALIDATION_ATTR_WHITELIST.indexOf(attributeName) > -1) {
+                _this.styleValidity(true);
+                _this.adapter.setLabelRequired(_this.getNativeInput().required);
+                return true;
+            }
+            return false;
+        });
+        if (attributesList.indexOf('maxlength') > -1) this.setcharacterCounter(this.getValue().length);
+    };
+    /**
+     * Opens/closes the notched outline.
+     */ MDCTextFieldFoundation1.prototype.notchOutline = function(openNotch) {
+        if (!this.adapter.hasOutline() || !this.adapter.hasLabel()) return;
+        if (openNotch) {
+            var labelWidth = this.adapter.getLabelWidth() * _constants.numbers.LABEL_SCALE;
+            this.adapter.notchOutline(labelWidth);
+        } else this.adapter.closeOutline();
+    };
+    /**
+     * Activates the text field focus state.
+     */ MDCTextFieldFoundation1.prototype.activateFocus = function() {
+        this.isFocused = true;
+        this.styleFocused(this.isFocused);
+        this.adapter.activateLineRipple();
+        if (this.adapter.hasLabel()) {
+            this.notchOutline(this.shouldFloat);
+            this.adapter.floatLabel(this.shouldFloat);
+            this.styleFloating(this.shouldFloat);
+            this.adapter.shakeLabel(this.shouldShake);
+        }
+        if (this.helperText && (this.helperText.isPersistent() || !this.helperText.isValidation() || !this.valid)) this.helperText.showToScreenReader();
+    };
+    /**
+     * Sets the line ripple's transform origin, so that the line ripple activate
+     * animation will animate out from the user's click location.
+     */ MDCTextFieldFoundation1.prototype.setTransformOrigin = function(evt) {
+        if (this.isDisabled() || this.adapter.hasOutline()) return;
+        var touches = evt.touches;
+        var targetEvent = touches ? touches[0] : evt;
+        var targetClientRect = targetEvent.target.getBoundingClientRect();
+        var normalizedX = targetEvent.clientX - targetClientRect.left;
+        this.adapter.setLineRippleTransformOrigin(normalizedX);
+    };
+    /**
+     * Handles input change of text input and text area.
+     */ MDCTextFieldFoundation1.prototype.handleInput = function() {
+        this.autoCompleteFocus();
+        this.setcharacterCounter(this.getValue().length);
+    };
+    /**
+     * Activates the Text Field's focus state in cases when the input value
+     * changes without user input (e.g. programmatically).
+     */ MDCTextFieldFoundation1.prototype.autoCompleteFocus = function() {
+        if (!this.receivedUserInput) this.activateFocus();
+    };
+    /**
+     * Deactivates the Text Field's focus state.
+     */ MDCTextFieldFoundation1.prototype.deactivateFocus = function() {
+        this.isFocused = false;
+        this.adapter.deactivateLineRipple();
+        var isValid = this.isValid();
+        this.styleValidity(isValid);
+        this.styleFocused(this.isFocused);
+        if (this.adapter.hasLabel()) {
+            this.notchOutline(this.shouldFloat);
+            this.adapter.floatLabel(this.shouldFloat);
+            this.styleFloating(this.shouldFloat);
+            this.adapter.shakeLabel(this.shouldShake);
+        }
+        if (!this.shouldFloat) this.receivedUserInput = false;
+    };
+    MDCTextFieldFoundation1.prototype.getValue = function() {
+        return this.getNativeInput().value;
+    };
+    /**
+     * @param value The value to set on the input Element.
+     */ MDCTextFieldFoundation1.prototype.setValue = function(value) {
+        // Prevent Safari from moving the caret to the end of the input when the
+        // value has not changed.
+        if (this.getValue() !== value) this.getNativeInput().value = value;
+        this.setcharacterCounter(value.length);
+        if (this.validateOnValueChange) {
+            var isValid = this.isValid();
+            this.styleValidity(isValid);
+        }
+        if (this.adapter.hasLabel()) {
+            this.notchOutline(this.shouldFloat);
+            this.adapter.floatLabel(this.shouldFloat);
+            this.styleFloating(this.shouldFloat);
+            if (this.validateOnValueChange) this.adapter.shakeLabel(this.shouldShake);
+        }
+    };
+    /**
+     * @return The custom validity state, if set; otherwise, the result of a
+     *     native validity check.
+     */ MDCTextFieldFoundation1.prototype.isValid = function() {
+        return this.useNativeValidation ? this.isNativeInputValid() : this.valid;
+    };
+    /**
+     * @param isValid Sets the custom validity state of the Text Field.
+     */ MDCTextFieldFoundation1.prototype.setValid = function(isValid) {
+        this.valid = isValid;
+        this.styleValidity(isValid);
+        var shouldShake = !isValid && !this.isFocused && !!this.getValue();
+        if (this.adapter.hasLabel()) this.adapter.shakeLabel(shouldShake);
+    };
+    /**
+     * @param shouldValidate Whether or not validity should be updated on
+     *     value change.
+     */ MDCTextFieldFoundation1.prototype.setValidateOnValueChange = function(shouldValidate) {
+        this.validateOnValueChange = shouldValidate;
+    };
+    /**
+     * @return Whether or not validity should be updated on value change. `true`
+     *     by default.
+     */ MDCTextFieldFoundation1.prototype.getValidateOnValueChange = function() {
+        return this.validateOnValueChange;
+    };
+    /**
+     * Enables or disables the use of native validation. Use this for custom
+     * validation.
+     * @param useNativeValidation Set this to false to ignore native input
+     *     validation.
+     */ MDCTextFieldFoundation1.prototype.setUseNativeValidation = function(useNativeValidation) {
+        this.useNativeValidation = useNativeValidation;
+    };
+    MDCTextFieldFoundation1.prototype.isDisabled = function() {
+        return this.getNativeInput().disabled;
+    };
+    /**
+     * @param disabled Sets the text-field disabled or enabled.
+     */ MDCTextFieldFoundation1.prototype.setDisabled = function(disabled) {
+        this.getNativeInput().disabled = disabled;
+        this.styleDisabled(disabled);
+    };
+    /**
+     * @param content Sets the content of the helper text.
+     */ MDCTextFieldFoundation1.prototype.setHelperTextContent = function(content) {
+        if (this.helperText) this.helperText.setContent(content);
+    };
+    /**
+     * Sets the aria label of the leading icon.
+     */ MDCTextFieldFoundation1.prototype.setLeadingIconAriaLabel = function(label) {
+        if (this.leadingIcon) this.leadingIcon.setAriaLabel(label);
+    };
+    /**
+     * Sets the text content of the leading icon.
+     */ MDCTextFieldFoundation1.prototype.setLeadingIconContent = function(content) {
+        if (this.leadingIcon) this.leadingIcon.setContent(content);
+    };
+    /**
+     * Sets the aria label of the trailing icon.
+     */ MDCTextFieldFoundation1.prototype.setTrailingIconAriaLabel = function(label) {
+        if (this.trailingIcon) this.trailingIcon.setAriaLabel(label);
+    };
+    /**
+     * Sets the text content of the trailing icon.
+     */ MDCTextFieldFoundation1.prototype.setTrailingIconContent = function(content) {
+        if (this.trailingIcon) this.trailingIcon.setContent(content);
+    };
+    /**
+     * Sets character counter values that shows characters used and the total
+     * character limit.
+     */ MDCTextFieldFoundation1.prototype.setcharacterCounter = function(currentLength) {
+        if (!this.characterCounter) return;
+        var maxLength = this.getNativeInput().maxLength;
+        if (maxLength === -1) throw new Error('MDCTextFieldFoundation: Expected maxlength html property on text input or textarea.');
+        this.characterCounter.setCounterValue(currentLength, maxLength);
+    };
+    /**
+     * @return True if the Text Field input fails in converting the user-supplied
+     *     value.
+     */ MDCTextFieldFoundation1.prototype.isBadInput = function() {
+        // The badInput property is not supported in IE 11 💩.
+        return this.getNativeInput().validity.badInput || false;
+    };
+    /**
+     * @return The result of native validity checking (ValidityState.valid).
+     */ MDCTextFieldFoundation1.prototype.isNativeInputValid = function() {
+        return this.getNativeInput().validity.valid;
+    };
+    /**
+     * Styles the component based on the validity state.
+     */ MDCTextFieldFoundation1.prototype.styleValidity = function(isValid) {
+        var INVALID = MDCTextFieldFoundation1.cssClasses.INVALID;
+        if (isValid) this.adapter.removeClass(INVALID);
+        else this.adapter.addClass(INVALID);
+        if (this.helperText) {
+            this.helperText.setValidity(isValid);
+            // We dynamically set or unset aria-describedby for validation helper text
+            // only, based on whether the field is valid
+            var helperTextValidation = this.helperText.isValidation();
+            if (!helperTextValidation) return;
+            var helperTextVisible = this.helperText.isVisible();
+            var helperTextId = this.helperText.getId();
+            if (helperTextVisible && helperTextId) this.adapter.setInputAttr(_constants.strings.ARIA_DESCRIBEDBY, helperTextId);
+            else this.adapter.removeInputAttr(_constants.strings.ARIA_DESCRIBEDBY);
+        }
+    };
+    /**
+     * Styles the component based on the focused state.
+     */ MDCTextFieldFoundation1.prototype.styleFocused = function(isFocused) {
+        var FOCUSED = MDCTextFieldFoundation1.cssClasses.FOCUSED;
+        if (isFocused) this.adapter.addClass(FOCUSED);
+        else this.adapter.removeClass(FOCUSED);
+    };
+    /**
+     * Styles the component based on the disabled state.
+     */ MDCTextFieldFoundation1.prototype.styleDisabled = function(isDisabled) {
+        var _a = MDCTextFieldFoundation1.cssClasses, DISABLED = _a.DISABLED, INVALID = _a.INVALID;
+        if (isDisabled) {
+            this.adapter.addClass(DISABLED);
+            this.adapter.removeClass(INVALID);
+        } else this.adapter.removeClass(DISABLED);
+        if (this.leadingIcon) this.leadingIcon.setDisabled(isDisabled);
+        if (this.trailingIcon) this.trailingIcon.setDisabled(isDisabled);
+    };
+    /**
+     * Styles the component based on the label floating state.
+     */ MDCTextFieldFoundation1.prototype.styleFloating = function(isFloating) {
+        var LABEL_FLOATING = MDCTextFieldFoundation1.cssClasses.LABEL_FLOATING;
+        if (isFloating) this.adapter.addClass(LABEL_FLOATING);
+        else this.adapter.removeClass(LABEL_FLOATING);
+    };
+    /**
+     * @return The native text input element from the host environment, or an
+     *     object with the same shape for unit tests.
+     */ MDCTextFieldFoundation1.prototype.getNativeInput = function() {
+        // this.adapter may be undefined in foundation unit tests. This happens when
+        // testdouble is creating a mock object and invokes the
+        // shouldShake/shouldFloat getters (which in turn call getValue(), which
+        // calls this method) before init() has been called from the MDCTextField
+        // constructor. To work around that issue, we return a dummy object.
+        var nativeInput = this.adapter ? this.adapter.getNativeInput() : null;
+        return nativeInput || {
+            disabled: false,
+            maxLength: -1,
+            required: false,
+            type: 'input',
+            validity: {
+                badInput: false,
+                valid: true
+            },
+            value: ''
+        };
+    };
+    return MDCTextFieldFoundation1;
+}(_foundation.MDCFoundation);
+exports.default = MDCTextFieldFoundation;
+
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"wdBr4","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"bX2wx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCTextFieldHelperText", ()=>MDCTextFieldHelperText
+);
+/**
+ * @license
+ * Copyright 2017 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _component = require("@material/base/component");
+var _foundation = require("./foundation");
+var MDCTextFieldHelperText = function(_super) {
+    _tslib.__extends(MDCTextFieldHelperText1, _super);
+    function MDCTextFieldHelperText1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTextFieldHelperText1.attachTo = function(root) {
+        return new MDCTextFieldHelperText1(root);
+    };
+    Object.defineProperty(MDCTextFieldHelperText1.prototype, "foundationForTextField", {
+        // Provided for access by MDCTextField component
+        get: function() {
+            return this.foundation;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCTextFieldHelperText1.prototype.getDefaultFoundation = function() {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            addClass: function(className) {
+                return _this.root.classList.add(className);
+            },
+            removeClass: function(className) {
+                return _this.root.classList.remove(className);
+            },
+            hasClass: function(className) {
+                return _this.root.classList.contains(className);
+            },
+            getAttr: function(attr) {
+                return _this.root.getAttribute(attr);
+            },
+            setAttr: function(attr, value) {
+                return _this.root.setAttribute(attr, value);
+            },
+            removeAttr: function(attr) {
+                return _this.root.removeAttribute(attr);
+            },
+            setContent: function(content) {
+                _this.root.textContent = content;
+            }
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation.MDCTextFieldHelperTextFoundation(adapter);
+    };
+    return MDCTextFieldHelperText1;
+}(_component.MDCComponent);
+
+},{"tslib":"lRdW5","@material/base/component":"jLptS","./foundation":"5gLP0","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"5gLP0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCTextFieldHelperTextFoundation", ()=>MDCTextFieldHelperTextFoundation
+);
+/**
+ * @license
+ * Copyright 2017 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("@material/base/foundation");
+var _constants = require("./constants");
+var MDCTextFieldHelperTextFoundation = function(_super) {
+    _tslib.__extends(MDCTextFieldHelperTextFoundation1, _super);
+    function MDCTextFieldHelperTextFoundation1(adapter) {
+        return _super.call(this, _tslib.__assign(_tslib.__assign({
+        }, MDCTextFieldHelperTextFoundation1.defaultAdapter), adapter)) || this;
+    }
+    Object.defineProperty(MDCTextFieldHelperTextFoundation1, "cssClasses", {
+        get: function() {
+            return _constants.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldHelperTextFoundation1, "strings", {
+        get: function() {
+            return _constants.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldHelperTextFoundation1, "defaultAdapter", {
+        /**
+         * See {@link MDCTextFieldHelperTextAdapter} for typing information on parameters and return types.
+         */ get: function() {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                addClass: function() {
+                    return undefined;
+                },
+                removeClass: function() {
+                    return undefined;
+                },
+                hasClass: function() {
+                    return false;
+                },
+                getAttr: function() {
+                    return null;
+                },
+                setAttr: function() {
+                    return undefined;
+                },
+                removeAttr: function() {
+                    return undefined;
+                },
+                setContent: function() {
+                    return undefined;
+                }
+            };
+        // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCTextFieldHelperTextFoundation1.prototype.getId = function() {
+        return this.adapter.getAttr('id');
+    };
+    MDCTextFieldHelperTextFoundation1.prototype.isVisible = function() {
+        return this.adapter.getAttr(_constants.strings.ARIA_HIDDEN) !== 'true';
+    };
+    /**
+     * Sets the content of the helper text field.
+     */ MDCTextFieldHelperTextFoundation1.prototype.setContent = function(content) {
+        this.adapter.setContent(content);
+    };
+    MDCTextFieldHelperTextFoundation1.prototype.isPersistent = function() {
+        return this.adapter.hasClass(_constants.cssClasses.HELPER_TEXT_PERSISTENT);
+    };
+    /**
+     * @param isPersistent Sets the persistency of the helper text.
+     */ MDCTextFieldHelperTextFoundation1.prototype.setPersistent = function(isPersistent) {
+        if (isPersistent) this.adapter.addClass(_constants.cssClasses.HELPER_TEXT_PERSISTENT);
+        else this.adapter.removeClass(_constants.cssClasses.HELPER_TEXT_PERSISTENT);
+    };
+    /**
+     * @return whether the helper text acts as an error validation message.
+     */ MDCTextFieldHelperTextFoundation1.prototype.isValidation = function() {
+        return this.adapter.hasClass(_constants.cssClasses.HELPER_TEXT_VALIDATION_MSG);
+    };
+    /**
+     * @param isValidation True to make the helper text act as an error validation message.
+     */ MDCTextFieldHelperTextFoundation1.prototype.setValidation = function(isValidation) {
+        if (isValidation) this.adapter.addClass(_constants.cssClasses.HELPER_TEXT_VALIDATION_MSG);
+        else this.adapter.removeClass(_constants.cssClasses.HELPER_TEXT_VALIDATION_MSG);
+    };
+    /**
+     * Makes the helper text visible to the screen reader.
+     */ MDCTextFieldHelperTextFoundation1.prototype.showToScreenReader = function() {
+        this.adapter.removeAttr(_constants.strings.ARIA_HIDDEN);
+    };
+    /**
+     * Sets the validity of the helper text based on the input validity.
+     */ MDCTextFieldHelperTextFoundation1.prototype.setValidity = function(inputIsValid) {
+        var helperTextIsPersistent = this.adapter.hasClass(_constants.cssClasses.HELPER_TEXT_PERSISTENT);
+        var helperTextIsValidationMsg = this.adapter.hasClass(_constants.cssClasses.HELPER_TEXT_VALIDATION_MSG);
+        var validationMsgNeedsDisplay = helperTextIsValidationMsg && !inputIsValid;
+        if (validationMsgNeedsDisplay) {
+            this.showToScreenReader();
+            // If role is already alert, refresh it to trigger another announcement
+            // from screenreader.
+            if (this.adapter.getAttr(_constants.strings.ROLE) === 'alert') this.refreshAlertRole();
+            else this.adapter.setAttr(_constants.strings.ROLE, 'alert');
+        } else this.adapter.removeAttr(_constants.strings.ROLE);
+        if (!helperTextIsPersistent && !validationMsgNeedsDisplay) this.hide();
+    };
+    /**
+     * Hides the help text from screen readers.
+     */ MDCTextFieldHelperTextFoundation1.prototype.hide = function() {
+        this.adapter.setAttr(_constants.strings.ARIA_HIDDEN, 'true');
+    };
+    MDCTextFieldHelperTextFoundation1.prototype.refreshAlertRole = function() {
+        var _this = this;
+        this.adapter.removeAttr(_constants.strings.ROLE);
+        requestAnimationFrame(function() {
+            _this.adapter.setAttr(_constants.strings.ROLE, 'alert');
+        });
+    };
+    return MDCTextFieldHelperTextFoundation1;
+}(_foundation.MDCFoundation);
+exports.default = MDCTextFieldHelperTextFoundation;
+
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"f4O20","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"f4O20":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "strings", ()=>strings
+);
+parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var cssClasses = {
+    HELPER_TEXT_PERSISTENT: 'mdc-text-field-helper-text--persistent',
+    HELPER_TEXT_VALIDATION_MSG: 'mdc-text-field-helper-text--validation-msg',
+    ROOT: 'mdc-text-field-helper-text'
+};
+var strings = {
+    ARIA_HIDDEN: 'aria-hidden',
+    ROLE: 'role',
+    ROOT_SELECTOR: "." + cssClasses.ROOT
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"gn4Te":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCTextFieldIcon", ()=>MDCTextFieldIcon
+);
+/**
+ * @license
+ * Copyright 2017 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _component = require("@material/base/component");
+var _foundation = require("./foundation");
+var MDCTextFieldIcon = function(_super) {
+    _tslib.__extends(MDCTextFieldIcon1, _super);
+    function MDCTextFieldIcon1() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MDCTextFieldIcon1.attachTo = function(root) {
+        return new MDCTextFieldIcon1(root);
+    };
+    Object.defineProperty(MDCTextFieldIcon1.prototype, "foundationForTextField", {
+        // Provided for access by MDCTextField component
+        get: function() {
+            return this.foundation;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCTextFieldIcon1.prototype.getDefaultFoundation = function() {
+        var _this = this;
+        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
+        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
+        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+        var adapter = {
+            getAttr: function(attr) {
+                return _this.root.getAttribute(attr);
+            },
+            setAttr: function(attr, value) {
+                return _this.root.setAttribute(attr, value);
+            },
+            removeAttr: function(attr) {
+                return _this.root.removeAttribute(attr);
+            },
+            setContent: function(content) {
+                _this.root.textContent = content;
+            },
+            registerInteractionHandler: function(evtType, handler) {
+                return _this.listen(evtType, handler);
+            },
+            deregisterInteractionHandler: function(evtType, handler) {
+                return _this.unlisten(evtType, handler);
+            },
+            notifyIconAction: function() {
+                return _this.emit(_foundation.MDCTextFieldIconFoundation.strings.ICON_EVENT, {
+                } /* evtData */ , true);
+            }
+        };
+        // tslint:enable:object-literal-sort-keys
+        return new _foundation.MDCTextFieldIconFoundation(adapter);
+    };
+    return MDCTextFieldIcon1;
+}(_component.MDCComponent);
+
+},{"tslib":"lRdW5","@material/base/component":"jLptS","./foundation":"95gVw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"95gVw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCTextFieldIconFoundation", ()=>MDCTextFieldIconFoundation
+);
+/**
+ * @license
+ * Copyright 2017 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("@material/base/foundation");
+var _constants = require("./constants");
+var INTERACTION_EVENTS = [
+    'click',
+    'keydown'
+];
+var MDCTextFieldIconFoundation = function(_super) {
+    _tslib.__extends(MDCTextFieldIconFoundation1, _super);
+    function MDCTextFieldIconFoundation1(adapter) {
+        var _this = _super.call(this, _tslib.__assign(_tslib.__assign({
+        }, MDCTextFieldIconFoundation1.defaultAdapter), adapter)) || this;
+        _this.savedTabIndex = null;
+        _this.interactionHandler = function(evt) {
+            _this.handleInteraction(evt);
+        };
+        return _this;
+    }
+    Object.defineProperty(MDCTextFieldIconFoundation1, "strings", {
+        get: function() {
+            return _constants.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldIconFoundation1, "cssClasses", {
+        get: function() {
+            return _constants.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCTextFieldIconFoundation1, "defaultAdapter", {
+        /**
+         * See {@link MDCTextFieldIconAdapter} for typing information on parameters and return types.
+         */ get: function() {
+            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
+            return {
+                getAttr: function() {
+                    return null;
+                },
+                setAttr: function() {
+                    return undefined;
+                },
+                removeAttr: function() {
+                    return undefined;
+                },
+                setContent: function() {
+                    return undefined;
+                },
+                registerInteractionHandler: function() {
+                    return undefined;
+                },
+                deregisterInteractionHandler: function() {
+                    return undefined;
+                },
+                notifyIconAction: function() {
+                    return undefined;
+                }
+            };
+        // tslint:enable:object-literal-sort-keys
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCTextFieldIconFoundation1.prototype.init = function() {
+        var e_1, _a;
+        this.savedTabIndex = this.adapter.getAttr('tabindex');
+        try {
+            for(var INTERACTION_EVENTS_1 = _tslib.__values(INTERACTION_EVENTS), INTERACTION_EVENTS_1_1 = INTERACTION_EVENTS_1.next(); !INTERACTION_EVENTS_1_1.done; INTERACTION_EVENTS_1_1 = INTERACTION_EVENTS_1.next()){
+                var evtType = INTERACTION_EVENTS_1_1.value;
+                this.adapter.registerInteractionHandler(evtType, this.interactionHandler);
+            }
+        } catch (e_1_1) {
+            e_1 = {
+                error: e_1_1
+            };
+        } finally{
+            try {
+                if (INTERACTION_EVENTS_1_1 && !INTERACTION_EVENTS_1_1.done && (_a = INTERACTION_EVENTS_1.return)) _a.call(INTERACTION_EVENTS_1);
+            } finally{
+                if (e_1) throw e_1.error;
+            }
+        }
+    };
+    MDCTextFieldIconFoundation1.prototype.destroy = function() {
+        var e_2, _a;
+        try {
+            for(var INTERACTION_EVENTS_2 = _tslib.__values(INTERACTION_EVENTS), INTERACTION_EVENTS_2_1 = INTERACTION_EVENTS_2.next(); !INTERACTION_EVENTS_2_1.done; INTERACTION_EVENTS_2_1 = INTERACTION_EVENTS_2.next()){
+                var evtType = INTERACTION_EVENTS_2_1.value;
+                this.adapter.deregisterInteractionHandler(evtType, this.interactionHandler);
+            }
+        } catch (e_2_1) {
+            e_2 = {
+                error: e_2_1
+            };
+        } finally{
+            try {
+                if (INTERACTION_EVENTS_2_1 && !INTERACTION_EVENTS_2_1.done && (_a = INTERACTION_EVENTS_2.return)) _a.call(INTERACTION_EVENTS_2);
+            } finally{
+                if (e_2) throw e_2.error;
+            }
+        }
+    };
+    MDCTextFieldIconFoundation1.prototype.setDisabled = function(disabled) {
+        if (!this.savedTabIndex) return;
+        if (disabled) {
+            this.adapter.setAttr('tabindex', '-1');
+            this.adapter.removeAttr('role');
+        } else {
+            this.adapter.setAttr('tabindex', this.savedTabIndex);
+            this.adapter.setAttr('role', _constants.strings.ICON_ROLE);
+        }
+    };
+    MDCTextFieldIconFoundation1.prototype.setAriaLabel = function(label) {
+        this.adapter.setAttr('aria-label', label);
+    };
+    MDCTextFieldIconFoundation1.prototype.setContent = function(content) {
+        this.adapter.setContent(content);
+    };
+    MDCTextFieldIconFoundation1.prototype.handleInteraction = function(evt) {
+        var isEnterKey = evt.key === 'Enter' || evt.keyCode === 13;
+        if (evt.type === 'click' || isEnterKey) {
+            evt.preventDefault(); // stop click from causing host label to focus
+            // input
+            this.adapter.notifyIconAction();
+        }
+    };
+    return MDCTextFieldIconFoundation1;
+}(_foundation.MDCFoundation);
+exports.default = MDCTextFieldIconFoundation;
+
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"aIXJG","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"aIXJG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "strings", ()=>strings
+);
+parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var strings = {
+    ICON_EVENT: 'MDCTextField:icon',
+    ICON_ROLE: 'button'
+};
+var cssClasses = {
+    ROOT: 'mdc-text-field__icon'
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"4SZIS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"8ibHT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "characterCountCssClasses", ()=>_constants.cssClasses
+);
+parcelHelpers.export(exports, "characterCountStrings", ()=>_constants.strings
+);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _adapter = require("./adapter");
+parcelHelpers.exportAll(_adapter, exports);
+var _component = require("./component");
+parcelHelpers.exportAll(_component, exports);
+var _foundation = require("./foundation");
+parcelHelpers.exportAll(_foundation, exports);
+var _constants = require("./constants");
+
+},{"./adapter":"3byYj","./component":"hwtce","./foundation":"dpux4","./constants":"1cPx3","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"3byYj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"j9yda":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "helperTextCssClasses", ()=>_constants.cssClasses
+);
+parcelHelpers.export(exports, "helperTextStrings", ()=>_constants.strings
+);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _adapter = require("./adapter");
+parcelHelpers.exportAll(_adapter, exports);
+var _component = require("./component");
+parcelHelpers.exportAll(_component, exports);
+var _foundation = require("./foundation");
+parcelHelpers.exportAll(_foundation, exports);
+var _constants = require("./constants");
+
+},{"./adapter":"hl5sa","./component":"bX2wx","./foundation":"5gLP0","./constants":"f4O20","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"hl5sa":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"82Zgi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "iconCssClasses", ()=>_constants.cssClasses
+);
+parcelHelpers.export(exports, "iconStrings", ()=>_constants.strings
+);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _adapter = require("./adapter");
+parcelHelpers.exportAll(_adapter, exports);
+var _component = require("./component");
+parcelHelpers.exportAll(_component, exports);
+var _foundation = require("./foundation");
+parcelHelpers.exportAll(_foundation, exports);
+var _constants = require("./constants");
+
+},{"./adapter":"43CWW","./component":"gn4Te","./foundation":"95gVw","./constants":"aIXJG","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"43CWW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"jRAE3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "util", ()=>_util
+);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _util = require("./util");
+var _adapter = require("./adapter");
+parcelHelpers.exportAll(_adapter, exports);
+var _component = require("./component");
+parcelHelpers.exportAll(_component, exports);
+var _constants = require("./constants");
+parcelHelpers.exportAll(_constants, exports);
+var _foundation = require("./foundation");
+parcelHelpers.exportAll(_foundation, exports);
+var _types = require("./types");
+parcelHelpers.exportAll(_types, exports);
+
+},{"./util":"l3az5","./adapter":"9CpwK","./component":"035sE","./constants":"lg1jP","./foundation":"7frpT","./types":"xrl7V","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"9CpwK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"xrl7V":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"03vJm":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$76ff = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
