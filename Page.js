@@ -3,15 +3,14 @@ import { Work } from "./Work";
 import { About } from "./About";
 import { Contact } from "./Contact";
 import { Project } from "./Project";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
-{
-  /*  
-  <Route exact path="/" element={<Work />}>
-    <Work />
-  </Route> */
-}
 export function Page() {
+  let location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
   return (
     <div>
       <Header />

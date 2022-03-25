@@ -19,13 +19,7 @@ export function Header() {
     >
       <div className="mdc-top-app-bar__row">
         <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          {/* hard coding the home url due to complications with React Router and Github Pages*/}
-          {/*<a
-            href="https://jesseraypaulsen.github.io/portfolio"
-            className="material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
-          >
-            gesture
-          </a>*/}
+          {/* instead of using Link, an anchor tag and the useNavigate hook are used to overcome conflicts with React Router and Github Pages*/}
           <a
             href=""
             onClick={() => navigate("/")}
