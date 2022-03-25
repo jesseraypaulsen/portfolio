@@ -24659,16 +24659,11 @@ var _contact = require("./Contact");
 var _project = require("./Project");
 var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
-var _s = $RefreshSig$();
 function Page() {
-    _s();
-    let location = _reactRouterDom.useLocation();
-    _react.useEffect(()=>{
-        window.scrollTo(0, 0);
-    }, [
-        location
-    ]);
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+    /*let location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);*/ return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
             }, void 0, false, {
@@ -24728,11 +24723,6 @@ function Page() {
         columnNumber: 5
     }, this));
 }
-_s(Page, "BXcZrDMM76mmm4zA8/QV5UbMNXE=", false, function() {
-    return [
-        _reactRouterDom.useLocation
-    ];
-});
 _c = Page;
 var _c;
 $RefreshReg$(_c, "Page");
