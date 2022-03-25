@@ -1012,18 +1012,18 @@ var _page = require("./Page");
 //import material
 var _stylesCss = require("./styles.css");
 const container = document.getElementById("container");
-console.log(undefined);
+//console.log(process.env.BASE_URL);
+//<HashRouter basename={process.env.BASE_URL}>
 _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.HashRouter, {
-    basename: undefined,
     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_page.Page, {
     }, void 0, false, {
         fileName: "index.js",
-        lineNumber: 12,
+        lineNumber: 13,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "index.js",
-    lineNumber: 11,
+    lineNumber: 12,
     columnNumber: 3
 }, undefined), container);
 
@@ -24664,17 +24664,15 @@ var _react = require("react");
 var _s = $RefreshSig$();
 function Page() {
     _s();
-    let location = _reactRouterDom.useLocation();
     _react.useEffect(()=>{
-        //window.scrollTo(0, 0);
-        console.log(`Page.js -> useEffect -> useLocation`);
+        window.scrollTo(0, 0);
     }, []);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
             }, void 0, false, {
                 fileName: "Page.js",
-                lineNumber: 17,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
@@ -24686,7 +24684,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 19,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24695,7 +24693,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 20,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24704,7 +24702,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 21,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24713,27 +24711,23 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 22,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Page.js",
-                lineNumber: 18,
+                lineNumber: 16,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Page.js",
-        lineNumber: 16,
+        lineNumber: 14,
         columnNumber: 5
     }, this));
 }
-_s(Page, "BXcZrDMM76mmm4zA8/QV5UbMNXE=", false, function() {
-    return [
-        _reactRouterDom.useLocation
-    ];
-});
+_s(Page, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = Page;
 var _c;
 $RefreshReg$(_c, "Page");
@@ -24788,7 +24782,7 @@ function Header() {
                             children: "gesture"
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 23,
+                            lineNumber: 24,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
@@ -24796,7 +24790,7 @@ function Header() {
                             children: "My Portfolio"
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 30,
+                            lineNumber: 31,
                             columnNumber: 11
                         }, this)
                     ]
@@ -24818,12 +24812,12 @@ function Header() {
                                     children: "Projects"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 35,
+                                    lineNumber: 36,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 34,
+                                lineNumber: 35,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -24834,12 +24828,12 @@ function Header() {
                                     children: "About"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 40,
+                                    lineNumber: 41,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 39,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -24850,23 +24844,23 @@ function Header() {
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 45,
+                                    lineNumber: 46,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 44,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Header.js",
-                        lineNumber: 33,
+                        lineNumber: 34,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Header.js",
-                    lineNumber: 32,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, this)
             ]
@@ -27175,7 +27169,13 @@ parcelHelpers.export(exports, "Work", ()=>Work
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
+var _react = require("react");
+var _s = $RefreshSig$();
 function Work() {
+    _s();
+    _react.useEffect(()=>{
+        window.scrollTo(0, 0);
+    }, []);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
@@ -27183,7 +27183,7 @@ function Work() {
                 children: "Projects"
             }, void 0, false, {
                 fileName: "Work.js",
-                lineNumber: 6,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
@@ -27201,7 +27201,7 @@ function Work() {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 10,
+                                    lineNumber: 14,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27212,7 +27212,7 @@ function Work() {
                                             children: "Web Application"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 15,
+                                            lineNumber: 19,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -27220,7 +27220,7 @@ function Work() {
                                             children: "Personal Knowledge Management System"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 18,
+                                            lineNumber: 22,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27228,24 +27228,24 @@ function Work() {
                                             children: "Inspired by Memex and the Zettelkasten. Renders notecards as nodes on a graph."
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 21,
+                                            lineNumber: 25,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 14,
+                                    lineNumber: 18,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 9,
+                            lineNumber: 13,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 8,
+                        lineNumber: 12,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -27260,7 +27260,7 @@ function Work() {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 30,
+                                    lineNumber: 34,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27271,7 +27271,7 @@ function Work() {
                                             children: "Web Application"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 35,
+                                            lineNumber: 39,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -27279,7 +27279,7 @@ function Work() {
                                             children: "Personality Test"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 38,
+                                            lineNumber: 42,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27287,24 +27287,24 @@ function Work() {
                                             children: "The Five O.C.E.A.N. Traits"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 41,
+                                            lineNumber: 45,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 34,
+                                    lineNumber: 38,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 29,
+                            lineNumber: 33,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 28,
+                        lineNumber: 32,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -27319,7 +27319,7 @@ function Work() {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 49,
+                                    lineNumber: 53,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27330,7 +27330,7 @@ function Work() {
                                             children: "Photography"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 54,
+                                            lineNumber: 58,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -27338,7 +27338,7 @@ function Work() {
                                             children: "Flowers of Amsterdam"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 57,
+                                            lineNumber: 61,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27346,24 +27346,24 @@ function Work() {
                                             children: "Flowers are an essential part of nature. Here they mix with city life."
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 60,
+                                            lineNumber: 64,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 53,
+                                    lineNumber: 57,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 48,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 47,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -27378,7 +27378,7 @@ function Work() {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 69,
+                                    lineNumber: 73,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27389,7 +27389,7 @@ function Work() {
                                             children: "Photography"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 74,
+                                            lineNumber: 78,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -27397,7 +27397,7 @@ function Work() {
                                             children: "Flowers of Amsterdam"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 77,
+                                            lineNumber: 81,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27405,39 +27405,40 @@ function Work() {
                                             children: "Flowers are an essential part of nature. Here they mix with city life."
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 80,
+                                            lineNumber: 84,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 73,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 68,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 67,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Work.js",
-                lineNumber: 7,
+                lineNumber: 11,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Work.js",
-        lineNumber: 5,
+        lineNumber: 9,
         columnNumber: 5
     }, this));
 }
+_s(Work, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = Work;
 var _c;
 $RefreshReg$(_c, "Work");
@@ -27447,7 +27448,7 @@ $RefreshReg$(_c, "Work");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"2rsUE":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","react":"21dqq"}],"2rsUE":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27459,7 +27460,13 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "About", ()=>About
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 function About() {
+    _s();
+    _react.useEffect(()=>{
+        window.scrollTo(0, 0);
+    }, []);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
@@ -27467,7 +27474,7 @@ function About() {
                 children: "About Me"
             }, void 0, false, {
                 fileName: "About.js",
-                lineNumber: 4,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27480,30 +27487,17 @@ function About() {
                             alt: ""
                         }, void 0, false, {
                             fileName: "About.js",
-                            lineNumber: 7,
+                            lineNumber: 12,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "About.js",
-                        lineNumber: 6,
+                        lineNumber: 11,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
                         children: [
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur. Odio? Magnam asperiores impedit fuga",
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
-                            }, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 17,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
-                            }, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 18,
-                                columnNumber: 11
-                            }, this),
-                            "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
                             }, void 0, false, {
                                 fileName: "About.js",
@@ -27516,26 +27510,40 @@ function About() {
                                 lineNumber: 23,
                                 columnNumber: 11
                             }, this),
+                            "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
+                            }, void 0, false, {
+                                fileName: "About.js",
+                                lineNumber: 27,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
+                            }, void 0, false, {
+                                fileName: "About.js",
+                                lineNumber: 28,
+                                columnNumber: 11
+                            }, this),
                             "Tempora aperiam nobis asperiores consequatur cumque, sed nisi perferendis laudantium a odit excepturi quo distinctio incidunt molestiae, dicta quia saepe laborum perspiciatis odio alias aspernatur quis. Quam corrupti error recusandae. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem."
                         ]
                     }, void 0, true, {
                         fileName: "About.js",
-                        lineNumber: 12,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "About.js",
-                lineNumber: 5,
+                lineNumber: 10,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "About.js",
-        lineNumber: 3,
+        lineNumber: 8,
         columnNumber: 5
     }, this));
 }
+_s(About, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = About;
 var _c;
 $RefreshReg$(_c, "About");
@@ -27545,7 +27553,7 @@ $RefreshReg$(_c, "About");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"23MUH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","react":"21dqq"}],"23MUH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$c69d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27576,6 +27584,9 @@ function Contact() {
         new _characterCounter.MDCTextFieldCharacterCounter(characterCounter.current);
         new _ripple.MDCRipple(button.current);
     }, []);
+    _react.useEffect(()=>{
+        window.scrollTo(0, 0);
+    });
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
         className: "contactPage",
         children: [
@@ -27584,7 +27595,7 @@ function Contact() {
                 children: "Contact Me"
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 22,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -27592,7 +27603,7 @@ function Contact() {
                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur."
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 23,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
@@ -27608,7 +27619,7 @@ function Contact() {
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 31,
+                                lineNumber: 34,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
@@ -27617,20 +27628,20 @@ function Contact() {
                                 children: "Name"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 36,
+                                lineNumber: 39,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 39,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 30,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27643,7 +27654,7 @@ function Contact() {
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 43,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
@@ -27652,20 +27663,20 @@ function Contact() {
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 48,
+                                lineNumber: 51,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 51,
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 42,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27678,7 +27689,7 @@ function Contact() {
                                 children: "0 / 500"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 58,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("textarea", {
@@ -27689,7 +27700,7 @@ function Contact() {
                                 maxLength: "500"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 64,
+                                lineNumber: 67,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27699,7 +27710,7 @@ function Contact() {
                                         className: "mdc-notched-outline__leading"
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 72,
+                                        lineNumber: 75,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27710,31 +27721,31 @@ function Contact() {
                                             children: "Textarea Label"
                                         }, void 0, false, {
                                             fileName: "Contact.js",
-                                            lineNumber: 74,
+                                            lineNumber: 77,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 73,
+                                        lineNumber: 76,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                                         className: "mdc-notched-outline__trailing"
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 78,
+                                        lineNumber: 81,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "Contact.js",
-                                lineNumber: 71,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 54,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
@@ -27746,7 +27757,7 @@ function Contact() {
                                 children: "Submit"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 86,
+                                lineNumber: 89,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
@@ -27755,29 +27766,29 @@ function Contact() {
                                 children: "favorite"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 87,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 82,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Contact.js",
-                lineNumber: 29,
+                lineNumber: 32,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Contact.js",
-        lineNumber: 21,
+        lineNumber: 24,
         columnNumber: 5
     }, this));
 }
-_s(Contact, "STIC14wcaarM6fAZyu4CEYllw34=");
+_s(Contact, "kJMhZ5z5x0XpDuzGga/NA6SMeWI=");
 _c = Contact;
 var _c;
 $RefreshReg$(_c, "Contact");
@@ -30525,7 +30536,13 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Project", ()=>Project
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
 function Project() {
+    _s();
+    _react.useEffect(()=>{
+        window.scrollTo(0, 0);
+    }, []);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
         className: "contentMax",
         children: [
@@ -30534,7 +30551,7 @@ function Project() {
                 children: "Flowers in Amsterdam"
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 4,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -30542,7 +30559,7 @@ function Project() {
                 children: "Photography"
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 5,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -30550,7 +30567,7 @@ function Project() {
                 children: "Now, take a good look at me! I’m one that has spoken to a King, I am: mayhap you’ll never see such another: and to show you I’m not proud, you may shake hands with me!’ And he grinned almost from ear to ear, as he leant forwards (and as nearly as possible fell off the wall in doing so) and offered Alice his hand. She watched him a little anxiously as she took it."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 6,
+                lineNumber: 11,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -30558,7 +30575,7 @@ function Project() {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 14,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -30566,7 +30583,7 @@ function Project() {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 18,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -30574,7 +30591,7 @@ function Project() {
                 children: "But the beard seemed to melt away as she touched it, and she found herself sitting quietly under a tree—while the Gnat (for that was the insect she had been talking to) was balancing itself on a twig just over her head, and fanning her with its wings."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 22,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -30582,7 +30599,7 @@ function Project() {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 28,
+                lineNumber: 33,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -30590,7 +30607,7 @@ function Project() {
                 children: "However, this was anything but a regular bee: in fact it was an elephant—as Alice soon found out, though the idea quite took her breath away at first."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 32,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
@@ -30604,12 +30621,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 39,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 38,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30620,12 +30637,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 46,
+                            lineNumber: 51,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 45,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30636,12 +30653,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 53,
+                            lineNumber: 58,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 52,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30652,12 +30669,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 60,
+                            lineNumber: 65,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 59,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30668,12 +30685,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 67,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 66,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30684,12 +30701,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 74,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 73,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30700,12 +30717,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 81,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 80,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30716,27 +30733,28 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 88,
+                            lineNumber: 93,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 87,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Project.js",
-                lineNumber: 37,
+                lineNumber: 42,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Project.js",
-        lineNumber: 3,
+        lineNumber: 8,
         columnNumber: 5
     }, this));
 }
+_s(Project, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = Project;
 var _c;
 $RefreshReg$(_c, "Project");
@@ -30746,6 +30764,6 @@ $RefreshReg$(_c, "Project");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"7N9bM":[function() {},{}]},["haZVB","b17wO","bB7Pu"], "bB7Pu", "parcelRequire2041")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","react":"21dqq"}],"7N9bM":[function() {},{}]},["haZVB","b17wO","bB7Pu"], "bB7Pu", "parcelRequire2041")
 
 //# sourceMappingURL=index.3d214d75.js.map
