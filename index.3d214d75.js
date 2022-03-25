@@ -1012,16 +1012,18 @@ var _page = require("./Page");
 //import material
 var _stylesCss = require("./styles.css");
 const container = document.getElementById("container");
+console.log(undefined);
 _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.HashRouter, {
+    basename: undefined,
     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_page.Page, {
     }, void 0, false, {
         fileName: "index.js",
-        lineNumber: 11,
+        lineNumber: 12,
         columnNumber: 5
     }, undefined)
 }, void 0, false, {
     fileName: "index.js",
-    lineNumber: 10,
+    lineNumber: 11,
     columnNumber: 3
 }, undefined), container);
 
