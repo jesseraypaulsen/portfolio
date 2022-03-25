@@ -24749,7 +24749,8 @@ function Header() {
     const topAppBarElement = _react.useRef(null);
     _react.useEffect(()=>{
         const topAppBar = new _index.MDCTopAppBar(topAppBarElement.current);
-    }, []); // <-- empty array means 'run once'
+    }, []);
+    const navigate = _reactRouterDom.useNavigate();
     //https://material.io/components/app-bars-top/web#other-variants
     //https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("header", {
@@ -24765,12 +24766,14 @@ function Header() {
                     className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-start",
                     children: [
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                            href: "https://jesseraypaulsen.github.io/portfolio",
+                            href: "",
+                            onClick: ()=>navigate("/")
+                            ,
                             className: "material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded",
                             children: "gesture"
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 21,
+                            lineNumber: 29,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
@@ -24778,13 +24781,13 @@ function Header() {
                             children: "My Portfolio"
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 27,
+                            lineNumber: 36,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "Header.js",
-                    lineNumber: 19,
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
@@ -24800,12 +24803,12 @@ function Header() {
                                     children: "Projects"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 32,
+                                    lineNumber: 41,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 31,
+                                lineNumber: 40,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -24816,12 +24819,12 @@ function Header() {
                                     children: "About"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 37,
+                                    lineNumber: 46,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 36,
+                                lineNumber: 45,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -24832,38 +24835,42 @@ function Header() {
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 42,
+                                    lineNumber: 51,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 41,
+                                lineNumber: 50,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Header.js",
-                        lineNumber: 30,
+                        lineNumber: 39,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Header.js",
-                    lineNumber: 29,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Header.js",
-            lineNumber: 18,
+            lineNumber: 20,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Header.js",
-        lineNumber: 13,
+        lineNumber: 15,
         columnNumber: 5
     }, this));
 }
-_s(Header, "DWeBm88uEdehmB+gpgDTqkjqM20=");
+_s(Header, "xpuElp6aOPICxdxDMfjDmuHMTmo=", false, function() {
+    return [
+        _reactRouterDom.useNavigate
+    ];
+});
 _c = Header;
 var _c;
 $RefreshReg$(_c, "Header");
@@ -27187,7 +27194,7 @@ function Work() {
                                     children: [
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
                                             className: "mdc-typography mdc-typography--overline cardCategory",
-                                            children: "Photography"
+                                            children: "Web Application"
                                         }, void 0, false, {
                                             fileName: "Work.js",
                                             lineNumber: 15,
@@ -27195,7 +27202,7 @@ function Work() {
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
                                             className: "mdc-typography mdc-typography--headline6 cardTitle",
-                                            children: "Flowers of Amsterdam"
+                                            children: "Personal Knowledge Management System"
                                         }, void 0, false, {
                                             fileName: "Work.js",
                                             lineNumber: 18,
@@ -27203,7 +27210,7 @@ function Work() {
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                                             className: "demo-card__secondary mdc-typography mdc-typography--body2",
-                                            children: "Flowers are an essential part of nature. Here they mix with city life."
+                                            children: "Inspired by Memex and the Zettelkasten. Renders notecards as nodes on a graph."
                                         }, void 0, false, {
                                             fileName: "Work.js",
                                             lineNumber: 21,
@@ -27246,7 +27253,7 @@ function Work() {
                                     children: [
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h3", {
                                             className: "mdc-typography mdc-typography--overline cardCategory",
-                                            children: "Photography"
+                                            children: "Web Application"
                                         }, void 0, false, {
                                             fileName: "Work.js",
                                             lineNumber: 35,
@@ -27254,7 +27261,7 @@ function Work() {
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
                                             className: "mdc-typography mdc-typography--headline6 cardTitle",
-                                            children: "Flowers of Amsterdam"
+                                            children: "Personality Test"
                                         }, void 0, false, {
                                             fileName: "Work.js",
                                             lineNumber: 38,
@@ -27262,7 +27269,7 @@ function Work() {
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                                             className: "demo-card__secondary mdc-typography mdc-typography--body2",
-                                            children: "Flowers are an essential part of nature. Here they mix with city life."
+                                            children: "The Five O.C.E.A.N. Traits"
                                         }, void 0, false, {
                                             fileName: "Work.js",
                                             lineNumber: 41,
@@ -27297,7 +27304,7 @@ function Work() {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 50,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27308,7 +27315,7 @@ function Work() {
                                             children: "Photography"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 55,
+                                            lineNumber: 54,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -27316,7 +27323,7 @@ function Work() {
                                             children: "Flowers of Amsterdam"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 58,
+                                            lineNumber: 57,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27324,24 +27331,24 @@ function Work() {
                                             children: "Flowers are an essential part of nature. Here they mix with city life."
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 61,
+                                            lineNumber: 60,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 54,
+                                    lineNumber: 53,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 49,
+                            lineNumber: 48,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 48,
+                        lineNumber: 47,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -27356,7 +27363,7 @@ function Work() {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 70,
+                                    lineNumber: 69,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27367,7 +27374,7 @@ function Work() {
                                             children: "Photography"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 75,
+                                            lineNumber: 74,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h2", {
@@ -27375,7 +27382,7 @@ function Work() {
                                             children: "Flowers of Amsterdam"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 78,
+                                            lineNumber: 77,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27383,24 +27390,24 @@ function Work() {
                                             children: "Flowers are an essential part of nature. Here they mix with city life."
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 81,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 74,
+                                    lineNumber: 73,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 69,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 68,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this)
                 ]
