@@ -24658,13 +24658,22 @@ var _about = require("./About");
 var _contact = require("./Contact");
 var _project = require("./Project");
 var _reactRouterDom = require("react-router-dom");
+var _react = require("react");
+var _s = $RefreshSig$();
 function Page() {
+    _s();
+    let location = _reactRouterDom.useLocation();
+    _react.useEffect(()=>{
+        window.scrollTo(0, 0);
+    }, [
+        location
+    ]);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
             }, void 0, false, {
                 fileName: "Page.js",
-                lineNumber: 17,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
@@ -24676,7 +24685,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 19,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24685,7 +24694,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 20,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24694,7 +24703,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 21,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24703,22 +24712,27 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 22,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Page.js",
-                lineNumber: 18,
+                lineNumber: 17,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Page.js",
-        lineNumber: 16,
+        lineNumber: 15,
         columnNumber: 5
     }, this));
 }
+_s(Page, "BXcZrDMM76mmm4zA8/QV5UbMNXE=", false, function() {
+    return [
+        _reactRouterDom.useLocation
+    ];
+});
 _c = Page;
 var _c;
 $RefreshReg$(_c, "Page");
@@ -24728,7 +24742,7 @@ $RefreshReg$(_c, "Page");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Header":"8bVnH","./Work":"7s2mh","./About":"2rsUE","./Contact":"23MUH","./Project":"03vJm","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"8bVnH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./Header":"8bVnH","./Work":"7s2mh","./About":"2rsUE","./Contact":"23MUH","./Project":"03vJm","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","react":"21dqq"}],"8bVnH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7785 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -24773,7 +24787,7 @@ function Header() {
                             children: "gesture"
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 29,
+                            lineNumber: 23,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("span", {
@@ -24781,7 +24795,7 @@ function Header() {
                             children: "My Portfolio"
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 36,
+                            lineNumber: 30,
                             columnNumber: 11
                         }, this)
                     ]
@@ -24803,12 +24817,12 @@ function Header() {
                                     children: "Projects"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 41,
+                                    lineNumber: 35,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 40,
+                                lineNumber: 34,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -24819,12 +24833,12 @@ function Header() {
                                     children: "About"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 46,
+                                    lineNumber: 40,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 45,
+                                lineNumber: 39,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -24835,23 +24849,23 @@ function Header() {
                                     children: "Contact"
                                 }, void 0, false, {
                                     fileName: "Header.js",
-                                    lineNumber: 51,
+                                    lineNumber: 45,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 50,
+                                lineNumber: 44,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Header.js",
-                        lineNumber: 39,
+                        lineNumber: 33,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Header.js",
-                    lineNumber: 38,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this)
             ]
@@ -30512,10 +30526,10 @@ parcelHelpers.export(exports, "Project", ()=>Project
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 function Project() {
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("main", {
-        class: "contentMax",
+        className: "contentMax",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
-                class: "mdc-typography--headline4",
+                className: "mdc-typography--headline4",
                 children: "Flowers in Amsterdam"
             }, void 0, false, {
                 fileName: "Project.js",
@@ -30523,7 +30537,7 @@ function Project() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                class: "mdc-typography--overline",
+                className: "mdc-typography--overline",
                 children: "Photography"
             }, void 0, false, {
                 fileName: "Project.js",
@@ -30531,7 +30545,7 @@ function Project() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                class: "mdc-typography--body1",
+                className: "mdc-typography--body1",
                 children: "Now, take a good look at me! I’m one that has spoken to a King, I am: mayhap you’ll never see such another: and to show you I’m not proud, you may shake hands with me!’ And he grinned almost from ear to ear, as he leant forwards (and as nearly as possible fell off the wall in doing so) and offered Alice his hand. She watched him a little anxiously as she took it."
             }, void 0, false, {
                 fileName: "Project.js",
@@ -30555,7 +30569,7 @@ function Project() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                class: "mdc-typography--caption",
+                className: "mdc-typography--caption",
                 children: "But the beard seemed to melt away as she touched it, and she found herself sitting quietly under a tree—while the Gnat (for that was the insect she had been talking to) was balancing itself on a twig just over her head, and fanning her with its wings."
             }, void 0, false, {
                 fileName: "Project.js",
@@ -30571,7 +30585,7 @@ function Project() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
-                class: "mdc-typography--body1",
+                className: "mdc-typography--body1",
                 children: "However, this was anything but a regular bee: in fact it was an elephant—as Alice soon found out, though the idea quite took her breath away at first."
             }, void 0, false, {
                 fileName: "Project.js",
@@ -30579,12 +30593,12 @@ function Project() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
-                class: "mdc-image-list mdc-image-list--masonry masonry-image-list imageList",
+                className: "mdc-image-list mdc-image-list--masonry masonry-image-list imageList",
                 children: [
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-image-list__item",
+                        className: "mdc-image-list__item",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            class: "mdc-image-list__image",
+                            className: "mdc-image-list__image",
                             src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
                             alt: "Text label"
                         }, void 0, false, {
@@ -30598,9 +30612,9 @@ function Project() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-image-list__item",
+                        className: "mdc-image-list__item",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            class: "mdc-image-list__image",
+                            className: "mdc-image-list__image",
                             src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png?1558558462723",
                             alt: "Text label"
                         }, void 0, false, {
@@ -30614,9 +30628,9 @@ function Project() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-image-list__item",
+                        className: "mdc-image-list__item",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            class: "mdc-image-list__image",
+                            className: "mdc-image-list__image",
                             src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg?1558558462399",
                             alt: "Text label"
                         }, void 0, false, {
@@ -30630,9 +30644,9 @@ function Project() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-image-list__item",
+                        className: "mdc-image-list__item",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            class: "mdc-image-list__image",
+                            className: "mdc-image-list__image",
                             src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg?1558558462200",
                             alt: "Text label"
                         }, void 0, false, {
@@ -30646,9 +30660,9 @@ function Project() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-image-list__item",
+                        className: "mdc-image-list__item",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            class: "mdc-image-list__image",
+                            className: "mdc-image-list__image",
                             src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg?1558558462683",
                             alt: "Text label"
                         }, void 0, false, {
@@ -30662,9 +30676,9 @@ function Project() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-image-list__item",
+                        className: "mdc-image-list__item",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            class: "mdc-image-list__image",
+                            className: "mdc-image-list__image",
                             src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png?1558558462701",
                             alt: "Text label"
                         }, void 0, false, {
@@ -30678,9 +30692,9 @@ function Project() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-image-list__item",
+                        className: "mdc-image-list__item",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            class: "mdc-image-list__image",
+                            className: "mdc-image-list__image",
                             src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg?1558558480051",
                             alt: "Text label"
                         }, void 0, false, {
@@ -30694,9 +30708,9 @@ function Project() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
-                        class: "mdc-image-list__item",
+                        className: "mdc-image-list__item",
                         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                            class: "mdc-image-list__image",
+                            className: "mdc-image-list__image",
                             src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507",
                             alt: "Text label"
                         }, void 0, false, {
