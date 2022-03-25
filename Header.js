@@ -1,12 +1,14 @@
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MDCTopAppBar } from "@material/top-app-bar/index";
 
 export function Header() {
   const topAppBarElement = useRef(null);
   useEffect(() => {
     const topAppBar = new MDCTopAppBar(topAppBarElement.current);
-  }, []); // <-- empty array means 'run once'
+  }, []);
+  const navigate = useNavigate();
+
   //https://material.io/components/app-bars-top/web#other-variants
   //https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar
   return (
@@ -18,8 +20,15 @@ export function Header() {
       <div className="mdc-top-app-bar__row">
         <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
           {/* hard coding the home url due to complications with React Router and Github Pages*/}
-          <a
+          {/*<a
             href="https://jesseraypaulsen.github.io/portfolio"
+            className="material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+          >
+            gesture
+          </a>*/}
+          <a
+            href=""
+            onClick={() => navigate("/")}
             className="material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
           >
             gesture

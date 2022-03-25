@@ -13,14 +13,14 @@ export function Work() {
             />
             <div className="cardContent">
               <h3 className="mdc-typography mdc-typography--overline cardCategory">
-                Photography
+                Web Application
               </h3>
               <h2 className="mdc-typography mdc-typography--headline6 cardTitle">
-                Flowers of Amsterdam
+                Personal Knowledge Management System
               </h2>
               <div className="demo-card__secondary mdc-typography mdc-typography--body2">
-                Flowers are an essential part of nature. Here they mix with city
-                life.
+                Inspired by Memex and the Zettelkasten. Renders notecards as
+                nodes on a graph.
               </div>
             </div>
           </Link>
@@ -33,14 +33,13 @@ export function Work() {
             />
             <div className="cardContent">
               <h3 className="mdc-typography mdc-typography--overline cardCategory">
-                Photography
+                Web Application
               </h3>
               <h2 className="mdc-typography mdc-typography--headline6 cardTitle">
-                Flowers of Amsterdam
+                Personality Test
               </h2>
               <div className="demo-card__secondary mdc-typography mdc-typography--body2">
-                Flowers are an essential part of nature. Here they mix with city
-                life.
+                The Five O.C.E.A.N. Traits
               </div>
             </div>
           </Link>

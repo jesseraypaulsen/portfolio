@@ -5,7 +5,8 @@
   "description": "",
   "scripts": {
     "predeploy": "rm -rf dist && parcel build index.html --public-url https://jesseraypaulsen.github.io/portfolio",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "clean": "rm -rf dist && rm -rf .parcel-cache"
   },
   "keywords": [],
   "author": "",
