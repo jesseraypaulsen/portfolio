@@ -5,6 +5,8 @@ import { Page } from "./Page";
 import "./styles.css";
 
 const container = document.getElementById("container");
+//console.log(process.env.BASE_URL);
+//<HashRouter basename={process.env.BASE_URL}>
 
 ReactDOM.render(
   <HashRouter>

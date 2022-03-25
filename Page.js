@@ -7,10 +7,9 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 
 export function Page() {
-  let location = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [location]);
+  }, []);
   return (
     <div>
       <Header />

@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 export function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main>
       <h1 className="mdc-typography--headline2 centered">About Me</h1>

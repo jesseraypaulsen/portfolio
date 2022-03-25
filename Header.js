@@ -19,7 +19,8 @@ export function Header() {
     >
       <div className="mdc-top-app-bar__row">
         <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          {/* instead of using Link, an anchor tag and the useNavigate hook are used to overcome conflicts with React Router and Github Pages*/}
+          {/* instead of using Link, an anchor tag and the useNavigate hook are used to overcome 
+          conflicts with React Router and Github Pages.*/}
           <a
             href=""
             onClick={() => navigate("/")}

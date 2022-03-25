@@ -1,4 +1,9 @@
+import { useEffect } from "react";
+
 export function Project() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="contentMax">
       <h1 className="mdc-typography--headline4">Flowers in Amsterdam</h1>

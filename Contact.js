@@ -16,6 +16,9 @@ export function Contact() {
     new MDCTextFieldCharacterCounter(characterCounter.current);
     new MDCRipple(button.current);
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <main className="contactPage">
