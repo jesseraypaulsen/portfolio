@@ -24666,9 +24666,7 @@ function Page() {
     _react.useEffect(()=>{
         //window.scrollTo(0, 0);
         console.log(`Page.js -> useEffect -> useLocation`);
-    }, [
-        location
-    ]);
+    }, []);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
