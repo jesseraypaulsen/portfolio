@@ -24659,16 +24659,22 @@ var _contact = require("./Contact");
 var _project = require("./Project");
 var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
+var _s = $RefreshSig$();
 function Page() {
-    /*let location = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);*/ return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+    _s();
+    let location = _reactRouterDom.useLocation();
+    _react.useEffect(()=>{
+        //window.scrollTo(0, 0);
+        console.log(`Page.js -> useEffect -> useLocation`);
+    }, [
+        location
+    ]);
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
             }, void 0, false, {
                 fileName: "Page.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
@@ -24680,7 +24686,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 18,
+                        lineNumber: 19,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24689,7 +24695,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 19,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24698,7 +24704,7 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 20,
+                        lineNumber: 21,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
@@ -24707,22 +24713,27 @@ function Page() {
                         }, void 0, false, void 0, void 0)
                     }, void 0, false, {
                         fileName: "Page.js",
-                        lineNumber: 21,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Page.js",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Page.js",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 5
     }, this));
 }
+_s(Page, "BXcZrDMM76mmm4zA8/QV5UbMNXE=", false, function() {
+    return [
+        _reactRouterDom.useLocation
+    ];
+});
 _c = Page;
 var _c;
 $RefreshReg$(_c, "Page");
