@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import "./work.css";
 
 export function Work() {
   useEffect(() => {

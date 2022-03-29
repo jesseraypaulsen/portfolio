@@ -3,6 +3,10 @@ import { useEffect, useRef } from "react";
 import { MDCTopAppBar } from "@material/top-app-bar/index";
 import "./header.css";
 
+{
+  /* https://fonts.google.com/icons */
+}
+
 export function Header() {
   const topAppBarElement = useRef(null);
   useEffect(() => {
@@ -16,10 +20,12 @@ export function Header() {
       ref={topAppBarElement}
     >
       <div className="mdc-top-app-bar__row">
-        {/* https://fonts.google.com/icons */}
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"></section>
+
         <section
-          className="mdc-top-app-bar__section mdc-top-app-bar__section--align-middle"
+          className="mdc-top-app-bar__section"
           role="toolbar"
+          style={{ justifyContent: "center" }}
         >
           {/* useNavigate is a workaround for issues with Github Pages and React Router */}
           <a
@@ -53,6 +59,7 @@ export function Header() {
             email
           </Link>
         </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"></section>
       </div>
     </header>
   );
