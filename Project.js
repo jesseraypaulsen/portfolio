@@ -2,10 +2,11 @@ import { useEffect } from "react";
 
 export function Project() {
   useEffect(() => {
+    /* see Home.js for explanation */
     window.scrollTo(0, 0);
   }, []);
   return (
-    <main className="contentMax">
+    <main className="contentMax mdc-top-app-bar--fixed-adjust">
       <h1 className="mdc-typography--headline4">Flowers in Amsterdam</h1>
       <p className="mdc-typography--overline">Photography</p>
       <p className="mdc-typography--body1">

@@ -1,0 +1,25 @@
+/* Contact.js */
+.contactText {
+  margin: 0 auto 32px;
+}
+
+.contactPage {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.contactForm > * + * {
+  margin-top: 24px;
+}
+
+.submitButton {
+  width: 150px;
+  align-self: flex-end;
+}

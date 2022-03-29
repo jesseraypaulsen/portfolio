@@ -2,10 +2,11 @@ import { useEffect } from "react";
 
 export function About() {
   useEffect(() => {
+    /* see Home.js for explanation */
     window.scrollTo(0, 0);
   }, []);
   return (
-    <main>
+    <main className="mdc-top-app-bar--fixed-adjust">
       <h1 className="mdc-typography--headline2 centered">About Me</h1>
       <div className="aboutMe">
         <figure className="selfPortrait">

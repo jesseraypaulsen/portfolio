@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
 import { MDCTopAppBar } from "@material/top-app-bar/index";
+import "./header.css";
 
 export function Header() {
   const topAppBarElement = useRef(null);
@@ -8,51 +9,59 @@ export function Header() {
     const topAppBar = new MDCTopAppBar(topAppBarElement.current);
   }, []);
   const navigate = useNavigate();
-
-  //https://material.io/components/app-bars-top/web#other-variants
-  //https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar
   return (
     <header
-      className="mdc-top-app-bar mdc-top-app-bar--short mdc-top-app-bar--short-has-action-item"
-      style={{ top: "0px" }}
+      className="mdc-top-app-bar"
+      style={{ top: "0" }}
       ref={topAppBarElement}
     >
       <div className="mdc-top-app-bar__row">
-        <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          {/* instead of using Link, an anchor tag and the useNavigate hook are used to overcome 
-          conflicts with React Router and Github Pages.*/}
+        {/* https://fonts.google.com/icons */}
+        <section
+          className="mdc-top-app-bar__section mdc-top-app-bar__section--align-middle"
+          role="toolbar"
+        >
+          {/* useNavigate is a workaround for issues with Github Pages and React Router */}
           <a
             href=""
             onClick={() => navigate("/")}
-            className="material-icons mdc-top-app-bar__navigation-icon mdc-ripple-upgraded--unbounded mdc-ripple-upgraded"
+            className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Home"
           >
-            gesture
+            home
           </a>
-          <span className="mdc-top-app-bar__title">My Portfolio</span>
-        </section>
-        <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
-          <ul className="navList">
-            <li className="navListItem">
-              <Link className="navListLink mdc-typography--button" to="/">
-                Projects
-              </Link>
-            </li>
-            <li className="navListItem">
-              <Link className="navListLink mdc-typography--button" to="/about">
-                About
-              </Link>
-            </li>
-            <li className="navListItem">
-              <Link
-                className="navListLink mdc-typography--button"
-                to="/contact"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
+          <Link
+            className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Work"
+            to="/work"
+            onClick={(e) => showTriangle(e)}
+          >
+            work
+          </Link>
+          <Link
+            className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="About"
+            to="/about"
+          >
+            info
+          </Link>
+          <Link
+            className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            aria-label="Contact"
+            to="/contact"
+          >
+            email
+          </Link>
         </section>
       </div>
     </header>
   );
 }
+
+function showTriangle(e) {}
+
+/*
+  https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar
+  https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar
+  https://material.io/components/app-bars-top/web#style-customization
+*/

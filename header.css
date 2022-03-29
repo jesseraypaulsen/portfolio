@@ -1,0 +1,12 @@
+/*https://css-tricks.com/snippets/css/css-triangle/*/
+
+.triangle {
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: solid 20px #ffffff;
+  border-left: solid 20px transparent;
+  border-right: solid 20px transparent;
+  border-bottom: solid 20px transparent;
+  position: absolute;
+}

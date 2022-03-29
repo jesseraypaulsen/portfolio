@@ -1,12 +1,14 @@
 import ReactDOM from "react-dom";
 import { HashRouter } from "react-router-dom";
 import { Page } from "./Page";
-//import material
-import "./styles.css";
+import "./general.css";
+//import "./header.css";
+import "./work.css";
+import "./project.css";
+import "./contact.css";
+import "./about.css";
 
 const container = document.getElementById("container");
-//console.log(process.env.BASE_URL);
-//<HashRouter basename={process.env.BASE_URL}>
 
 ReactDOM.render(
   <HashRouter>

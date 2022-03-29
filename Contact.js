@@ -17,11 +17,12 @@ export function Contact() {
     new MDCRipple(button.current);
   }, []);
   useEffect(() => {
+    /* see Home.js for explanation */
     window.scrollTo(0, 0);
   });
 
   return (
-    <main className="contactPage">
+    <main className="contactPage mdc-top-app-bar--fixed-adjust">
       <h1 className="mdc-typography--headline2 centered">Contact Me</h1>
       <p className="contactText">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta

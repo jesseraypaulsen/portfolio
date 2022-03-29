@@ -1,24 +1,21 @@
 import { Header } from "./Header";
+import { Home } from "./Home";
 import { Work } from "./Work";
 import { About } from "./About";
 import { Contact } from "./Contact";
 import { Project } from "./Project";
-import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 
 export function Page() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Work />} />
+        <Route path="/" element={<Home />} />
+        <Route exact path="work" element={<Work />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="project" element={<Project />} />
-        {/*<Route path="home" element={<Home />} />*/}
       </Routes>
     </div>
   );

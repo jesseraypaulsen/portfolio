@@ -1,0 +1,20 @@
+/* About.js */
+.aboutMe {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutMe figure {
+  margin: 0;
+}
+
+.aboutMe img {
+  width: 100%;
+}
+
+.aboutMe > * {
+  flex: 1;
+}
