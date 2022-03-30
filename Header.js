@@ -3,7 +3,9 @@ import { useEffect, useRef } from "react";
 import { MDCTopAppBar } from "@material/top-app-bar/index";
 import "./header.css";
 
-/* Material Icons Library -> https://fonts.google.com/icons */
+/* https://developers.google.com/fonts/docs/material_icons#styling_icons_in_material_design
+   why don't these classes for making icons dark/light/big/small work?
+*/
 
 export function Header() {
   const topAppBarElement = useRef(null);
@@ -11,8 +13,15 @@ export function Header() {
     const topAppBar = new MDCTopAppBar(topAppBarElement.current);
   }, []);
   const navigate = useNavigate();
+  //header is set to { top: "0" } because the margin from an element in normal flow (Frame),
+  //mysteriously changes the starting position of the header even though it has a fixed
+  //position. I have no idea why this occurs.
   return (
-    <header className="mdc-top-app-bar" ref={topAppBarElement}>
+    <header
+      className="mdc-top-app-bar"
+      ref={topAppBarElement}
+      style={{ top: "0" }}
+    >
       <div className="mdc-top-app-bar__row">
         <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"></section>
 
@@ -24,36 +33,43 @@ export function Header() {
           {/* useNavigate is a workaround for issues with Github Pages and React Router */}
           <a
             href=""
-            // onClick={() => navigate("/")}
-            className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
             aria-label="Home"
-            onClick={(e) => showTriangle(e)}
+            onClick={(e) => showTriangle(e, navigate)}
+            // onClick={() => navigate("/")}
           >
-            home
+            <i className="material-icons mdc-top-app-bar__action-item mdc-icon-button">
+              home
+            </i>
           </a>
           <Link
-            className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            //className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
             aria-label="Work"
             to="/work"
             onClick={(e) => showTriangle(e)}
           >
-            work
+            <i className="material-icons mdc-top-app-bar__action-item mdc-icon-button">
+              work
+            </i>
           </Link>
           <Link
-            className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            //className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
             aria-label="About"
             to="/about"
             onClick={(e) => showTriangle(e)}
           >
-            info
+            <i className="material-icons mdc-top-app-bar__action-item mdc-icon-button">
+              info
+            </i>
           </Link>
           <Link
-            className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+            //className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
             aria-label="Contact"
             to="/contact"
             onClick={(e) => showTriangle(e)}
           >
-            email
+            <i className="material-icons mdc-top-app-bar__action-item mdc-icon-button">
+              email
+            </i>
           </Link>
         </section>
         <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"></section>

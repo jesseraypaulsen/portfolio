@@ -3,6 +3,7 @@
   min-height: 400px;
   border: 1px solid black;
   background: aliceblue;
-  margin: 50px auto 0; /*horizontonal center*/
+  margin: 100px auto 0; /*horizontonal center*/
   padding: 30px;
+  overflow-y: auto;
 }

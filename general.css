@@ -2,7 +2,7 @@
 
 :root {
   /* --mdc-theme-primary: #6200ee; */
-  --mdc-theme-primary: aliceblue;
+  --mdc-theme-primary: rgb(5, 50, 90);
   --pageMax: 1200x;
   --contentMax: 900px;
 }
@@ -18,16 +18,20 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden; /* disable scrolling */
+}
+
 /* About.js, Project.js, Work.js */
 img {
   width: 100%;
 }
 
 /* About.js, Contact.js, Project.js, Work.js */
-main {
+/* main {
   max-width: var(--pageMax);
   margin: 0 auto;
-}
+} */
 
 /* index.js, About.js */
 p {

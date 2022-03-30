@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Frame } from "./Frame";
 import "./project.css";
 
 export function Project() {
@@ -7,7 +8,7 @@ export function Project() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <main className="contentMax mdc-top-app-bar--fixed-adjust">
+    <Frame>
       <h1 className="mdc-typography--headline4">Flowers in Amsterdam</h1>
       <p className="mdc-typography--overline">Photography</p>
       <p className="mdc-typography--body1">
@@ -99,6 +100,6 @@ export function Project() {
           />
         </li>
       </ul>
-    </main>
+    </Frame>
   );
 }
