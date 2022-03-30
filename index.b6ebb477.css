@@ -1,0 +1,217 @@
+/*https://css-tricks.com/snippets/css/css-triangle/*/
+
+.triangle {
+  width: 0;
+  height: 0;
+  display: block;
+  border-top: solid 20px #ffffff;
+  border-left: solid 20px transparent;
+  border-right: solid 20px transparent;
+  border-bottom: solid 20px transparent;
+  position: absolute;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  max-width: 380px;
+  /* font-family: "Source Sans Pro", sans-serif; */
+  border: solid 1px black;
+  margin: auto; /* horizontally center this element */
+}
+
+h1 {
+  font-size: 3.4em;
+  font-weight: 400;
+  color: #363636;
+}
+
+.jumbotron .jumbotron__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* border: solid 1px black; */
+}
+
+.jumbotron .jumbotron__row + * {
+} /* the asterisk targets both .my-title and .social-icon-links */
+
+.my-title {
+  font-size: 1.25em;
+  color: #aaa;
+  /* border: 1px solid black; */
+}
+
+.social-icon-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /* background-color: aliceblue; */
+}
+
+.social-icon-links svg {
+  width: 23px;
+  height: 23px;
+}
+
+.frame {
+  width: 900px;
+  min-height: 300px;
+  border: 1px solid black;
+  background: aliceblue;
+  margin: 50px auto 0; /*horizontonal center*/
+  padding: 30px;
+}
+
+/* Work.js */
+.cardContent {
+  padding: 16px;
+}
+
+.cardCategory {
+  margin: 0;
+}
+
+.cardTitle {
+  margin: 0 0 16px;
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0 auto -16px;
+  max-width: 1200px;
+}
+
+.card {
+  flex: 1;
+  flex-basis: 400px;
+  margin: 0 16px 16px 0;
+}
+
+/* About.js */
+.aboutMe {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutMe figure {
+  margin: 0;
+}
+
+.aboutMe img {
+  width: 100%;
+}
+
+.aboutMe > * {
+  flex: 1;
+}
+
+/* Contact.js */
+.contactText {
+  margin: 0 auto 32px;
+}
+
+.contactPage {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.contactForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.contactForm > * + * {
+  margin-top: 24px;
+}
+
+.submitButton {
+  width: 150px;
+  align-self: flex-end;
+}
+
+/* Project.js */
+.imageList {
+  @include mdc-image-list-masonry-columns(1);
+  margin-top: 16px;
+}
+
+.imageList .mdc-image-list__item {
+  margin-bottom: 16px;
+}
+
+.contentMax {
+  max-width: var(--contentMax);
+}
+
+/* Define theme variables before importing any MDC Web component styles */
+
+:root {
+  /* --mdc-theme-primary: #6200ee; */
+  --mdc-theme-primary: #000000;
+  --pageMax: 1200x;
+  --contentMax: 900px;
+}
+
+/* index.html */
+/* body {
+  padding: 50px 32px 32px;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* About.js, Project.js, Work.js */
+img {
+  width: 100%;
+}
+
+/* About.js, Contact.js, Project.js, Work.js */
+main {
+  max-width: var(--pageMax);
+  margin: 0 auto;
+}
+
+/* index.js, About.js */
+p {
+  line-height: 1.8;
+}
+
+/* About.js, Contact.js */
+.centered {
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .imageList {
+    column-count: 2;
+    column-gap: 16px;
+  }
+
+  .aboutMe {
+    flex-direction: row;
+  }
+
+  .aboutMe figure {
+    margin-right: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .imageList {
+    column-count: 3;
+  }
+}
+
+/*# sourceMappingURL=index.b6ebb477.css.map */
