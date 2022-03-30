@@ -1,6 +1,8 @@
+/* height must be set for scrolling to work. Setting min-height instead does not work. */
+
 .frame {
   width: 900px;
-  min-height: 400px;
+  height: 500px;
   border: 1px solid black;
   background: aliceblue;
   margin: 100px auto 0; /*horizontonal center*/
