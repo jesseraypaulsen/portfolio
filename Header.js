@@ -3,9 +3,7 @@ import { useEffect, useRef } from "react";
 import { MDCTopAppBar } from "@material/top-app-bar/index";
 import "./header.css";
 
-{
-  /* https://fonts.google.com/icons */
-}
+/* Material Icons Library -> https://fonts.google.com/icons */
 
 export function Header() {
   const topAppBarElement = useRef(null);
@@ -26,9 +24,10 @@ export function Header() {
           {/* useNavigate is a workaround for issues with Github Pages and React Router */}
           <a
             href=""
-            onClick={() => navigate("/")}
+            // onClick={() => navigate("/")}
             className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
             aria-label="Home"
+            onClick={(e) => showTriangle(e)}
           >
             home
           </a>
@@ -44,6 +43,7 @@ export function Header() {
             className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
             aria-label="About"
             to="/about"
+            onClick={(e) => showTriangle(e)}
           >
             info
           </Link>
@@ -51,6 +51,7 @@ export function Header() {
             className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
             aria-label="Contact"
             to="/contact"
+            onClick={(e) => showTriangle(e)}
           >
             email
           </Link>
@@ -61,7 +62,11 @@ export function Header() {
   );
 }
 
-function showTriangle(e) {}
+function showTriangle(e, callback) {
+  //e.preventDefault();
+  console.log(`showTriangle called`);
+  if (callback) callback("/"); // navigate("/")
+}
 
 /*
   https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar

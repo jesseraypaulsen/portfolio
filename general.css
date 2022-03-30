@@ -2,7 +2,7 @@
 
 :root {
   /* --mdc-theme-primary: #6200ee; */
-  --mdc-theme-primary: #000000;
+  --mdc-theme-primary: aliceblue;
   --pageMax: 1200x;
   --contentMax: 900px;
 }

@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { MDCTextField } from "@material/textfield";
 import { MDCTextFieldCharacterCounter } from "@material/textfield/character-counter";
 import { MDCRipple } from "@material/ripple";
+import { Frame } from "./Frame";
 import "./contact.css";
 
 export function Contact() {
@@ -22,8 +23,9 @@ export function Contact() {
     window.scrollTo(0, 0);
   });
 
+  //<Frame extraClass="contactPage">
   return (
-    <main className="contactPage mdc-top-app-bar--fixed-adjust">
+    <Frame>
       <h1 className="mdc-typography--headline2 centered">Contact Me</h1>
       <p className="contactText">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
@@ -94,6 +96,6 @@ export function Contact() {
           </i>
         </button>
       </form>
-    </main>
+    </Frame>
   );
 }

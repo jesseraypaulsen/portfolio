@@ -3,10 +3,11 @@
   margin: 0 auto 32px;
 }
 
-.contactPage {
+/* Frame.js makes this obsolete */
+/* .contactPage {
   margin: 0 auto;
   max-width: 600px;
-}
+} */
 
 .contactForm {
   display: flex;

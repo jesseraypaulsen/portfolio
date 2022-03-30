@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Frame } from "./Frame";
 import "./about.css";
 
 export function About() {
@@ -7,7 +8,7 @@ export function About() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <main className="mdc-top-app-bar--fixed-adjust">
+    <Frame>
       <h1 className="mdc-typography--headline2 centered">About Me</h1>
       <div className="aboutMe">
         <figure className="selfPortrait">
@@ -36,6 +37,6 @@ export function About() {
           quaerat, alias rem.
         </p>
       </div>
-    </main>
+    </Frame>
   );
 }
