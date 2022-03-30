@@ -2,15 +2,14 @@
   display: flex;
   flex-direction: column;
   padding: 40px;
-  max-width: 450px;
+  max-width: 380px;
   /* font-family: "Source Sans Pro", sans-serif; */
-  /* border: solid 1px black; */
+  border: solid 1px black;
+  margin: auto; /* horizontally center this element */
 }
 
 h1 {
-  /* line-height: 1.25em; */
   font-size: 3.4em;
-  /* letter-spacing: -0.015em; */
   font-weight: 400;
   color: #363636;
 }

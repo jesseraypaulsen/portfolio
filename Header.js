@@ -14,13 +14,9 @@ export function Header() {
   }, []);
   const navigate = useNavigate();
   return (
-    <header
-      className="mdc-top-app-bar"
-      style={{ top: "0" }}
-      ref={topAppBarElement}
-    >
+    <header className="mdc-top-app-bar" ref={topAppBarElement}>
       <div className="mdc-top-app-bar__row">
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"></section>
+        <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"></section>
 
         <section
           className="mdc-top-app-bar__section"
@@ -59,7 +55,7 @@ export function Header() {
             email
           </Link>
         </section>
-        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"></section>
+        <section className="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"></section>
       </div>
     </header>
   );
