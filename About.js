@@ -9,7 +9,9 @@ export function About() {
   }, []);
   return (
     <Frame>
-      <h1 className="mdc-typography--headline2 centered">About Me</h1>
+      <h1 className="mdc-typography--headline2 centered section-title">
+        About Me
+      </h1>
       <div className="aboutMe">
         <figure className="selfPortrait">
           <img

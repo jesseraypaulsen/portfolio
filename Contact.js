@@ -26,7 +26,9 @@ export function Contact() {
   //<Frame extraClass="contactPage">
   return (
     <Frame>
-      <h1 className="mdc-typography--headline2 centered">Contact Me</h1>
+      <h1 className="mdc-typography--headline2 centered section-title">
+        Contact Me
+      </h1>
       <p className="contactText">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
         cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque

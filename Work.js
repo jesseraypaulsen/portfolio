@@ -10,12 +10,7 @@ export function Work() {
   }, []);
   return (
     <Frame>
-      <h1
-        className="mdc-typography--headline2 centered"
-        style={{ paddingBottom: "50px" }}
-      >
-        Work
-      </h1>
+      <h1 className="mdc-typography--headline2 centered section-title">Work</h1>
       <ul className="cardList">
         <li className="mdc-card card">
           <Link to="/project" className="mdc-card__primary-action" tabIndex="0">

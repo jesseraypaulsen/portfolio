@@ -31,44 +31,38 @@ export function Header() {
           style={{ justifyContent: "center" }}
         >
           {/* useNavigate is a workaround for issues with Github Pages and React Router */}
-          <a
-            href=""
-            aria-label="Home"
-            onClick={(e) => showTriangle(e, navigate)}
-            // onClick={() => navigate("/")}
-          >
-            <i className="material-icons mdc-top-app-bar__action-item mdc-icon-button">
+          <a href="" aria-label="Home" onClick={() => navigate("/")}>
+            <i
+              className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+              onClick={(e) => showTriangle(e)}
+            >
               home
+              <div className="triangle"></div>
             </i>
           </a>
-          <Link
-            //className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-            aria-label="Work"
-            to="/work"
-            onClick={(e) => showTriangle(e)}
-          >
-            <i className="material-icons mdc-top-app-bar__action-item mdc-icon-button">
+          <Link aria-label="Work" to="/work">
+            <i
+              className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+              onClick={(e) => showTriangle(e)}
+            >
               work
             </i>
           </Link>
-          <Link
-            //className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-            aria-label="About"
-            to="/about"
-            onClick={(e) => showTriangle(e)}
-          >
-            <i className="material-icons mdc-top-app-bar__action-item mdc-icon-button">
+          <Link aria-label="About" to="/about">
+            <i
+              className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+              onClick={(e) => showTriangle(e)}
+            >
               info
             </i>
           </Link>
-          <Link
-            //className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-            aria-label="Contact"
-            to="/contact"
-            onClick={(e) => showTriangle(e)}
-          >
-            <i className="material-icons mdc-top-app-bar__action-item mdc-icon-button">
+          <Link aria-label="Contact" to="/contact">
+            <i
+              className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
+              onClick={(e) => showTriangle(e)}
+            >
               email
+              {/*<div className="triangle"></div>*/}
             </i>
           </Link>
         </section>
@@ -78,10 +72,22 @@ export function Header() {
   );
 }
 
-function showTriangle(e, callback) {
-  //e.preventDefault();
-  console.log(`showTriangle called`);
-  if (callback) callback("/"); // navigate("/")
+function showTriangle(e) {
+  /* this is a handler on each i element. It appends a triangle to the i element.
+   So the triangle will also call this function if it is clicked, and if so this 
+   line prevents further execution. */
+  if (e.target.nodeName !== "I") return;
+
+  //const iconRect = e.target.getBoundingClientRect();
+
+  const prevTriangle = document.querySelector(".triangle");
+  console.log("PrevTriangle");
+  console.log(prevTriangle);
+  if (prevTriangle) prevTriangle.remove();
+
+  const triangle = document.createElement("div");
+  triangle.classList.add("triangle");
+  e.target.append(triangle);
 }
 
 /*

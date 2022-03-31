@@ -1,11 +1,15 @@
-/* height must be set for scrolling to work. Setting min-height instead does not work. */
+/* height must be set for scrolling to work. Setting min-height instead does not work. 
+Setting height to 600px or above turns the scrolling off. */
 
 .frame {
   width: 900px;
-  height: 500px;
-  border: 1px solid black;
-  background: aliceblue;
+  height: 520px;
+  background: #ffffff;
   margin: 100px auto 0; /*horizontonal center*/
   padding: 30px;
   overflow-y: auto;
+}
+
+.frame .section-title {
+  padding-bottom: 50px;
 }
