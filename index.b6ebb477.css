@@ -1,26 +1,33 @@
 /*https://css-tricks.com/snippets/css/css-triangle/*/
 
+i {
+  position: relative;
+}
 .triangle {
   width: 0;
   height: 0;
-  display: block;
-  border-top: solid 20px #ffffff;
   border-left: solid 20px transparent;
   border-right: solid 20px transparent;
-  border-bottom: solid 20px transparent;
+  border-bottom: solid 20px white;
   position: absolute;
+  top: 73px;
+  left: 4px;
 }
 
-/* height must be set for scrolling to work. Setting min-height instead does not work. */
+/* height must be set for scrolling to work. Setting min-height instead does not work. 
+Setting height to 600px or above turns the scrolling off. */
 
 .frame {
   width: 900px;
   height: 520px;
-  border: 1px solid black;
-  background: aliceblue;
+  background: #ffffff;
   margin: 100px auto 0; /*horizontonal center*/
   padding: 30px;
   overflow-y: auto;
+}
+
+.frame .section-title {
+  padding-bottom: 50px;
 }
 
 .jumbotron {
@@ -160,7 +167,7 @@ h1 {
 
 :root {
   /* --mdc-theme-primary: #6200ee; */
-  --mdc-theme-primary: rgb(5, 50, 90);
+  --mdc-theme-primary: #90a4ae;
   --pageMax: 1200x;
   --contentMax: 900px;
 }
@@ -178,6 +185,7 @@ h1 {
 
 body {
   overflow: hidden; /* disable scrolling */
+  background-color: #ddd;
 }
 
 /* About.js, Project.js, Work.js */
