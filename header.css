@@ -8,8 +8,12 @@ i {
   height: 0;
   border-left: solid 20px transparent;
   border-right: solid 20px transparent;
-  border-bottom: solid 20px white;
+  border-bottom: solid 20px transparent;
   position: absolute;
-  top: 73px;
+  top: 72px;
   left: 4px;
+}
+
+.triangle.show {
+  border-bottom: solid 20px white;
 }

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { MDCTopAppBar } from "@material/top-app-bar/index";
 import "./header.css";
 
@@ -16,6 +16,8 @@ export function Header() {
   //header is set to { top: "0" } because the margin from an element in normal flow (Frame),
   //mysteriously changes the starting position of the header even though it has a fixed
   //position. I have no idea why this occurs.
+  const [arrow, setArrow] = useState("home");
+  console.log(arrow);
   return (
     <header
       className="mdc-top-app-bar"
@@ -34,35 +36,45 @@ export function Header() {
           <a href="" aria-label="Home" onClick={() => navigate("/")}>
             <i
               className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-              onClick={(e) => showTriangle(e)}
+              onClick={(e) => setArrow((prevState) => "home")}
             >
               home
-              <div className="triangle"></div>
+              <div
+                className={arrow == "home" ? "triangle show" : "triangle"}
+              ></div>
             </i>
           </a>
           <Link aria-label="Work" to="/work">
             <i
               className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-              onClick={(e) => showTriangle(e)}
+              onClick={(e) => setArrow((prevState) => "work")}
             >
               work
+              <div
+                className={arrow == "work" ? "triangle show" : "triangle"}
+              ></div>
             </i>
           </Link>
           <Link aria-label="About" to="/about">
             <i
               className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-              onClick={(e) => showTriangle(e)}
+              onClick={(e) => setArrow((prevState) => "about")}
             >
               info
+              <div
+                className={arrow == "about" ? "triangle show" : "triangle"}
+              ></div>
             </i>
           </Link>
           <Link aria-label="Contact" to="/contact">
             <i
               className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-              onClick={(e) => showTriangle(e)}
+              onClick={(e) => setArrow((prevState) => "contact")}
             >
               email
-              {/*<div className="triangle"></div>*/}
+              <div
+                className={arrow == "contact" ? "triangle show" : "triangle"}
+              ></div>
             </i>
           </Link>
         </section>
@@ -70,24 +82,6 @@ export function Header() {
       </div>
     </header>
   );
-}
-
-function showTriangle(e) {
-  /* this is a handler on each i element. It appends a triangle to the i element.
-   So the triangle will also call this function if it is clicked, and if so this 
-   line prevents further execution. */
-  if (e.target.nodeName !== "I") return;
-
-  //const iconRect = e.target.getBoundingClientRect();
-
-  const prevTriangle = document.querySelector(".triangle");
-  console.log("PrevTriangle");
-  console.log(prevTriangle);
-  if (prevTriangle) prevTriangle.remove();
-
-  const triangle = document.createElement("div");
-  triangle.classList.add("triangle");
-  e.target.append(triangle);
 }
 
 /*

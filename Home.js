@@ -31,7 +31,7 @@ export function Home() {
 function SocialLinks() {
   return (
     <div className="social-icon-links">
-      <div style={{ padding: "10px" }}>
+      <div>
         <a
           href="https://www.linkedin.com/in/jesse-paulsen-71136a132"
           target="_blank"
@@ -47,7 +47,7 @@ function SocialLinks() {
           </svg>
         </a>
       </div>
-      <div style={{ padding: "10px" }}>
+      <div>
         <a
           href="https://github.com/jesseraypaulsen"
           target="_blank"

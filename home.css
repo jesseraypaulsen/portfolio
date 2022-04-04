@@ -12,6 +12,7 @@ h1 {
   font-size: 3.4em;
   font-weight: 400;
   color: #363636;
+  padding-bottom: 0.7em;
 }
 
 .jumbotron .jumbotron__row {
@@ -33,9 +34,19 @@ h1 {
 .social-icon-links {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   /* background-color: aliceblue; */
 }
+
+.social-icon-links > div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.social-icon-links > div:first-child {
+  border-right: 0;
+} /* collapsed border. NOTE: if you set the width to a positive value here, then you
+you must also set the style and color values or it will not show. */
 
 .social-icon-links svg {
   width: 23px;
