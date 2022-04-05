@@ -3,6 +3,7 @@
 i {
   position: relative;
 }
+
 .triangle {
   width: 0;
   height: 0;
@@ -10,8 +11,9 @@ i {
   border-right: solid 20px transparent;
   border-bottom: solid 20px transparent;
   position: absolute;
-  top: 72px;
   left: 4px;
+  /* top: 72px; */
+  /* bottom: -44px; */
 }
 
 .triangle.show {

@@ -17,7 +17,7 @@ export function Header() {
   //mysteriously changes the starting position of the header even though it has a fixed
   //position. I have no idea why this occurs.
   const [arrow, setArrow] = useState("home");
-  console.log(arrow);
+  const triangleBottom = alignArrowWithFrame();
   return (
     <header
       className="mdc-top-app-bar"
@@ -39,9 +39,15 @@ export function Header() {
               onClick={(e) => setArrow((prevState) => "home")}
             >
               home
-              <div
+              {/*<div
                 className={arrow == "home" ? "triangle show" : "triangle"}
-              ></div>
+              ></div>*/}
+              {triangleBottom ? (
+                <div
+                  style={{ bottom: triangleBottom }}
+                  className={arrow == "home" ? "triangle show" : "triangle"}
+                ></div>
+              ) : null}
             </i>
           </a>
           <Link aria-label="Work" to="/work">
@@ -50,9 +56,16 @@ export function Header() {
               onClick={(e) => setArrow((prevState) => "work")}
             >
               work
-              <div
-                className={arrow == "work" ? "triangle show" : "triangle"}
-              ></div>
+              {triangleBottom ? (
+                <div
+                  style={{ bottom: triangleBottom }}
+                  className={arrow == "work" ? "triangle show" : "triangle"}
+                ></div>
+              ) : (
+                <div
+                  className={arrow == "work" ? "triangle show" : "triangle"}
+                ></div>
+              )}
             </i>
           </Link>
           <Link aria-label="About" to="/about">
@@ -61,9 +74,16 @@ export function Header() {
               onClick={(e) => setArrow((prevState) => "about")}
             >
               info
-              <div
-                className={arrow == "about" ? "triangle show" : "triangle"}
-              ></div>
+              {triangleBottom ? (
+                <div
+                  style={{ bottom: triangleBottom }}
+                  className={arrow == "about" ? "triangle show" : "triangle"}
+                ></div>
+              ) : (
+                <div
+                  className={arrow == "about" ? "triangle show" : "triangle"}
+                ></div>
+              )}
             </i>
           </Link>
           <Link aria-label="Contact" to="/contact">
@@ -72,9 +92,16 @@ export function Header() {
               onClick={(e) => setArrow((prevState) => "contact")}
             >
               email
-              <div
-                className={arrow == "contact" ? "triangle show" : "triangle"}
-              ></div>
+              {triangleBottom ? (
+                <div
+                  style={{ bottom: triangleBottom }}
+                  className={arrow == "contact" ? "triangle show" : "triangle"}
+                ></div>
+              ) : (
+                <div
+                  className={arrow == "contact" ? "triangle show" : "triangle"}
+                ></div>
+              )}
             </i>
           </Link>
         </section>
@@ -82,6 +109,17 @@ export function Header() {
       </div>
     </header>
   );
+}
+
+function alignArrowWithFrame() {
+  const frame = document.querySelector(".frame");
+  const i = document.querySelector("i");
+  // doesn't matter which i element, because they all have the same vertical position.
+  if (frame && i) {
+    const domRectF = frame.getBoundingClientRect();
+    const domRectI = i.getBoundingClientRect();
+    return -(domRectF.top - domRectI.bottom);
+  }
 }
 
 /*
