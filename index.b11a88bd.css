@@ -1,35 +1,3 @@
-/*https://css-tricks.com/snippets/css/css-triangle/*/
-
-i {
-  position: relative;
-}
-.triangle {
-  width: 0;
-  height: 0;
-  border-left: solid 20px transparent;
-  border-right: solid 20px transparent;
-  border-bottom: solid 20px white;
-  position: absolute;
-  top: 73px;
-  left: 4px;
-}
-
-/* height must be set for scrolling to work. Setting min-height instead does not work. 
-Setting height to 600px or above turns the scrolling off. */
-
-.frame {
-  width: 900px;
-  height: 520px;
-  background: #ffffff;
-  margin: 100px auto 0; /*horizontonal center*/
-  padding: 30px;
-  overflow-y: auto;
-}
-
-.frame .section-title {
-  padding-bottom: 50px;
-}
-
 .jumbotron {
   display: flex;
   flex-direction: column;
@@ -44,6 +12,7 @@ h1 {
   font-size: 3.4em;
   font-weight: 400;
   color: #363636;
+  padding-bottom: 0.7em;
 }
 
 .jumbotron .jumbotron__row {
@@ -65,9 +34,19 @@ h1 {
 .social-icon-links {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   /* background-color: aliceblue; */
 }
+
+.social-icon-links > div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.social-icon-links > div:first-child {
+  border-right: 0;
+} /* collapsed border. NOTE: if you set the width to a positive value here, then you
+you must also set the style and color values or it will not show. */
 
 .social-icon-links svg {
   width: 23px;
@@ -163,6 +142,34 @@ h1 {
   max-width: var(--contentMax);
 }
 
+/* height must be set for scrolling to work. Setting min-height instead does not work. 
+Setting height to 600px or above turns the scrolling off. */
+
+.body-container {
+  width: 900px;
+  height: 520px;
+  /* height: 100vh;
+  width: 100vw; */
+  background: #ffffff;
+  margin: 100px auto 0;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.body-container .section-title {
+  padding-bottom: 50px;
+}
+
+/*https://css-tricks.com/snippets/css/css-triangle/*/
+.body-container > .arrow {
+  width: 0;
+  height: 0;
+  border-left: solid 24px transparent;
+  border-right: solid 24px transparent;
+  border-bottom: solid 20px white;  
+  position: absolute;
+  top: -20px;
+}
 /* Define theme variables before importing any MDC Web component styles */
 
 :root {
@@ -171,11 +178,6 @@ h1 {
   --pageMax: 1200x;
   --contentMax: 900px;
 }
-
-/* index.html */
-/* body {
-  padding: 50px 32px 32px;
-} */
 
 * {
   margin: 0;
@@ -186,6 +188,7 @@ h1 {
 body {
   overflow: hidden; /* disable scrolling */
   background-color: #ddd;
+  position: relative;
 }
 
 /* About.js, Project.js, Work.js */
@@ -230,4 +233,4 @@ p {
   }
 }
 
-/*# sourceMappingURL=index.b6ebb477.css.map */
+/*# sourceMappingURL=index.b11a88bd.css.map */

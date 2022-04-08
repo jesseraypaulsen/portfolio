@@ -1008,11 +1008,11 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _reactRouterDom = require("react-router-dom");
-var _page = require("./Page");
-var _generalCss = require("./general.css");
+var _app = require("./App");
+var _baseCss = require("./base.css");
 const container = document.getElementById("container");
 _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.HashRouter, {
-    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_page.Page, {
+    children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_app.App, {
     }, void 0, false, {
         fileName: "index.js",
         lineNumber: 10,
@@ -1029,7 +1029,7 @@ _reactDomDefault.default.render(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouter
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","react-router-dom":"fdOAw","./Page":"37UYl","./general.css":"4mkKe","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","react-router-dom":"fdOAw","./App":"2Ew96","./base.css":"jenSB","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"iTorj":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-dev-runtime.development.js');
 
@@ -24639,104 +24639,55 @@ const normalizeSearch = (search)=>!search || search === "?" ? "" : search.starts
 const normalizeHash = (hash)=>!hash || hash === "#" ? "" : hash.startsWith("#") ? hash : "#" + hash
 ; ///////////////////////////////////////////////////////////////////////////////
 
-},{"react":"21dqq","history":"iE5Zp","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"37UYl":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9310 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react":"21dqq","history":"iE5Zp","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"2Ew96":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c1db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9310.prelude(module);
+$parcel$ReactRefreshHelpers$c1db.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Page", ()=>Page
+parcelHelpers.export(exports, "App", ()=>App
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _header = require("./Header");
-var _home = require("./Home");
-var _work = require("./Work");
-var _about = require("./About");
-var _contact = require("./Contact");
-var _project = require("./Project");
-var _reactRouterDom = require("react-router-dom");
-function Page() {
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+var _body = require("./Body");
+var _react = require("react");
+var _s = $RefreshSig$();
+function App() {
+    _s();
+    const [arrowPosition, setArrowPosition] = _react.useState(null);
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
+                setArrowPosition: setArrowPosition
             }, void 0, false, {
-                fileName: "Page.js",
-                lineNumber: 12,
+                fileName: "App.js",
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "/",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_home.Home, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 14,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "work",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 15,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "about",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_about.About, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 16,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "contact",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_contact.Contact, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 17,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "project",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_project.Project, {
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Page.js",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "Page.js",
-                lineNumber: 13,
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_body.Body, {
+                arrowPosition: arrowPosition
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 10,
                 columnNumber: 7
             }, this)
         ]
-    }, void 0, true, {
-        fileName: "Page.js",
-        lineNumber: 11,
-        columnNumber: 5
-    }, this));
+    }, void 0, true));
 }
-_c = Page;
+_s(App, "q3f7twSwN6nIDdvzPDgxphus4Xk=");
+_c = App;
 var _c;
-$RefreshReg$(_c, "Page");
+$RefreshReg$(_c, "App");
 
-  $parcel$ReactRefreshHelpers$9310.postlude(module);
+  $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Header":"8bVnH","./Home":"k46Sb","./Work":"7s2mh","./About":"2rsUE","./Contact":"23MUH","./Project":"03vJm","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"8bVnH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./Header":"8bVnH","./Body":"69BtK","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"8bVnH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7785 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -24745,6 +24696,7 @@ $parcel$ReactRefreshHelpers$7785.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+//import "./header.css";
 /* https://developers.google.com/fonts/docs/material_icons#styling_icons_in_material_design
    why don't these classes for making icons dark/light/big/small work?
 */ parcelHelpers.export(exports, "Header", ()=>Header
@@ -24753,9 +24705,8 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
 var _index = require("@material/top-app-bar/index");
-var _headerCss = require("./header.css");
 var _s = $RefreshSig$();
-function Header() {
+function Header({ setArrowPosition  }) {
     _s();
     const topAppBarElement = _react.useRef(null);
     _react.useEffect(()=>{
@@ -24765,6 +24716,11 @@ function Header() {
     //header is set to { top: "0" } because the margin from an element in normal flow (Frame),
     //mysteriously changes the starting position of the header even though it has a fixed
     //position. I have no idea why this occurs.
+    const homeButtonRef = _react.useRef(null);
+    _react.useEffect(()=>{
+        setArrowPosition((prevState)=>homeButtonRef.current.getBoundingClientRect()
+        );
+    }, []);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("header", {
         className: "mdc-top-app-bar",
         ref: topAppBarElement,
@@ -24778,7 +24734,7 @@ function Header() {
                     className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
                 }, void 0, false, {
                     fileName: "Header.js",
-                    lineNumber: 26,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
@@ -24788,137 +24744,114 @@ function Header() {
                         justifyContent: "center"
                     },
                     children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
-                            href: "",
-                            "aria-label": "Home",
-                            onClick: ()=>navigate("/")
-                            ,
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                            "aria-label": "home",
+                            to: "/",
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
                                 className: "material-icons mdc-top-app-bar__action-item mdc-icon-button",
-                                onClick: (e)=>showTriangle(e)
+                                ref: homeButtonRef,
+                                onClick: (e)=>setArrowPosition((prevState)=>e.target.getBoundingClientRect()
+                                    )
                                 ,
-                                children: [
-                                    "home",
-                                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                                        className: "triangle"
-                                    }, void 0, false, {
-                                        fileName: "Header.js",
-                                        lineNumber: 40,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                children: "home"
+                            }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 35,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 34,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            "aria-label": "Work",
+                            "aria-label": "work",
                             to: "/work",
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
                                 className: "material-icons mdc-top-app-bar__action-item mdc-icon-button",
-                                onClick: (e)=>showTriangle(e)
+                                onClick: (e)=>setArrowPosition((prevState)=>e.target.getBoundingClientRect()
+                                    )
                                 ,
                                 children: "work"
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 44,
+                                lineNumber: 56,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 43,
+                            lineNumber: 55,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            "aria-label": "About",
+                            "aria-label": "about",
                             to: "/about",
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
                                 className: "material-icons mdc-top-app-bar__action-item mdc-icon-button",
-                                onClick: (e)=>showTriangle(e)
+                                onClick: (e)=>setArrowPosition((prevState)=>e.target.getBoundingClientRect()
+                                    )
                                 ,
                                 children: "info"
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 52,
+                                lineNumber: 68,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 51,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            "aria-label": "Contact",
+                            "aria-label": "contact",
                             to: "/contact",
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
                                 className: "material-icons mdc-top-app-bar__action-item mdc-icon-button",
-                                onClick: (e)=>showTriangle(e)
+                                onClick: (e)=>setArrowPosition((prevState)=>e.target.getBoundingClientRect()
+                                    )
                                 ,
                                 children: "email"
                             }, void 0, false, {
                                 fileName: "Header.js",
-                                lineNumber: 60,
+                                lineNumber: 80,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "Header.js",
-                            lineNumber: 59,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "Header.js",
-                    lineNumber: 28,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
                     className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
                 }, void 0, false, {
                     fileName: "Header.js",
-                    lineNumber: 69,
+                    lineNumber: 92,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Header.js",
-            lineNumber: 25,
+            lineNumber: 32,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Header.js",
-        lineNumber: 20,
+        lineNumber: 27,
         columnNumber: 5
     }, this));
 }
-_s(Header, "xpuElp6aOPICxdxDMfjDmuHMTmo=", false, function() {
+_s(Header, "MpeTGoi7Xr+8WC8/2NFpwkJYGYI=", false, function() {
     return [
         _reactRouterDom.useNavigate
     ];
 });
 _c = Header;
-function showTriangle(e) {
-    /* this is a handler on each i element. It appends a triangle to the i element.
-   So the triangle will also call this function if it is clicked, and if so this 
-   line prevents further execution. */ if (e.target.nodeName !== "I") return;
-    //const iconRect = e.target.getBoundingClientRect();
-    const prevTriangle = document.querySelector(".triangle");
-    console.log("PrevTriangle");
-    console.log(prevTriangle);
-    if (prevTriangle) prevTriangle.remove();
-    const triangle = document.createElement("div");
-    triangle.classList.add("triangle");
-    e.target.append(triangle);
-} /*
-  https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar
-  https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar
-  https://material.io/components/app-bars-top/web#style-customization
-*/ 
 var _c;
 $RefreshReg$(_c, "Header");
 
@@ -24927,7 +24860,7 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","react":"21dqq","@material/top-app-bar/index":"gjVJK","./header.css":"jbtdK","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"gjVJK":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","react":"21dqq","@material/top-app-bar/index":"gjVJK","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"gjVJK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -27074,7 +27007,7 @@ var MDCShortTopAppBarFoundation = function(_super) {
 }(_foundation.MDCTopAppBarBaseFoundation);
 exports.default = MDCShortTopAppBarFoundation;
 
-},{"tslib":"lRdW5","../constants":"52gAM","../foundation":"dHcUo","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"jbtdK":[function() {},{}],"7nTYm":[function(require,module,exports) {
+},{"tslib":"lRdW5","../constants":"52gAM","../foundation":"dHcUo","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"7nTYm":[function(require,module,exports) {
 "use strict";
 var Refresh = require('react-refresh/runtime');
 function debounce(func, delay) {
@@ -27194,7 +27127,124 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"iorOX"}],"k46Sb":[function(require,module,exports) {
+},{"react-refresh/runtime":"iorOX"}],"69BtK":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5ac0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5ac0.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Body", ()=>Body
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _home = require("./Home");
+var _work = require("./Work");
+var _about = require("./About");
+var _contact = require("./Contact");
+var _project = require("./Project");
+var _reactRouterDom = require("react-router-dom");
+var _react = require("react");
+var _bodyCss = require("./body.css");
+var _s = $RefreshSig$();
+function Body({ arrowPosition  }) {
+    _s();
+    console.log(arrowPosition);
+    const scrollRef = _react.useRef(null);
+    /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
+     Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
+     component and apply it to all sub-components. But HashRouter and useLocation do not work 
+     together. */ return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+        className: "body-container",
+        ref: scrollRef,
+        children: [
+            arrowPosition ? /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                className: "arrow",
+                style: {
+                    left: arrowPosition.x
+                }
+            }, void 0, false, {
+                fileName: "Body.js",
+                lineNumber: 20,
+                columnNumber: 9
+            }, this) : null,
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
+                children: [
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "/",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_home.Home, {
+                            scrollRef: scrollRef
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "Body.js",
+                        lineNumber: 23,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "work",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
+                            scrollRef: scrollRef
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "Body.js",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "about",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_about.About, {
+                            scrollRef: scrollRef
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "Body.js",
+                        lineNumber: 25,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "contact",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_contact.Contact, {
+                            scrollRef: scrollRef
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "Body.js",
+                        lineNumber: 26,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                        path: "project",
+                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_project.Project, {
+                            scrollRef: scrollRef
+                        }, void 0, false, void 0, void 0)
+                    }, void 0, false, {
+                        fileName: "Body.js",
+                        lineNumber: 27,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "Body.js",
+                lineNumber: 22,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "Body.js",
+        lineNumber: 18,
+        columnNumber: 5
+    }, this));
+}
+_s(Body, "rUl6RJdP9XfufN21BrtKqIOri0o=");
+_c = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$5ac0.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./Home":"k46Sb","./Work":"7s2mh","./About":"2rsUE","./Contact":"23MUH","./Project":"03vJm","react-router-dom":"fdOAw","react":"21dqq","./body.css":"cEXyv","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"k46Sb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5e44 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27207,18 +27257,14 @@ parcelHelpers.export(exports, "Home", ()=>Home
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _frame = require("./Frame");
 var _homeCss = require("./home.css");
 var _s = $RefreshSig$();
-function Home() {
+function Home({ scrollRef  }) {
     _s();
     _react.useEffect(()=>{
-        /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
-     Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
-     component and apply it to all sub-components. But HashRouter and useLocation do not work 
-     together. So for now it gets called in every scrollable sub-component. */ window.scrollTo(0, 0);
+        scrollRef.current.scrollTo(0, 0);
     }, []);
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_frame.Frame, {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
             className: "jumbotron",
             children: [
@@ -27228,12 +27274,12 @@ function Home() {
                         children: "Jesse Paulsen"
                     }, void 0, false, {
                         fileName: "Home.js",
-                        lineNumber: 17,
+                        lineNumber: 12,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 16,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27247,32 +27293,28 @@ function Home() {
                             children: "JavaScript Developer"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 23,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(SocialLinks, {
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 24,
+                            lineNumber: 19,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "Home.js",
-                    lineNumber: 19,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Home.js",
-            lineNumber: 15,
+            lineNumber: 10,
             columnNumber: 7
         }, this)
-    }, void 0, false, {
-        fileName: "Home.js",
-        lineNumber: 14,
-        columnNumber: 5
-    }, this));
+    }, void 0, false));
 }
 _s(Home, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = Home;
@@ -27281,9 +27323,6 @@ function SocialLinks() {
         className: "social-icon-links",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                style: {
-                    padding: "10px"
-                },
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
                     href: "https://www.linkedin.com/in/jesse-paulsen-71136a132",
                     target: "_blank",
@@ -27297,28 +27336,25 @@ function SocialLinks() {
                             d: "M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 46,
+                            lineNumber: 41,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Home.js",
-                        lineNumber: 40,
+                        lineNumber: 35,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 35,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "Home.js",
-                lineNumber: 34,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                style: {
-                    padding: "10px"
-                },
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("a", {
                     href: "https://github.com/jesseraypaulsen",
                     target: "_blank",
@@ -27332,28 +27368,28 @@ function SocialLinks() {
                             d: "M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 62,
+                            lineNumber: 57,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Home.js",
-                        lineNumber: 56,
+                        lineNumber: 51,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 51,
+                    lineNumber: 46,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "Home.js",
-                lineNumber: 50,
+                lineNumber: 45,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Home.js",
-        lineNumber: 33,
+        lineNumber: 28,
         columnNumber: 5
     }, this));
 }
@@ -27367,49 +27403,7 @@ $RefreshReg$(_c1, "SocialLinks");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Frame":"gvmGy","./home.css":"i6MqZ","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"gvmGy":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0ee7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0ee7.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Frame", ()=>Frame
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _frameCss = require("./frame.css");
-function Frame(props) {
-    /* the mdc- class stops topbar from overlapping this element.
-     does it only increase its padding-height? 
-  let classes = "mdc-top-app-bar--fixed-adjust";
-  if (props.extraClass) {
-    classes += ` ${props.extraClass}`;
-  }
-  return (
-    <main className={classes}>
-      <div className="frame">{props.children}</div>
-    </main>
-  ); */ return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "frame",
-        children: props.children
-    }, void 0, false, {
-        fileName: "Frame.js",
-        lineNumber: 15,
-        columnNumber: 10
-    }, this));
-}
-_c = Frame;
-var _c;
-$RefreshReg$(_c, "Frame");
-
-  $parcel$ReactRefreshHelpers$0ee7.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./frame.css":"6OQRg","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"6OQRg":[function() {},{}],"i6MqZ":[function() {},{}],"7s2mh":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./home.css":"i6MqZ","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"i6MqZ":[function() {},{}],"7s2mh":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$352a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27423,22 +27417,21 @@ parcelHelpers.export(exports, "Work", ()=>Work
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
-var _frame = require("./Frame");
 var _workCss = require("./work.css");
 var _s = $RefreshSig$();
-function Work() {
+function Work({ scrollRef  }) {
     _s();
     _react.useEffect(()=>{
-        /* see Home.js for explanation */ window.scrollTo(0, 0);
+        scrollRef.current.scrollTo(0, 0);
     }, []);
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_frame.Frame, {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "Work"
             }, void 0, false, {
                 fileName: "Work.js",
-                lineNumber: 13,
+                lineNumber: 11,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
@@ -27456,7 +27449,7 @@ function Work() {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 17,
+                                    lineNumber: 15,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27467,7 +27460,7 @@ function Work() {
                                             children: "Personal Knowledge Management System"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 25,
+                                            lineNumber: 23,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27475,24 +27468,24 @@ function Work() {
                                             children: "A Unique Application. Inspired by Memex and the Zettelkasten. Renders notecards as nodes on a graph."
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 28,
+                                            lineNumber: 26,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 21,
+                                    lineNumber: 19,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 16,
+                            lineNumber: 14,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 15,
+                        lineNumber: 13,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -27507,7 +27500,7 @@ function Work() {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 37,
+                                    lineNumber: 35,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27518,7 +27511,7 @@ function Work() {
                                             children: "Personality Test"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 45,
+                                            lineNumber: 43,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27526,36 +27519,36 @@ function Work() {
                                             children: "The Five O.C.E.A.N. Traits"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 48,
+                                            lineNumber: 46,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 41,
+                                    lineNumber: 39,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 36,
+                            lineNumber: 34,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 35,
+                        lineNumber: 33,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Work.js",
-                lineNumber: 14,
+                lineNumber: 12,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Work.js",
-        lineNumber: 12,
+        lineNumber: 10,
         columnNumber: 5
     }, this));
 }
@@ -27569,7 +27562,7 @@ $RefreshReg$(_c, "Work");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","react":"21dqq","./Frame":"gvmGy","./work.css":"gdyIn","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"gdyIn":[function() {},{}],"2rsUE":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","react":"21dqq","./work.css":"gdyIn","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"gdyIn":[function() {},{}],"2rsUE":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27582,22 +27575,21 @@ parcelHelpers.export(exports, "About", ()=>About
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _frame = require("./Frame");
 var _aboutCss = require("./about.css");
 var _s = $RefreshSig$();
-function About() {
+function About({ scrollRef  }) {
     _s();
     _react.useEffect(()=>{
-        /* see Home.js for explanation */ window.scrollTo(0, 0);
+        scrollRef.current.scrollTo(0, 0);
     }, []);
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_frame.Frame, {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "About Me"
             }, void 0, false, {
                 fileName: "About.js",
-                lineNumber: 12,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27610,12 +27602,12 @@ function About() {
                             alt: ""
                         }, void 0, false, {
                             fileName: "About.js",
-                            lineNumber: 17,
+                            lineNumber: 15,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "About.js",
-                        lineNumber: 16,
+                        lineNumber: 14,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -27624,47 +27616,43 @@ function About() {
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
                             }, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 27,
+                                lineNumber: 25,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
                             }, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 28,
+                                lineNumber: 26,
                                 columnNumber: 11
                             }, this),
                             "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
                             }, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 32,
+                                lineNumber: 30,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("br", {
                             }, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 33,
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, this),
                             "Tempora aperiam nobis asperiores consequatur cumque, sed nisi perferendis laudantium a odit excepturi quo distinctio incidunt molestiae, dicta quia saepe laborum perspiciatis odio alias aspernatur quis. Quam corrupti error recusandae. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem."
                         ]
                     }, void 0, true, {
                         fileName: "About.js",
-                        lineNumber: 22,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "About.js",
-                lineNumber: 15,
+                lineNumber: 13,
                 columnNumber: 7
             }, this)
         ]
-    }, void 0, true, {
-        fileName: "About.js",
-        lineNumber: 11,
-        columnNumber: 5
-    }, this));
+    }, void 0, true));
 }
 _s(About, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = About;
@@ -27676,7 +27664,7 @@ $RefreshReg$(_c, "About");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Frame":"gvmGy","./about.css":"bgXLg","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"bgXLg":[function() {},{}],"23MUH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./about.css":"bgXLg","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"bgXLg":[function() {},{}],"23MUH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$c69d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27692,10 +27680,9 @@ var _react = require("react");
 var _textfield = require("@material/textfield");
 var _characterCounter = require("@material/textfield/character-counter");
 var _ripple = require("@material/ripple");
-var _frame = require("./Frame");
 var _contactCss = require("./contact.css");
 var _s = $RefreshSig$();
-function Contact() {
+function Contact({ scrollRef  }) {
     _s();
     const nameField = _react.useRef(null);
     const emailField = _react.useRef(null);
@@ -27710,17 +27697,16 @@ function Contact() {
         new _ripple.MDCRipple(button.current);
     }, []);
     _react.useEffect(()=>{
-        /* see Home.js for explanation */ window.scrollTo(0, 0);
-    });
-    //<Frame extraClass="contactPage">
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_frame.Frame, {
+        scrollRef.current.scrollTo(0, 0);
+    }, []);
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "Contact Me"
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 29,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -27728,7 +27714,7 @@ function Contact() {
                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur."
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 32,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("form", {
@@ -27744,7 +27730,7 @@ function Contact() {
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 40,
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
@@ -27753,20 +27739,20 @@ function Contact() {
                                 children: "Name"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 45,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 48,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 39,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27779,7 +27765,7 @@ function Contact() {
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 52,
+                                lineNumber: 49,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("label", {
@@ -27788,20 +27774,20 @@ function Contact() {
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 57,
+                                lineNumber: 54,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 60,
+                                lineNumber: 57,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 51,
+                        lineNumber: 48,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27814,7 +27800,7 @@ function Contact() {
                                 children: "0 / 500"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 67,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("textarea", {
@@ -27825,7 +27811,7 @@ function Contact() {
                                 maxLength: "500"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 73,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27835,7 +27821,7 @@ function Contact() {
                                         className: "mdc-notched-outline__leading"
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 81,
+                                        lineNumber: 78,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -27846,31 +27832,31 @@ function Contact() {
                                             children: "Textarea Label"
                                         }, void 0, false, {
                                             fileName: "Contact.js",
-                                            lineNumber: 83,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 82,
+                                        lineNumber: 79,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                                         className: "mdc-notched-outline__trailing"
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 87,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "Contact.js",
-                                lineNumber: 80,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 63,
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
@@ -27882,7 +27868,7 @@ function Contact() {
                                 children: "Submit"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 95,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
@@ -27891,27 +27877,23 @@ function Contact() {
                                 children: "favorite"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 96,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 91,
+                        lineNumber: 88,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Contact.js",
-                lineNumber: 38,
+                lineNumber: 35,
                 columnNumber: 7
             }, this)
         ]
-    }, void 0, true, {
-        fileName: "Contact.js",
-        lineNumber: 28,
-        columnNumber: 5
-    }, this));
+    }, void 0, true));
 }
 _s(Contact, "kJMhZ5z5x0XpDuzGga/NA6SMeWI=");
 _c = Contact;
@@ -27923,7 +27905,7 @@ $RefreshReg$(_c, "Contact");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@material/textfield":"iAIQW","@material/textfield/character-counter":"8ibHT","@material/ripple":"jRAE3","./Frame":"gvmGy","./contact.css":"gWYIh","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"iAIQW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@material/textfield":"iAIQW","@material/textfield/character-counter":"8ibHT","@material/ripple":"jRAE3","./contact.css":"gWYIh","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"iAIQW":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -30662,22 +30644,21 @@ parcelHelpers.export(exports, "Project", ()=>Project
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _frame = require("./Frame");
 var _projectCss = require("./project.css");
 var _s = $RefreshSig$();
-function Project() {
+function Project({ scrollRef  }) {
     _s();
     _react.useEffect(()=>{
-        /* see Home.js for explanation */ window.scrollTo(0, 0);
+        scrollRef.current.scrollTo(0, 0);
     }, []);
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_frame.Frame, {
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
                 className: "mdc-typography--headline4",
                 children: "Flowers in Amsterdam"
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 12,
+                lineNumber: 10,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -30685,7 +30666,7 @@ function Project() {
                 children: "Photography"
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 13,
+                lineNumber: 11,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -30693,7 +30674,7 @@ function Project() {
                 children: "Now, take a good look at me! I’m one that has spoken to a King, I am: mayhap you’ll never see such another: and to show you I’m not proud, you may shake hands with me!’ And he grinned almost from ear to ear, as he leant forwards (and as nearly as possible fell off the wall in doing so) and offered Alice his hand. She watched him a little anxiously as she took it."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 14,
+                lineNumber: 12,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -30701,7 +30682,7 @@ function Project() {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 22,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -30709,7 +30690,7 @@ function Project() {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 26,
+                lineNumber: 24,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -30717,7 +30698,7 @@ function Project() {
                 children: "But the beard seemed to melt away as she touched it, and she found herself sitting quietly under a tree—while the Gnat (for that was the insect she had been talking to) was balancing itself on a twig just over her head, and fanning her with its wings."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 30,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
@@ -30725,7 +30706,7 @@ function Project() {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 36,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
@@ -30733,7 +30714,7 @@ function Project() {
                 children: "However, this was anything but a regular bee: in fact it was an elephant—as Alice soon found out, though the idea quite took her breath away at first."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 40,
+                lineNumber: 38,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("ul", {
@@ -30747,12 +30728,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 47,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 46,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30763,12 +30744,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 54,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 53,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30779,12 +30760,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 61,
+                            lineNumber: 59,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 60,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30795,12 +30776,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 68,
+                            lineNumber: 66,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 67,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30811,12 +30792,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 75,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 74,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30827,12 +30808,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 82,
+                            lineNumber: 80,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 81,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30843,12 +30824,12 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 89,
+                            lineNumber: 87,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 88,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV("li", {
@@ -30859,26 +30840,22 @@ function Project() {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 96,
+                            lineNumber: 94,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 95,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Project.js",
-                lineNumber: 45,
+                lineNumber: 43,
                 columnNumber: 7
             }, this)
         ]
-    }, void 0, true, {
-        fileName: "Project.js",
-        lineNumber: 11,
-        columnNumber: 5
-    }, this));
+    }, void 0, true));
 }
 _s(Project, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = Project;
@@ -30890,6 +30867,6 @@ $RefreshReg$(_c, "Project");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./Frame":"gvmGy","./project.css":"ioOt3","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"ioOt3":[function() {},{}],"4mkKe":[function() {},{}]},["haZVB","b17wO","bB7Pu"], "bB7Pu", "parcelRequire2041")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./project.css":"ioOt3","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"ioOt3":[function() {},{}],"cEXyv":[function() {},{}],"jenSB":[function() {},{}]},["haZVB","b17wO","bB7Pu"], "bB7Pu", "parcelRequire2041")
 
 //# sourceMappingURL=index.3d214d75.js.map
