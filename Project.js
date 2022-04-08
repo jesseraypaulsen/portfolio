@@ -1,14 +1,12 @@
 import { useEffect } from "react";
-import { Frame } from "./Frame";
 import "./project.css";
 
-export function Project() {
+export function Project({ scrollRef }) {
   useEffect(() => {
-    /* see Home.js for explanation */
-    window.scrollTo(0, 0);
+    scrollRef.current.scrollTo(0, 0);
   }, []);
   return (
-    <Frame>
+    <>
       <h1 className="mdc-typography--headline4">Flowers in Amsterdam</h1>
       <p className="mdc-typography--overline">Photography</p>
       <p className="mdc-typography--body1">
@@ -100,6 +98,6 @@ export function Project() {
           />
         </li>
       </ul>
-    </Frame>
+    </>
   );
 }

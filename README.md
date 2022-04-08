@@ -5,4 +5,4 @@ The project is based on [this Material Design template](https://glitch.com/~mate
 I then decided to change its appearance somewhat to resemble 
 [this template provided by html5up.net](https://html5up.net/astral)
 
-I learned that React Router does not work smoothly with Github Pages. Github Pages prefers static sites to single page applications. If I were re-doing this project, I would use a static site generator like Gatsby or Jekyll.
+I learned that React Router does not work smoothly with Github Pages. Github Pages prefers static sites to single page applications. If I were doing this project over again, I would use a static site generator like Gatsby or Jekyll.

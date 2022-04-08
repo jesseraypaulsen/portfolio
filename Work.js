@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-import { Frame } from "./Frame";
+import { useEffect, useRef } from "react";
 import "./work.css";
 
-export function Work() {
+export function Work({ scrollRef }) {
   useEffect(() => {
-    /* see Home.js for explanation */
-    window.scrollTo(0, 0);
+    scrollRef.current.scrollTo(0, 0);
   }, []);
   return (
-    <Frame>
+    <div>
       <h1 className="mdc-typography--headline2 centered section-title">Work</h1>
       <ul className="cardList">
         <li className="mdc-card card">
@@ -52,6 +50,6 @@ export function Work() {
           </Link>
         </li>
       </ul>
-    </Frame>
+    </div>
   );
 }

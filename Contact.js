@@ -2,10 +2,9 @@ import { useEffect, useRef } from "react";
 import { MDCTextField } from "@material/textfield";
 import { MDCTextFieldCharacterCounter } from "@material/textfield/character-counter";
 import { MDCRipple } from "@material/ripple";
-import { Frame } from "./Frame";
 import "./contact.css";
 
-export function Contact() {
+export function Contact({ scrollRef }) {
   const nameField = useRef(null);
   const emailField = useRef(null);
   const messageField = useRef(null);
@@ -19,13 +18,11 @@ export function Contact() {
     new MDCRipple(button.current);
   }, []);
   useEffect(() => {
-    /* see Home.js for explanation */
-    window.scrollTo(0, 0);
-  });
+    scrollRef.current.scrollTo(0, 0);
+  }, []);
 
-  //<Frame extraClass="contactPage">
   return (
-    <Frame>
+    <>
       <h1 className="mdc-typography--headline2 centered section-title">
         Contact Me
       </h1>
@@ -98,6 +95,6 @@ export function Contact() {
           </i>
         </button>
       </form>
-    </Frame>
+    </>
   );
 }

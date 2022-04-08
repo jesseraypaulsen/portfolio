@@ -1,17 +1,12 @@
 import { useEffect } from "react";
-import { Frame } from "./Frame";
 import "./home.css";
 
-export function Home() {
+export function Home({ scrollRef }) {
   useEffect(() => {
-    /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
-     Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
-     component and apply it to all sub-components. But HashRouter and useLocation do not work 
-     together. So for now it gets called in every scrollable sub-component. */
-    window.scrollTo(0, 0);
+    scrollRef.current.scrollTo(0, 0);
   }, []);
   return (
-    <Frame>
+    <>
       <div className="jumbotron">
         <div className="jumbotron__row">
           <h1>Jesse Paulsen</h1>
@@ -24,7 +19,7 @@ export function Home() {
           <SocialLinks />
         </div>
       </div>
-    </Frame>
+    </>
   );
 }
 

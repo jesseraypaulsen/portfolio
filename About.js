@@ -1,14 +1,12 @@
 import { useEffect } from "react";
-import { Frame } from "./Frame";
 import "./about.css";
 
-export function About() {
+export function About({ scrollRef }) {
   useEffect(() => {
-    /* see Home.js for explanation */
-    window.scrollTo(0, 0);
+    scrollRef.current.scrollTo(0, 0);
   }, []);
   return (
-    <Frame>
+    <>
       <h1 className="mdc-typography--headline2 centered section-title">
         About Me
       </h1>
@@ -39,6 +37,6 @@ export function About() {
           quaerat, alias rem.
         </p>
       </div>
-    </Frame>
+    </>
   );
 }

@@ -16,6 +16,7 @@
 body {
   overflow: hidden; /* disable scrolling */
   background-color: #ddd;
+  position: relative;
 }
 
 /* About.js, Project.js, Work.js */

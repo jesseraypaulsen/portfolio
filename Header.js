@@ -1,13 +1,13 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { MDCTopAppBar } from "@material/top-app-bar/index";
-import "./header.css";
+//import "./header.css";
 
 /* https://developers.google.com/fonts/docs/material_icons#styling_icons_in_material_design
    why don't these classes for making icons dark/light/big/small work?
 */
 
-export function Header() {
+export function Header({ setArrowPosition }) {
   const topAppBarElement = useRef(null);
   useEffect(() => {
     const topAppBar = new MDCTopAppBar(topAppBarElement.current);
@@ -16,8 +16,13 @@ export function Header() {
   //header is set to { top: "0" } because the margin from an element in normal flow (Frame),
   //mysteriously changes the starting position of the header even though it has a fixed
   //position. I have no idea why this occurs.
-  const [arrow, setArrow] = useState("home");
-  const triangleBottom = alignArrowWithFrame();
+
+  const homeButtonRef = useRef(null);
+  useEffect(() => {
+    setArrowPosition((prevState) =>
+      homeButtonRef.current.getBoundingClientRect()
+    );
+  }, []);
   return (
     <header
       className="mdc-top-app-bar"
@@ -33,75 +38,54 @@ export function Header() {
           style={{ justifyContent: "center" }}
         >
           {/* useNavigate is a workaround for issues with Github Pages and React Router */}
-          <a href="" aria-label="Home" onClick={() => navigate("/")}>
+          {/*<a href="" aria-label="home" onClick={() => navigate("/")}>*/}
+          <Link aria-label="home" to="/">
             <i
               className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-              onClick={(e) => setArrow((prevState) => "home")}
+              ref={homeButtonRef}
+              onClick={(e) =>
+                setArrowPosition((prevState) =>
+                  e.target.getBoundingClientRect()
+                )
+              }
             >
               home
-              {/*<div
-                className={arrow == "home" ? "triangle show" : "triangle"}
-              ></div>*/}
-              {triangleBottom ? (
-                <div
-                  style={{ bottom: triangleBottom }}
-                  className={arrow == "home" ? "triangle show" : "triangle"}
-                ></div>
-              ) : null}
             </i>
-          </a>
-          <Link aria-label="Work" to="/work">
+          </Link>
+          <Link aria-label="work" to="/work">
             <i
               className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-              onClick={(e) => setArrow((prevState) => "work")}
+              onClick={(e) =>
+                setArrowPosition((prevState) =>
+                  e.target.getBoundingClientRect()
+                )
+              }
             >
               work
-              {triangleBottom ? (
-                <div
-                  style={{ bottom: triangleBottom }}
-                  className={arrow == "work" ? "triangle show" : "triangle"}
-                ></div>
-              ) : (
-                <div
-                  className={arrow == "work" ? "triangle show" : "triangle"}
-                ></div>
-              )}
             </i>
           </Link>
-          <Link aria-label="About" to="/about">
+          <Link aria-label="about" to="/about">
             <i
               className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-              onClick={(e) => setArrow((prevState) => "about")}
+              onClick={(e) =>
+                setArrowPosition((prevState) =>
+                  e.target.getBoundingClientRect()
+                )
+              }
             >
               info
-              {triangleBottom ? (
-                <div
-                  style={{ bottom: triangleBottom }}
-                  className={arrow == "about" ? "triangle show" : "triangle"}
-                ></div>
-              ) : (
-                <div
-                  className={arrow == "about" ? "triangle show" : "triangle"}
-                ></div>
-              )}
             </i>
           </Link>
-          <Link aria-label="Contact" to="/contact">
+          <Link aria-label="contact" to="/contact">
             <i
               className="material-icons mdc-top-app-bar__action-item mdc-icon-button"
-              onClick={(e) => setArrow((prevState) => "contact")}
+              onClick={(e) =>
+                setArrowPosition((prevState) =>
+                  e.target.getBoundingClientRect()
+                )
+              }
             >
               email
-              {triangleBottom ? (
-                <div
-                  style={{ bottom: triangleBottom }}
-                  className={arrow == "contact" ? "triangle show" : "triangle"}
-                ></div>
-              ) : (
-                <div
-                  className={arrow == "contact" ? "triangle show" : "triangle"}
-                ></div>
-              )}
             </i>
           </Link>
         </section>
@@ -110,20 +94,3 @@ export function Header() {
     </header>
   );
 }
-
-function alignArrowWithFrame() {
-  const frame = document.querySelector(".frame");
-  const i = document.querySelector("i");
-  // doesn't matter which i element, because they all have the same vertical position.
-  if (frame && i) {
-    const domRectF = frame.getBoundingClientRect();
-    const domRectI = i.getBoundingClientRect();
-    return -(domRectF.top - domRectI.bottom);
-  }
-}
-
-/*
-  https://material-components.github.io/material-components-web-catalog/#/component/top-app-bar
-  https://github.com/material-components/material-components-web/tree/master/packages/mdc-top-app-bar
-  https://material.io/components/app-bars-top/web#style-customization
-*/
