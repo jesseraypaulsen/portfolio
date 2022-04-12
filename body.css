@@ -2,8 +2,8 @@
 Setting height to 600px or above turns the scrolling off. */
 
 .body-container {
-  width: 900px;
-  height: 520px;
+  max-width: 900px;
+  max-height: 520px;
   /* height: 100vh;
   width: 100vw; */
   background: #ffffff;
