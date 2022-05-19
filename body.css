@@ -3,13 +3,12 @@ Setting height to 600px or above turns the scrolling off. */
 
 .body-container {
   max-width: 900px;
-  max-height: 520px;
-  /* height: 100vh;
-  width: 100vw; */
+  /* max-height: 520px; */
+  height: 100vh;
   background: #ffffff;
   margin: 88px auto 0;
   padding: 30px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .body-container .section-title {
