@@ -15,9 +15,11 @@
   /* background-image: linear-gradient(#90a4ae, #ddd); */
 }
 
+html {
+  overflow-y: scroll; /* prevent layout shifts when scrollbar appears/disappears */
+}
+
 body {
-  /* overflow: hidden; <- disable scrolling */
-  /* background-color: #ddd !important; */
   position: relative;
   background-image: linear-gradient(#90a4ae, #ddd);
 }

@@ -1,13 +1,11 @@
-import { Header } from "./Header";
-import { Body } from "./Body";
-import { useState } from "react";
+import { Nav } from "./Nav";
+import { Main } from "./Main";
 
 export function App() {
-  const [arrowPosition, setArrowPosition] = useState(null);
   return (
     <>
-      <Header setArrowPosition={setArrowPosition} />
-      <Body arrowPosition={arrowPosition} />
+      <Nav />
+      <Main />
     </>
   );
 }

@@ -5,20 +5,16 @@ import { Contact } from "./Contact";
 import { Project } from "./Project";
 import { Routes, Route } from "react-router-dom";
 import { useRef } from "react";
-import "./body.css";
+import "./main.css";
 
-export function Body({ arrowPosition }) {
-  console.log(arrowPosition);
+export function Main() {
   const scrollRef = useRef(null);
   /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
      Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
      component and apply it to all sub-components. But HashRouter and useLocation do not work 
      together. */
   return (
-    <div className="body-container" ref={scrollRef}>
-      {arrowPosition ? (
-        <div className="arrow" style={{ left: arrowPosition.x }} />
-      ) : null}
+    <div className="main" ref={scrollRef}>
       <Routes>
         <Route path="/" element={<Home scrollRef={scrollRef} />} />
         <Route path="work" element={<Work scrollRef={scrollRef} />} />

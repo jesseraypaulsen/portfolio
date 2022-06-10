@@ -1,11 +1,11 @@
+
 .jumbotron {
   display: flex;
   flex-direction: column;
   padding: 40px;
   max-width: 380px;
-  /* font-family: "Roboto script=latin rev=1"; */
-  border: solid 1px black;
-  margin: auto; /* horizontally center this element */
+  margin: 0 auto;
+  background-color: #ebebeb;
 }
 
 h1 {
@@ -13,6 +13,7 @@ h1 {
   font-weight: 400;
   color: #363636;
   padding-bottom: 0.7em;
+  font-family: "Rancho";
 }
 
 .jumbotron .jumbotron__row {
@@ -21,9 +22,6 @@ h1 {
   align-items: center;
   /* border: solid 1px black; */
 }
-
-.jumbotron .jumbotron__row + * {
-} /* the asterisk targets both .my-title and .social-icon-links */
 
 .my-title {
   font-size: 1.25em;

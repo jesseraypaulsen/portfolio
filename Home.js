@@ -9,7 +9,7 @@ export function Home({ scrollRef }) {
     <>
       <div className="jumbotron">
         <div className="jumbotron__row">
-          <h1>Jesse Paulsen</h1>
+          <h1 className="font-effect-3d-float">Jesse Paulsen</h1>
         </div>
         <div
           className="jumbotron__row"

@@ -1,0 +1,43 @@
+nav {
+  padding-top: 1.5em;
+  text-align: center;
+}
+
+.nav-item {
+  /* position: relative; */
+  padding: 0 .5em;
+  border: .05em solid #fff;
+  text-decoration: none;
+}
+
+/* https://css-tricks.com/snippets/css/css-triangle */
+.nav-item::after {
+    display: block;
+    content: "";
+    position: absolute;
+    border-bottom: solid 0 #fff;
+    border-left: solid 0.5em transparent;
+    border-right: solid 0.5em transparent;
+    top: 1.74em;
+    -moz-transition: border-bottom-width .25s ease-in-out;
+    -webkit-transition: border-bottom-width .25s ease-in-out;
+    -ms-transition: border-bottom-width .25s ease-in-out;
+    transition: border-bottom-width .25s ease-in-out;
+}
+
+.nav-item.active::after {
+  border-bottom-width: 0.5em;
+}
+/* https: //google.github.io/material-design-icons */
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.material-icons.md-light.active {
+  color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 0.3);
+}

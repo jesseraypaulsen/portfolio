@@ -1,0 +1,12 @@
+.main {
+  /* position: relative; */
+  max-width: 900px;
+  background: #ffffff;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.main .section-title {
+  padding-bottom: 50px;
+}
