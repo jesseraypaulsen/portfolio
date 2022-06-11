@@ -24651,33 +24651,26 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _header = require("./Header");
-var _body = require("./Body");
-var _react = require("react");
-var _s = $RefreshSig$();
+var _nav = require("./Nav");
+var _main = require("./Main");
 function App() {
-    _s();
-    const [arrowPosition, setArrowPosition] = _react.useState(null);
     return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: [
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_header.Header, {
-                setArrowPosition: setArrowPosition
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_nav.Nav, {
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 9,
+                lineNumber: 7,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_body.Body, {
-                arrowPosition: arrowPosition
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_main.Main, {
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 10,
+                lineNumber: 8,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true));
 }
-_s(App, "q3f7twSwN6nIDdvzPDgxphus4Xk=");
 _c = App;
 var _c;
 $RefreshReg$(_c, "App");
@@ -24687,2327 +24680,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Header":"8bVnH","./Body":"69BtK","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"8bVnH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7785 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7785.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-//import "./header.css";
-/* https://developers.google.com/fonts/docs/material_icons#styling_icons_in_material_design
-   why don't these classes for making icons dark/light/big/small work?
-*/ parcelHelpers.export(exports, "Header", ()=>Header
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _react = require("react");
-var _index = require("@material/top-app-bar/index");
-var _s = $RefreshSig$();
-function Header({ setArrowPosition  }) {
-    _s();
-    const topAppBarElement = _react.useRef(null);
-    _react.useEffect(()=>{
-        const topAppBar = new _index.MDCTopAppBar(topAppBarElement.current);
-    }, []);
-    const navigate = _reactRouterDom.useNavigate();
-    //header is set to { top: "0" } because the margin from an element in normal flow (Frame),
-    //mysteriously changes the starting position of the header even though it has a fixed
-    //position. I have no idea why this occurs.
-    const homeButtonRef = _react.useRef(null);
-    _react.useEffect(()=>{
-        setArrowPosition((prevState)=>homeButtonRef.current.getBoundingClientRect()
-        );
-    }, []);
-    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("header", {
-        className: "mdc-top-app-bar",
-        ref: topAppBarElement,
-        style: {
-            top: "0"
-        },
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-            className: "mdc-top-app-bar__row",
-            children: [
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
-                    className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
-                }, void 0, false, {
-                    fileName: "Header.js",
-                    lineNumber: 33,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
-                    className: "mdc-top-app-bar__section",
-                    role: "toolbar",
-                    style: {
-                        justifyContent: "center"
-                    },
-                    children: [
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            "aria-label": "home",
-                            to: "/",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
-                                className: "material-icons mdc-top-app-bar__action-item mdc-icon-button",
-                                ref: homeButtonRef,
-                                onClick: (e)=>setArrowPosition((prevState)=>e.target.getBoundingClientRect()
-                                    )
-                                ,
-                                children: "home"
-                            }, void 0, false, {
-                                fileName: "Header.js",
-                                lineNumber: 43,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "Header.js",
-                            lineNumber: 42,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            "aria-label": "work",
-                            to: "/work",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
-                                className: "material-icons mdc-top-app-bar__action-item mdc-icon-button",
-                                onClick: (e)=>setArrowPosition((prevState)=>e.target.getBoundingClientRect()
-                                    )
-                                ,
-                                children: "work"
-                            }, void 0, false, {
-                                fileName: "Header.js",
-                                lineNumber: 56,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "Header.js",
-                            lineNumber: 55,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            "aria-label": "about",
-                            to: "/about",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
-                                className: "material-icons mdc-top-app-bar__action-item mdc-icon-button",
-                                onClick: (e)=>setArrowPosition((prevState)=>e.target.getBoundingClientRect()
-                                    )
-                                ,
-                                children: "info"
-                            }, void 0, false, {
-                                fileName: "Header.js",
-                                lineNumber: 68,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "Header.js",
-                            lineNumber: 67,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
-                            "aria-label": "contact",
-                            to: "/contact",
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("i", {
-                                className: "material-icons mdc-top-app-bar__action-item mdc-icon-button",
-                                onClick: (e)=>setArrowPosition((prevState)=>e.target.getBoundingClientRect()
-                                    )
-                                ,
-                                children: "email"
-                            }, void 0, false, {
-                                fileName: "Header.js",
-                                lineNumber: 80,
-                                columnNumber: 13
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "Header.js",
-                            lineNumber: 79,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "Header.js",
-                    lineNumber: 35,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ _jsxDevRuntime.jsxDEV("section", {
-                    className: "mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
-                }, void 0, false, {
-                    fileName: "Header.js",
-                    lineNumber: 92,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "Header.js",
-            lineNumber: 32,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "Header.js",
-        lineNumber: 27,
-        columnNumber: 5
-    }, this));
-}
-_s(Header, "MpeTGoi7Xr+8WC8/2NFpwkJYGYI=", false, function() {
-    return [
-        _reactRouterDom.useNavigate
-    ];
-});
-_c = Header;
-var _c;
-$RefreshReg$(_c, "Header");
-
-  $parcel$ReactRefreshHelpers$7785.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","react":"21dqq","@material/top-app-bar/index":"gjVJK","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"gjVJK":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * @license
- * Copyright 2019 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _adapter = require("./adapter");
-parcelHelpers.exportAll(_adapter, exports);
-var _component = require("./component");
-parcelHelpers.exportAll(_component, exports);
-var _constants = require("./constants");
-parcelHelpers.exportAll(_constants, exports);
-var _foundation = require("./foundation");
-parcelHelpers.exportAll(_foundation, exports);
-var _foundation1 = require("./fixed/foundation");
-parcelHelpers.exportAll(_foundation1, exports);
-var _foundation2 = require("./short/foundation");
-parcelHelpers.exportAll(_foundation2, exports);
-var _foundation3 = require("./standard/foundation");
-parcelHelpers.exportAll(_foundation3, exports);
-
-},{"./adapter":"3Ovfy","./component":"KwNqD","./constants":"52gAM","./foundation":"dHcUo","./fixed/foundation":"eeQCV","./short/foundation":"9lhAW","./standard/foundation":"6uP3L","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"3Ovfy":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"KwNqD":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCTopAppBar", ()=>MDCTopAppBar
-);
-/**
- * @license
- * Copyright 2018 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _tslib = require("tslib");
-var _component = require("@material/base/component");
-var _component1 = require("@material/ripple/component");
-var _constants = require("./constants");
-var _foundation = require("./fixed/foundation");
-var _foundation1 = require("./short/foundation");
-var _foundation2 = require("./standard/foundation");
-var MDCTopAppBar = function(_super) {
-    _tslib.__extends(MDCTopAppBar1, _super);
-    function MDCTopAppBar1() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    MDCTopAppBar1.attachTo = function(root) {
-        return new MDCTopAppBar1(root);
-    };
-    MDCTopAppBar1.prototype.initialize = function(rippleFactory) {
-        if (rippleFactory === void 0) rippleFactory = function(el) {
-            return _component1.MDCRipple.attachTo(el);
-        };
-        this.navIcon = this.root.querySelector(_constants.strings.NAVIGATION_ICON_SELECTOR);
-        // Get all icons in the toolbar and instantiate the ripples
-        var icons = [].slice.call(this.root.querySelectorAll(_constants.strings.ACTION_ITEM_SELECTOR));
-        if (this.navIcon) icons.push(this.navIcon);
-        this.iconRipples = icons.map(function(icon) {
-            var ripple = rippleFactory(icon);
-            ripple.unbounded = true;
-            return ripple;
-        });
-        this.scrollTarget = window;
-    };
-    MDCTopAppBar1.prototype.initialSyncWithDOM = function() {
-        this.handleNavigationClick = this.foundation.handleNavigationClick.bind(this.foundation);
-        this.handleWindowResize = this.foundation.handleWindowResize.bind(this.foundation);
-        this.handleTargetScroll = this.foundation.handleTargetScroll.bind(this.foundation);
-        this.scrollTarget.addEventListener('scroll', this.handleTargetScroll);
-        if (this.navIcon) this.navIcon.addEventListener('click', this.handleNavigationClick);
-        var isFixed = this.root.classList.contains(_constants.cssClasses.FIXED_CLASS);
-        var isShort = this.root.classList.contains(_constants.cssClasses.SHORT_CLASS);
-        if (!isShort && !isFixed) window.addEventListener('resize', this.handleWindowResize);
-    };
-    MDCTopAppBar1.prototype.destroy = function() {
-        var e_1, _a;
-        try {
-            for(var _b = _tslib.__values(this.iconRipples), _c = _b.next(); !_c.done; _c = _b.next()){
-                var iconRipple = _c.value;
-                iconRipple.destroy();
-            }
-        } catch (e_1_1) {
-            e_1 = {
-                error: e_1_1
-            };
-        } finally{
-            try {
-                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
-            } finally{
-                if (e_1) throw e_1.error;
-            }
-        }
-        this.scrollTarget.removeEventListener('scroll', this.handleTargetScroll);
-        if (this.navIcon) this.navIcon.removeEventListener('click', this.handleNavigationClick);
-        var isFixed = this.root.classList.contains(_constants.cssClasses.FIXED_CLASS);
-        var isShort = this.root.classList.contains(_constants.cssClasses.SHORT_CLASS);
-        if (!isShort && !isFixed) window.removeEventListener('resize', this.handleWindowResize);
-        _super.prototype.destroy.call(this);
-    };
-    MDCTopAppBar1.prototype.setScrollTarget = function(target) {
-        // Remove scroll handler from the previous scroll target
-        this.scrollTarget.removeEventListener('scroll', this.handleTargetScroll);
-        this.scrollTarget = target;
-        // Initialize scroll handler on the new scroll target
-        this.handleTargetScroll = this.foundation.handleTargetScroll.bind(this.foundation);
-        this.scrollTarget.addEventListener('scroll', this.handleTargetScroll);
-    };
-    MDCTopAppBar1.prototype.getDefaultFoundation = function() {
-        var _this = this;
-        // DO NOT INLINE this variable. For backward compatibility, foundations take a Partial<MDCFooAdapter>.
-        // To ensure we don't accidentally omit any methods, we need a separate, strongly typed adapter variable.
-        // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
-        var adapter = {
-            hasClass: function(className) {
-                return _this.root.classList.contains(className);
-            },
-            addClass: function(className) {
-                return _this.root.classList.add(className);
-            },
-            removeClass: function(className) {
-                return _this.root.classList.remove(className);
-            },
-            setStyle: function(property, value) {
-                return _this.root.style.setProperty(property, value);
-            },
-            getTopAppBarHeight: function() {
-                return _this.root.clientHeight;
-            },
-            notifyNavigationIconClicked: function() {
-                return _this.emit(_constants.strings.NAVIGATION_EVENT, {
-                });
-            },
-            getViewportScrollY: function() {
-                var win = _this.scrollTarget;
-                var el = _this.scrollTarget;
-                return win.pageYOffset !== undefined ? win.pageYOffset : el.scrollTop;
-            },
-            getTotalActionItems: function() {
-                return _this.root.querySelectorAll(_constants.strings.ACTION_ITEM_SELECTOR).length;
-            }
-        };
-        // tslint:enable:object-literal-sort-keys
-        var foundation;
-        if (this.root.classList.contains(_constants.cssClasses.SHORT_CLASS)) foundation = new _foundation1.MDCShortTopAppBarFoundation(adapter);
-        else if (this.root.classList.contains(_constants.cssClasses.FIXED_CLASS)) foundation = new _foundation.MDCFixedTopAppBarFoundation(adapter);
-        else foundation = new _foundation2.MDCTopAppBarFoundation(adapter);
-        return foundation;
-    };
-    return MDCTopAppBar1;
-}(_component.MDCComponent);
-
-},{"tslib":"lRdW5","@material/base/component":"jLptS","@material/ripple/component":"035sE","./constants":"52gAM","./fixed/foundation":"eeQCV","./short/foundation":"9lhAW","./standard/foundation":"6uP3L","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"lRdW5":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "__extends", ()=>__extends
-);
-parcelHelpers.export(exports, "__assign", ()=>__assign
-);
-parcelHelpers.export(exports, "__rest", ()=>__rest
-);
-parcelHelpers.export(exports, "__decorate", ()=>__decorate
-);
-parcelHelpers.export(exports, "__param", ()=>__param
-);
-parcelHelpers.export(exports, "__metadata", ()=>__metadata
-);
-parcelHelpers.export(exports, "__awaiter", ()=>__awaiter
-);
-parcelHelpers.export(exports, "__generator", ()=>__generator
-);
-parcelHelpers.export(exports, "__createBinding", ()=>__createBinding
-);
-parcelHelpers.export(exports, "__exportStar", ()=>__exportStar
-);
-parcelHelpers.export(exports, "__values", ()=>__values
-);
-parcelHelpers.export(exports, "__read", ()=>__read
-);
-/** @deprecated */ parcelHelpers.export(exports, "__spread", ()=>__spread
-);
-/** @deprecated */ parcelHelpers.export(exports, "__spreadArrays", ()=>__spreadArrays
-);
-parcelHelpers.export(exports, "__spreadArray", ()=>__spreadArray
-);
-parcelHelpers.export(exports, "__await", ()=>__await
-);
-parcelHelpers.export(exports, "__asyncGenerator", ()=>__asyncGenerator
-);
-parcelHelpers.export(exports, "__asyncDelegator", ()=>__asyncDelegator
-);
-parcelHelpers.export(exports, "__asyncValues", ()=>__asyncValues
-);
-parcelHelpers.export(exports, "__makeTemplateObject", ()=>__makeTemplateObject
-);
-parcelHelpers.export(exports, "__importStar", ()=>__importStar
-);
-parcelHelpers.export(exports, "__importDefault", ()=>__importDefault
-);
-parcelHelpers.export(exports, "__classPrivateFieldGet", ()=>__classPrivateFieldGet
-);
-parcelHelpers.export(exports, "__classPrivateFieldSet", ()=>__classPrivateFieldSet
-);
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */ /* global Reflect, Promise */ var extendStatics = function(d1, b1) {
-    extendStatics = Object.setPrototypeOf || ({
-        __proto__: []
-    }) instanceof Array && function(d, b) {
-        d.__proto__ = b;
-    } || function(d, b) {
-        for(var p in b)if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
-    };
-    return extendStatics(d1, b1);
-};
-function __extends(d, b) {
-    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-    extendStatics(d, b);
-    function __() {
-        this.constructor = d;
-    }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-var __assign = function() {
-    __assign = Object.assign || function __assign(t) {
-        for(var s, i = 1, n = arguments.length; i < n; i++){
-            s = arguments[i];
-            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-function __rest(s, e) {
-    var t = {
-    };
-    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
-        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-    }
-    return t;
-}
-function __decorate(decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for(var i = decorators.length - 1; i >= 0; i--)if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-}
-function __param(paramIndex, decorator) {
-    return function(target, key) {
-        decorator(target, key, paramIndex);
-    };
-}
-function __metadata(metadataKey, metadataValue) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
-}
-function __awaiter(thisArg, _arguments, P, generator) {
-    function adopt(value) {
-        return value instanceof P ? value : new P(function(resolve) {
-            resolve(value);
-        });
-    }
-    return new (P || (P = Promise))(function(resolve, reject) {
-        function fulfilled(value) {
-            try {
-                step(generator.next(value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-        function rejected(value) {
-            try {
-                step(generator["throw"](value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-        function step(result) {
-            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-        }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-}
-function __generator(thisArg, body) {
-    var _ = {
-        label: 0,
-        sent: function() {
-            if (t[0] & 1) throw t[1];
-            return t[1];
-        },
-        trys: [],
-        ops: []
-    }, f, y, t, g;
-    function verb(n) {
-        return function(v) {
-            return step([
-                n,
-                v
-            ]);
-        };
-    }
-    function step(op) {
-        if (f) throw new TypeError("Generator is already executing.");
-        while(_)try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [
-                op[0] & 2,
-                t.value
-            ];
-            switch(op[0]){
-                case 0:
-                case 1:
-                    t = op;
-                    break;
-                case 4:
-                    _.label++;
-                    return {
-                        value: op[1],
-                        done: false
-                    };
-                case 5:
-                    _.label++;
-                    y = op[1];
-                    op = [
-                        0
-                    ];
-                    continue;
-                case 7:
-                    op = _.ops.pop();
-                    _.trys.pop();
-                    continue;
-                default:
-                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                        _ = 0;
-                        continue;
-                    }
-                    if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                        _.label = op[1];
-                        break;
-                    }
-                    if (op[0] === 6 && _.label < t[1]) {
-                        _.label = t[1];
-                        t = op;
-                        break;
-                    }
-                    if (t && _.label < t[2]) {
-                        _.label = t[2];
-                        _.ops.push(op);
-                        break;
-                    }
-                    if (t[2]) _.ops.pop();
-                    _.trys.pop();
-                    continue;
-            }
-            op = body.call(thisArg, _);
-        } catch (e) {
-            op = [
-                6,
-                e
-            ];
-            y = 0;
-        } finally{
-            f = t = 0;
-        }
-        if (op[0] & 5) throw op[1];
-        return {
-            value: op[0] ? op[1] : void 0,
-            done: true
-        };
-    }
-    return g = {
-        next: verb(0),
-        "throw": verb(1),
-        "return": verb(2)
-    }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
-        return this;
-    }), g;
-}
-var __createBinding = Object.create ? function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, {
-        enumerable: true,
-        get: function() {
-            return m[k];
-        }
-    });
-} : function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-};
-function __exportStar(m, o) {
-    for(var p in m)if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
-}
-function __values(o) {
-    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-    if (m) return m.call(o);
-    if (o && typeof o.length === "number") return {
-        next: function() {
-            if (o && i >= o.length) o = void 0;
-            return {
-                value: o && o[i++],
-                done: !o
-            };
-        }
-    };
-    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-}
-function __read(o, n) {
-    var m = typeof Symbol === "function" && o[Symbol.iterator];
-    if (!m) return o;
-    var i = m.call(o), r, ar = [], e;
-    try {
-        while((n === void 0 || n-- > 0) && !(r = i.next()).done)ar.push(r.value);
-    } catch (error) {
-        e = {
-            error: error
-        };
-    } finally{
-        try {
-            if (r && !r.done && (m = i["return"])) m.call(i);
-        } finally{
-            if (e) throw e.error;
-        }
-    }
-    return ar;
-}
-function __spread() {
-    for(var ar = [], i = 0; i < arguments.length; i++)ar = ar.concat(__read(arguments[i]));
-    return ar;
-}
-function __spreadArrays() {
-    for(var s = 0, i = 0, il = arguments.length; i < il; i++)s += arguments[i].length;
-    for(var r = Array(s), k = 0, i = 0; i < il; i++)for(var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)r[k] = a[j];
-    return r;
-}
-function __spreadArray(to, from, pack) {
-    if (pack || arguments.length === 2) {
-        for(var i = 0, l = from.length, ar; i < l; i++)if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-}
-function __await(v) {
-    return this instanceof __await ? (this.v = v, this) : new __await(v);
-}
-function __asyncGenerator(thisArg, _arguments, generator) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var g = generator.apply(thisArg, _arguments || []), i, q = [];
-    function verb(n) {
-        if (g[n]) i[n] = function(v) {
-            return new Promise(function(a, b) {
-                q.push([
-                    n,
-                    v,
-                    a,
-                    b
-                ]) > 1 || resume(n, v);
-            });
-        };
-    }
-    function resume(n, v) {
-        try {
-            step(g[n](v));
-        } catch (e) {
-            settle(q[0][3], e);
-        }
-    }
-    function step(r) {
-        r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
-    }
-    function fulfill(value) {
-        resume("next", value);
-    }
-    function reject(value) {
-        resume("throw", value);
-    }
-    function settle(f, v) {
-        if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
-    }
-    return i = {
-    }, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-        return this;
-    }, i;
-}
-function __asyncDelegator(o) {
-    var i, p;
-    function verb(n, f) {
-        i[n] = o[n] ? function(v) {
-            return (p = !p) ? {
-                value: __await(o[n](v)),
-                done: n === "return"
-            } : f ? f(v) : v;
-        } : f;
-    }
-    return i = {
-    }, verb("next"), verb("throw", function(e) {
-        throw e;
-    }), verb("return"), i[Symbol.iterator] = function() {
-        return this;
-    }, i;
-}
-function __asyncValues(o) {
-    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-    var m = o[Symbol.asyncIterator], i;
-    function verb(n) {
-        i[n] = o[n] && function(v) {
-            return new Promise(function(resolve, reject) {
-                v = o[n](v), settle(resolve, reject, v.done, v.value);
-            });
-        };
-    }
-    function settle(resolve, reject, d, v1) {
-        Promise.resolve(v1).then(function(v) {
-            resolve({
-                value: v,
-                done: d
-            });
-        }, reject);
-    }
-    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {
-    }, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-        return this;
-    }, i);
-}
-function __makeTemplateObject(cooked, raw) {
-    if (Object.defineProperty) Object.defineProperty(cooked, "raw", {
-        value: raw
-    });
-    else cooked.raw = raw;
-    return cooked;
-}
-var __setModuleDefault = Object.create ? function(o, v) {
-    Object.defineProperty(o, "default", {
-        enumerable: true,
-        value: v
-    });
-} : function(o, v) {
-    o["default"] = v;
-};
-function __importStar(mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {
-    };
-    if (mod != null) {
-        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    }
-    __setModuleDefault(result, mod);
-    return result;
-}
-function __importDefault(mod) {
-    return mod && mod.__esModule ? mod : {
-        default: mod
-    };
-}
-function __classPrivateFieldGet(receiver, state, kind, f) {
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-}
-function __classPrivateFieldSet(receiver, state, value, kind, f) {
-    if (kind === "m") throw new TypeError("Private method is not writable");
-    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
-    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-    return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"jLptS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCComponent", ()=>MDCComponent
-);
-/**
- * @license
- * Copyright 2016 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _tslib = require("tslib");
-var _foundation = require("./foundation");
-var MDCComponent = function() {
-    function MDCComponent1(root, foundation) {
-        var args = [];
-        for(var _i = 2; _i < arguments.length; _i++)args[_i - 2] = arguments[_i];
-        this.root = root;
-        this.initialize.apply(this, _tslib.__spreadArray([], _tslib.__read(args)));
-        // Note that we initialize foundation here and not within the constructor's
-        // default param so that this.root is defined and can be used within the
-        // foundation class.
-        this.foundation = foundation === undefined ? this.getDefaultFoundation() : foundation;
-        this.foundation.init();
-        this.initialSyncWithDOM();
-    }
-    MDCComponent1.attachTo = function(root) {
-        // Subclasses which extend MDCBase should provide an attachTo() method that takes a root element and
-        // returns an instantiated component with its root set to that element. Also note that in the cases of
-        // subclasses, an explicit foundation class will not have to be passed in; it will simply be initialized
-        // from getDefaultFoundation().
-        return new MDCComponent1(root, new _foundation.MDCFoundation({
-        }));
-    };
-    /* istanbul ignore next: method param only exists for typing purposes; it does not need to be unit tested */ MDCComponent1.prototype.initialize = function() {
-        var _args = [];
-        for(var _i = 0; _i < arguments.length; _i++)_args[_i] = arguments[_i];
-    // Subclasses can override this to do any additional setup work that would be considered part of a
-    // "constructor". Essentially, it is a hook into the parent constructor before the foundation is
-    // initialized. Any additional arguments besides root and foundation will be passed in here.
-    };
-    MDCComponent1.prototype.getDefaultFoundation = function() {
-        // Subclasses must override this method to return a properly configured foundation class for the
-        // component.
-        throw new Error("Subclasses must override getDefaultFoundation to return a properly configured foundation class");
-    };
-    MDCComponent1.prototype.initialSyncWithDOM = function() {
-    // Subclasses should override this method if they need to perform work to synchronize with a host DOM
-    // object. An example of this would be a form control wrapper that needs to synchronize its internal state
-    // to some property or attribute of the host DOM. Please note: this is *not* the place to perform DOM
-    // reads/writes that would cause layout / paint, as this is called synchronously from within the constructor.
-    };
-    MDCComponent1.prototype.destroy = function() {
-        // Subclasses may implement this method to release any resources / deregister any listeners they have
-        // attached. An example of this might be deregistering a resize event from the window object.
-        this.foundation.destroy();
-    };
-    MDCComponent1.prototype.listen = function(evtType, handler, options) {
-        this.root.addEventListener(evtType, handler, options);
-    };
-    MDCComponent1.prototype.unlisten = function(evtType, handler, options) {
-        this.root.removeEventListener(evtType, handler, options);
-    };
-    /**
-     * Fires a cross-browser-compatible custom event from the component root of the given type, with the given data.
-     */ MDCComponent1.prototype.emit = function(evtType, evtData, shouldBubble) {
-        if (shouldBubble === void 0) shouldBubble = false;
-        var evt;
-        if (typeof CustomEvent === 'function') evt = new CustomEvent(evtType, {
-            bubbles: shouldBubble,
-            detail: evtData
-        });
-        else {
-            evt = document.createEvent('CustomEvent');
-            evt.initCustomEvent(evtType, shouldBubble, false, evtData);
-        }
-        this.root.dispatchEvent(evt);
-    };
-    return MDCComponent1;
-}();
-exports.default = MDCComponent;
-
-},{"tslib":"lRdW5","./foundation":"kC5Yw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"kC5Yw":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCFoundation", ()=>MDCFoundation
-);
-/**
- * @license
- * Copyright 2016 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var MDCFoundation = function() {
-    function MDCFoundation1(adapter) {
-        if (adapter === void 0) adapter = {
-        };
-        this.adapter = adapter;
-    }
-    Object.defineProperty(MDCFoundation1, "cssClasses", {
-        get: function() {
-            // Classes extending MDCFoundation should implement this method to return an object which exports every
-            // CSS class the foundation class needs as a property. e.g. {ACTIVE: 'mdc-component--active'}
-            return {
-            };
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCFoundation1, "strings", {
-        get: function() {
-            // Classes extending MDCFoundation should implement this method to return an object which exports all
-            // semantic strings as constants. e.g. {ARIA_ROLE: 'tablist'}
-            return {
-            };
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCFoundation1, "numbers", {
-        get: function() {
-            // Classes extending MDCFoundation should implement this method to return an object which exports all
-            // of its semantic numbers as constants. e.g. {ANIMATION_DELAY_MS: 350}
-            return {
-            };
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCFoundation1, "defaultAdapter", {
-        get: function() {
-            // Classes extending MDCFoundation may choose to implement this getter in order to provide a convenient
-            // way of viewing the necessary methods of an adapter. In the future, this could also be used for adapter
-            // validation.
-            return {
-            };
-        },
-        enumerable: false,
-        configurable: true
-    });
-    MDCFoundation1.prototype.init = function() {
-    // Subclasses should override this method to perform initialization routines (registering events, etc.)
-    };
-    MDCFoundation1.prototype.destroy = function() {
-    // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
-    };
-    return MDCFoundation1;
-}();
-exports.default = MDCFoundation;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"035sE":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCRipple", ()=>MDCRipple
-);
-/**
- * @license
- * Copyright 2016 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _tslib = require("tslib");
-var _component = require("@material/base/component");
-var _events = require("@material/dom/events");
-var _ponyfill = require("@material/dom/ponyfill");
-var _foundation = require("./foundation");
-var _util = require("./util");
-var MDCRipple = function(_super) {
-    _tslib.__extends(MDCRipple1, _super);
-    function MDCRipple1() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.disabled = false;
-        return _this;
-    }
-    MDCRipple1.attachTo = function(root, opts) {
-        if (opts === void 0) opts = {
-            isUnbounded: undefined
-        };
-        var ripple = new MDCRipple1(root);
-        // Only override unbounded behavior if option is explicitly specified
-        if (opts.isUnbounded !== undefined) ripple.unbounded = opts.isUnbounded;
-        return ripple;
-    };
-    MDCRipple1.createAdapter = function(instance) {
-        return {
-            addClass: function(className) {
-                return instance.root.classList.add(className);
-            },
-            browserSupportsCssVars: function() {
-                return _util.supportsCssVariables(window);
-            },
-            computeBoundingRect: function() {
-                return instance.root.getBoundingClientRect();
-            },
-            containsEventTarget: function(target) {
-                return instance.root.contains(target);
-            },
-            deregisterDocumentInteractionHandler: function(evtType, handler) {
-                return document.documentElement.removeEventListener(evtType, handler, _events.applyPassive());
-            },
-            deregisterInteractionHandler: function(evtType, handler) {
-                return instance.root.removeEventListener(evtType, handler, _events.applyPassive());
-            },
-            deregisterResizeHandler: function(handler) {
-                return window.removeEventListener('resize', handler);
-            },
-            getWindowPageOffset: function() {
-                return {
-                    x: window.pageXOffset,
-                    y: window.pageYOffset
-                };
-            },
-            isSurfaceActive: function() {
-                return _ponyfill.matches(instance.root, ':active');
-            },
-            isSurfaceDisabled: function() {
-                return Boolean(instance.disabled);
-            },
-            isUnbounded: function() {
-                return Boolean(instance.unbounded);
-            },
-            registerDocumentInteractionHandler: function(evtType, handler) {
-                return document.documentElement.addEventListener(evtType, handler, _events.applyPassive());
-            },
-            registerInteractionHandler: function(evtType, handler) {
-                return instance.root.addEventListener(evtType, handler, _events.applyPassive());
-            },
-            registerResizeHandler: function(handler) {
-                return window.addEventListener('resize', handler);
-            },
-            removeClass: function(className) {
-                return instance.root.classList.remove(className);
-            },
-            updateCssVariable: function(varName, value) {
-                return instance.root.style.setProperty(varName, value);
-            }
-        };
-    };
-    Object.defineProperty(MDCRipple1.prototype, "unbounded", {
-        get: function() {
-            return Boolean(this.isUnbounded);
-        },
-        set: function(unbounded) {
-            this.isUnbounded = Boolean(unbounded);
-            this.setUnbounded();
-        },
-        enumerable: false,
-        configurable: true
-    });
-    MDCRipple1.prototype.activate = function() {
-        this.foundation.activate();
-    };
-    MDCRipple1.prototype.deactivate = function() {
-        this.foundation.deactivate();
-    };
-    MDCRipple1.prototype.layout = function() {
-        this.foundation.layout();
-    };
-    MDCRipple1.prototype.getDefaultFoundation = function() {
-        return new _foundation.MDCRippleFoundation(MDCRipple1.createAdapter(this));
-    };
-    MDCRipple1.prototype.initialSyncWithDOM = function() {
-        var root = this.root;
-        this.isUnbounded = 'mdcRippleIsUnbounded' in root.dataset;
-    };
-    /**
-     * Closure Compiler throws an access control error when directly accessing a
-     * protected or private property inside a getter/setter, like unbounded above.
-     * By accessing the protected property inside a method, we solve that problem.
-     * That's why this function exists.
-     */ MDCRipple1.prototype.setUnbounded = function() {
-        this.foundation.setUnbounded(Boolean(this.isUnbounded));
-    };
-    return MDCRipple1;
-}(_component.MDCComponent);
-
-},{"tslib":"lRdW5","@material/base/component":"jLptS","@material/dom/events":"87xmx","@material/dom/ponyfill":"8pLcv","./foundation":"7frpT","./util":"l3az5","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"87xmx":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * @license
- * Copyright 2019 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ /**
- * Determine whether the current browser supports passive event listeners, and
- * if so, use them.
- */ parcelHelpers.export(exports, "applyPassive", ()=>applyPassive
-);
-function applyPassive(globalObj) {
-    if (globalObj === void 0) globalObj = window;
-    return supportsPassiveOption(globalObj) ? {
-        passive: true
-    } : false;
-}
-function supportsPassiveOption(globalObj) {
-    if (globalObj === void 0) globalObj = window;
-    // See
-    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
-    var passiveSupported = false;
-    try {
-        var options = {
-            // This function will be called when the browser
-            // attempts to access the passive property.
-            get passive () {
-                passiveSupported = true;
-                return false;
-            }
-        };
-        var handler = function() {
-        };
-        globalObj.document.addEventListener('test', handler, options);
-        globalObj.document.removeEventListener('test', handler, options);
-    } catch (err) {
-        passiveSupported = false;
-    }
-    return passiveSupported;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"8pLcv":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * @license
- * Copyright 2018 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ /**
- * @fileoverview A "ponyfill" is a polyfill that doesn't modify the global prototype chain.
- * This makes ponyfills safer than traditional polyfills, especially for libraries like MDC.
- */ parcelHelpers.export(exports, "closest", ()=>closest
-);
-parcelHelpers.export(exports, "matches", ()=>matches
-);
-/**
- * Used to compute the estimated scroll width of elements. When an element is
- * hidden due to display: none; being applied to a parent element, the width is
- * returned as 0. However, the element will have a true width once no longer
- * inside a display: none context. This method computes an estimated width when
- * the element is hidden or returns the true width when the element is visble.
- * @param {Element} element the element whose width to estimate
- */ parcelHelpers.export(exports, "estimateScrollWidth", ()=>estimateScrollWidth
-);
-function closest(element, selector) {
-    if (element.closest) return element.closest(selector);
-    var el = element;
-    while(el){
-        if (matches(el, selector)) return el;
-        el = el.parentElement;
-    }
-    return null;
-}
-function matches(element, selector) {
-    var nativeMatches = element.matches || element.webkitMatchesSelector || element.msMatchesSelector;
-    return nativeMatches.call(element, selector);
-}
-function estimateScrollWidth(element) {
-    // Check the offsetParent. If the element inherits display: none from any
-    // parent, the offsetParent property will be null (see
-    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent).
-    // This check ensures we only clone the node when necessary.
-    var htmlEl = element;
-    if (htmlEl.offsetParent !== null) return htmlEl.scrollWidth;
-    var clone = htmlEl.cloneNode(true);
-    clone.style.setProperty('position', 'absolute');
-    clone.style.setProperty('transform', 'translate(-9999px, -9999px)');
-    document.documentElement.appendChild(clone);
-    var scrollWidth = clone.scrollWidth;
-    document.documentElement.removeChild(clone);
-    return scrollWidth;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"7frpT":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCRippleFoundation", ()=>MDCRippleFoundation
-);
-/**
- * @license
- * Copyright 2016 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _tslib = require("tslib");
-var _foundation = require("@material/base/foundation");
-var _constants = require("./constants");
-var _util = require("./util");
-// Activation events registered on the root element of each instance for activation
-var ACTIVATION_EVENT_TYPES = [
-    'touchstart',
-    'pointerdown',
-    'mousedown',
-    'keydown', 
-];
-// Deactivation events registered on documentElement when a pointer-related down event occurs
-var POINTER_DEACTIVATION_EVENT_TYPES = [
-    'touchend',
-    'pointerup',
-    'mouseup',
-    'contextmenu', 
-];
-// simultaneous nested activations
-var activatedTargets = [];
-var MDCRippleFoundation = function(_super) {
-    _tslib.__extends(MDCRippleFoundation1, _super);
-    function MDCRippleFoundation1(adapter) {
-        var _this = _super.call(this, _tslib.__assign(_tslib.__assign({
-        }, MDCRippleFoundation1.defaultAdapter), adapter)) || this;
-        _this.activationAnimationHasEnded = false;
-        _this.activationTimer = 0;
-        _this.fgDeactivationRemovalTimer = 0;
-        _this.fgScale = '0';
-        _this.frame = {
-            width: 0,
-            height: 0
-        };
-        _this.initialSize = 0;
-        _this.layoutFrame = 0;
-        _this.maxRadius = 0;
-        _this.unboundedCoords = {
-            left: 0,
-            top: 0
-        };
-        _this.activationState = _this.defaultActivationState();
-        _this.activationTimerCallback = function() {
-            _this.activationAnimationHasEnded = true;
-            _this.runDeactivationUXLogicIfReady();
-        };
-        _this.activateHandler = function(e) {
-            _this.activateImpl(e);
-        };
-        _this.deactivateHandler = function() {
-            _this.deactivateImpl();
-        };
-        _this.focusHandler = function() {
-            _this.handleFocus();
-        };
-        _this.blurHandler = function() {
-            _this.handleBlur();
-        };
-        _this.resizeHandler = function() {
-            _this.layout();
-        };
-        return _this;
-    }
-    Object.defineProperty(MDCRippleFoundation1, "cssClasses", {
-        get: function() {
-            return _constants.cssClasses;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCRippleFoundation1, "strings", {
-        get: function() {
-            return _constants.strings;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCRippleFoundation1, "numbers", {
-        get: function() {
-            return _constants.numbers;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCRippleFoundation1, "defaultAdapter", {
-        get: function() {
-            return {
-                addClass: function() {
-                    return undefined;
-                },
-                browserSupportsCssVars: function() {
-                    return true;
-                },
-                computeBoundingRect: function() {
-                    return {
-                        top: 0,
-                        right: 0,
-                        bottom: 0,
-                        left: 0,
-                        width: 0,
-                        height: 0
-                    };
-                },
-                containsEventTarget: function() {
-                    return true;
-                },
-                deregisterDocumentInteractionHandler: function() {
-                    return undefined;
-                },
-                deregisterInteractionHandler: function() {
-                    return undefined;
-                },
-                deregisterResizeHandler: function() {
-                    return undefined;
-                },
-                getWindowPageOffset: function() {
-                    return {
-                        x: 0,
-                        y: 0
-                    };
-                },
-                isSurfaceActive: function() {
-                    return true;
-                },
-                isSurfaceDisabled: function() {
-                    return true;
-                },
-                isUnbounded: function() {
-                    return true;
-                },
-                registerDocumentInteractionHandler: function() {
-                    return undefined;
-                },
-                registerInteractionHandler: function() {
-                    return undefined;
-                },
-                registerResizeHandler: function() {
-                    return undefined;
-                },
-                removeClass: function() {
-                    return undefined;
-                },
-                updateCssVariable: function() {
-                    return undefined;
-                }
-            };
-        },
-        enumerable: false,
-        configurable: true
-    });
-    MDCRippleFoundation1.prototype.init = function() {
-        var _this = this;
-        var supportsPressRipple = this.supportsPressRipple();
-        this.registerRootHandlers(supportsPressRipple);
-        if (supportsPressRipple) {
-            var _a = MDCRippleFoundation1.cssClasses, ROOT_1 = _a.ROOT, UNBOUNDED_1 = _a.UNBOUNDED;
-            requestAnimationFrame(function() {
-                _this.adapter.addClass(ROOT_1);
-                if (_this.adapter.isUnbounded()) {
-                    _this.adapter.addClass(UNBOUNDED_1);
-                    // Unbounded ripples need layout logic applied immediately to set coordinates for both shade and ripple
-                    _this.layoutInternal();
-                }
-            });
-        }
-    };
-    MDCRippleFoundation1.prototype.destroy = function() {
-        var _this = this;
-        if (this.supportsPressRipple()) {
-            if (this.activationTimer) {
-                clearTimeout(this.activationTimer);
-                this.activationTimer = 0;
-                this.adapter.removeClass(MDCRippleFoundation1.cssClasses.FG_ACTIVATION);
-            }
-            if (this.fgDeactivationRemovalTimer) {
-                clearTimeout(this.fgDeactivationRemovalTimer);
-                this.fgDeactivationRemovalTimer = 0;
-                this.adapter.removeClass(MDCRippleFoundation1.cssClasses.FG_DEACTIVATION);
-            }
-            var _a = MDCRippleFoundation1.cssClasses, ROOT_2 = _a.ROOT, UNBOUNDED_2 = _a.UNBOUNDED;
-            requestAnimationFrame(function() {
-                _this.adapter.removeClass(ROOT_2);
-                _this.adapter.removeClass(UNBOUNDED_2);
-                _this.removeCssVars();
-            });
-        }
-        this.deregisterRootHandlers();
-        this.deregisterDeactivationHandlers();
-    };
-    /**
-     * @param evt Optional event containing position information.
-     */ MDCRippleFoundation1.prototype.activate = function(evt) {
-        this.activateImpl(evt);
-    };
-    MDCRippleFoundation1.prototype.deactivate = function() {
-        this.deactivateImpl();
-    };
-    MDCRippleFoundation1.prototype.layout = function() {
-        var _this = this;
-        if (this.layoutFrame) cancelAnimationFrame(this.layoutFrame);
-        this.layoutFrame = requestAnimationFrame(function() {
-            _this.layoutInternal();
-            _this.layoutFrame = 0;
-        });
-    };
-    MDCRippleFoundation1.prototype.setUnbounded = function(unbounded) {
-        var UNBOUNDED = MDCRippleFoundation1.cssClasses.UNBOUNDED;
-        if (unbounded) this.adapter.addClass(UNBOUNDED);
-        else this.adapter.removeClass(UNBOUNDED);
-    };
-    MDCRippleFoundation1.prototype.handleFocus = function() {
-        var _this = this;
-        requestAnimationFrame(function() {
-            return _this.adapter.addClass(MDCRippleFoundation1.cssClasses.BG_FOCUSED);
-        });
-    };
-    MDCRippleFoundation1.prototype.handleBlur = function() {
-        var _this = this;
-        requestAnimationFrame(function() {
-            return _this.adapter.removeClass(MDCRippleFoundation1.cssClasses.BG_FOCUSED);
-        });
-    };
-    /**
-     * We compute this property so that we are not querying information about the client
-     * until the point in time where the foundation requests it. This prevents scenarios where
-     * client-side feature-detection may happen too early, such as when components are rendered on the server
-     * and then initialized at mount time on the client.
-     */ MDCRippleFoundation1.prototype.supportsPressRipple = function() {
-        return this.adapter.browserSupportsCssVars();
-    };
-    MDCRippleFoundation1.prototype.defaultActivationState = function() {
-        return {
-            activationEvent: undefined,
-            hasDeactivationUXRun: false,
-            isActivated: false,
-            isProgrammatic: false,
-            wasActivatedByPointer: false,
-            wasElementMadeActive: false
-        };
-    };
-    /**
-     * supportsPressRipple Passed from init to save a redundant function call
-     */ MDCRippleFoundation1.prototype.registerRootHandlers = function(supportsPressRipple) {
-        var e_1, _a;
-        if (supportsPressRipple) {
-            try {
-                for(var ACTIVATION_EVENT_TYPES_1 = _tslib.__values(ACTIVATION_EVENT_TYPES), ACTIVATION_EVENT_TYPES_1_1 = ACTIVATION_EVENT_TYPES_1.next(); !ACTIVATION_EVENT_TYPES_1_1.done; ACTIVATION_EVENT_TYPES_1_1 = ACTIVATION_EVENT_TYPES_1.next()){
-                    var evtType = ACTIVATION_EVENT_TYPES_1_1.value;
-                    this.adapter.registerInteractionHandler(evtType, this.activateHandler);
-                }
-            } catch (e_1_1) {
-                e_1 = {
-                    error: e_1_1
-                };
-            } finally{
-                try {
-                    if (ACTIVATION_EVENT_TYPES_1_1 && !ACTIVATION_EVENT_TYPES_1_1.done && (_a = ACTIVATION_EVENT_TYPES_1.return)) _a.call(ACTIVATION_EVENT_TYPES_1);
-                } finally{
-                    if (e_1) throw e_1.error;
-                }
-            }
-            if (this.adapter.isUnbounded()) this.adapter.registerResizeHandler(this.resizeHandler);
-        }
-        this.adapter.registerInteractionHandler('focus', this.focusHandler);
-        this.adapter.registerInteractionHandler('blur', this.blurHandler);
-    };
-    MDCRippleFoundation1.prototype.registerDeactivationHandlers = function(evt) {
-        var e_2, _a;
-        if (evt.type === 'keydown') this.adapter.registerInteractionHandler('keyup', this.deactivateHandler);
-        else try {
-            for(var POINTER_DEACTIVATION_EVENT_TYPES_1 = _tslib.__values(POINTER_DEACTIVATION_EVENT_TYPES), POINTER_DEACTIVATION_EVENT_TYPES_1_1 = POINTER_DEACTIVATION_EVENT_TYPES_1.next(); !POINTER_DEACTIVATION_EVENT_TYPES_1_1.done; POINTER_DEACTIVATION_EVENT_TYPES_1_1 = POINTER_DEACTIVATION_EVENT_TYPES_1.next()){
-                var evtType = POINTER_DEACTIVATION_EVENT_TYPES_1_1.value;
-                this.adapter.registerDocumentInteractionHandler(evtType, this.deactivateHandler);
-            }
-        } catch (e_2_1) {
-            e_2 = {
-                error: e_2_1
-            };
-        } finally{
-            try {
-                if (POINTER_DEACTIVATION_EVENT_TYPES_1_1 && !POINTER_DEACTIVATION_EVENT_TYPES_1_1.done && (_a = POINTER_DEACTIVATION_EVENT_TYPES_1.return)) _a.call(POINTER_DEACTIVATION_EVENT_TYPES_1);
-            } finally{
-                if (e_2) throw e_2.error;
-            }
-        }
-    };
-    MDCRippleFoundation1.prototype.deregisterRootHandlers = function() {
-        var e_3, _a;
-        try {
-            for(var ACTIVATION_EVENT_TYPES_2 = _tslib.__values(ACTIVATION_EVENT_TYPES), ACTIVATION_EVENT_TYPES_2_1 = ACTIVATION_EVENT_TYPES_2.next(); !ACTIVATION_EVENT_TYPES_2_1.done; ACTIVATION_EVENT_TYPES_2_1 = ACTIVATION_EVENT_TYPES_2.next()){
-                var evtType = ACTIVATION_EVENT_TYPES_2_1.value;
-                this.adapter.deregisterInteractionHandler(evtType, this.activateHandler);
-            }
-        } catch (e_3_1) {
-            e_3 = {
-                error: e_3_1
-            };
-        } finally{
-            try {
-                if (ACTIVATION_EVENT_TYPES_2_1 && !ACTIVATION_EVENT_TYPES_2_1.done && (_a = ACTIVATION_EVENT_TYPES_2.return)) _a.call(ACTIVATION_EVENT_TYPES_2);
-            } finally{
-                if (e_3) throw e_3.error;
-            }
-        }
-        this.adapter.deregisterInteractionHandler('focus', this.focusHandler);
-        this.adapter.deregisterInteractionHandler('blur', this.blurHandler);
-        if (this.adapter.isUnbounded()) this.adapter.deregisterResizeHandler(this.resizeHandler);
-    };
-    MDCRippleFoundation1.prototype.deregisterDeactivationHandlers = function() {
-        var e_4, _a;
-        this.adapter.deregisterInteractionHandler('keyup', this.deactivateHandler);
-        try {
-            for(var POINTER_DEACTIVATION_EVENT_TYPES_2 = _tslib.__values(POINTER_DEACTIVATION_EVENT_TYPES), POINTER_DEACTIVATION_EVENT_TYPES_2_1 = POINTER_DEACTIVATION_EVENT_TYPES_2.next(); !POINTER_DEACTIVATION_EVENT_TYPES_2_1.done; POINTER_DEACTIVATION_EVENT_TYPES_2_1 = POINTER_DEACTIVATION_EVENT_TYPES_2.next()){
-                var evtType = POINTER_DEACTIVATION_EVENT_TYPES_2_1.value;
-                this.adapter.deregisterDocumentInteractionHandler(evtType, this.deactivateHandler);
-            }
-        } catch (e_4_1) {
-            e_4 = {
-                error: e_4_1
-            };
-        } finally{
-            try {
-                if (POINTER_DEACTIVATION_EVENT_TYPES_2_1 && !POINTER_DEACTIVATION_EVENT_TYPES_2_1.done && (_a = POINTER_DEACTIVATION_EVENT_TYPES_2.return)) _a.call(POINTER_DEACTIVATION_EVENT_TYPES_2);
-            } finally{
-                if (e_4) throw e_4.error;
-            }
-        }
-    };
-    MDCRippleFoundation1.prototype.removeCssVars = function() {
-        var _this = this;
-        var rippleStrings = MDCRippleFoundation1.strings;
-        var keys = Object.keys(rippleStrings);
-        keys.forEach(function(key) {
-            if (key.indexOf('VAR_') === 0) _this.adapter.updateCssVariable(rippleStrings[key], null);
-        });
-    };
-    MDCRippleFoundation1.prototype.activateImpl = function(evt) {
-        var _this = this;
-        if (this.adapter.isSurfaceDisabled()) return;
-        var activationState = this.activationState;
-        if (activationState.isActivated) return;
-        // Avoid reacting to follow-on events fired by touch device after an already-processed user interaction
-        var previousActivationEvent = this.previousActivationEvent;
-        var isSameInteraction = previousActivationEvent && evt !== undefined && previousActivationEvent.type !== evt.type;
-        if (isSameInteraction) return;
-        activationState.isActivated = true;
-        activationState.isProgrammatic = evt === undefined;
-        activationState.activationEvent = evt;
-        activationState.wasActivatedByPointer = activationState.isProgrammatic ? false : evt !== undefined && (evt.type === 'mousedown' || evt.type === 'touchstart' || evt.type === 'pointerdown');
-        var hasActivatedChild = evt !== undefined && activatedTargets.length > 0 && activatedTargets.some(function(target) {
-            return _this.adapter.containsEventTarget(target);
-        });
-        if (hasActivatedChild) {
-            // Immediately reset activation state, while preserving logic that prevents touch follow-on events
-            this.resetActivationState();
-            return;
-        }
-        if (evt !== undefined) {
-            activatedTargets.push(evt.target);
-            this.registerDeactivationHandlers(evt);
-        }
-        activationState.wasElementMadeActive = this.checkElementMadeActive(evt);
-        if (activationState.wasElementMadeActive) this.animateActivation();
-        requestAnimationFrame(function() {
-            // Reset array on next frame after the current event has had a chance to bubble to prevent ancestor ripples
-            activatedTargets = [];
-            if (!activationState.wasElementMadeActive && evt !== undefined && (evt.key === ' ' || evt.keyCode === 32)) {
-                // If space was pressed, try again within an rAF call to detect :active, because different UAs report
-                // active states inconsistently when they're called within event handling code:
-                // - https://bugs.chromium.org/p/chromium/issues/detail?id=635971
-                // - https://bugzilla.mozilla.org/show_bug.cgi?id=1293741
-                // We try first outside rAF to support Edge, which does not exhibit this problem, but will crash if a CSS
-                // variable is set within a rAF callback for a submit button interaction (#2241).
-                activationState.wasElementMadeActive = _this.checkElementMadeActive(evt);
-                if (activationState.wasElementMadeActive) _this.animateActivation();
-            }
-            if (!activationState.wasElementMadeActive) // Reset activation state immediately if element was not made active.
-            _this.activationState = _this.defaultActivationState();
-        });
-    };
-    MDCRippleFoundation1.prototype.checkElementMadeActive = function(evt) {
-        return evt !== undefined && evt.type === 'keydown' ? this.adapter.isSurfaceActive() : true;
-    };
-    MDCRippleFoundation1.prototype.animateActivation = function() {
-        var _this = this;
-        var _a = MDCRippleFoundation1.strings, VAR_FG_TRANSLATE_START = _a.VAR_FG_TRANSLATE_START, VAR_FG_TRANSLATE_END = _a.VAR_FG_TRANSLATE_END;
-        var _b = MDCRippleFoundation1.cssClasses, FG_DEACTIVATION = _b.FG_DEACTIVATION, FG_ACTIVATION = _b.FG_ACTIVATION;
-        var DEACTIVATION_TIMEOUT_MS = MDCRippleFoundation1.numbers.DEACTIVATION_TIMEOUT_MS;
-        this.layoutInternal();
-        var translateStart = '';
-        var translateEnd = '';
-        if (!this.adapter.isUnbounded()) {
-            var _c = this.getFgTranslationCoordinates(), startPoint = _c.startPoint, endPoint = _c.endPoint;
-            translateStart = startPoint.x + "px, " + startPoint.y + "px";
-            translateEnd = endPoint.x + "px, " + endPoint.y + "px";
-        }
-        this.adapter.updateCssVariable(VAR_FG_TRANSLATE_START, translateStart);
-        this.adapter.updateCssVariable(VAR_FG_TRANSLATE_END, translateEnd);
-        // Cancel any ongoing activation/deactivation animations
-        clearTimeout(this.activationTimer);
-        clearTimeout(this.fgDeactivationRemovalTimer);
-        this.rmBoundedActivationClasses();
-        this.adapter.removeClass(FG_DEACTIVATION);
-        // Force layout in order to re-trigger the animation.
-        this.adapter.computeBoundingRect();
-        this.adapter.addClass(FG_ACTIVATION);
-        this.activationTimer = setTimeout(function() {
-            _this.activationTimerCallback();
-        }, DEACTIVATION_TIMEOUT_MS);
-    };
-    MDCRippleFoundation1.prototype.getFgTranslationCoordinates = function() {
-        var _a = this.activationState, activationEvent = _a.activationEvent, wasActivatedByPointer = _a.wasActivatedByPointer;
-        var startPoint;
-        if (wasActivatedByPointer) startPoint = _util.getNormalizedEventCoords(activationEvent, this.adapter.getWindowPageOffset(), this.adapter.computeBoundingRect());
-        else startPoint = {
-            x: this.frame.width / 2,
-            y: this.frame.height / 2
-        };
-        // Center the element around the start point.
-        startPoint = {
-            x: startPoint.x - this.initialSize / 2,
-            y: startPoint.y - this.initialSize / 2
-        };
-        var endPoint = {
-            x: this.frame.width / 2 - this.initialSize / 2,
-            y: this.frame.height / 2 - this.initialSize / 2
-        };
-        return {
-            startPoint: startPoint,
-            endPoint: endPoint
-        };
-    };
-    MDCRippleFoundation1.prototype.runDeactivationUXLogicIfReady = function() {
-        var _this = this;
-        // This method is called both when a pointing device is released, and when the activation animation ends.
-        // The deactivation animation should only run after both of those occur.
-        var FG_DEACTIVATION = MDCRippleFoundation1.cssClasses.FG_DEACTIVATION;
-        var _a = this.activationState, hasDeactivationUXRun = _a.hasDeactivationUXRun, isActivated = _a.isActivated;
-        var activationHasEnded = hasDeactivationUXRun || !isActivated;
-        if (activationHasEnded && this.activationAnimationHasEnded) {
-            this.rmBoundedActivationClasses();
-            this.adapter.addClass(FG_DEACTIVATION);
-            this.fgDeactivationRemovalTimer = setTimeout(function() {
-                _this.adapter.removeClass(FG_DEACTIVATION);
-            }, _constants.numbers.FG_DEACTIVATION_MS);
-        }
-    };
-    MDCRippleFoundation1.prototype.rmBoundedActivationClasses = function() {
-        var FG_ACTIVATION = MDCRippleFoundation1.cssClasses.FG_ACTIVATION;
-        this.adapter.removeClass(FG_ACTIVATION);
-        this.activationAnimationHasEnded = false;
-        this.adapter.computeBoundingRect();
-    };
-    MDCRippleFoundation1.prototype.resetActivationState = function() {
-        var _this = this;
-        this.previousActivationEvent = this.activationState.activationEvent;
-        this.activationState = this.defaultActivationState();
-        // Touch devices may fire additional events for the same interaction within a short time.
-        // Store the previous event until it's safe to assume that subsequent events are for new interactions.
-        setTimeout(function() {
-            return _this.previousActivationEvent = undefined;
-        }, MDCRippleFoundation1.numbers.TAP_DELAY_MS);
-    };
-    MDCRippleFoundation1.prototype.deactivateImpl = function() {
-        var _this = this;
-        var activationState = this.activationState;
-        // This can happen in scenarios such as when you have a keyup event that blurs the element.
-        if (!activationState.isActivated) return;
-        var state = _tslib.__assign({
-        }, activationState);
-        if (activationState.isProgrammatic) {
-            requestAnimationFrame(function() {
-                _this.animateDeactivation(state);
-            });
-            this.resetActivationState();
-        } else {
-            this.deregisterDeactivationHandlers();
-            requestAnimationFrame(function() {
-                _this.activationState.hasDeactivationUXRun = true;
-                _this.animateDeactivation(state);
-                _this.resetActivationState();
-            });
-        }
-    };
-    MDCRippleFoundation1.prototype.animateDeactivation = function(_a) {
-        var wasActivatedByPointer = _a.wasActivatedByPointer, wasElementMadeActive = _a.wasElementMadeActive;
-        if (wasActivatedByPointer || wasElementMadeActive) this.runDeactivationUXLogicIfReady();
-    };
-    MDCRippleFoundation1.prototype.layoutInternal = function() {
-        var _this = this;
-        this.frame = this.adapter.computeBoundingRect();
-        var maxDim = Math.max(this.frame.height, this.frame.width);
-        // Surface diameter is treated differently for unbounded vs. bounded ripples.
-        // Unbounded ripple diameter is calculated smaller since the surface is expected to already be padded appropriately
-        // to extend the hitbox, and the ripple is expected to meet the edges of the padded hitbox (which is typically
-        // square). Bounded ripples, on the other hand, are fully expected to expand beyond the surface's longest diameter
-        // (calculated based on the diagonal plus a constant padding), and are clipped at the surface's border via
-        // `overflow: hidden`.
-        var getBoundedRadius = function() {
-            var hypotenuse = Math.sqrt(Math.pow(_this.frame.width, 2) + Math.pow(_this.frame.height, 2));
-            return hypotenuse + MDCRippleFoundation1.numbers.PADDING;
-        };
-        this.maxRadius = this.adapter.isUnbounded() ? maxDim : getBoundedRadius();
-        // Ripple is sized as a fraction of the largest dimension of the surface, then scales up using a CSS scale transform
-        var initialSize = Math.floor(maxDim * MDCRippleFoundation1.numbers.INITIAL_ORIGIN_SCALE);
-        // Unbounded ripple size should always be even number to equally center align.
-        if (this.adapter.isUnbounded() && initialSize % 2 !== 0) this.initialSize = initialSize - 1;
-        else this.initialSize = initialSize;
-        this.fgScale = "" + this.maxRadius / this.initialSize;
-        this.updateLayoutCssVars();
-    };
-    MDCRippleFoundation1.prototype.updateLayoutCssVars = function() {
-        var _a = MDCRippleFoundation1.strings, VAR_FG_SIZE = _a.VAR_FG_SIZE, VAR_LEFT = _a.VAR_LEFT, VAR_TOP = _a.VAR_TOP, VAR_FG_SCALE = _a.VAR_FG_SCALE;
-        this.adapter.updateCssVariable(VAR_FG_SIZE, this.initialSize + "px");
-        this.adapter.updateCssVariable(VAR_FG_SCALE, this.fgScale);
-        if (this.adapter.isUnbounded()) {
-            this.unboundedCoords = {
-                left: Math.round(this.frame.width / 2 - this.initialSize / 2),
-                top: Math.round(this.frame.height / 2 - this.initialSize / 2)
-            };
-            this.adapter.updateCssVariable(VAR_LEFT, this.unboundedCoords.left + "px");
-            this.adapter.updateCssVariable(VAR_TOP, this.unboundedCoords.top + "px");
-        }
-    };
-    return MDCRippleFoundation1;
-}(_foundation.MDCFoundation);
-exports.default = MDCRippleFoundation;
-
-},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"lg1jP","./util":"l3az5","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"lg1jP":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
-);
-parcelHelpers.export(exports, "strings", ()=>strings
-);
-parcelHelpers.export(exports, "numbers", ()=>numbers
-);
-var cssClasses = {
-    // Ripple is a special case where the "root" component is really a "mixin" of sorts,
-    // given that it's an 'upgrade' to an existing component. That being said it is the root
-    // CSS class that all other CSS classes derive from.
-    BG_FOCUSED: 'mdc-ripple-upgraded--background-focused',
-    FG_ACTIVATION: 'mdc-ripple-upgraded--foreground-activation',
-    FG_DEACTIVATION: 'mdc-ripple-upgraded--foreground-deactivation',
-    ROOT: 'mdc-ripple-upgraded',
-    UNBOUNDED: 'mdc-ripple-upgraded--unbounded'
-};
-var strings = {
-    VAR_FG_SCALE: '--mdc-ripple-fg-scale',
-    VAR_FG_SIZE: '--mdc-ripple-fg-size',
-    VAR_FG_TRANSLATE_END: '--mdc-ripple-fg-translate-end',
-    VAR_FG_TRANSLATE_START: '--mdc-ripple-fg-translate-start',
-    VAR_LEFT: '--mdc-ripple-left',
-    VAR_TOP: '--mdc-ripple-top'
-};
-var numbers = {
-    DEACTIVATION_TIMEOUT_MS: 225,
-    FG_DEACTIVATION_MS: 150,
-    INITIAL_ORIGIN_SCALE: 0.6,
-    PADDING: 10,
-    TAP_DELAY_MS: 300
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"l3az5":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "supportsCssVariables", ()=>supportsCssVariables
-);
-parcelHelpers.export(exports, "getNormalizedEventCoords", ()=>getNormalizedEventCoords
-);
-/**
- * Stores result from supportsCssVariables to avoid redundant processing to
- * detect CSS custom variable support.
- */ var supportsCssVariables_;
-function supportsCssVariables(windowObj, forceRefresh) {
-    if (forceRefresh === void 0) forceRefresh = false;
-    var CSS = windowObj.CSS;
-    var supportsCssVars = supportsCssVariables_;
-    if (typeof supportsCssVariables_ === 'boolean' && !forceRefresh) return supportsCssVariables_;
-    var supportsFunctionPresent = CSS && typeof CSS.supports === 'function';
-    if (!supportsFunctionPresent) return false;
-    var explicitlySupportsCssVars = CSS.supports('--css-vars', 'yes');
-    // See: https://bugs.webkit.org/show_bug.cgi?id=154669
-    // See: README section on Safari
-    var weAreFeatureDetectingSafari10plus = CSS.supports('(--css-vars: yes)') && CSS.supports('color', '#00000000');
-    supportsCssVars = explicitlySupportsCssVars || weAreFeatureDetectingSafari10plus;
-    if (!forceRefresh) supportsCssVariables_ = supportsCssVars;
-    return supportsCssVars;
-}
-function getNormalizedEventCoords(evt, pageOffset, clientRect) {
-    if (!evt) return {
-        x: 0,
-        y: 0
-    };
-    var x = pageOffset.x, y = pageOffset.y;
-    var documentX = x + clientRect.left;
-    var documentY = y + clientRect.top;
-    var normalizedX;
-    var normalizedY;
-    // Determine touch point relative to the ripple container.
-    if (evt.type === 'touchstart') {
-        var touchEvent = evt;
-        normalizedX = touchEvent.changedTouches[0].pageX - documentX;
-        normalizedY = touchEvent.changedTouches[0].pageY - documentY;
-    } else {
-        var mouseEvent = evt;
-        normalizedX = mouseEvent.pageX - documentX;
-        normalizedY = mouseEvent.pageY - documentY;
-    }
-    return {
-        x: normalizedX,
-        y: normalizedY
-    };
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"52gAM":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
-);
-parcelHelpers.export(exports, "numbers", ()=>numbers
-);
-parcelHelpers.export(exports, "strings", ()=>strings
-);
-/**
- * @license
- * Copyright 2018 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var cssClasses = {
-    FIXED_CLASS: 'mdc-top-app-bar--fixed',
-    FIXED_SCROLLED_CLASS: 'mdc-top-app-bar--fixed-scrolled',
-    SHORT_CLASS: 'mdc-top-app-bar--short',
-    SHORT_COLLAPSED_CLASS: 'mdc-top-app-bar--short-collapsed',
-    SHORT_HAS_ACTION_ITEM_CLASS: 'mdc-top-app-bar--short-has-action-item'
-};
-var numbers = {
-    DEBOUNCE_THROTTLE_RESIZE_TIME_MS: 100,
-    MAX_TOP_APP_BAR_HEIGHT: 128
-};
-var strings = {
-    ACTION_ITEM_SELECTOR: '.mdc-top-app-bar__action-item',
-    NAVIGATION_EVENT: 'MDCTopAppBar:nav',
-    NAVIGATION_ICON_SELECTOR: '.mdc-top-app-bar__navigation-icon',
-    ROOT_SELECTOR: '.mdc-top-app-bar',
-    TITLE_SELECTOR: '.mdc-top-app-bar__title'
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"eeQCV":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCFixedTopAppBarFoundation", ()=>MDCFixedTopAppBarFoundation
-);
-/**
- * @license
- * Copyright 2018 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _tslib = require("tslib");
-var _constants = require("../constants");
-var _foundation = require("../standard/foundation");
-var MDCFixedTopAppBarFoundation = function(_super) {
-    _tslib.__extends(MDCFixedTopAppBarFoundation1, _super);
-    function MDCFixedTopAppBarFoundation1() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        /**
-         * State variable for the previous scroll iteration top app bar state
-         */ _this.wasScrolled = false;
-        return _this;
-    }
-    /**
-     * Scroll handler for applying/removing the modifier class on the fixed top app bar.
-     * @override
-     */ MDCFixedTopAppBarFoundation1.prototype.handleTargetScroll = function() {
-        var currentScroll = this.adapter.getViewportScrollY();
-        if (currentScroll <= 0) {
-            if (this.wasScrolled) {
-                this.adapter.removeClass(_constants.cssClasses.FIXED_SCROLLED_CLASS);
-                this.wasScrolled = false;
-            }
-        } else if (!this.wasScrolled) {
-            this.adapter.addClass(_constants.cssClasses.FIXED_SCROLLED_CLASS);
-            this.wasScrolled = true;
-        }
-    };
-    return MDCFixedTopAppBarFoundation1;
-}(_foundation.MDCTopAppBarFoundation);
-exports.default = MDCFixedTopAppBarFoundation;
-
-},{"tslib":"lRdW5","../constants":"52gAM","../standard/foundation":"6uP3L","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"6uP3L":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCTopAppBarFoundation", ()=>MDCTopAppBarFoundation
-);
-/**
- * @license
- * Copyright 2018 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _tslib = require("tslib");
-var _constants = require("../constants");
-var _foundation = require("../foundation");
-var INITIAL_VALUE = 0;
-var MDCTopAppBarFoundation = function(_super) {
-    _tslib.__extends(MDCTopAppBarFoundation1, _super);
-    /* istanbul ignore next: optional argument is not a branch statement */ function MDCTopAppBarFoundation1(adapter) {
-        var _this = _super.call(this, adapter) || this;
-        /**
-         * Indicates if the top app bar was docked in the previous scroll handler iteration.
-         */ _this.wasDocked = true;
-        /**
-         * Indicates if the top app bar is docked in the fully shown position.
-         */ _this.isDockedShowing = true;
-        /**
-         * Variable for current scroll position of the top app bar
-         */ _this.currentAppBarOffsetTop = 0;
-        /**
-         * Used to prevent the top app bar from being scrolled out of view during resize events
-         */ _this.isCurrentlyBeingResized = false;
-        /**
-         * The timeout that's used to throttle the resize events
-         */ _this.resizeThrottleId = INITIAL_VALUE;
-        /**
-         * The timeout that's used to debounce toggling the isCurrentlyBeingResized
-         * variable after a resize
-         */ _this.resizeDebounceId = INITIAL_VALUE;
-        _this.lastScrollPosition = _this.adapter.getViewportScrollY();
-        _this.topAppBarHeight = _this.adapter.getTopAppBarHeight();
-        return _this;
-    }
-    MDCTopAppBarFoundation1.prototype.destroy = function() {
-        _super.prototype.destroy.call(this);
-        this.adapter.setStyle('top', '');
-    };
-    /**
-     * Scroll handler for the default scroll behavior of the top app bar.
-     * @override
-     */ MDCTopAppBarFoundation1.prototype.handleTargetScroll = function() {
-        var currentScrollPosition = Math.max(this.adapter.getViewportScrollY(), 0);
-        var diff = currentScrollPosition - this.lastScrollPosition;
-        this.lastScrollPosition = currentScrollPosition;
-        // If the window is being resized the lastScrollPosition needs to be updated
-        // but the current scroll of the top app bar should stay in the same
-        // position.
-        if (!this.isCurrentlyBeingResized) {
-            this.currentAppBarOffsetTop -= diff;
-            if (this.currentAppBarOffsetTop > 0) this.currentAppBarOffsetTop = 0;
-            else if (Math.abs(this.currentAppBarOffsetTop) > this.topAppBarHeight) this.currentAppBarOffsetTop = -this.topAppBarHeight;
-            this.moveTopAppBar();
-        }
-    };
-    /**
-     * Top app bar resize handler that throttle/debounce functions that execute updates.
-     * @override
-     */ MDCTopAppBarFoundation1.prototype.handleWindowResize = function() {
-        var _this = this;
-        // Throttle resize events 10 p/s
-        if (!this.resizeThrottleId) this.resizeThrottleId = setTimeout(function() {
-            _this.resizeThrottleId = INITIAL_VALUE;
-            _this.throttledResizeHandler();
-        }, _constants.numbers.DEBOUNCE_THROTTLE_RESIZE_TIME_MS);
-        this.isCurrentlyBeingResized = true;
-        if (this.resizeDebounceId) clearTimeout(this.resizeDebounceId);
-        this.resizeDebounceId = setTimeout(function() {
-            _this.handleTargetScroll();
-            _this.isCurrentlyBeingResized = false;
-            _this.resizeDebounceId = INITIAL_VALUE;
-        }, _constants.numbers.DEBOUNCE_THROTTLE_RESIZE_TIME_MS);
-    };
-    /**
-     * Function to determine if the DOM needs to update.
-     */ MDCTopAppBarFoundation1.prototype.checkForUpdate = function() {
-        var offscreenBoundaryTop = -this.topAppBarHeight;
-        var hasAnyPixelsOffscreen = this.currentAppBarOffsetTop < 0;
-        var hasAnyPixelsOnscreen = this.currentAppBarOffsetTop > offscreenBoundaryTop;
-        var partiallyShowing = hasAnyPixelsOffscreen && hasAnyPixelsOnscreen;
-        // If it's partially showing, it can't be docked.
-        if (partiallyShowing) this.wasDocked = false;
-        else {
-            // Not previously docked and not partially showing, it's now docked.
-            if (!this.wasDocked) {
-                this.wasDocked = true;
-                return true;
-            } else if (this.isDockedShowing !== hasAnyPixelsOnscreen) {
-                this.isDockedShowing = hasAnyPixelsOnscreen;
-                return true;
-            }
-        }
-        return partiallyShowing;
-    };
-    /**
-     * Function to move the top app bar if needed.
-     */ MDCTopAppBarFoundation1.prototype.moveTopAppBar = function() {
-        if (this.checkForUpdate()) {
-            // Once the top app bar is fully hidden we use the max potential top app bar height as our offset
-            // so the top app bar doesn't show if the window resizes and the new height > the old height.
-            var offset = this.currentAppBarOffsetTop;
-            if (Math.abs(offset) >= this.topAppBarHeight) offset = -_constants.numbers.MAX_TOP_APP_BAR_HEIGHT;
-            this.adapter.setStyle('top', offset + 'px');
-        }
-    };
-    /**
-     * Throttled function that updates the top app bar scrolled values if the
-     * top app bar height changes.
-     */ MDCTopAppBarFoundation1.prototype.throttledResizeHandler = function() {
-        var currentHeight = this.adapter.getTopAppBarHeight();
-        if (this.topAppBarHeight !== currentHeight) {
-            this.wasDocked = false;
-            // Since the top app bar has a different height depending on the screen width, this
-            // will ensure that the top app bar remains in the correct location if
-            // completely hidden and a resize makes the top app bar a different height.
-            this.currentAppBarOffsetTop -= this.topAppBarHeight - currentHeight;
-            this.topAppBarHeight = currentHeight;
-        }
-        this.handleTargetScroll();
-    };
-    return MDCTopAppBarFoundation1;
-}(_foundation.MDCTopAppBarBaseFoundation);
-exports.default = MDCTopAppBarFoundation;
-
-},{"tslib":"lRdW5","../constants":"52gAM","../foundation":"dHcUo","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"dHcUo":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCTopAppBarBaseFoundation", ()=>MDCTopAppBarBaseFoundation
-);
-/**
- * @license
- * Copyright 2018 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _tslib = require("tslib");
-var _foundation = require("@material/base/foundation");
-var _constants = require("./constants");
-var MDCTopAppBarBaseFoundation = function(_super) {
-    _tslib.__extends(MDCTopAppBarBaseFoundation1, _super);
-    /* istanbul ignore next: optional argument is not a branch statement */ function MDCTopAppBarBaseFoundation1(adapter) {
-        return _super.call(this, _tslib.__assign(_tslib.__assign({
-        }, MDCTopAppBarBaseFoundation1.defaultAdapter), adapter)) || this;
-    }
-    Object.defineProperty(MDCTopAppBarBaseFoundation1, "strings", {
-        get: function() {
-            return _constants.strings;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCTopAppBarBaseFoundation1, "cssClasses", {
-        get: function() {
-            return _constants.cssClasses;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCTopAppBarBaseFoundation1, "numbers", {
-        get: function() {
-            return _constants.numbers;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    Object.defineProperty(MDCTopAppBarBaseFoundation1, "defaultAdapter", {
-        /**
-         * See {@link MDCTopAppBarAdapter} for typing information on parameters and return types.
-         */ get: function() {
-            // tslint:disable:object-literal-sort-keys Methods should be in the same order as the adapter interface.
-            return {
-                addClass: function() {
-                    return undefined;
-                },
-                removeClass: function() {
-                    return undefined;
-                },
-                hasClass: function() {
-                    return false;
-                },
-                setStyle: function() {
-                    return undefined;
-                },
-                getTopAppBarHeight: function() {
-                    return 0;
-                },
-                notifyNavigationIconClicked: function() {
-                    return undefined;
-                },
-                getViewportScrollY: function() {
-                    return 0;
-                },
-                getTotalActionItems: function() {
-                    return 0;
-                }
-            };
-        // tslint:enable:object-literal-sort-keys
-        },
-        enumerable: false,
-        configurable: true
-    });
-    /** Other variants of TopAppBar foundation overrides this method */ MDCTopAppBarBaseFoundation1.prototype.handleTargetScroll = function() {
-    }; // tslint:disable-line:no-empty
-    /** Other variants of TopAppBar foundation overrides this method */ MDCTopAppBarBaseFoundation1.prototype.handleWindowResize = function() {
-    }; // tslint:disable-line:no-empty
-    MDCTopAppBarBaseFoundation1.prototype.handleNavigationClick = function() {
-        this.adapter.notifyNavigationIconClicked();
-    };
-    return MDCTopAppBarBaseFoundation1;
-}(_foundation.MDCFoundation);
-exports.default = MDCTopAppBarBaseFoundation;
-
-},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"52gAM","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"9lhAW":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MDCShortTopAppBarFoundation", ()=>MDCShortTopAppBarFoundation
-);
-/**
- * @license
- * Copyright 2018 Google Inc.
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- */ var _tslib = require("tslib");
-var _constants = require("../constants");
-var _foundation = require("../foundation");
-var MDCShortTopAppBarFoundation = function(_super) {
-    _tslib.__extends(MDCShortTopAppBarFoundation1, _super);
-    /* istanbul ignore next: optional argument is not a branch statement */ function MDCShortTopAppBarFoundation1(adapter) {
-        var _this = _super.call(this, adapter) || this;
-        _this.collapsed = false;
-        _this.isAlwaysCollapsed = false;
-        return _this;
-    }
-    Object.defineProperty(MDCShortTopAppBarFoundation1.prototype, "isCollapsed", {
-        // Public visibility for backward compatibility.
-        get: function() {
-            return this.collapsed;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    MDCShortTopAppBarFoundation1.prototype.init = function() {
-        _super.prototype.init.call(this);
-        if (this.adapter.getTotalActionItems() > 0) this.adapter.addClass(_constants.cssClasses.SHORT_HAS_ACTION_ITEM_CLASS);
-        // If initialized with SHORT_COLLAPSED_CLASS, the bar should always be collapsed
-        this.setAlwaysCollapsed(this.adapter.hasClass(_constants.cssClasses.SHORT_COLLAPSED_CLASS));
-    };
-    /**
-     * Set if the short top app bar should always be collapsed.
-     *
-     * @param value When `true`, bar will always be collapsed. When `false`, bar may collapse or expand based on scroll.
-     */ MDCShortTopAppBarFoundation1.prototype.setAlwaysCollapsed = function(value) {
-        this.isAlwaysCollapsed = !!value;
-        if (this.isAlwaysCollapsed) this.collapse();
-        else // let maybeCollapseBar determine if the bar should be collapsed
-        this.maybeCollapseBar();
-    };
-    MDCShortTopAppBarFoundation1.prototype.getAlwaysCollapsed = function() {
-        return this.isAlwaysCollapsed;
-    };
-    /**
-     * Scroll handler for applying/removing the collapsed modifier class on the short top app bar.
-     * @override
-     */ MDCShortTopAppBarFoundation1.prototype.handleTargetScroll = function() {
-        this.maybeCollapseBar();
-    };
-    MDCShortTopAppBarFoundation1.prototype.maybeCollapseBar = function() {
-        if (this.isAlwaysCollapsed) return;
-        var currentScroll = this.adapter.getViewportScrollY();
-        if (currentScroll <= 0) {
-            if (this.collapsed) this.uncollapse();
-        } else if (!this.collapsed) this.collapse();
-    };
-    MDCShortTopAppBarFoundation1.prototype.uncollapse = function() {
-        this.adapter.removeClass(_constants.cssClasses.SHORT_COLLAPSED_CLASS);
-        this.collapsed = false;
-    };
-    MDCShortTopAppBarFoundation1.prototype.collapse = function() {
-        this.adapter.addClass(_constants.cssClasses.SHORT_COLLAPSED_CLASS);
-        this.collapsed = true;
-    };
-    return MDCShortTopAppBarFoundation1;
-}(_foundation.MDCTopAppBarBaseFoundation);
-exports.default = MDCShortTopAppBarFoundation;
-
-},{"tslib":"lRdW5","../constants":"52gAM","../foundation":"dHcUo","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"7nTYm":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm","./Nav":"8j6Xq","./Main":"gItCV"}],"7nTYm":[function(require,module,exports) {
 "use strict";
 var Refresh = require('react-refresh/runtime');
 function debounce(func, delay) {
@@ -27127,16 +24800,103 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"iorOX"}],"69BtK":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5ac0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react-refresh/runtime":"iorOX"}],"8j6Xq":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$caa2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5ac0.prelude(module);
+$parcel$ReactRefreshHelpers$caa2.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Body", ()=>Body
+parcelHelpers.export(exports, "Nav", ()=>Nav
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _navCss = require("./nav.css");
+var _react = require("react");
+var _s = $RefreshSig$();
+function Nav() {
+    _s();
+    const [arrow, setArrow] = _react.useState("home");
+    console.log(arrow);
+    return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("nav", {
+        children: [
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                "aria-label": "home",
+                to: "/",
+                className: `nav-item material-icons md-48 md-light ${arrow == "home" ? "active" : ""}`,
+                onClick: ()=>setArrow("home")
+                ,
+                children: "home"
+            }, void 0, false, {
+                fileName: "Nav.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                "aria-label": "work",
+                to: "/work",
+                className: `nav-item material-icons md-48 md-light ${arrow == "work" ? "active" : ""}`,
+                onClick: ()=>setArrow("work")
+                ,
+                children: "work"
+            }, void 0, false, {
+                fileName: "Nav.js",
+                lineNumber: 20,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                "aria-label": "about",
+                to: "/about",
+                className: `nav-item material-icons md-48 md-light ${arrow == "about" ? "active" : ""}`,
+                onClick: ()=>setArrow("about")
+                ,
+                children: "info"
+            }, void 0, false, {
+                fileName: "Nav.js",
+                lineNumber: 30,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Link, {
+                "aria-label": "contact",
+                to: "/contact",
+                className: `nav-item material-icons md-48 md-light ${arrow == "contact" ? "active" : ""}`,
+                onClick: ()=>setArrow("contact")
+                ,
+                children: "email"
+            }, void 0, false, {
+                fileName: "Nav.js",
+                lineNumber: 40,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "Nav.js",
+        lineNumber: 9,
+        columnNumber: 5
+    }, this));
+}
+_s(Nav, "j189Du8RntVuzXtxc56bH3QrgU4=");
+_c = Nav;
+var _c;
+$RefreshReg$(_c, "Nav");
+
+  $parcel$ReactRefreshHelpers$caa2.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","./nav.css":"7vV98","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"7vV98":[function() {},{}],"gItCV":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$eef6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$eef6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Main", ()=>Main
 );
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _home = require("./Home");
@@ -27146,105 +24906,92 @@ var _contact = require("./Contact");
 var _project = require("./Project");
 var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
-var _bodyCss = require("./body.css");
+var _mainCss = require("./main.css");
 var _s = $RefreshSig$();
-function Body({ arrowPosition  }) {
+function Main() {
     _s();
-    console.log(arrowPosition);
     const scrollRef = _react.useRef(null);
     /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
      Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
      component and apply it to all sub-components. But HashRouter and useLocation do not work 
      together. */ return(/*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "body-container",
+        className: "main",
         ref: scrollRef,
-        children: [
-            arrowPosition ? /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-                className: "arrow",
-                style: {
-                    left: arrowPosition.x
-                }
-            }, void 0, false, {
-                fileName: "Body.js",
-                lineNumber: 20,
-                columnNumber: 9
-            }, this) : null,
-            /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
-                children: [
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "/",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_home.Home, {
-                            scrollRef: scrollRef
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Body.js",
-                        lineNumber: 23,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "work",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
-                            scrollRef: scrollRef
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Body.js",
-                        lineNumber: 24,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "about",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_about.About, {
-                            scrollRef: scrollRef
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Body.js",
-                        lineNumber: 25,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "contact",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_contact.Contact, {
-                            scrollRef: scrollRef
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Body.js",
-                        lineNumber: 26,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
-                        path: "project",
-                        element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_project.Project, {
-                            scrollRef: scrollRef
-                        }, void 0, false, void 0, void 0)
-                    }, void 0, false, {
-                        fileName: "Body.js",
-                        lineNumber: 27,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "Body.js",
-                lineNumber: 22,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "Body.js",
-        lineNumber: 18,
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Routes, {
+            children: [
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                    path: "/",
+                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_home.Home, {
+                        scrollRef: scrollRef
+                    }, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "Main.js",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                    path: "work",
+                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_work.Work, {
+                        scrollRef: scrollRef
+                    }, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "Main.js",
+                    lineNumber: 20,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                    path: "about",
+                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_about.About, {
+                        scrollRef: scrollRef
+                    }, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "Main.js",
+                    lineNumber: 21,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                    path: "contact",
+                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_contact.Contact, {
+                        scrollRef: scrollRef
+                    }, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "Main.js",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactRouterDom.Route, {
+                    path: "project",
+                    element: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_project.Project, {
+                        scrollRef: scrollRef
+                    }, void 0, false, void 0, void 0)
+                }, void 0, false, {
+                    fileName: "Main.js",
+                    lineNumber: 23,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "Main.js",
+            lineNumber: 18,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "Main.js",
+        lineNumber: 17,
         columnNumber: 5
     }, this));
 }
-_s(Body, "rUl6RJdP9XfufN21BrtKqIOri0o=");
-_c = Body;
+_s(Main, "rUl6RJdP9XfufN21BrtKqIOri0o=");
+_c = Main;
 var _c;
-$RefreshReg$(_c, "Body");
+$RefreshReg$(_c, "Main");
 
-  $parcel$ReactRefreshHelpers$5ac0.postlude(module);
+  $parcel$ReactRefreshHelpers$eef6.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Home":"k46Sb","./Work":"7s2mh","./About":"2rsUE","./Contact":"23MUH","./Project":"03vJm","react-router-dom":"fdOAw","react":"21dqq","./body.css":"cEXyv","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"k46Sb":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./Home":"k46Sb","./Work":"7s2mh","./About":"2rsUE","./Contact":"23MUH","./Project":"03vJm","react-router-dom":"fdOAw","react":"21dqq","./main.css":"cvfZG","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"k46Sb":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5e44 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27271,6 +25018,7 @@ function Home({ scrollRef  }) {
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                     className: "jumbotron__row",
                     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV("h1", {
+                        className: "font-effect-3d-float",
                         children: "Jesse Paulsen"
                     }, void 0, false, {
                         fileName: "Home.js",
@@ -28445,7 +26193,742 @@ var MDCTextField = function(_super) {
     return MDCTextField1;
 }(_component.MDCComponent);
 
-},{"tslib":"lRdW5","@material/base/component":"jLptS","@material/dom/events":"87xmx","@material/dom/ponyfill":"8pLcv","@material/floating-label/component":"larjq","@material/line-ripple/component":"4xpf3","@material/notched-outline/component":"ibiBS","@material/ripple/component":"035sE","@material/ripple/foundation":"7frpT","./character-counter/component":"hwtce","./character-counter/foundation":"dpux4","./constants":"wdBr4","./foundation":"2UHkh","./helper-text/component":"bX2wx","./helper-text/foundation":"5gLP0","./icon/component":"gn4Te","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"larjq":[function(require,module,exports) {
+},{"tslib":"lRdW5","@material/base/component":"jLptS","@material/dom/events":"87xmx","@material/dom/ponyfill":"8pLcv","@material/floating-label/component":"larjq","@material/line-ripple/component":"4xpf3","@material/notched-outline/component":"ibiBS","@material/ripple/component":"035sE","@material/ripple/foundation":"7frpT","./character-counter/component":"hwtce","./character-counter/foundation":"dpux4","./constants":"wdBr4","./foundation":"2UHkh","./helper-text/component":"bX2wx","./helper-text/foundation":"5gLP0","./icon/component":"gn4Te","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"lRdW5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "__extends", ()=>__extends
+);
+parcelHelpers.export(exports, "__assign", ()=>__assign
+);
+parcelHelpers.export(exports, "__rest", ()=>__rest
+);
+parcelHelpers.export(exports, "__decorate", ()=>__decorate
+);
+parcelHelpers.export(exports, "__param", ()=>__param
+);
+parcelHelpers.export(exports, "__metadata", ()=>__metadata
+);
+parcelHelpers.export(exports, "__awaiter", ()=>__awaiter
+);
+parcelHelpers.export(exports, "__generator", ()=>__generator
+);
+parcelHelpers.export(exports, "__createBinding", ()=>__createBinding
+);
+parcelHelpers.export(exports, "__exportStar", ()=>__exportStar
+);
+parcelHelpers.export(exports, "__values", ()=>__values
+);
+parcelHelpers.export(exports, "__read", ()=>__read
+);
+/** @deprecated */ parcelHelpers.export(exports, "__spread", ()=>__spread
+);
+/** @deprecated */ parcelHelpers.export(exports, "__spreadArrays", ()=>__spreadArrays
+);
+parcelHelpers.export(exports, "__spreadArray", ()=>__spreadArray
+);
+parcelHelpers.export(exports, "__await", ()=>__await
+);
+parcelHelpers.export(exports, "__asyncGenerator", ()=>__asyncGenerator
+);
+parcelHelpers.export(exports, "__asyncDelegator", ()=>__asyncDelegator
+);
+parcelHelpers.export(exports, "__asyncValues", ()=>__asyncValues
+);
+parcelHelpers.export(exports, "__makeTemplateObject", ()=>__makeTemplateObject
+);
+parcelHelpers.export(exports, "__importStar", ()=>__importStar
+);
+parcelHelpers.export(exports, "__importDefault", ()=>__importDefault
+);
+parcelHelpers.export(exports, "__classPrivateFieldGet", ()=>__classPrivateFieldGet
+);
+parcelHelpers.export(exports, "__classPrivateFieldSet", ()=>__classPrivateFieldSet
+);
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */ /* global Reflect, Promise */ var extendStatics = function(d1, b1) {
+    extendStatics = Object.setPrototypeOf || ({
+        __proto__: []
+    }) instanceof Array && function(d, b) {
+        d.__proto__ = b;
+    } || function(d, b) {
+        for(var p in b)if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p];
+    };
+    return extendStatics(d1, b1);
+};
+function __extends(d, b) {
+    if (typeof b !== "function" && b !== null) throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+    extendStatics(d, b);
+    function __() {
+        this.constructor = d;
+    }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for(var s, i = 1, n = arguments.length; i < n; i++){
+            s = arguments[i];
+            for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+function __rest(s, e) {
+    var t = {
+    };
+    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
+        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+    }
+    return t;
+}
+function __decorate(decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for(var i = decorators.length - 1; i >= 0; i--)if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+}
+function __param(paramIndex, decorator) {
+    return function(target, key) {
+        decorator(target, key, paramIndex);
+    };
+}
+function __metadata(metadataKey, metadataValue) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
+}
+function __awaiter(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+}
+function __generator(thisArg, body) {
+    var _ = {
+        label: 0,
+        sent: function() {
+            if (t[0] & 1) throw t[1];
+            return t[1];
+        },
+        trys: [],
+        ops: []
+    }, f, y, t, g;
+    function verb(n) {
+        return function(v) {
+            return step([
+                n,
+                v
+            ]);
+        };
+    }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while(_)try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [
+                op[0] & 2,
+                t.value
+            ];
+            switch(op[0]){
+                case 0:
+                case 1:
+                    t = op;
+                    break;
+                case 4:
+                    _.label++;
+                    return {
+                        value: op[1],
+                        done: false
+                    };
+                case 5:
+                    _.label++;
+                    y = op[1];
+                    op = [
+                        0
+                    ];
+                    continue;
+                case 7:
+                    op = _.ops.pop();
+                    _.trys.pop();
+                    continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                        _ = 0;
+                        continue;
+                    }
+                    if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                        _.label = op[1];
+                        break;
+                    }
+                    if (op[0] === 6 && _.label < t[1]) {
+                        _.label = t[1];
+                        t = op;
+                        break;
+                    }
+                    if (t && _.label < t[2]) {
+                        _.label = t[2];
+                        _.ops.push(op);
+                        break;
+                    }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop();
+                    continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) {
+            op = [
+                6,
+                e
+            ];
+            y = 0;
+        } finally{
+            f = t = 0;
+        }
+        if (op[0] & 5) throw op[1];
+        return {
+            value: op[0] ? op[1] : void 0,
+            done: true
+        };
+    }
+    return g = {
+        next: verb(0),
+        "throw": verb(1),
+        "return": verb(2)
+    }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
+        return this;
+    }), g;
+}
+var __createBinding = Object.create ? function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, {
+        enumerable: true,
+        get: function() {
+            return m[k];
+        }
+    });
+} : function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+};
+function __exportStar(m, o) {
+    for(var p in m)if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p)) __createBinding(o, m, p);
+}
+function __values(o) {
+    var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
+    if (m) return m.call(o);
+    if (o && typeof o.length === "number") return {
+        next: function() {
+            if (o && i >= o.length) o = void 0;
+            return {
+                value: o && o[i++],
+                done: !o
+            };
+        }
+    };
+    throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
+}
+function __read(o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while((n === void 0 || n-- > 0) && !(r = i.next()).done)ar.push(r.value);
+    } catch (error) {
+        e = {
+            error: error
+        };
+    } finally{
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        } finally{
+            if (e) throw e.error;
+        }
+    }
+    return ar;
+}
+function __spread() {
+    for(var ar = [], i = 0; i < arguments.length; i++)ar = ar.concat(__read(arguments[i]));
+    return ar;
+}
+function __spreadArrays() {
+    for(var s = 0, i = 0, il = arguments.length; i < il; i++)s += arguments[i].length;
+    for(var r = Array(s), k = 0, i = 0; i < il; i++)for(var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)r[k] = a[j];
+    return r;
+}
+function __spreadArray(to, from, pack) {
+    if (pack || arguments.length === 2) {
+        for(var i = 0, l = from.length, ar; i < l; i++)if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+}
+function __await(v) {
+    return this instanceof __await ? (this.v = v, this) : new __await(v);
+}
+function __asyncGenerator(thisArg, _arguments, generator) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var g = generator.apply(thisArg, _arguments || []), i, q = [];
+    function verb(n) {
+        if (g[n]) i[n] = function(v) {
+            return new Promise(function(a, b) {
+                q.push([
+                    n,
+                    v,
+                    a,
+                    b
+                ]) > 1 || resume(n, v);
+            });
+        };
+    }
+    function resume(n, v) {
+        try {
+            step(g[n](v));
+        } catch (e) {
+            settle(q[0][3], e);
+        }
+    }
+    function step(r) {
+        r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
+    }
+    function fulfill(value) {
+        resume("next", value);
+    }
+    function reject(value) {
+        resume("throw", value);
+    }
+    function settle(f, v) {
+        if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
+    }
+    return i = {
+    }, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
+        return this;
+    }, i;
+}
+function __asyncDelegator(o) {
+    var i, p;
+    function verb(n, f) {
+        i[n] = o[n] ? function(v) {
+            return (p = !p) ? {
+                value: __await(o[n](v)),
+                done: n === "return"
+            } : f ? f(v) : v;
+        } : f;
+    }
+    return i = {
+    }, verb("next"), verb("throw", function(e) {
+        throw e;
+    }), verb("return"), i[Symbol.iterator] = function() {
+        return this;
+    }, i;
+}
+function __asyncValues(o) {
+    if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
+    var m = o[Symbol.asyncIterator], i;
+    function verb(n) {
+        i[n] = o[n] && function(v) {
+            return new Promise(function(resolve, reject) {
+                v = o[n](v), settle(resolve, reject, v.done, v.value);
+            });
+        };
+    }
+    function settle(resolve, reject, d, v1) {
+        Promise.resolve(v1).then(function(v) {
+            resolve({
+                value: v,
+                done: d
+            });
+        }, reject);
+    }
+    return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {
+    }, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
+        return this;
+    }, i);
+}
+function __makeTemplateObject(cooked, raw) {
+    if (Object.defineProperty) Object.defineProperty(cooked, "raw", {
+        value: raw
+    });
+    else cooked.raw = raw;
+    return cooked;
+}
+var __setModuleDefault = Object.create ? function(o, v) {
+    Object.defineProperty(o, "default", {
+        enumerable: true,
+        value: v
+    });
+} : function(o, v) {
+    o["default"] = v;
+};
+function __importStar(mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {
+    };
+    if (mod != null) {
+        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    }
+    __setModuleDefault(result, mod);
+    return result;
+}
+function __importDefault(mod) {
+    return mod && mod.__esModule ? mod : {
+        default: mod
+    };
+}
+function __classPrivateFieldGet(receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+}
+function __classPrivateFieldSet(receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"jLptS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCComponent", ()=>MDCComponent
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("./foundation");
+var MDCComponent = function() {
+    function MDCComponent1(root, foundation) {
+        var args = [];
+        for(var _i = 2; _i < arguments.length; _i++)args[_i - 2] = arguments[_i];
+        this.root = root;
+        this.initialize.apply(this, _tslib.__spreadArray([], _tslib.__read(args)));
+        // Note that we initialize foundation here and not within the constructor's
+        // default param so that this.root is defined and can be used within the
+        // foundation class.
+        this.foundation = foundation === undefined ? this.getDefaultFoundation() : foundation;
+        this.foundation.init();
+        this.initialSyncWithDOM();
+    }
+    MDCComponent1.attachTo = function(root) {
+        // Subclasses which extend MDCBase should provide an attachTo() method that takes a root element and
+        // returns an instantiated component with its root set to that element. Also note that in the cases of
+        // subclasses, an explicit foundation class will not have to be passed in; it will simply be initialized
+        // from getDefaultFoundation().
+        return new MDCComponent1(root, new _foundation.MDCFoundation({
+        }));
+    };
+    /* istanbul ignore next: method param only exists for typing purposes; it does not need to be unit tested */ MDCComponent1.prototype.initialize = function() {
+        var _args = [];
+        for(var _i = 0; _i < arguments.length; _i++)_args[_i] = arguments[_i];
+    // Subclasses can override this to do any additional setup work that would be considered part of a
+    // "constructor". Essentially, it is a hook into the parent constructor before the foundation is
+    // initialized. Any additional arguments besides root and foundation will be passed in here.
+    };
+    MDCComponent1.prototype.getDefaultFoundation = function() {
+        // Subclasses must override this method to return a properly configured foundation class for the
+        // component.
+        throw new Error("Subclasses must override getDefaultFoundation to return a properly configured foundation class");
+    };
+    MDCComponent1.prototype.initialSyncWithDOM = function() {
+    // Subclasses should override this method if they need to perform work to synchronize with a host DOM
+    // object. An example of this would be a form control wrapper that needs to synchronize its internal state
+    // to some property or attribute of the host DOM. Please note: this is *not* the place to perform DOM
+    // reads/writes that would cause layout / paint, as this is called synchronously from within the constructor.
+    };
+    MDCComponent1.prototype.destroy = function() {
+        // Subclasses may implement this method to release any resources / deregister any listeners they have
+        // attached. An example of this might be deregistering a resize event from the window object.
+        this.foundation.destroy();
+    };
+    MDCComponent1.prototype.listen = function(evtType, handler, options) {
+        this.root.addEventListener(evtType, handler, options);
+    };
+    MDCComponent1.prototype.unlisten = function(evtType, handler, options) {
+        this.root.removeEventListener(evtType, handler, options);
+    };
+    /**
+     * Fires a cross-browser-compatible custom event from the component root of the given type, with the given data.
+     */ MDCComponent1.prototype.emit = function(evtType, evtData, shouldBubble) {
+        if (shouldBubble === void 0) shouldBubble = false;
+        var evt;
+        if (typeof CustomEvent === 'function') evt = new CustomEvent(evtType, {
+            bubbles: shouldBubble,
+            detail: evtData
+        });
+        else {
+            evt = document.createEvent('CustomEvent');
+            evt.initCustomEvent(evtType, shouldBubble, false, evtData);
+        }
+        this.root.dispatchEvent(evt);
+    };
+    return MDCComponent1;
+}();
+exports.default = MDCComponent;
+
+},{"tslib":"lRdW5","./foundation":"kC5Yw","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"kC5Yw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCFoundation", ()=>MDCFoundation
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var MDCFoundation = function() {
+    function MDCFoundation1(adapter) {
+        if (adapter === void 0) adapter = {
+        };
+        this.adapter = adapter;
+    }
+    Object.defineProperty(MDCFoundation1, "cssClasses", {
+        get: function() {
+            // Classes extending MDCFoundation should implement this method to return an object which exports every
+            // CSS class the foundation class needs as a property. e.g. {ACTIVE: 'mdc-component--active'}
+            return {
+            };
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCFoundation1, "strings", {
+        get: function() {
+            // Classes extending MDCFoundation should implement this method to return an object which exports all
+            // semantic strings as constants. e.g. {ARIA_ROLE: 'tablist'}
+            return {
+            };
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCFoundation1, "numbers", {
+        get: function() {
+            // Classes extending MDCFoundation should implement this method to return an object which exports all
+            // of its semantic numbers as constants. e.g. {ANIMATION_DELAY_MS: 350}
+            return {
+            };
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCFoundation1, "defaultAdapter", {
+        get: function() {
+            // Classes extending MDCFoundation may choose to implement this getter in order to provide a convenient
+            // way of viewing the necessary methods of an adapter. In the future, this could also be used for adapter
+            // validation.
+            return {
+            };
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCFoundation1.prototype.init = function() {
+    // Subclasses should override this method to perform initialization routines (registering events, etc.)
+    };
+    MDCFoundation1.prototype.destroy = function() {
+    // Subclasses should override this method to perform de-initialization routines (de-registering events, etc.)
+    };
+    return MDCFoundation1;
+}();
+exports.default = MDCFoundation;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"87xmx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * @license
+ * Copyright 2019 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ /**
+ * Determine whether the current browser supports passive event listeners, and
+ * if so, use them.
+ */ parcelHelpers.export(exports, "applyPassive", ()=>applyPassive
+);
+function applyPassive(globalObj) {
+    if (globalObj === void 0) globalObj = window;
+    return supportsPassiveOption(globalObj) ? {
+        passive: true
+    } : false;
+}
+function supportsPassiveOption(globalObj) {
+    if (globalObj === void 0) globalObj = window;
+    // See
+    // https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+    var passiveSupported = false;
+    try {
+        var options = {
+            // This function will be called when the browser
+            // attempts to access the passive property.
+            get passive () {
+                passiveSupported = true;
+                return false;
+            }
+        };
+        var handler = function() {
+        };
+        globalObj.document.addEventListener('test', handler, options);
+        globalObj.document.removeEventListener('test', handler, options);
+    } catch (err) {
+        passiveSupported = false;
+    }
+    return passiveSupported;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"8pLcv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * @license
+ * Copyright 2018 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ /**
+ * @fileoverview A "ponyfill" is a polyfill that doesn't modify the global prototype chain.
+ * This makes ponyfills safer than traditional polyfills, especially for libraries like MDC.
+ */ parcelHelpers.export(exports, "closest", ()=>closest
+);
+parcelHelpers.export(exports, "matches", ()=>matches
+);
+/**
+ * Used to compute the estimated scroll width of elements. When an element is
+ * hidden due to display: none; being applied to a parent element, the width is
+ * returned as 0. However, the element will have a true width once no longer
+ * inside a display: none context. This method computes an estimated width when
+ * the element is hidden or returns the true width when the element is visble.
+ * @param {Element} element the element whose width to estimate
+ */ parcelHelpers.export(exports, "estimateScrollWidth", ()=>estimateScrollWidth
+);
+function closest(element, selector) {
+    if (element.closest) return element.closest(selector);
+    var el = element;
+    while(el){
+        if (matches(el, selector)) return el;
+        el = el.parentElement;
+    }
+    return null;
+}
+function matches(element, selector) {
+    var nativeMatches = element.matches || element.webkitMatchesSelector || element.msMatchesSelector;
+    return nativeMatches.call(element, selector);
+}
+function estimateScrollWidth(element) {
+    // Check the offsetParent. If the element inherits display: none from any
+    // parent, the offsetParent property will be null (see
+    // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetParent).
+    // This check ensures we only clone the node when necessary.
+    var htmlEl = element;
+    if (htmlEl.offsetParent !== null) return htmlEl.scrollWidth;
+    var clone = htmlEl.cloneNode(true);
+    clone.style.setProperty('position', 'absolute');
+    clone.style.setProperty('transform', 'translate(-9999px, -9999px)');
+    document.documentElement.appendChild(clone);
+    var scrollWidth = clone.scrollWidth;
+    document.documentElement.removeChild(clone);
+    return scrollWidth;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"larjq":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MDCFloatingLabel", ()=>MDCFloatingLabel
@@ -29113,7 +27596,788 @@ var MDCNotchedOutlineFoundation = function(_super) {
 }(_foundation.MDCFoundation);
 exports.default = MDCNotchedOutlineFoundation;
 
-},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"3IcFA","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"hwtce":[function(require,module,exports) {
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"3IcFA","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"035sE":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCRipple", ()=>MDCRipple
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _component = require("@material/base/component");
+var _events = require("@material/dom/events");
+var _ponyfill = require("@material/dom/ponyfill");
+var _foundation = require("./foundation");
+var _util = require("./util");
+var MDCRipple = function(_super) {
+    _tslib.__extends(MDCRipple1, _super);
+    function MDCRipple1() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.disabled = false;
+        return _this;
+    }
+    MDCRipple1.attachTo = function(root, opts) {
+        if (opts === void 0) opts = {
+            isUnbounded: undefined
+        };
+        var ripple = new MDCRipple1(root);
+        // Only override unbounded behavior if option is explicitly specified
+        if (opts.isUnbounded !== undefined) ripple.unbounded = opts.isUnbounded;
+        return ripple;
+    };
+    MDCRipple1.createAdapter = function(instance) {
+        return {
+            addClass: function(className) {
+                return instance.root.classList.add(className);
+            },
+            browserSupportsCssVars: function() {
+                return _util.supportsCssVariables(window);
+            },
+            computeBoundingRect: function() {
+                return instance.root.getBoundingClientRect();
+            },
+            containsEventTarget: function(target) {
+                return instance.root.contains(target);
+            },
+            deregisterDocumentInteractionHandler: function(evtType, handler) {
+                return document.documentElement.removeEventListener(evtType, handler, _events.applyPassive());
+            },
+            deregisterInteractionHandler: function(evtType, handler) {
+                return instance.root.removeEventListener(evtType, handler, _events.applyPassive());
+            },
+            deregisterResizeHandler: function(handler) {
+                return window.removeEventListener('resize', handler);
+            },
+            getWindowPageOffset: function() {
+                return {
+                    x: window.pageXOffset,
+                    y: window.pageYOffset
+                };
+            },
+            isSurfaceActive: function() {
+                return _ponyfill.matches(instance.root, ':active');
+            },
+            isSurfaceDisabled: function() {
+                return Boolean(instance.disabled);
+            },
+            isUnbounded: function() {
+                return Boolean(instance.unbounded);
+            },
+            registerDocumentInteractionHandler: function(evtType, handler) {
+                return document.documentElement.addEventListener(evtType, handler, _events.applyPassive());
+            },
+            registerInteractionHandler: function(evtType, handler) {
+                return instance.root.addEventListener(evtType, handler, _events.applyPassive());
+            },
+            registerResizeHandler: function(handler) {
+                return window.addEventListener('resize', handler);
+            },
+            removeClass: function(className) {
+                return instance.root.classList.remove(className);
+            },
+            updateCssVariable: function(varName, value) {
+                return instance.root.style.setProperty(varName, value);
+            }
+        };
+    };
+    Object.defineProperty(MDCRipple1.prototype, "unbounded", {
+        get: function() {
+            return Boolean(this.isUnbounded);
+        },
+        set: function(unbounded) {
+            this.isUnbounded = Boolean(unbounded);
+            this.setUnbounded();
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCRipple1.prototype.activate = function() {
+        this.foundation.activate();
+    };
+    MDCRipple1.prototype.deactivate = function() {
+        this.foundation.deactivate();
+    };
+    MDCRipple1.prototype.layout = function() {
+        this.foundation.layout();
+    };
+    MDCRipple1.prototype.getDefaultFoundation = function() {
+        return new _foundation.MDCRippleFoundation(MDCRipple1.createAdapter(this));
+    };
+    MDCRipple1.prototype.initialSyncWithDOM = function() {
+        var root = this.root;
+        this.isUnbounded = 'mdcRippleIsUnbounded' in root.dataset;
+    };
+    /**
+     * Closure Compiler throws an access control error when directly accessing a
+     * protected or private property inside a getter/setter, like unbounded above.
+     * By accessing the protected property inside a method, we solve that problem.
+     * That's why this function exists.
+     */ MDCRipple1.prototype.setUnbounded = function() {
+        this.foundation.setUnbounded(Boolean(this.isUnbounded));
+    };
+    return MDCRipple1;
+}(_component.MDCComponent);
+
+},{"tslib":"lRdW5","@material/base/component":"jLptS","@material/dom/events":"87xmx","@material/dom/ponyfill":"8pLcv","./foundation":"7frpT","./util":"l3az5","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"7frpT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MDCRippleFoundation", ()=>MDCRippleFoundation
+);
+/**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */ var _tslib = require("tslib");
+var _foundation = require("@material/base/foundation");
+var _constants = require("./constants");
+var _util = require("./util");
+// Activation events registered on the root element of each instance for activation
+var ACTIVATION_EVENT_TYPES = [
+    'touchstart',
+    'pointerdown',
+    'mousedown',
+    'keydown', 
+];
+// Deactivation events registered on documentElement when a pointer-related down event occurs
+var POINTER_DEACTIVATION_EVENT_TYPES = [
+    'touchend',
+    'pointerup',
+    'mouseup',
+    'contextmenu', 
+];
+// simultaneous nested activations
+var activatedTargets = [];
+var MDCRippleFoundation = function(_super) {
+    _tslib.__extends(MDCRippleFoundation1, _super);
+    function MDCRippleFoundation1(adapter) {
+        var _this = _super.call(this, _tslib.__assign(_tslib.__assign({
+        }, MDCRippleFoundation1.defaultAdapter), adapter)) || this;
+        _this.activationAnimationHasEnded = false;
+        _this.activationTimer = 0;
+        _this.fgDeactivationRemovalTimer = 0;
+        _this.fgScale = '0';
+        _this.frame = {
+            width: 0,
+            height: 0
+        };
+        _this.initialSize = 0;
+        _this.layoutFrame = 0;
+        _this.maxRadius = 0;
+        _this.unboundedCoords = {
+            left: 0,
+            top: 0
+        };
+        _this.activationState = _this.defaultActivationState();
+        _this.activationTimerCallback = function() {
+            _this.activationAnimationHasEnded = true;
+            _this.runDeactivationUXLogicIfReady();
+        };
+        _this.activateHandler = function(e) {
+            _this.activateImpl(e);
+        };
+        _this.deactivateHandler = function() {
+            _this.deactivateImpl();
+        };
+        _this.focusHandler = function() {
+            _this.handleFocus();
+        };
+        _this.blurHandler = function() {
+            _this.handleBlur();
+        };
+        _this.resizeHandler = function() {
+            _this.layout();
+        };
+        return _this;
+    }
+    Object.defineProperty(MDCRippleFoundation1, "cssClasses", {
+        get: function() {
+            return _constants.cssClasses;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCRippleFoundation1, "strings", {
+        get: function() {
+            return _constants.strings;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCRippleFoundation1, "numbers", {
+        get: function() {
+            return _constants.numbers;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(MDCRippleFoundation1, "defaultAdapter", {
+        get: function() {
+            return {
+                addClass: function() {
+                    return undefined;
+                },
+                browserSupportsCssVars: function() {
+                    return true;
+                },
+                computeBoundingRect: function() {
+                    return {
+                        top: 0,
+                        right: 0,
+                        bottom: 0,
+                        left: 0,
+                        width: 0,
+                        height: 0
+                    };
+                },
+                containsEventTarget: function() {
+                    return true;
+                },
+                deregisterDocumentInteractionHandler: function() {
+                    return undefined;
+                },
+                deregisterInteractionHandler: function() {
+                    return undefined;
+                },
+                deregisterResizeHandler: function() {
+                    return undefined;
+                },
+                getWindowPageOffset: function() {
+                    return {
+                        x: 0,
+                        y: 0
+                    };
+                },
+                isSurfaceActive: function() {
+                    return true;
+                },
+                isSurfaceDisabled: function() {
+                    return true;
+                },
+                isUnbounded: function() {
+                    return true;
+                },
+                registerDocumentInteractionHandler: function() {
+                    return undefined;
+                },
+                registerInteractionHandler: function() {
+                    return undefined;
+                },
+                registerResizeHandler: function() {
+                    return undefined;
+                },
+                removeClass: function() {
+                    return undefined;
+                },
+                updateCssVariable: function() {
+                    return undefined;
+                }
+            };
+        },
+        enumerable: false,
+        configurable: true
+    });
+    MDCRippleFoundation1.prototype.init = function() {
+        var _this = this;
+        var supportsPressRipple = this.supportsPressRipple();
+        this.registerRootHandlers(supportsPressRipple);
+        if (supportsPressRipple) {
+            var _a = MDCRippleFoundation1.cssClasses, ROOT_1 = _a.ROOT, UNBOUNDED_1 = _a.UNBOUNDED;
+            requestAnimationFrame(function() {
+                _this.adapter.addClass(ROOT_1);
+                if (_this.adapter.isUnbounded()) {
+                    _this.adapter.addClass(UNBOUNDED_1);
+                    // Unbounded ripples need layout logic applied immediately to set coordinates for both shade and ripple
+                    _this.layoutInternal();
+                }
+            });
+        }
+    };
+    MDCRippleFoundation1.prototype.destroy = function() {
+        var _this = this;
+        if (this.supportsPressRipple()) {
+            if (this.activationTimer) {
+                clearTimeout(this.activationTimer);
+                this.activationTimer = 0;
+                this.adapter.removeClass(MDCRippleFoundation1.cssClasses.FG_ACTIVATION);
+            }
+            if (this.fgDeactivationRemovalTimer) {
+                clearTimeout(this.fgDeactivationRemovalTimer);
+                this.fgDeactivationRemovalTimer = 0;
+                this.adapter.removeClass(MDCRippleFoundation1.cssClasses.FG_DEACTIVATION);
+            }
+            var _a = MDCRippleFoundation1.cssClasses, ROOT_2 = _a.ROOT, UNBOUNDED_2 = _a.UNBOUNDED;
+            requestAnimationFrame(function() {
+                _this.adapter.removeClass(ROOT_2);
+                _this.adapter.removeClass(UNBOUNDED_2);
+                _this.removeCssVars();
+            });
+        }
+        this.deregisterRootHandlers();
+        this.deregisterDeactivationHandlers();
+    };
+    /**
+     * @param evt Optional event containing position information.
+     */ MDCRippleFoundation1.prototype.activate = function(evt) {
+        this.activateImpl(evt);
+    };
+    MDCRippleFoundation1.prototype.deactivate = function() {
+        this.deactivateImpl();
+    };
+    MDCRippleFoundation1.prototype.layout = function() {
+        var _this = this;
+        if (this.layoutFrame) cancelAnimationFrame(this.layoutFrame);
+        this.layoutFrame = requestAnimationFrame(function() {
+            _this.layoutInternal();
+            _this.layoutFrame = 0;
+        });
+    };
+    MDCRippleFoundation1.prototype.setUnbounded = function(unbounded) {
+        var UNBOUNDED = MDCRippleFoundation1.cssClasses.UNBOUNDED;
+        if (unbounded) this.adapter.addClass(UNBOUNDED);
+        else this.adapter.removeClass(UNBOUNDED);
+    };
+    MDCRippleFoundation1.prototype.handleFocus = function() {
+        var _this = this;
+        requestAnimationFrame(function() {
+            return _this.adapter.addClass(MDCRippleFoundation1.cssClasses.BG_FOCUSED);
+        });
+    };
+    MDCRippleFoundation1.prototype.handleBlur = function() {
+        var _this = this;
+        requestAnimationFrame(function() {
+            return _this.adapter.removeClass(MDCRippleFoundation1.cssClasses.BG_FOCUSED);
+        });
+    };
+    /**
+     * We compute this property so that we are not querying information about the client
+     * until the point in time where the foundation requests it. This prevents scenarios where
+     * client-side feature-detection may happen too early, such as when components are rendered on the server
+     * and then initialized at mount time on the client.
+     */ MDCRippleFoundation1.prototype.supportsPressRipple = function() {
+        return this.adapter.browserSupportsCssVars();
+    };
+    MDCRippleFoundation1.prototype.defaultActivationState = function() {
+        return {
+            activationEvent: undefined,
+            hasDeactivationUXRun: false,
+            isActivated: false,
+            isProgrammatic: false,
+            wasActivatedByPointer: false,
+            wasElementMadeActive: false
+        };
+    };
+    /**
+     * supportsPressRipple Passed from init to save a redundant function call
+     */ MDCRippleFoundation1.prototype.registerRootHandlers = function(supportsPressRipple) {
+        var e_1, _a;
+        if (supportsPressRipple) {
+            try {
+                for(var ACTIVATION_EVENT_TYPES_1 = _tslib.__values(ACTIVATION_EVENT_TYPES), ACTIVATION_EVENT_TYPES_1_1 = ACTIVATION_EVENT_TYPES_1.next(); !ACTIVATION_EVENT_TYPES_1_1.done; ACTIVATION_EVENT_TYPES_1_1 = ACTIVATION_EVENT_TYPES_1.next()){
+                    var evtType = ACTIVATION_EVENT_TYPES_1_1.value;
+                    this.adapter.registerInteractionHandler(evtType, this.activateHandler);
+                }
+            } catch (e_1_1) {
+                e_1 = {
+                    error: e_1_1
+                };
+            } finally{
+                try {
+                    if (ACTIVATION_EVENT_TYPES_1_1 && !ACTIVATION_EVENT_TYPES_1_1.done && (_a = ACTIVATION_EVENT_TYPES_1.return)) _a.call(ACTIVATION_EVENT_TYPES_1);
+                } finally{
+                    if (e_1) throw e_1.error;
+                }
+            }
+            if (this.adapter.isUnbounded()) this.adapter.registerResizeHandler(this.resizeHandler);
+        }
+        this.adapter.registerInteractionHandler('focus', this.focusHandler);
+        this.adapter.registerInteractionHandler('blur', this.blurHandler);
+    };
+    MDCRippleFoundation1.prototype.registerDeactivationHandlers = function(evt) {
+        var e_2, _a;
+        if (evt.type === 'keydown') this.adapter.registerInteractionHandler('keyup', this.deactivateHandler);
+        else try {
+            for(var POINTER_DEACTIVATION_EVENT_TYPES_1 = _tslib.__values(POINTER_DEACTIVATION_EVENT_TYPES), POINTER_DEACTIVATION_EVENT_TYPES_1_1 = POINTER_DEACTIVATION_EVENT_TYPES_1.next(); !POINTER_DEACTIVATION_EVENT_TYPES_1_1.done; POINTER_DEACTIVATION_EVENT_TYPES_1_1 = POINTER_DEACTIVATION_EVENT_TYPES_1.next()){
+                var evtType = POINTER_DEACTIVATION_EVENT_TYPES_1_1.value;
+                this.adapter.registerDocumentInteractionHandler(evtType, this.deactivateHandler);
+            }
+        } catch (e_2_1) {
+            e_2 = {
+                error: e_2_1
+            };
+        } finally{
+            try {
+                if (POINTER_DEACTIVATION_EVENT_TYPES_1_1 && !POINTER_DEACTIVATION_EVENT_TYPES_1_1.done && (_a = POINTER_DEACTIVATION_EVENT_TYPES_1.return)) _a.call(POINTER_DEACTIVATION_EVENT_TYPES_1);
+            } finally{
+                if (e_2) throw e_2.error;
+            }
+        }
+    };
+    MDCRippleFoundation1.prototype.deregisterRootHandlers = function() {
+        var e_3, _a;
+        try {
+            for(var ACTIVATION_EVENT_TYPES_2 = _tslib.__values(ACTIVATION_EVENT_TYPES), ACTIVATION_EVENT_TYPES_2_1 = ACTIVATION_EVENT_TYPES_2.next(); !ACTIVATION_EVENT_TYPES_2_1.done; ACTIVATION_EVENT_TYPES_2_1 = ACTIVATION_EVENT_TYPES_2.next()){
+                var evtType = ACTIVATION_EVENT_TYPES_2_1.value;
+                this.adapter.deregisterInteractionHandler(evtType, this.activateHandler);
+            }
+        } catch (e_3_1) {
+            e_3 = {
+                error: e_3_1
+            };
+        } finally{
+            try {
+                if (ACTIVATION_EVENT_TYPES_2_1 && !ACTIVATION_EVENT_TYPES_2_1.done && (_a = ACTIVATION_EVENT_TYPES_2.return)) _a.call(ACTIVATION_EVENT_TYPES_2);
+            } finally{
+                if (e_3) throw e_3.error;
+            }
+        }
+        this.adapter.deregisterInteractionHandler('focus', this.focusHandler);
+        this.adapter.deregisterInteractionHandler('blur', this.blurHandler);
+        if (this.adapter.isUnbounded()) this.adapter.deregisterResizeHandler(this.resizeHandler);
+    };
+    MDCRippleFoundation1.prototype.deregisterDeactivationHandlers = function() {
+        var e_4, _a;
+        this.adapter.deregisterInteractionHandler('keyup', this.deactivateHandler);
+        try {
+            for(var POINTER_DEACTIVATION_EVENT_TYPES_2 = _tslib.__values(POINTER_DEACTIVATION_EVENT_TYPES), POINTER_DEACTIVATION_EVENT_TYPES_2_1 = POINTER_DEACTIVATION_EVENT_TYPES_2.next(); !POINTER_DEACTIVATION_EVENT_TYPES_2_1.done; POINTER_DEACTIVATION_EVENT_TYPES_2_1 = POINTER_DEACTIVATION_EVENT_TYPES_2.next()){
+                var evtType = POINTER_DEACTIVATION_EVENT_TYPES_2_1.value;
+                this.adapter.deregisterDocumentInteractionHandler(evtType, this.deactivateHandler);
+            }
+        } catch (e_4_1) {
+            e_4 = {
+                error: e_4_1
+            };
+        } finally{
+            try {
+                if (POINTER_DEACTIVATION_EVENT_TYPES_2_1 && !POINTER_DEACTIVATION_EVENT_TYPES_2_1.done && (_a = POINTER_DEACTIVATION_EVENT_TYPES_2.return)) _a.call(POINTER_DEACTIVATION_EVENT_TYPES_2);
+            } finally{
+                if (e_4) throw e_4.error;
+            }
+        }
+    };
+    MDCRippleFoundation1.prototype.removeCssVars = function() {
+        var _this = this;
+        var rippleStrings = MDCRippleFoundation1.strings;
+        var keys = Object.keys(rippleStrings);
+        keys.forEach(function(key) {
+            if (key.indexOf('VAR_') === 0) _this.adapter.updateCssVariable(rippleStrings[key], null);
+        });
+    };
+    MDCRippleFoundation1.prototype.activateImpl = function(evt) {
+        var _this = this;
+        if (this.adapter.isSurfaceDisabled()) return;
+        var activationState = this.activationState;
+        if (activationState.isActivated) return;
+        // Avoid reacting to follow-on events fired by touch device after an already-processed user interaction
+        var previousActivationEvent = this.previousActivationEvent;
+        var isSameInteraction = previousActivationEvent && evt !== undefined && previousActivationEvent.type !== evt.type;
+        if (isSameInteraction) return;
+        activationState.isActivated = true;
+        activationState.isProgrammatic = evt === undefined;
+        activationState.activationEvent = evt;
+        activationState.wasActivatedByPointer = activationState.isProgrammatic ? false : evt !== undefined && (evt.type === 'mousedown' || evt.type === 'touchstart' || evt.type === 'pointerdown');
+        var hasActivatedChild = evt !== undefined && activatedTargets.length > 0 && activatedTargets.some(function(target) {
+            return _this.adapter.containsEventTarget(target);
+        });
+        if (hasActivatedChild) {
+            // Immediately reset activation state, while preserving logic that prevents touch follow-on events
+            this.resetActivationState();
+            return;
+        }
+        if (evt !== undefined) {
+            activatedTargets.push(evt.target);
+            this.registerDeactivationHandlers(evt);
+        }
+        activationState.wasElementMadeActive = this.checkElementMadeActive(evt);
+        if (activationState.wasElementMadeActive) this.animateActivation();
+        requestAnimationFrame(function() {
+            // Reset array on next frame after the current event has had a chance to bubble to prevent ancestor ripples
+            activatedTargets = [];
+            if (!activationState.wasElementMadeActive && evt !== undefined && (evt.key === ' ' || evt.keyCode === 32)) {
+                // If space was pressed, try again within an rAF call to detect :active, because different UAs report
+                // active states inconsistently when they're called within event handling code:
+                // - https://bugs.chromium.org/p/chromium/issues/detail?id=635971
+                // - https://bugzilla.mozilla.org/show_bug.cgi?id=1293741
+                // We try first outside rAF to support Edge, which does not exhibit this problem, but will crash if a CSS
+                // variable is set within a rAF callback for a submit button interaction (#2241).
+                activationState.wasElementMadeActive = _this.checkElementMadeActive(evt);
+                if (activationState.wasElementMadeActive) _this.animateActivation();
+            }
+            if (!activationState.wasElementMadeActive) // Reset activation state immediately if element was not made active.
+            _this.activationState = _this.defaultActivationState();
+        });
+    };
+    MDCRippleFoundation1.prototype.checkElementMadeActive = function(evt) {
+        return evt !== undefined && evt.type === 'keydown' ? this.adapter.isSurfaceActive() : true;
+    };
+    MDCRippleFoundation1.prototype.animateActivation = function() {
+        var _this = this;
+        var _a = MDCRippleFoundation1.strings, VAR_FG_TRANSLATE_START = _a.VAR_FG_TRANSLATE_START, VAR_FG_TRANSLATE_END = _a.VAR_FG_TRANSLATE_END;
+        var _b = MDCRippleFoundation1.cssClasses, FG_DEACTIVATION = _b.FG_DEACTIVATION, FG_ACTIVATION = _b.FG_ACTIVATION;
+        var DEACTIVATION_TIMEOUT_MS = MDCRippleFoundation1.numbers.DEACTIVATION_TIMEOUT_MS;
+        this.layoutInternal();
+        var translateStart = '';
+        var translateEnd = '';
+        if (!this.adapter.isUnbounded()) {
+            var _c = this.getFgTranslationCoordinates(), startPoint = _c.startPoint, endPoint = _c.endPoint;
+            translateStart = startPoint.x + "px, " + startPoint.y + "px";
+            translateEnd = endPoint.x + "px, " + endPoint.y + "px";
+        }
+        this.adapter.updateCssVariable(VAR_FG_TRANSLATE_START, translateStart);
+        this.adapter.updateCssVariable(VAR_FG_TRANSLATE_END, translateEnd);
+        // Cancel any ongoing activation/deactivation animations
+        clearTimeout(this.activationTimer);
+        clearTimeout(this.fgDeactivationRemovalTimer);
+        this.rmBoundedActivationClasses();
+        this.adapter.removeClass(FG_DEACTIVATION);
+        // Force layout in order to re-trigger the animation.
+        this.adapter.computeBoundingRect();
+        this.adapter.addClass(FG_ACTIVATION);
+        this.activationTimer = setTimeout(function() {
+            _this.activationTimerCallback();
+        }, DEACTIVATION_TIMEOUT_MS);
+    };
+    MDCRippleFoundation1.prototype.getFgTranslationCoordinates = function() {
+        var _a = this.activationState, activationEvent = _a.activationEvent, wasActivatedByPointer = _a.wasActivatedByPointer;
+        var startPoint;
+        if (wasActivatedByPointer) startPoint = _util.getNormalizedEventCoords(activationEvent, this.adapter.getWindowPageOffset(), this.adapter.computeBoundingRect());
+        else startPoint = {
+            x: this.frame.width / 2,
+            y: this.frame.height / 2
+        };
+        // Center the element around the start point.
+        startPoint = {
+            x: startPoint.x - this.initialSize / 2,
+            y: startPoint.y - this.initialSize / 2
+        };
+        var endPoint = {
+            x: this.frame.width / 2 - this.initialSize / 2,
+            y: this.frame.height / 2 - this.initialSize / 2
+        };
+        return {
+            startPoint: startPoint,
+            endPoint: endPoint
+        };
+    };
+    MDCRippleFoundation1.prototype.runDeactivationUXLogicIfReady = function() {
+        var _this = this;
+        // This method is called both when a pointing device is released, and when the activation animation ends.
+        // The deactivation animation should only run after both of those occur.
+        var FG_DEACTIVATION = MDCRippleFoundation1.cssClasses.FG_DEACTIVATION;
+        var _a = this.activationState, hasDeactivationUXRun = _a.hasDeactivationUXRun, isActivated = _a.isActivated;
+        var activationHasEnded = hasDeactivationUXRun || !isActivated;
+        if (activationHasEnded && this.activationAnimationHasEnded) {
+            this.rmBoundedActivationClasses();
+            this.adapter.addClass(FG_DEACTIVATION);
+            this.fgDeactivationRemovalTimer = setTimeout(function() {
+                _this.adapter.removeClass(FG_DEACTIVATION);
+            }, _constants.numbers.FG_DEACTIVATION_MS);
+        }
+    };
+    MDCRippleFoundation1.prototype.rmBoundedActivationClasses = function() {
+        var FG_ACTIVATION = MDCRippleFoundation1.cssClasses.FG_ACTIVATION;
+        this.adapter.removeClass(FG_ACTIVATION);
+        this.activationAnimationHasEnded = false;
+        this.adapter.computeBoundingRect();
+    };
+    MDCRippleFoundation1.prototype.resetActivationState = function() {
+        var _this = this;
+        this.previousActivationEvent = this.activationState.activationEvent;
+        this.activationState = this.defaultActivationState();
+        // Touch devices may fire additional events for the same interaction within a short time.
+        // Store the previous event until it's safe to assume that subsequent events are for new interactions.
+        setTimeout(function() {
+            return _this.previousActivationEvent = undefined;
+        }, MDCRippleFoundation1.numbers.TAP_DELAY_MS);
+    };
+    MDCRippleFoundation1.prototype.deactivateImpl = function() {
+        var _this = this;
+        var activationState = this.activationState;
+        // This can happen in scenarios such as when you have a keyup event that blurs the element.
+        if (!activationState.isActivated) return;
+        var state = _tslib.__assign({
+        }, activationState);
+        if (activationState.isProgrammatic) {
+            requestAnimationFrame(function() {
+                _this.animateDeactivation(state);
+            });
+            this.resetActivationState();
+        } else {
+            this.deregisterDeactivationHandlers();
+            requestAnimationFrame(function() {
+                _this.activationState.hasDeactivationUXRun = true;
+                _this.animateDeactivation(state);
+                _this.resetActivationState();
+            });
+        }
+    };
+    MDCRippleFoundation1.prototype.animateDeactivation = function(_a) {
+        var wasActivatedByPointer = _a.wasActivatedByPointer, wasElementMadeActive = _a.wasElementMadeActive;
+        if (wasActivatedByPointer || wasElementMadeActive) this.runDeactivationUXLogicIfReady();
+    };
+    MDCRippleFoundation1.prototype.layoutInternal = function() {
+        var _this = this;
+        this.frame = this.adapter.computeBoundingRect();
+        var maxDim = Math.max(this.frame.height, this.frame.width);
+        // Surface diameter is treated differently for unbounded vs. bounded ripples.
+        // Unbounded ripple diameter is calculated smaller since the surface is expected to already be padded appropriately
+        // to extend the hitbox, and the ripple is expected to meet the edges of the padded hitbox (which is typically
+        // square). Bounded ripples, on the other hand, are fully expected to expand beyond the surface's longest diameter
+        // (calculated based on the diagonal plus a constant padding), and are clipped at the surface's border via
+        // `overflow: hidden`.
+        var getBoundedRadius = function() {
+            var hypotenuse = Math.sqrt(Math.pow(_this.frame.width, 2) + Math.pow(_this.frame.height, 2));
+            return hypotenuse + MDCRippleFoundation1.numbers.PADDING;
+        };
+        this.maxRadius = this.adapter.isUnbounded() ? maxDim : getBoundedRadius();
+        // Ripple is sized as a fraction of the largest dimension of the surface, then scales up using a CSS scale transform
+        var initialSize = Math.floor(maxDim * MDCRippleFoundation1.numbers.INITIAL_ORIGIN_SCALE);
+        // Unbounded ripple size should always be even number to equally center align.
+        if (this.adapter.isUnbounded() && initialSize % 2 !== 0) this.initialSize = initialSize - 1;
+        else this.initialSize = initialSize;
+        this.fgScale = "" + this.maxRadius / this.initialSize;
+        this.updateLayoutCssVars();
+    };
+    MDCRippleFoundation1.prototype.updateLayoutCssVars = function() {
+        var _a = MDCRippleFoundation1.strings, VAR_FG_SIZE = _a.VAR_FG_SIZE, VAR_LEFT = _a.VAR_LEFT, VAR_TOP = _a.VAR_TOP, VAR_FG_SCALE = _a.VAR_FG_SCALE;
+        this.adapter.updateCssVariable(VAR_FG_SIZE, this.initialSize + "px");
+        this.adapter.updateCssVariable(VAR_FG_SCALE, this.fgScale);
+        if (this.adapter.isUnbounded()) {
+            this.unboundedCoords = {
+                left: Math.round(this.frame.width / 2 - this.initialSize / 2),
+                top: Math.round(this.frame.height / 2 - this.initialSize / 2)
+            };
+            this.adapter.updateCssVariable(VAR_LEFT, this.unboundedCoords.left + "px");
+            this.adapter.updateCssVariable(VAR_TOP, this.unboundedCoords.top + "px");
+        }
+    };
+    return MDCRippleFoundation1;
+}(_foundation.MDCFoundation);
+exports.default = MDCRippleFoundation;
+
+},{"tslib":"lRdW5","@material/base/foundation":"kC5Yw","./constants":"lg1jP","./util":"l3az5","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"lg1jP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cssClasses", ()=>cssClasses
+);
+parcelHelpers.export(exports, "strings", ()=>strings
+);
+parcelHelpers.export(exports, "numbers", ()=>numbers
+);
+var cssClasses = {
+    // Ripple is a special case where the "root" component is really a "mixin" of sorts,
+    // given that it's an 'upgrade' to an existing component. That being said it is the root
+    // CSS class that all other CSS classes derive from.
+    BG_FOCUSED: 'mdc-ripple-upgraded--background-focused',
+    FG_ACTIVATION: 'mdc-ripple-upgraded--foreground-activation',
+    FG_DEACTIVATION: 'mdc-ripple-upgraded--foreground-deactivation',
+    ROOT: 'mdc-ripple-upgraded',
+    UNBOUNDED: 'mdc-ripple-upgraded--unbounded'
+};
+var strings = {
+    VAR_FG_SCALE: '--mdc-ripple-fg-scale',
+    VAR_FG_SIZE: '--mdc-ripple-fg-size',
+    VAR_FG_TRANSLATE_END: '--mdc-ripple-fg-translate-end',
+    VAR_FG_TRANSLATE_START: '--mdc-ripple-fg-translate-start',
+    VAR_LEFT: '--mdc-ripple-left',
+    VAR_TOP: '--mdc-ripple-top'
+};
+var numbers = {
+    DEACTIVATION_TIMEOUT_MS: 225,
+    FG_DEACTIVATION_MS: 150,
+    INITIAL_ORIGIN_SCALE: 0.6,
+    PADDING: 10,
+    TAP_DELAY_MS: 300
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"l3az5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "supportsCssVariables", ()=>supportsCssVariables
+);
+parcelHelpers.export(exports, "getNormalizedEventCoords", ()=>getNormalizedEventCoords
+);
+/**
+ * Stores result from supportsCssVariables to avoid redundant processing to
+ * detect CSS custom variable support.
+ */ var supportsCssVariables_;
+function supportsCssVariables(windowObj, forceRefresh) {
+    if (forceRefresh === void 0) forceRefresh = false;
+    var CSS = windowObj.CSS;
+    var supportsCssVars = supportsCssVariables_;
+    if (typeof supportsCssVariables_ === 'boolean' && !forceRefresh) return supportsCssVariables_;
+    var supportsFunctionPresent = CSS && typeof CSS.supports === 'function';
+    if (!supportsFunctionPresent) return false;
+    var explicitlySupportsCssVars = CSS.supports('--css-vars', 'yes');
+    // See: https://bugs.webkit.org/show_bug.cgi?id=154669
+    // See: README section on Safari
+    var weAreFeatureDetectingSafari10plus = CSS.supports('(--css-vars: yes)') && CSS.supports('color', '#00000000');
+    supportsCssVars = explicitlySupportsCssVars || weAreFeatureDetectingSafari10plus;
+    if (!forceRefresh) supportsCssVariables_ = supportsCssVars;
+    return supportsCssVars;
+}
+function getNormalizedEventCoords(evt, pageOffset, clientRect) {
+    if (!evt) return {
+        x: 0,
+        y: 0
+    };
+    var x = pageOffset.x, y = pageOffset.y;
+    var documentX = x + clientRect.left;
+    var documentY = y + clientRect.top;
+    var normalizedX;
+    var normalizedY;
+    // Determine touch point relative to the ripple container.
+    if (evt.type === 'touchstart') {
+        var touchEvent = evt;
+        normalizedX = touchEvent.changedTouches[0].pageX - documentX;
+        normalizedY = touchEvent.changedTouches[0].pageY - documentY;
+    } else {
+        var mouseEvent = evt;
+        normalizedX = mouseEvent.pageX - documentX;
+        normalizedY = mouseEvent.pageY - documentY;
+    }
+    return {
+        x: normalizedX,
+        y: normalizedY
+    };
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz"}],"hwtce":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MDCTextFieldCharacterCounter", ()=>MDCTextFieldCharacterCounter
@@ -30867,6 +30131,6 @@ $RefreshReg$(_c, "Project");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./project.css":"ioOt3","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"ioOt3":[function() {},{}],"cEXyv":[function() {},{}],"jenSB":[function() {},{}]},["haZVB","b17wO","bB7Pu"], "bB7Pu", "parcelRequire2041")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./project.css":"ioOt3","@parcel/transformer-js/src/esmodule-helpers.js":"4kfJz","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7nTYm"}],"ioOt3":[function() {},{}],"cvfZG":[function() {},{}],"jenSB":[function() {},{}]},["haZVB","b17wO","bB7Pu"], "bB7Pu", "parcelRequire2041")
 
 //# sourceMappingURL=index.3d214d75.js.map

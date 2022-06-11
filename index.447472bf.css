@@ -1,11 +1,54 @@
+nav {
+  padding-top: 1.5em;
+  text-align: center;
+}
+
+.nav-item {
+  position: relative;
+  padding: 0 .3em;
+  text-decoration: none;
+}
+
+/* https://css-tricks.com/snippets/css/css-triangle */
+.nav-item::after {
+    display: block;
+    content: "";
+    position: absolute;
+    border-bottom: solid 0 #fff;
+    border-left: solid 0.5em transparent;
+    border-right: solid 0.5em transparent;
+    bottom: -0.75em;
+    -moz-transition: border-bottom-width .25s ease-in-out;
+    -webkit-transition: border-bottom-width .25s ease-in-out;
+    -ms-transition: border-bottom-width .25s ease-in-out;
+    transition: border-bottom-width .25s ease-in-out;
+}
+
+.nav-item.active::after {
+  border-bottom-width: 0.5em;
+}
+/* https: //google.github.io/material-design-icons */
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.material-icons.md-light.active {
+  color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
 .jumbotron {
   display: flex;
   flex-direction: column;
   padding: 40px;
   max-width: 380px;
-  /* font-family: "Roboto script=latin rev=1"; */
-  border: solid 1px black;
-  margin: auto; /* horizontally center this element */
+  margin: 0 auto;
+  background-color: #ebebeb;
 }
 
 h1 {
@@ -13,6 +56,7 @@ h1 {
   font-weight: 400;
   color: #363636;
   padding-bottom: 0.7em;
+  font-family: "Rancho";
 }
 
 .jumbotron .jumbotron__row {
@@ -21,9 +65,6 @@ h1 {
   align-items: center;
   /* border: solid 1px black; */
 }
-
-.jumbotron .jumbotron__row + * {
-} /* the asterisk targets both .my-title and .social-icon-links */
 
 .my-title {
   font-size: 1.25em;
@@ -142,33 +183,17 @@ you must also set the style and color values or it will not show. */
   max-width: var(--contentMax);
 }
 
-/* height must be set for scrolling to work. Setting min-height instead does not work. 
-Setting height to 600px or above turns the scrolling off. */
-
-.body-container {
+.main {
+  /* position: relative; */
   max-width: 900px;
-  max-height: 520px;
-  /* height: 100vh;
-  width: 100vw; */
   background: #ffffff;
-  margin: 88px auto 0;
-  padding: 30px;
-  overflow-y: auto;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
 }
 
-.body-container .section-title {
+.main .section-title {
   padding-bottom: 50px;
-}
-
-/*https://css-tricks.com/snippets/css/css-triangle/*/
-.body-container > .arrow {
-  width: 0;
-  height: 0;
-  border-left: solid 24px transparent;
-  border-right: solid 24px transparent;
-  border-bottom: solid 20px white;  
-  position: absolute;
-  top: -20px;
 }
 /* Define theme variables before importing any MDC Web component styles */
 
@@ -183,12 +208,17 @@ Setting height to 600px or above turns the scrolling off. */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background-color: #ddd; */
+  /* background-image: linear-gradient(#90a4ae, #ddd); */
+}
+
+html {
+  overflow-y: scroll; /* prevent layout shifts when scrollbar appears/disappears */
 }
 
 body {
-  overflow: hidden; /* disable scrolling */
-  background-color: #ddd;
   position: relative;
+  background-image: linear-gradient(#90a4ae, #ddd);
 }
 
 /* About.js, Project.js, Work.js */
@@ -233,4 +263,4 @@ p {
   }
 }
 
-/*# sourceMappingURL=index.b11a88bd.css.map */
+/*# sourceMappingURL=index.447472bf.css.map */
