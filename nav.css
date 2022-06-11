@@ -4,9 +4,8 @@ nav {
 }
 
 .nav-item {
-  /* position: relative; */
-  padding: 0 .5em;
-  border: .05em solid #fff;
+  position: relative;
+  padding: 0 .3em;
   text-decoration: none;
 }
 
@@ -18,7 +17,7 @@ nav {
     border-bottom: solid 0 #fff;
     border-left: solid 0.5em transparent;
     border-right: solid 0.5em transparent;
-    top: 1.74em;
+    bottom: -0.75em;
     -moz-transition: border-bottom-width .25s ease-in-out;
     -webkit-transition: border-bottom-width .25s ease-in-out;
     -ms-transition: border-bottom-width .25s ease-in-out;
