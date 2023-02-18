@@ -9,7 +9,7 @@ I learned that React Router does not work smoothly with Github Pages. Github Pag
 
 ## Todos
 
-- bug: background
+- bug: background <span style="font-size: 2em; color:green">✔</span>
 - bug: if you refresh the page at any point after having selected a section from the menu, the content corresponding to the selected menu item is still displayed and the arrow points to the Home icon. At the very least the arrow should reflect the selected section.
 - redesign the hero section
 - make the contact form work

@@ -6,20 +6,19 @@ export function Home({ scrollRef }) {
     scrollRef.current.scrollTo(0, 0);
   }, []);
   return (
-    <>
-      <div className="jumbotron">
-        <div className="jumbotron__row">
-          <h1 className="font-effect-3d-float">Jesse Paulsen</h1>
-        </div>
-        <div
-          className="jumbotron__row"
-          style={{ justifyContent: "space-between" }}
-        >
-          <div className="my-title">JavaScript Developer</div>
-          <SocialLinks />
-        </div>
+    <div className="jumbotron">
+      <div className="jumbotron__row">
+        {/* <h1 className="font-effect-3d-float">Jesse Paulsen</h1> */}
+        <h1>Jesse Paulsen</h1>
       </div>
-    </>
+      <div
+        className="jumbotron__row"
+        style={{ justifyContent: "space-between" }}
+      >
+        <div className="my-title">JavaScript Developer</div>
+        <SocialLinks />
+      </div>
+    </div>
   );
 }
 
