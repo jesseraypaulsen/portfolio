@@ -1,100 +1,88 @@
 nav {
-  padding-top: 1.5em;
   text-align: center;
+  padding-top: 1.5em;
 }
 
 .nav-item {
-  position: relative;
   padding: 0 .3em;
   text-decoration: none;
+  position: relative;
 }
 
-/* https://css-tricks.com/snippets/css/css-triangle */
-.nav-item::after {
-    display: block;
-    content: "";
-    position: absolute;
-    border-bottom: solid 0 #fff;
-    border-left: solid 0.5em transparent;
-    border-right: solid 0.5em transparent;
-    bottom: -0.75em;
-    -moz-transition: border-bottom-width .25s ease-in-out;
-    -webkit-transition: border-bottom-width .25s ease-in-out;
-    -ms-transition: border-bottom-width .25s ease-in-out;
-    transition: border-bottom-width .25s ease-in-out;
+.nav-item:after {
+  content: "";
+  border-bottom: 0 solid #fff;
+  border-left: .5em solid #0000;
+  border-right: .5em solid #0000;
+  transition: border-bottom-width .25s ease-in-out;
+  display: block;
+  position: absolute;
+  bottom: -.75em;
 }
 
-.nav-item.active::after {
-  border-bottom-width: 0.5em;
+.nav-item.active:after {
+  border-bottom-width: .5em;
 }
-/* https: //google.github.io/material-design-icons */
 
 .material-icons.md-48 {
   font-size: 48px;
 }
 
 .material-icons.md-light.active {
-  color: rgba(255, 255, 255, 1);
+  color: #fff;
 }
 
 .material-icons.md-light {
-  color: rgba(255, 255, 255, 0.3);
+  color: #ffffff4d;
 }
 
-
 .jumbotron {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
   max-width: 380px;
-  margin: 0 auto;
   background-color: #ebebeb;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
 }
 
 h1 {
+  color: #363636;
+  padding-bottom: .7em;
+  font-family: Rancho;
   font-size: 3.4em;
   font-weight: 400;
-  color: #363636;
-  padding-bottom: 0.7em;
-  font-family: "Rancho";
 }
 
 .jumbotron .jumbotron__row {
-  display: flex;
   flex-direction: row;
   align-items: center;
-  /* border: solid 1px black; */
+  display: flex;
 }
 
 .my-title {
-  font-size: 1.25em;
   color: #aaa;
-  /* border: 1px solid black; */
+  font-size: 1.25em;
 }
 
 .social-icon-links {
-  display: flex;
   flex-direction: row;
-  /* align-items: flex-start; */
-  /* background-color: aliceblue; */
+  display: flex;
 }
 
 .social-icon-links > div {
-  border: 1px solid black;
+  border: 1px solid #000;
   padding: 10px;
 }
 
 .social-icon-links > div:first-child {
   border-right: 0;
-} /* collapsed border. NOTE: if you set the width to a positive value here, then you
-you must also set the style and color values or it will not show. */
+}
 
 .social-icon-links svg {
   width: 23px;
   height: 23px;
 }
 
-/* Work.js */
 .cardContent {
   padding: 16px;
 }
@@ -108,26 +96,24 @@ you must also set the style and color values or it will not show. */
 }
 
 .cardList {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0 auto -16px;
   max-width: 1200px;
+  flex-wrap: wrap;
+  margin: 0 auto -16px;
+  padding: 0;
+  display: flex;
 }
 
 .card {
-  flex: 1;
-  flex-basis: 400px;
+  flex: 400px;
   margin: 0 16px 16px 0;
 }
 
-/* About.js */
 .aboutMe {
-  display: flex;
   max-width: 1200px;
-  margin: 0 auto;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
 }
 
 .aboutMe figure {
@@ -142,22 +128,15 @@ you must also set the style and color values or it will not show. */
   flex: 1;
 }
 
-/* Contact.js */
 .contactText {
   margin: 0 auto 32px;
 }
 
-/* Frame.js makes this obsolete */
-/* .contactPage {
-  margin: 0 auto;
-  max-width: 600px;
-} */
-
 .contactForm {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
+  display: flex;
 }
 
 .contactForm > * + * {
@@ -169,9 +148,7 @@ you must also set the style and color values or it will not show. */
   align-self: flex-end;
 }
 
-/* Project.js */
 .imageList {
-  @include mdc-image-list-masonry-columns(1);
   margin-top: 16px;
 }
 
@@ -184,60 +161,45 @@ you must also set the style and color values or it will not show. */
 }
 
 .main {
-  /* position: relative; */
   max-width: 900px;
-  background: #ffffff;
-  margin: 0 auto;
-  margin-top: 30px;
+  background: #fff;
+  margin: 30px auto 0;
   padding: 20px;
 }
 
 .main .section-title {
   padding-bottom: 50px;
 }
-/* Define theme variables before importing any MDC Web component styles */
 
 :root {
-  /* --mdc-theme-primary: #6200ee; */
   --mdc-theme-primary: #90a4ae;
-  --pageMax: 1200x;
+  --pageMax: 1200dppx;
   --contentMax: 900px;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  /* background-color: #ddd; */
-  /* background-image: linear-gradient(#90a4ae, #ddd); */
 }
 
 html {
-  overflow-y: scroll; /* prevent layout shifts when scrollbar appears/disappears */
+  overflow-y: scroll;
 }
 
 body {
+  background-color: #637a72;
   position: relative;
-  background-image: linear-gradient(#90a4ae, #ddd);
 }
 
-/* About.js, Project.js, Work.js */
 img {
   width: 100%;
 }
 
-/* About.js, Contact.js, Project.js, Work.js */
-/* main {
-  max-width: var(--pageMax);
-  margin: 0 auto;
-} */
-
-/* index.js, About.js */
 p {
   line-height: 1.8;
 }
 
-/* About.js, Contact.js */
 .centered {
   text-align: center;
 }
