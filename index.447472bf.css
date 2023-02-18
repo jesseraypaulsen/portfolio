@@ -37,11 +37,10 @@ nav {
 }
 
 .jumbotron {
-  max-width: 380px;
   background-color: #ebebeb;
   flex-direction: column;
   margin: 0 auto;
-  padding: 40px;
+  padding: 2.5em;
   display: flex;
 }
 
