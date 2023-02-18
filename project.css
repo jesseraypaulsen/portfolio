@@ -1,6 +1,5 @@
 /* Project.js */
 .imageList {
-  @include mdc-image-list-masonry-columns(1);
   margin-top: 16px;
 }
 

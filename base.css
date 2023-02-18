@@ -21,7 +21,8 @@ html {
 
 body {
   position: relative;
-  background-image: linear-gradient(#90a4ae, #ddd);
+  /* background-image: linear-gradient(#90a4ae, #ddd); */
+  background-color: rgb(99, 122, 114);
 }
 
 /* About.js, Project.js, Work.js */
