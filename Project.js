@@ -1,14 +1,37 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import "./project.css";
 
+const data = [
+  {
+    id: "pkm",
+    title: "Personal Knowledge Management System",
+    repo: "https://github.com/jesseraypaulsen/nodecards",
+    demo: "",
+  },
+  {
+    id: "ocean",
+    title: "Personality Test",
+    repo: "https://github.com/jesseraypaulsen/personality-test",
+    demo: "",
+  },
+];
+
 export function Project({ scrollRef }) {
+  const { id } = useParams();
+  const choice = data.find((item) => item.id === id);
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <h1 className="mdc-typography--headline4">Flowers in Amsterdam</h1>
-      <p className="mdc-typography--overline">Photography</p>
+      <h1 className="mdc-typography--headline4">{choice.title}</h1>
+      {/* <p className="mdc-typography--overline">Photography</p> */}
+      <p style={{ marginBottom: "1em" }}>
+        <a href={choice.repo} target="_blank" rel="noopener">
+          Github repo
+        </a>
+      </p>
       <p className="mdc-typography--body1">
         Now, take a good look at me! I’m one that has spoken to a King, I am:
         mayhap you’ll never see such another: and to show you I’m not proud, you

@@ -20,7 +20,10 @@ export function Main() {
         <Route path="work" element={<Work scrollRef={scrollRef} />} />
         <Route path="about" element={<About scrollRef={scrollRef} />} />
         <Route path="contact" element={<Contact scrollRef={scrollRef} />} />
-        <Route path="project" element={<Project scrollRef={scrollRef} />} />
+        <Route
+          path="/project/:id"
+          element={<Project scrollRef={scrollRef} />}
+        />
       </Routes>
     </div>
   );

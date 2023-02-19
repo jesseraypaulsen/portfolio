@@ -6,6 +6,8 @@
   /* max-width: 75em; */
   margin: 0 auto;
   background-color: #ebebeb;
+  /* border: solid 1px black; */
+  justify-content: space-between;
 }
 
 h1 {

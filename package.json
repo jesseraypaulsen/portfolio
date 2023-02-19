@@ -6,7 +6,8 @@
   "scripts": {
     "predeploy": "rm -rf dist && npx parcel build index.html --public-url https://jesseraypaulsen.github.io/portfolio",
     "deploy": "gh-pages -d dist",
-    "clean": "rm -rf dist && rm -rf .parcel-cache"
+    "clean": "rm -rf dist && rm -rf .parcel-cache",
+    "start": "npx parcel index.html"
   },
   "keywords": [],
   "author": "",
