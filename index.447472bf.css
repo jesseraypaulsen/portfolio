@@ -39,6 +39,7 @@ nav {
 .jumbotron {
   background-color: #ebebeb;
   flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
   padding: 2.5em;
   display: flex;
