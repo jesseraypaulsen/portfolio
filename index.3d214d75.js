@@ -26607,9 +26607,8 @@ function Main() {
      Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
      component and apply it to all sub-components. But HashRouter and useLocation do not work 
      together. */ mainRef.current.scrollTo(0, 0);
-        /* change the height of Main based on the height of the currently rendered section, so that 
-    the height transition animation will work */ setHeight(mainRef.current.firstElementChild.clientHeight + "px");
-        console.log("Main > mainRef.current.firstElementChild.clientHeight: ", mainRef.current.firstElementChild.clientHeight);
+        /* explicitly change the height of Main based on the height of the currently rendered section, so that 
+    the height transition animation will work */ setHeight(mainRef.current.firstElementChild.clientHeight + 50 + "px");
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "main",
@@ -26626,7 +26625,7 @@ function Main() {
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 32,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -26636,7 +26635,7 @@ function Main() {
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 33,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -26646,7 +26645,7 @@ function Main() {
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 34,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -26656,7 +26655,7 @@ function Main() {
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 35,
+                    lineNumber: 31,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
@@ -26666,18 +26665,18 @@ function Main() {
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 36,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Main.js",
-            lineNumber: 31,
+            lineNumber: 27,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Main.js",
-        lineNumber: 30,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
