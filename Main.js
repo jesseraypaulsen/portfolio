@@ -8,41 +8,32 @@ import { useRef, useState } from "react";
 import "./main.css";
 
 export function Main() {
-  const scrollRef = useRef(null);
-  /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
+  const mainRef = useRef(null);
+  const [height, setHeight] = useState(0);
+
+  const doStuff = () => {
+    /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
      Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
      component and apply it to all sub-components. But HashRouter and useLocation do not work 
      together. */
+    mainRef.current.scrollTo(0, 0);
 
-  /*
-   pass down setHeight to each component. for height transition.
-  */
-  const [height, setHeight] = useState("100px");
-  const long = () => setHeight("900px");
-  const short = () => setHeight("300px");
+    /* change the height of Main based on the height of the currently rendered section, so that 
+    the height transition animation will work */
+    setHeight(mainRef.current.firstElementChild.clientHeight + "px");
+    console.log(
+      "Main > mainRef.current.firstElementChild.clientHeight: ",
+      mainRef.current.firstElementChild.clientHeight
+    );
+  };
   return (
-    <div className="main" ref={scrollRef} style={{ height }}>
+    <div className="main" ref={mainRef} style={{ height }}>
       <Routes>
-        <Route
-          path="/"
-          element={<Home scrollRef={scrollRef} callback={short} />}
-        />
-        <Route
-          path="work"
-          element={<Work scrollRef={scrollRef} callback={long} />}
-        />
-        <Route
-          path="about"
-          element={<About scrollRef={scrollRef} callback={long} />}
-        />
-        <Route
-          path="contact"
-          element={<Contact scrollRef={scrollRef} callback={long} />}
-        />
-        <Route
-          path="/project/:id"
-          element={<Project scrollRef={scrollRef} callback={long} />}
-        />
+        <Route path="/" element={<Home callback={doStuff} />} />
+        <Route path="work" element={<Work callback={doStuff} />} />
+        <Route path="about" element={<About callback={doStuff} />} />
+        <Route path="contact" element={<Contact callback={doStuff} />} />
+        <Route path="/project/:id" element={<Project callback={doStuff} />} />
       </Routes>
     </div>
   );

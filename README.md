@@ -9,25 +9,27 @@ I learned that React Router does not work smoothly with Github Pages. Github Pag
 
 ## Todos
 
-- what about lifting the states from both Nav and Main up into App? maybe a better structure can start from this.
-
 - <span style="color:red">redesign the hero section</span>
 
-- <span style="color:red">animation for transitioning size of Main between nav selections</span>
-
-- nav icons: should light up on hover plus tooltip
+- <span style="color:red">snapshots, screencasts for Work > OCEAN, nodecards (desktop)</span>
 
 - make the contact form work
 
 - picture + paragraphs for About section
 
-- <span style="color:red">snapshots, screencasts for Work > OCEAN, nodecards (desktop)</span>
-
 - after deployment, put up links to live demos on the portfolio
 
 ---
 
+## Someday/Maybe
+
+- what about lifting the states from both Nav and Main up into App? maybe a better structure can start from this.
+
+- nav icons: should light up on hover plus tooltip
+
 ## DONE
+
+- animation for transitioning size of Main between nav selections <span style="color:green">✔</span> NOTE: there has to be a better way of doing this, than executing a callback in each section component (passed down from Main).
 
 - bug: if you refresh the page at any point after having selected a section from the menu, the content corresponding to the selected menu item is still displayed and the arrow points to the Home icon. At the very least the arrow should reflect the selected section. Because the Refresh stays at the same URL, and the URL bar drives the main application logic through the Hash Router. Ie, React renders what the URL bar tells it to render. It renders different sections in Main. But the big arrow always starts at Home when the browser refreshes, indepedent of URL. So we need to set the big arrow's initial state to the state of the URL bar. <span style="color:green">✔</span>
 

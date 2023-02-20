@@ -4,7 +4,7 @@ import { MDCTextFieldCharacterCounter } from "@material/textfield/character-coun
 import { MDCRipple } from "@material/ripple";
 import "./contact.css";
 
-export function Contact({ scrollRef, callback }) {
+export function Contact({ callback }) {
   const nameField = useRef(null);
   const emailField = useRef(null);
   const messageField = useRef(null);
@@ -17,11 +17,10 @@ export function Contact({ scrollRef, callback }) {
     new MDCTextFieldCharacterCounter(characterCounter.current);
     new MDCRipple(button.current);
   }, []);
+
   useEffect(() => {
-    scrollRef.current.scrollTo(0, 0);
-  }, []);
-  useEffect(() => {
-    // set the height of Main
+    // 1. set the height of Main based on the height of this div.
+    // 2. scroll to the top of Main.
     callback();
   }, []);
 

@@ -3,7 +3,6 @@ import "./nav.css";
 
 export function Nav() {
   const loc = useLocation();
-  console.log("/project -> ", loc.pathname.includes("/project"));
   return (
     <nav>
       <Link

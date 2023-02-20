@@ -2,12 +2,10 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import "./work.css";
 
-export function Work({ scrollRef, callback }) {
+export function Work({ callback }) {
   useEffect(() => {
-    scrollRef.current.scrollTo(0, 0);
-  }, []);
-  useEffect(() => {
-    // set the height of Main
+    // 1. set the height of Main based on the height of this div.
+    // 2. scroll to the top of Main.
     callback();
   }, []);
   return (

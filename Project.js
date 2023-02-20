@@ -17,14 +17,12 @@ const data = [
   },
 ];
 
-export function Project({ scrollRef, callback }) {
+export function Project({ callback }) {
   const { id } = useParams();
   const choice = data.find((item) => item.id === id);
   useEffect(() => {
-    scrollRef.current.scrollTo(0, 0);
-  }, []);
-  useEffect(() => {
-    // set the height of Main
+    // 1. set the height of Main based on the height of this div.
+    // 2. scroll to the top of Main.
     callback();
   }, []);
   return (

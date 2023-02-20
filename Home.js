@@ -1,12 +1,10 @@
 import { useEffect } from "react";
 import "./home.css";
 
-export function Home({ scrollRef, callback }) {
+export function Home({ callback }) {
   useEffect(() => {
-    scrollRef.current.scrollTo(0, 0);
-  }, []);
-  useEffect(() => {
-    // set the height of Main
+    // 1. set the height of Main based on the height of this div.
+    // 2. scroll to the top of Main.
     callback();
   }, []);
 
