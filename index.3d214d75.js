@@ -26968,7 +26968,7 @@ function Work({ callback  }) {
                             tabIndex: "0",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers5.jpg?1558558462565",
+                                    src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
@@ -31784,6 +31784,14 @@ function Project({ callback  }) {
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                className: "mdc-typography--overline",
+                children: "Web Development"
+            }, void 0, false, {
+                fileName: "Project.js",
+                lineNumber: 41,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 style: {
                     marginBottom: "1em"
                 },
@@ -31811,19 +31819,11 @@ function Project({ callback  }) {
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507",
-                alt: ""
-            }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 55,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers5.jpg?1558558462565",
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 59,
+                lineNumber: 55,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31831,15 +31831,7 @@ function Project({ callback  }) {
                 children: "But the beard seemed to melt away as she touched it, and she found herself sitting quietly under a tree—while the Gnat (for that was the insect she had been talking to) was balancing itself on a twig just over her head, and fanning her with its wings."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 63,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
-                alt: ""
-            }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 69,
+                lineNumber: 59,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31847,144 +31839,15 @@ function Project({ callback  }) {
                 children: "However, this was anything but a regular bee: in fact it was an elephant—as Alice soon found out, though the idea quite took her breath away at first."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 73,
+                lineNumber: 65,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                 className: "mdc-image-list mdc-image-list--masonry masonry-image-list imageList",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "mdc-image-list__item",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "mdc-image-list__image",
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
-                            alt: "Text label"
-                        }, void 0, false, {
-                            fileName: "Project.js",
-                            lineNumber: 80,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Project.js",
-                        lineNumber: 79,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "mdc-image-list__item",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "mdc-image-list__image",
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png?1558558462723",
-                            alt: "Text label"
-                        }, void 0, false, {
-                            fileName: "Project.js",
-                            lineNumber: 87,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Project.js",
-                        lineNumber: 86,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "mdc-image-list__item",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "mdc-image-list__image",
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg?1558558462399",
-                            alt: "Text label"
-                        }, void 0, false, {
-                            fileName: "Project.js",
-                            lineNumber: 94,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Project.js",
-                        lineNumber: 93,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "mdc-image-list__item",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "mdc-image-list__image",
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg?1558558462200",
-                            alt: "Text label"
-                        }, void 0, false, {
-                            fileName: "Project.js",
-                            lineNumber: 101,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Project.js",
-                        lineNumber: 100,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "mdc-image-list__item",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "mdc-image-list__image",
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg?1558558462683",
-                            alt: "Text label"
-                        }, void 0, false, {
-                            fileName: "Project.js",
-                            lineNumber: 108,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Project.js",
-                        lineNumber: 107,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "mdc-image-list__item",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "mdc-image-list__image",
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png?1558558462701",
-                            alt: "Text label"
-                        }, void 0, false, {
-                            fileName: "Project.js",
-                            lineNumber: 115,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Project.js",
-                        lineNumber: 114,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "mdc-image-list__item",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "mdc-image-list__image",
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg?1558558480051",
-                            alt: "Text label"
-                        }, void 0, false, {
-                            fileName: "Project.js",
-                            lineNumber: 122,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Project.js",
-                        lineNumber: 121,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                        className: "mdc-image-list__item",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "mdc-image-list__image",
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507",
-                            alt: "Text label"
-                        }, void 0, false, {
-                            fileName: "Project.js",
-                            lineNumber: 129,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Project.js",
-                        lineNumber: 128,
-                        columnNumber: 11
-                    }, this)
-                ]
-            }, void 0, true, {
+                children: outputListOfImages()
+            }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 78,
+                lineNumber: 70,
                 columnNumber: 9
             }, this)
         ]
@@ -32003,12 +31866,12 @@ function Project({ callback  }) {
                 ]
             }, void 0, true, {
                 fileName: "Project.js",
-                lineNumber: 142,
+                lineNumber: 79,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "Project.js",
-            lineNumber: 141,
+            lineNumber: 78,
             columnNumber: 7
         }, this);
     }
@@ -32020,6 +31883,33 @@ _s(Project, "PeFtQlQQtB1pGcR3UOmcYg/qUPU=", false, function() {
     ];
 });
 _c = Project;
+function outputListOfImages() {
+    return [
+        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
+        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png?1558558462723",
+        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg?1558558462399",
+        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg?1558558462200",
+        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg?1558558462683",
+        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png?1558558462701",
+        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg?1558558480051",
+        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507"
+    ].map((url, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+            className: "mdc-image-list__item",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "mdc-image-list__image",
+                src: url,
+                alt: "Text label"
+            }, void 0, false, {
+                fileName: "Project.js",
+                lineNumber: 97,
+                columnNumber: 7
+            }, this)
+        }, void 0, false, {
+            fileName: "Project.js",
+            lineNumber: 96,
+            columnNumber: 5
+        }, this));
+}
 var _c;
 $RefreshReg$(_c, "Project");
 
