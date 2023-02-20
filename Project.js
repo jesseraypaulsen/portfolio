@@ -38,7 +38,7 @@ export function Project({ callback }) {
     return (
       <div className="section-project">
         <h1 className="mdc-typography--headline4">{choice.title}</h1>
-        {/* <p className="mdc-typography--overline">Photography</p> */}
+        <p className="mdc-typography--overline">Web Development</p>
         <p style={{ marginBottom: "1em" }}>
           <a href={choice.repo} target="_blank" rel="noopener">
             Github repo
@@ -53,10 +53,6 @@ export function Project({ callback }) {
           anxiously as she took it.
         </p>
         <img
-          src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507"
-          alt=""
-        />
-        <img
           src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers5.jpg?1558558462565"
           alt=""
         />
@@ -66,72 +62,13 @@ export function Project({ callback }) {
           insect she had been talking to) was balancing itself on a twig just
           over her head, and fanning her with its wings.
         </p>
-        <img
-          src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249"
-          alt=""
-        />
         <p className="mdc-typography--body1">
           However, this was anything but a regular bee: in fact it was an
           elephant—as Alice soon found out, though the idea quite took her
           breath away at first.
         </p>
         <ul className="mdc-image-list mdc-image-list--masonry masonry-image-list imageList">
-          <li className="mdc-image-list__item">
-            <img
-              className="mdc-image-list__image"
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249"
-              alt="Text label"
-            />
-          </li>
-          <li className="mdc-image-list__item">
-            <img
-              className="mdc-image-list__image"
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png?1558558462723"
-              alt="Text label"
-            />
-          </li>
-          <li className="mdc-image-list__item">
-            <img
-              className="mdc-image-list__image"
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg?1558558462399"
-              alt="Text label"
-            />
-          </li>
-          <li className="mdc-image-list__item">
-            <img
-              className="mdc-image-list__image"
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg?1558558462200"
-              alt="Text label"
-            />
-          </li>
-          <li className="mdc-image-list__item">
-            <img
-              className="mdc-image-list__image"
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg?1558558462683"
-              alt="Text label"
-            />
-          </li>
-          <li className="mdc-image-list__item">
-            <img
-              className="mdc-image-list__image"
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png?1558558462701"
-              alt="Text label"
-            />
-          </li>
-          <li className="mdc-image-list__item">
-            <img
-              className="mdc-image-list__image"
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg?1558558480051"
-              alt="Text label"
-            />
-          </li>
-          <li className="mdc-image-list__item">
-            <img
-              className="mdc-image-list__image"
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507"
-              alt="Text label"
-            />
-          </li>
+          {outputListOfImages()}
         </ul>
       </div>
     );
@@ -143,4 +80,21 @@ export function Project({ callback }) {
       </div>
     );
   }
+}
+
+function outputListOfImages() {
+  return [
+    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
+    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png?1558558462723",
+    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg?1558558462399",
+    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg?1558558462200",
+    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg?1558558462683",
+    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png?1558558462701",
+    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg?1558558480051",
+    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507",
+  ].map((url, i) => (
+    <li className="mdc-image-list__item">
+      <img className="mdc-image-list__image" src={url} alt="Text label" />
+    </li>
+  ));
 }

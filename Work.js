@@ -43,7 +43,7 @@ export function Work({ callback }) {
             tabIndex="0"
           >
             <img
-              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers5.jpg?1558558462565"
+              src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249"
               alt=""
             />
             <div className="cardContent">
