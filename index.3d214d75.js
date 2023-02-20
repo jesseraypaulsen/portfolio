@@ -31760,12 +31760,19 @@ function Project({ callback  }) {
     _s();
     const { id  } = (0, _reactRouterDom.useParams)();
     const choice = data.find((item)=>item.id === id);
+    console.log("Project: ", choice);
     (0, _react.useEffect)(()=>{
         // 1. set the height of Main based on the height of this div.
         // 2. scroll to the top of Main.
         callback();
     }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const redirect = ()=>{
+        setTimeout(()=>{
+            navigate("/work");
+        }, 2000);
+    };
+    if (choice) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "section-project",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -31773,8 +31780,8 @@ function Project({ callback  }) {
                 children: choice.title
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 30,
-                columnNumber: 7
+                lineNumber: 40,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 style: {
@@ -31787,61 +31794,61 @@ function Project({ callback  }) {
                     children: "Github repo"
                 }, void 0, false, {
                     fileName: "Project.js",
-                    lineNumber: 33,
-                    columnNumber: 9
+                    lineNumber: 43,
+                    columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 32,
-                columnNumber: 7
+                lineNumber: 42,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "mdc-typography--body1",
                 children: "Now, take a good look at me! I’m one that has spoken to a King, I am: mayhap you’ll never see such another: and to show you I’m not proud, you may shake hands with me!’ And he grinned almost from ear to ear, as he leant forwards (and as nearly as possible fell off the wall in doing so) and offered Alice his hand. She watched him a little anxiously as she took it."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 37,
-                columnNumber: 7
+                lineNumber: 47,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507",
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 45,
-                columnNumber: 7
+                lineNumber: 55,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers5.jpg?1558558462565",
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 49,
-                columnNumber: 7
+                lineNumber: 59,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "mdc-typography--caption",
                 children: "But the beard seemed to melt away as she touched it, and she found herself sitting quietly under a tree—while the Gnat (for that was the insect she had been talking to) was balancing itself on a twig just over her head, and fanning her with its wings."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 53,
-                columnNumber: 7
+                lineNumber: 63,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 59,
-                columnNumber: 7
+                lineNumber: 69,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "mdc-typography--body1",
                 children: "However, this was anything but a regular bee: in fact it was an elephant—as Alice soon found out, though the idea quite took her breath away at first."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 63,
-                columnNumber: 7
+                lineNumber: 73,
+                columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                 className: "mdc-image-list mdc-image-list--masonry masonry-image-list imageList",
@@ -31854,13 +31861,13 @@ function Project({ callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 70,
-                            columnNumber: 11
+                            lineNumber: 80,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 69,
-                        columnNumber: 9
+                        lineNumber: 79,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "mdc-image-list__item",
@@ -31870,13 +31877,13 @@ function Project({ callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 77,
-                            columnNumber: 11
+                            lineNumber: 87,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 76,
-                        columnNumber: 9
+                        lineNumber: 86,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "mdc-image-list__item",
@@ -31886,13 +31893,13 @@ function Project({ callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 84,
-                            columnNumber: 11
+                            lineNumber: 94,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 83,
-                        columnNumber: 9
+                        lineNumber: 93,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "mdc-image-list__item",
@@ -31902,13 +31909,13 @@ function Project({ callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 91,
-                            columnNumber: 11
+                            lineNumber: 101,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 90,
-                        columnNumber: 9
+                        lineNumber: 100,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "mdc-image-list__item",
@@ -31918,13 +31925,13 @@ function Project({ callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 98,
-                            columnNumber: 11
+                            lineNumber: 108,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 97,
-                        columnNumber: 9
+                        lineNumber: 107,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "mdc-image-list__item",
@@ -31934,13 +31941,13 @@ function Project({ callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 105,
-                            columnNumber: 11
+                            lineNumber: 115,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 104,
-                        columnNumber: 9
+                        lineNumber: 114,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "mdc-image-list__item",
@@ -31950,13 +31957,13 @@ function Project({ callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 112,
-                            columnNumber: 11
+                            lineNumber: 122,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 111,
-                        columnNumber: 9
+                        lineNumber: 121,
+                        columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "mdc-image-list__item",
@@ -31966,30 +31973,50 @@ function Project({ callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 119,
-                            columnNumber: 11
+                            lineNumber: 129,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 118,
-                        columnNumber: 9
+                        lineNumber: 128,
+                        columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Project.js",
-                lineNumber: 68,
-                columnNumber: 7
+                lineNumber: 78,
+                columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "Project.js",
-        lineNumber: 29,
-        columnNumber: 5
+        lineNumber: 39,
+        columnNumber: 7
     }, this);
+    else {
+        redirect();
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: [
+                    id,
+                    " is an invalid project id"
+                ]
+            }, void 0, true, {
+                fileName: "Project.js",
+                lineNumber: 142,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "Project.js",
+            lineNumber: 141,
+            columnNumber: 7
+        }, this);
+    }
 }
-_s(Project, "XT1vicrm+NSYLQxrGm9hA77HN9Y=", false, function() {
+_s(Project, "PeFtQlQQtB1pGcR3UOmcYg/qUPU=", false, function() {
     return [
-        (0, _reactRouterDom.useParams)
+        (0, _reactRouterDom.useParams),
+        (0, _reactRouterDom.useNavigate)
     ];
 });
 _c = Project;
