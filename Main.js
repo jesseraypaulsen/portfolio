@@ -20,7 +20,13 @@ export function Main() {
 
     /* explicitly change the height of Main based on the height of the currently rendered section, so that 
     the height transition animation will work */
-    setHeight(mainRef.current.firstElementChild.clientHeight + 50 + "px");
+    setTimeout(() => {
+      setHeight(mainRef.current.firstElementChild.clientHeight + 50 + "px");
+      console.log(
+        "mainRef.current.firstElementChild.clientHeight ",
+        mainRef.current.firstElementChild.clientHeight
+      );
+    }, 50); // delay for the work section, otherwise height is wrong
   };
   return (
     <div className="main" ref={mainRef} style={{ height }}>
