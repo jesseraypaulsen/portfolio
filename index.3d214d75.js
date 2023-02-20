@@ -26374,7 +26374,6 @@ $parcel$ReactRefreshHelpers$caa2.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//import { useState } from "react";
 parcelHelpers.export(exports, "Nav", ()=>Nav);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
@@ -26382,10 +26381,8 @@ var _navCss = require("./nav.css");
 var _s = $RefreshSig$();
 function Nav() {
     _s();
-    //const [arrow, setArrow] = useState("home");
-    //console.log(arrow);
     const loc = (0, _reactRouterDom.useLocation)();
-    console.log("useLocation: ", loc);
+    console.log("/project -> ", loc.pathname.includes("/project"));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -26395,17 +26392,17 @@ function Nav() {
                 children: "home"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 20,
+                lineNumber: 9,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 "aria-label": "work",
                 to: "/work",
-                className: `nav-item material-icons md-48 md-light ${loc.pathname == "/work" ? "active" : ""}`,
+                className: `nav-item material-icons md-48 md-light ${loc.pathname == "/work" || loc.pathname.includes("/project") ? "active" : ""}`,
                 children: "work"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 37,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -26415,7 +26412,7 @@ function Nav() {
                 children: "info"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 54,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -26425,13 +26422,13 @@ function Nav() {
                 children: "email"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 71,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Nav.js",
-        lineNumber: 11,
+        lineNumber: 8,
         columnNumber: 5
     }, this);
 }
