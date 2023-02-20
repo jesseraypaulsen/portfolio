@@ -4,7 +4,7 @@ import { MDCTextFieldCharacterCounter } from "@material/textfield/character-coun
 import { MDCRipple } from "@material/ripple";
 import "./contact.css";
 
-export function Contact({ scrollRef }) {
+export function Contact({ scrollRef, callback }) {
   const nameField = useRef(null);
   const emailField = useRef(null);
   const messageField = useRef(null);
@@ -20,9 +20,13 @@ export function Contact({ scrollRef }) {
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    // set the height of Main
+    callback();
+  }, []);
 
   return (
-    <>
+    <div className="section-contact">
       <h1 className="mdc-typography--headline2 centered section-title">
         Contact Me
       </h1>
@@ -95,6 +99,6 @@ export function Contact({ scrollRef }) {
           </i>
         </button>
       </form>
-    </>
+    </div>
   );
 }

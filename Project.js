@@ -17,14 +17,18 @@ const data = [
   },
 ];
 
-export function Project({ scrollRef }) {
+export function Project({ scrollRef, callback }) {
   const { id } = useParams();
   const choice = data.find((item) => item.id === id);
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    // set the height of Main
+    callback();
+  }, []);
   return (
-    <>
+    <div className="section-project">
       <h1 className="mdc-typography--headline4">{choice.title}</h1>
       {/* <p className="mdc-typography--overline">Photography</p> */}
       <p style={{ marginBottom: "1em" }}>
@@ -121,6 +125,6 @@ export function Project({ scrollRef }) {
           />
         </li>
       </ul>
-    </>
+    </div>
   );
 }

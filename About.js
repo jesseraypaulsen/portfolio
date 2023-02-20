@@ -1,12 +1,16 @@
 import { useEffect } from "react";
 import "./about.css";
 
-export function About({ scrollRef }) {
+export function About({ scrollRef, callback }) {
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    // set the height of Main
+    callback();
+  }, []);
   return (
-    <>
+    <div className="section-about">
       <h1 className="mdc-typography--headline2 centered section-title">
         About Me
       </h1>
@@ -37,6 +41,6 @@ export function About({ scrollRef }) {
           quaerat, alias rem.
         </p>
       </div>
-    </>
+    </div>
   );
 }

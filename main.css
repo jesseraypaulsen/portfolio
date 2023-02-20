@@ -1,13 +1,41 @@
 .main {
   /* position: relative; */
   max-width: 900px;
+  /* max-height: 800px; */
   background: #ffffff;
   margin: 0 auto;
   margin-top: 30px;
   padding: 20px;
   /* min-height: 50em; */
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+  /*-moz-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+  -webkit-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+  -ms-transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;
+  transition: min-height 0.5s ease-in-out, max-height 0.5s ease-in-out;*/
+  transition: height 0.5s ease-in-out;
 }
 
-.main .section-title {
-  padding-bottom: 50px;
+/* this changes the wrong thing!!! your goal is to target the parent element WHEN its child element has a particular class.
+ but this targets the child element with that class. the change is applied to the wrong element. 
+  
+  .main > .section-home {
+    max-height: 300px;
+  }
+  
+  .main > .section-about {
+    max-height: 800px;
+  }
+  
+  .main > .section-contact {
+    max-height: 800px;
+  }
+  
+  .main > .section-work {
+  max-height: 900px;
 }
+
+.main > .section-project {
+  max-height: 900px;
+}
+
+*/

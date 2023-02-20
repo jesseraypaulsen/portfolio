@@ -1,12 +1,17 @@
 import { useEffect } from "react";
 import "./home.css";
 
-export function Home({ scrollRef }) {
+export function Home({ scrollRef, callback }) {
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    // set the height of Main
+    callback();
+  }, []);
+
   return (
-    <div>
+    <div className="section-home">
       <div className="jumbotron">
         <div className="jumbotron__row">
           {/* <h1 className="font-effect-3d-float">Jesse Paulsen</h1> */}

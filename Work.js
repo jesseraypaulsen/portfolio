@@ -2,12 +2,16 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import "./work.css";
 
-export function Work({ scrollRef }) {
+export function Work({ scrollRef, callback }) {
   useEffect(() => {
     scrollRef.current.scrollTo(0, 0);
   }, []);
+  useEffect(() => {
+    // set the height of Main
+    callback();
+  }, []);
   return (
-    <div>
+    <div className="section-work">
       <h1 className="mdc-typography--headline2 centered section-title">Work</h1>
       <ul className="cardList">
         <li className="mdc-card card">
