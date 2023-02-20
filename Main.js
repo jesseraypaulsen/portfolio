@@ -18,13 +18,9 @@ export function Main() {
      together. */
     mainRef.current.scrollTo(0, 0);
 
-    /* change the height of Main based on the height of the currently rendered section, so that 
+    /* explicitly change the height of Main based on the height of the currently rendered section, so that 
     the height transition animation will work */
-    setHeight(mainRef.current.firstElementChild.clientHeight + "px");
-    console.log(
-      "Main > mainRef.current.firstElementChild.clientHeight: ",
-      mainRef.current.firstElementChild.clientHeight
-    );
+    setHeight(mainRef.current.firstElementChild.clientHeight + 50 + "px");
   };
   return (
     <div className="main" ref={mainRef} style={{ height }}>
