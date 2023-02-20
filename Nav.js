@@ -1,22 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import "./nav.css";
-//import { useState } from "react";
 
 export function Nav() {
-  //const [arrow, setArrow] = useState("home");
-  //console.log(arrow);
   const loc = useLocation();
-  console.log("useLocation: ", loc);
+  console.log("/project -> ", loc.pathname.includes("/project"));
   return (
     <nav>
-      {/* <Link
-        aria-label="home"
-        to="/"
-        className={`nav-item material-icons md-48 md-light ${
-          arrow == "home" ? "active" : ""
-        }`}
-        onClick={() => setArrow("home")}
-      > */}
       <Link
         aria-label="home"
         to="/"
@@ -26,31 +15,17 @@ export function Nav() {
       >
         home
       </Link>
-      {/* <Link
-        aria-label="work"
-        to="/work"
-        className={`nav-item material-icons md-48 md-light ${
-          arrow == "work" ? "active" : ""
-        }`}
-        onClick={() => setArrow("work")}
-      > */}
       <Link
         aria-label="work"
         to="/work"
         className={`nav-item material-icons md-48 md-light ${
-          loc.pathname == "/work" ? "active" : ""
+          loc.pathname == "/work" || loc.pathname.includes("/project")
+            ? "active"
+            : ""
         }`}
       >
         work
       </Link>
-      {/* <Link
-        aria-label="about"
-        to="/about"
-        className={`nav-item material-icons md-48 md-light ${
-          arrow == "about" ? "active" : ""
-        }`}
-        onClick={() => setArrow("about")}
-      > */}
       <Link
         aria-label="about"
         to="/about"
@@ -60,14 +35,6 @@ export function Nav() {
       >
         info
       </Link>
-      {/* <Link
-        aria-label="contact"
-        to="/contact"
-        className={`nav-item material-icons md-48 md-light ${
-          arrow == "contact" ? "active" : ""
-        }`}
-        onClick={() => setArrow("contact")}
-      > */}
       <Link
         aria-label="contact"
         to="/contact"
