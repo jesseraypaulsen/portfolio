@@ -165,10 +165,8 @@ h1 {
   background: #fff;
   margin: 30px auto 0;
   padding: 20px;
-}
-
-.main .section-title {
-  padding-bottom: 50px;
+  transition: height .5s ease-in-out;
+  box-shadow: 0 1px #00000040;
 }
 
 :root {

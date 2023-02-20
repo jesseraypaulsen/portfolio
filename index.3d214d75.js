@@ -26374,70 +26374,72 @@ $parcel$ReactRefreshHelpers$caa2.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+//import { useState } from "react";
 parcelHelpers.export(exports, "Nav", ()=>Nav);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _navCss = require("./nav.css");
-var _react = require("react");
 var _s = $RefreshSig$();
 function Nav() {
     _s();
-    const [arrow, setArrow] = (0, _react.useState)("home");
-    console.log(arrow);
+    //const [arrow, setArrow] = useState("home");
+    //console.log(arrow);
+    const loc = (0, _reactRouterDom.useLocation)();
+    console.log("useLocation: ", loc);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 "aria-label": "home",
                 to: "/",
-                className: `nav-item material-icons md-48 md-light ${arrow == "home" ? "active" : ""}`,
-                onClick: ()=>setArrow("home"),
+                className: `nav-item material-icons md-48 md-light ${loc.pathname == "/" ? "active" : ""}`,
                 children: "home"
-            }, void 0, false, {
-                fileName: "Nav.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                "aria-label": "work",
-                to: "/work",
-                className: `nav-item material-icons md-48 md-light ${arrow == "work" ? "active" : ""}`,
-                onClick: ()=>setArrow("work"),
-                children: "work"
             }, void 0, false, {
                 fileName: "Nav.js",
                 lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                "aria-label": "work",
+                to: "/work",
+                className: `nav-item material-icons md-48 md-light ${loc.pathname == "/work" ? "active" : ""}`,
+                children: "work"
+            }, void 0, false, {
+                fileName: "Nav.js",
+                lineNumber: 37,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 "aria-label": "about",
                 to: "/about",
-                className: `nav-item material-icons md-48 md-light ${arrow == "about" ? "active" : ""}`,
-                onClick: ()=>setArrow("about"),
+                className: `nav-item material-icons md-48 md-light ${loc.pathname == "/about" ? "active" : ""}`,
                 children: "info"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 30,
+                lineNumber: 54,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                 "aria-label": "contact",
                 to: "/contact",
-                className: `nav-item material-icons md-48 md-light ${arrow == "contact" ? "active" : ""}`,
-                onClick: ()=>setArrow("contact"),
+                className: `nav-item material-icons md-48 md-light ${loc.pathname == "/contact" ? "active" : ""}`,
                 children: "email"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 40,
+                lineNumber: 71,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Nav.js",
-        lineNumber: 9,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
-_s(Nav, "j189Du8RntVuzXtxc56bH3QrgU4=");
+_s(Nav, "+fPrPJs5E5K7VLA8vN588fSnNZA=", false, function() {
+    return [
+        (0, _reactRouterDom.useLocation)
+    ];
+});
 _c = Nav;
 var _c;
 $RefreshReg$(_c, "Nav");
@@ -26447,7 +26449,7 @@ $RefreshReg$(_c, "Nav");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","./nav.css":"7vV98","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"7vV98":[function() {},{}],"jpJJj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","./nav.css":"7vV98","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"7vV98":[function() {},{}],"jpJJj":[function(require,module,exports) {
 "use strict";
 var Refresh = require("df1acae74ac37d07");
 function debounce(func, delay) {
@@ -26606,74 +26608,87 @@ function Main() {
     /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
      Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
      component and apply it to all sub-components. But HashRouter and useLocation do not work 
-     together. */ return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+     together. */ /*
+   pass down setHeight to each component. for height transition.
+  */ const [height, setHeight] = (0, _react.useState)("100px");
+    const long = ()=>setHeight("900px");
+    const short = ()=>setHeight("300px");
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "main",
         ref: scrollRef,
+        style: {
+            height
+        },
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Routes), {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _home.Home), {
-                        scrollRef: scrollRef
+                        scrollRef: scrollRef,
+                        callback: short
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 19,
+                    lineNumber: 26,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "work",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _work.Work), {
-                        scrollRef: scrollRef
+                        scrollRef: scrollRef,
+                        callback: long
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 20,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "about",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _about.About), {
-                        scrollRef: scrollRef
+                        scrollRef: scrollRef,
+                        callback: long
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 21,
+                    lineNumber: 34,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "contact",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contact.Contact), {
-                        scrollRef: scrollRef
+                        scrollRef: scrollRef,
+                        callback: long
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 22,
+                    lineNumber: 38,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/project/:id",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _project.Project), {
-                        scrollRef: scrollRef
+                        scrollRef: scrollRef,
+                        callback: long
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 23,
+                    lineNumber: 42,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Main.js",
-            lineNumber: 18,
+            lineNumber: 25,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Main.js",
-        lineNumber: 17,
+        lineNumber: 24,
         columnNumber: 5
     }, this);
 }
-_s(Main, "rUl6RJdP9XfufN21BrtKqIOri0o=");
+_s(Main, "aTsIlPARayu3h6OzYRCMMJPsEUU=");
 _c = Main;
 var _c;
 $RefreshReg$(_c, "Main");
@@ -26697,12 +26712,17 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _homeCss = require("./home.css");
 var _s = $RefreshSig$();
-function Home({ scrollRef  }) {
+function Home({ scrollRef , callback  }) {
     _s();
     (0, _react.useEffect)(()=>{
         scrollRef.current.scrollTo(0, 0);
     }, []);
+    (0, _react.useEffect)(()=>{
+        // set the height of Main
+        callback();
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "section-home",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "jumbotron",
             children: [
@@ -26720,7 +26740,7 @@ function Home({ scrollRef  }) {
                                 children: "hire"
                             }, void 0, false, {
                                 fileName: "Home.js",
-                                lineNumber: 15,
+                                lineNumber: 20,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -26728,12 +26748,12 @@ function Home({ scrollRef  }) {
                         ]
                     }, void 0, true, {
                         fileName: "Home.js",
-                        lineNumber: 13,
+                        lineNumber: 18,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 11,
+                    lineNumber: 16,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26747,33 +26767,33 @@ function Home({ scrollRef  }) {
                             children: "JavaScript Developer"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 34,
+                            lineNumber: 39,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SocialLinks, {}, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 35,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "Home.js",
-                    lineNumber: 30,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Home.js",
-            lineNumber: 10,
+            lineNumber: 15,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Home.js",
-        lineNumber: 9,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 }
-_s(Home, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_s(Home, "3ubReDTFssvu4DHeldAg55cW/CI=");
 _c = Home;
 function SocialLinks() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26793,22 +26813,22 @@ function SocialLinks() {
                             d: "M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 57,
+                            lineNumber: 62,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Home.js",
-                        lineNumber: 51,
+                        lineNumber: 56,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 46,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "Home.js",
-                lineNumber: 45,
+                lineNumber: 50,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26825,28 +26845,28 @@ function SocialLinks() {
                             d: "M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 73,
+                            lineNumber: 78,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Home.js",
-                        lineNumber: 67,
+                        lineNumber: 72,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 62,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "Home.js",
-                lineNumber: 61,
+                lineNumber: 66,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Home.js",
-        lineNumber: 44,
+        lineNumber: 49,
         columnNumber: 5
     }, this);
 }
@@ -26875,19 +26895,24 @@ var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
 var _workCss = require("./work.css");
 var _s = $RefreshSig$();
-function Work({ scrollRef  }) {
+function Work({ scrollRef , callback  }) {
     _s();
     (0, _react.useEffect)(()=>{
         scrollRef.current.scrollTo(0, 0);
     }, []);
+    (0, _react.useEffect)(()=>{
+        // set the height of Main
+        callback();
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "section-work",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "Work"
             }, void 0, false, {
                 fileName: "Work.js",
-                lineNumber: 11,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -26905,7 +26930,7 @@ function Work({ scrollRef  }) {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 19,
+                                    lineNumber: 23,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26916,7 +26941,7 @@ function Work({ scrollRef  }) {
                                             children: "Personal Knowledge Management System"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 27,
+                                            lineNumber: 31,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26924,24 +26949,24 @@ function Work({ scrollRef  }) {
                                             children: "A Unique Application. Inspired by Memex and the Zettelkasten. Renders notecards as nodes on a graph."
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 30,
+                                            lineNumber: 34,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 23,
+                                    lineNumber: 27,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 14,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 13,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -26956,7 +26981,7 @@ function Work({ scrollRef  }) {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 43,
+                                    lineNumber: 47,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26967,7 +26992,7 @@ function Work({ scrollRef  }) {
                                             children: "Personality Test"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 51,
+                                            lineNumber: 55,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26975,40 +27000,40 @@ function Work({ scrollRef  }) {
                                             children: "The Five O.C.E.A.N. Traits"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 54,
+                                            lineNumber: 58,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 47,
+                                    lineNumber: 51,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 38,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 37,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Work.js",
-                lineNumber: 12,
+                lineNumber: 16,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Work.js",
-        lineNumber: 10,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 }
-_s(Work, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_s(Work, "3ubReDTFssvu4DHeldAg55cW/CI=");
 _c = Work;
 var _c;
 $RefreshReg$(_c, "Work");
@@ -27032,19 +27057,24 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _aboutCss = require("./about.css");
 var _s = $RefreshSig$();
-function About({ scrollRef  }) {
+function About({ scrollRef , callback  }) {
     _s();
     (0, _react.useEffect)(()=>{
         scrollRef.current.scrollTo(0, 0);
     }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    (0, _react.useEffect)(()=>{
+        // set the height of Main
+        callback();
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "section-about",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "About Me"
             }, void 0, false, {
                 fileName: "About.js",
-                lineNumber: 10,
+                lineNumber: 14,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27057,12 +27087,12 @@ function About({ scrollRef  }) {
                             alt: ""
                         }, void 0, false, {
                             fileName: "About.js",
-                            lineNumber: 15,
+                            lineNumber: 19,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "About.js",
-                        lineNumber: 14,
+                        lineNumber: 18,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27070,42 +27100,46 @@ function About({ scrollRef  }) {
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur. Odio? Magnam asperiores impedit fuga",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 25,
+                                lineNumber: 29,
                                 columnNumber: 11
                             }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 26,
-                                columnNumber: 11
-                            }, this),
-                            "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "About.js",
                                 lineNumber: 30,
                                 columnNumber: 11
                             }, this),
+                            "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 31,
+                                lineNumber: 34,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                fileName: "About.js",
+                                lineNumber: 35,
                                 columnNumber: 11
                             }, this),
                             "Tempora aperiam nobis asperiores consequatur cumque, sed nisi perferendis laudantium a odit excepturi quo distinctio incidunt molestiae, dicta quia saepe laborum perspiciatis odio alias aspernatur quis. Quam corrupti error recusandae. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem."
                         ]
                     }, void 0, true, {
                         fileName: "About.js",
-                        lineNumber: 20,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "About.js",
-                lineNumber: 13,
+                lineNumber: 17,
                 columnNumber: 7
             }, this)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "About.js",
+        lineNumber: 13,
+        columnNumber: 5
+    }, this);
 }
-_s(About, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_s(About, "3ubReDTFssvu4DHeldAg55cW/CI=");
 _c = About;
 var _c;
 $RefreshReg$(_c, "About");
@@ -27132,7 +27166,7 @@ var _characterCounter = require("@material/textfield/character-counter");
 var _ripple = require("@material/ripple");
 var _contactCss = require("./contact.css");
 var _s = $RefreshSig$();
-function Contact({ scrollRef  }) {
+function Contact({ scrollRef , callback  }) {
     _s();
     const nameField = (0, _react.useRef)(null);
     const emailField = (0, _react.useRef)(null);
@@ -27149,14 +27183,19 @@ function Contact({ scrollRef  }) {
     (0, _react.useEffect)(()=>{
         scrollRef.current.scrollTo(0, 0);
     }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    (0, _react.useEffect)(()=>{
+        // set the height of Main
+        callback();
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "section-contact",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "Contact Me"
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 26,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27164,7 +27203,7 @@ function Contact({ scrollRef  }) {
                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur."
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 29,
+                lineNumber: 33,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -27180,7 +27219,7 @@ function Contact({ scrollRef  }) {
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 37,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -27189,20 +27228,20 @@ function Contact({ scrollRef  }) {
                                 children: "Name"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 42,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 45,
+                                lineNumber: 49,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 36,
+                        lineNumber: 40,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27215,7 +27254,7 @@ function Contact({ scrollRef  }) {
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 49,
+                                lineNumber: 53,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -27224,20 +27263,20 @@ function Contact({ scrollRef  }) {
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 54,
+                                lineNumber: 58,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 57,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 48,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27250,7 +27289,7 @@ function Contact({ scrollRef  }) {
                                 children: "0 / 500"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 64,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
@@ -27261,7 +27300,7 @@ function Contact({ scrollRef  }) {
                                 maxLength: "500"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 70,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27271,7 +27310,7 @@ function Contact({ scrollRef  }) {
                                         className: "mdc-notched-outline__leading"
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 78,
+                                        lineNumber: 82,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27282,31 +27321,31 @@ function Contact({ scrollRef  }) {
                                             children: "Textarea Label"
                                         }, void 0, false, {
                                             fileName: "Contact.js",
-                                            lineNumber: 80,
+                                            lineNumber: 84,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 79,
+                                        lineNumber: 83,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "mdc-notched-outline__trailing"
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 84,
+                                        lineNumber: 88,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "Contact.js",
-                                lineNumber: 77,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 60,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27318,7 +27357,7 @@ function Contact({ scrollRef  }) {
                                 children: "Submit"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 92,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
@@ -27327,25 +27366,29 @@ function Contact({ scrollRef  }) {
                                 children: "favorite"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 93,
+                                lineNumber: 97,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 88,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Contact.js",
-                lineNumber: 35,
+                lineNumber: 39,
                 columnNumber: 7
             }, this)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "Contact.js",
+        lineNumber: 29,
+        columnNumber: 5
+    }, this);
 }
-_s(Contact, "kJMhZ5z5x0XpDuzGga/NA6SMeWI=");
+_s(Contact, "9RXG5ZVNyd2H+3AA7fMKHP+mpEI=");
 _c = Contact;
 var _c;
 $RefreshReg$(_c, "Contact");
@@ -31726,21 +31769,26 @@ const data = [
         demo: ""
     }
 ];
-function Project({ scrollRef  }) {
+function Project({ scrollRef , callback  }) {
     _s();
     const { id  } = (0, _reactRouterDom.useParams)();
     const choice = data.find((item)=>item.id === id);
     (0, _react.useEffect)(()=>{
         scrollRef.current.scrollTo(0, 0);
     }, []);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+    (0, _react.useEffect)(()=>{
+        // set the height of Main
+        callback();
+    }, []);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "section-project",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "mdc-typography--headline4",
                 children: choice.title
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 28,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31754,12 +31802,12 @@ function Project({ scrollRef  }) {
                     children: "Github repo"
                 }, void 0, false, {
                     fileName: "Project.js",
-                    lineNumber: 31,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 30,
+                lineNumber: 34,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31767,7 +31815,7 @@ function Project({ scrollRef  }) {
                 children: "Now, take a good look at me! I’m one that has spoken to a King, I am: mayhap you’ll never see such another: and to show you I’m not proud, you may shake hands with me!’ And he grinned almost from ear to ear, as he leant forwards (and as nearly as possible fell off the wall in doing so) and offered Alice his hand. She watched him a little anxiously as she took it."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 35,
+                lineNumber: 39,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -31775,7 +31823,7 @@ function Project({ scrollRef  }) {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 43,
+                lineNumber: 47,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -31783,7 +31831,7 @@ function Project({ scrollRef  }) {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 47,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31791,7 +31839,7 @@ function Project({ scrollRef  }) {
                 children: "But the beard seemed to melt away as she touched it, and she found herself sitting quietly under a tree—while the Gnat (for that was the insect she had been talking to) was balancing itself on a twig just over her head, and fanning her with its wings."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 51,
+                lineNumber: 55,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -31799,7 +31847,7 @@ function Project({ scrollRef  }) {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 57,
+                lineNumber: 61,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31807,7 +31855,7 @@ function Project({ scrollRef  }) {
                 children: "However, this was anything but a regular bee: in fact it was an elephant—as Alice soon found out, though the idea quite took her breath away at first."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 61,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -31821,12 +31869,12 @@ function Project({ scrollRef  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 68,
+                            lineNumber: 72,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 67,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31837,12 +31885,12 @@ function Project({ scrollRef  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 75,
+                            lineNumber: 79,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 74,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31853,12 +31901,12 @@ function Project({ scrollRef  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 82,
+                            lineNumber: 86,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 81,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31869,12 +31917,12 @@ function Project({ scrollRef  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 89,
+                            lineNumber: 93,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 88,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31885,12 +31933,12 @@ function Project({ scrollRef  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 96,
+                            lineNumber: 100,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 95,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31901,12 +31949,12 @@ function Project({ scrollRef  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 103,
+                            lineNumber: 107,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 102,
+                        lineNumber: 106,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31917,12 +31965,12 @@ function Project({ scrollRef  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 110,
+                            lineNumber: 114,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 109,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31933,24 +31981,28 @@ function Project({ scrollRef  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 117,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 116,
+                        lineNumber: 120,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Project.js",
-                lineNumber: 66,
+                lineNumber: 70,
                 columnNumber: 7
             }, this)
         ]
-    }, void 0, true);
+    }, void 0, true, {
+        fileName: "Project.js",
+        lineNumber: 31,
+        columnNumber: 5
+    }, this);
 }
-_s(Project, "XT1vicrm+NSYLQxrGm9hA77HN9Y=", false, function() {
+_s(Project, "NrwAnu+Xu8IMxwuWRtdZQJzKwrE=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
@@ -31964,6 +32016,6 @@ $RefreshReg$(_c, "Project");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./project.css":"ioOt3","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj","react-router-dom":"fdOAw"}],"ioOt3":[function() {},{}],"cvfZG":[function() {},{}],"jenSB":[function() {},{}]},["ckupm","gNHB0","bB7Pu"], "bB7Pu", "parcelRequire2041")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./project.css":"ioOt3","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"ioOt3":[function() {},{}],"cvfZG":[function() {},{}],"jenSB":[function() {},{}]},["ckupm","gNHB0","bB7Pu"], "bB7Pu", "parcelRequire2041")
 
 //# sourceMappingURL=index.3d214d75.js.map
