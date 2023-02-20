@@ -26382,7 +26382,6 @@ var _s = $RefreshSig$();
 function Nav() {
     _s();
     const loc = (0, _reactRouterDom.useLocation)();
-    console.log("/project -> ", loc.pathname.includes("/project"));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -26392,7 +26391,7 @@ function Nav() {
                 children: "home"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 9,
+                lineNumber: 8,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -26402,7 +26401,7 @@ function Nav() {
                 children: "work"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 18,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -26412,7 +26411,7 @@ function Nav() {
                 children: "info"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 29,
+                lineNumber: 28,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
@@ -26422,13 +26421,13 @@ function Nav() {
                 children: "email"
             }, void 0, false, {
                 fileName: "Nav.js",
-                lineNumber: 38,
+                lineNumber: 37,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Nav.js",
-        lineNumber: 8,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 }
@@ -26601,18 +26600,20 @@ var _mainCss = require("./main.css");
 var _s = $RefreshSig$();
 function Main() {
     _s();
-    const scrollRef = (0, _react.useRef)(null);
-    /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
+    const mainRef = (0, _react.useRef)(null);
+    const [height, setHeight] = (0, _react.useState)(0);
+    const doStuff = ()=>{
+        /* ReactRouter breaks scrolling by not refreshing it when new components are rendered.
      Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
      component and apply it to all sub-components. But HashRouter and useLocation do not work 
-     together. */ /*
-   pass down setHeight to each component. for height transition.
-  */ const [height, setHeight] = (0, _react.useState)("100px");
-    const long = ()=>setHeight("900px");
-    const short = ()=>setHeight("300px");
+     together. */ mainRef.current.scrollTo(0, 0);
+        /* change the height of Main based on the height of the currently rendered section, so that 
+    the height transition animation will work */ setHeight(mainRef.current.firstElementChild.clientHeight + "px");
+        console.log("Main > mainRef.current.firstElementChild.clientHeight: ", mainRef.current.firstElementChild.clientHeight);
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "main",
-        ref: scrollRef,
+        ref: mainRef,
         style: {
             height
         },
@@ -26621,30 +26622,27 @@ function Main() {
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _home.Home), {
-                        scrollRef: scrollRef,
-                        callback: short
+                        callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 26,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "work",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _work.Work), {
-                        scrollRef: scrollRef,
-                        callback: long
+                        callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 30,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "about",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _about.About), {
-                        scrollRef: scrollRef,
-                        callback: long
+                        callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
@@ -26654,38 +26652,36 @@ function Main() {
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "contact",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contact.Contact), {
-                        scrollRef: scrollRef,
-                        callback: long
+                        callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 38,
+                    lineNumber: 35,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Route), {
                     path: "/project/:id",
                     element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _project.Project), {
-                        scrollRef: scrollRef,
-                        callback: long
+                        callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
                     fileName: "Main.js",
-                    lineNumber: 42,
+                    lineNumber: 36,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Main.js",
-            lineNumber: 25,
+            lineNumber: 31,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Main.js",
-        lineNumber: 24,
+        lineNumber: 30,
         columnNumber: 5
     }, this);
 }
-_s(Main, "aTsIlPARayu3h6OzYRCMMJPsEUU=");
+_s(Main, "+4yo7HC4e00A4yuOfTOwxGg/HEg=");
 _c = Main;
 var _c;
 $RefreshReg$(_c, "Main");
@@ -26709,13 +26705,11 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _homeCss = require("./home.css");
 var _s = $RefreshSig$();
-function Home({ scrollRef , callback  }) {
+function Home({ callback  }) {
     _s();
     (0, _react.useEffect)(()=>{
-        scrollRef.current.scrollTo(0, 0);
-    }, []);
-    (0, _react.useEffect)(()=>{
-        // set the height of Main
+        // 1. set the height of Main based on the height of this div.
+        // 2. scroll to the top of Main.
         callback();
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26737,7 +26731,7 @@ function Home({ scrollRef , callback  }) {
                                 children: "hire"
                             }, void 0, false, {
                                 fileName: "Home.js",
-                                lineNumber: 20,
+                                lineNumber: 18,
                                 columnNumber: 13
                             }, this),
                             " ",
@@ -26745,12 +26739,12 @@ function Home({ scrollRef , callback  }) {
                         ]
                     }, void 0, true, {
                         fileName: "Home.js",
-                        lineNumber: 18,
+                        lineNumber: 16,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 16,
+                    lineNumber: 14,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26764,33 +26758,33 @@ function Home({ scrollRef , callback  }) {
                             children: "JavaScript Developer"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 39,
+                            lineNumber: 37,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SocialLinks, {}, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 40,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "Home.js",
-                    lineNumber: 35,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "Home.js",
-            lineNumber: 15,
+            lineNumber: 13,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "Home.js",
-        lineNumber: 14,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }
-_s(Home, "3ubReDTFssvu4DHeldAg55cW/CI=");
+_s(Home, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = Home;
 function SocialLinks() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26810,22 +26804,22 @@ function SocialLinks() {
                             d: "M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 62,
+                            lineNumber: 60,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Home.js",
-                        lineNumber: 56,
+                        lineNumber: 54,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 51,
+                    lineNumber: 49,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "Home.js",
-                lineNumber: 50,
+                lineNumber: 48,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26842,28 +26836,28 @@ function SocialLinks() {
                             d: "M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"
                         }, void 0, false, {
                             fileName: "Home.js",
-                            lineNumber: 78,
+                            lineNumber: 76,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "Home.js",
-                        lineNumber: 72,
+                        lineNumber: 70,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "Home.js",
-                    lineNumber: 67,
+                    lineNumber: 65,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "Home.js",
-                lineNumber: 66,
+                lineNumber: 64,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Home.js",
-        lineNumber: 49,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
@@ -26892,13 +26886,11 @@ var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
 var _workCss = require("./work.css");
 var _s = $RefreshSig$();
-function Work({ scrollRef , callback  }) {
+function Work({ callback  }) {
     _s();
     (0, _react.useEffect)(()=>{
-        scrollRef.current.scrollTo(0, 0);
-    }, []);
-    (0, _react.useEffect)(()=>{
-        // set the height of Main
+        // 1. set the height of Main based on the height of this div.
+        // 2. scroll to the top of Main.
         callback();
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26909,7 +26901,7 @@ function Work({ scrollRef , callback  }) {
                 children: "Work"
             }, void 0, false, {
                 fileName: "Work.js",
-                lineNumber: 15,
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -26927,7 +26919,7 @@ function Work({ scrollRef , callback  }) {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 23,
+                                    lineNumber: 21,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26938,7 +26930,7 @@ function Work({ scrollRef , callback  }) {
                                             children: "Personal Knowledge Management System"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 31,
+                                            lineNumber: 29,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26946,24 +26938,24 @@ function Work({ scrollRef , callback  }) {
                                             children: "A Unique Application. Inspired by Memex and the Zettelkasten. Renders notecards as nodes on a graph."
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 34,
+                                            lineNumber: 32,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 27,
+                                    lineNumber: 25,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 18,
+                            lineNumber: 16,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 17,
+                        lineNumber: 15,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -26978,7 +26970,7 @@ function Work({ scrollRef , callback  }) {
                                     alt: ""
                                 }, void 0, false, {
                                     fileName: "Work.js",
-                                    lineNumber: 47,
+                                    lineNumber: 45,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26989,7 +26981,7 @@ function Work({ scrollRef , callback  }) {
                                             children: "Personality Test"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 55,
+                                            lineNumber: 53,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26997,40 +26989,40 @@ function Work({ scrollRef , callback  }) {
                                             children: "The Five O.C.E.A.N. Traits"
                                         }, void 0, false, {
                                             fileName: "Work.js",
-                                            lineNumber: 58,
+                                            lineNumber: 56,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "Work.js",
-                                    lineNumber: 51,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "Work.js",
-                            lineNumber: 42,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Work.js",
-                        lineNumber: 41,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Work.js",
-                lineNumber: 16,
+                lineNumber: 14,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Work.js",
-        lineNumber: 14,
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }
-_s(Work, "3ubReDTFssvu4DHeldAg55cW/CI=");
+_s(Work, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = Work;
 var _c;
 $RefreshReg$(_c, "Work");
@@ -27054,13 +27046,11 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _aboutCss = require("./about.css");
 var _s = $RefreshSig$();
-function About({ scrollRef , callback  }) {
+function About({ callback  }) {
     _s();
     (0, _react.useEffect)(()=>{
-        scrollRef.current.scrollTo(0, 0);
-    }, []);
-    (0, _react.useEffect)(()=>{
-        // set the height of Main
+        // 1. set the height of Main based on the height of this div.
+        // 2. scroll to the top of Main.
         callback();
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27071,7 +27061,7 @@ function About({ scrollRef , callback  }) {
                 children: "About Me"
             }, void 0, false, {
                 fileName: "About.js",
-                lineNumber: 14,
+                lineNumber: 12,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27084,12 +27074,12 @@ function About({ scrollRef , callback  }) {
                             alt: ""
                         }, void 0, false, {
                             fileName: "About.js",
-                            lineNumber: 19,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "About.js",
-                        lineNumber: 18,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27097,46 +27087,46 @@ function About({ scrollRef , callback  }) {
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur. Odio? Magnam asperiores impedit fuga",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 29,
+                                lineNumber: 27,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 30,
+                                lineNumber: 28,
                                 columnNumber: 11
                             }, this),
                             "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 34,
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                 fileName: "About.js",
-                                lineNumber: 35,
+                                lineNumber: 33,
                                 columnNumber: 11
                             }, this),
                             "Tempora aperiam nobis asperiores consequatur cumque, sed nisi perferendis laudantium a odit excepturi quo distinctio incidunt molestiae, dicta quia saepe laborum perspiciatis odio alias aspernatur quis. Quam corrupti error recusandae. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem."
                         ]
                     }, void 0, true, {
                         fileName: "About.js",
-                        lineNumber: 24,
+                        lineNumber: 22,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "About.js",
-                lineNumber: 17,
+                lineNumber: 15,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "About.js",
-        lineNumber: 13,
+        lineNumber: 11,
         columnNumber: 5
     }, this);
 }
-_s(About, "3ubReDTFssvu4DHeldAg55cW/CI=");
+_s(About, "OD7bBpZva5O2jO+Puf00hKivP7c=");
 _c = About;
 var _c;
 $RefreshReg$(_c, "About");
@@ -27163,7 +27153,7 @@ var _characterCounter = require("@material/textfield/character-counter");
 var _ripple = require("@material/ripple");
 var _contactCss = require("./contact.css");
 var _s = $RefreshSig$();
-function Contact({ scrollRef , callback  }) {
+function Contact({ callback  }) {
     _s();
     const nameField = (0, _react.useRef)(null);
     const emailField = (0, _react.useRef)(null);
@@ -27178,10 +27168,8 @@ function Contact({ scrollRef , callback  }) {
         new (0, _ripple.MDCRipple)(button.current);
     }, []);
     (0, _react.useEffect)(()=>{
-        scrollRef.current.scrollTo(0, 0);
-    }, []);
-    (0, _react.useEffect)(()=>{
-        // set the height of Main
+        // 1. set the height of Main based on the height of this div.
+        // 2. scroll to the top of Main.
         callback();
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27192,7 +27180,7 @@ function Contact({ scrollRef , callback  }) {
                 children: "Contact Me"
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 30,
+                lineNumber: 29,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -27200,7 +27188,7 @@ function Contact({ scrollRef , callback  }) {
                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur."
             }, void 0, false, {
                 fileName: "Contact.js",
-                lineNumber: 33,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -27216,7 +27204,7 @@ function Contact({ scrollRef , callback  }) {
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 41,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -27225,20 +27213,20 @@ function Contact({ scrollRef , callback  }) {
                                 children: "Name"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 46,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 49,
+                                lineNumber: 48,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 40,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27251,7 +27239,7 @@ function Contact({ scrollRef , callback  }) {
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 53,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
@@ -27260,20 +27248,20 @@ function Contact({ scrollRef , callback  }) {
                                 children: "Email"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 58,
+                                lineNumber: 57,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 61,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 52,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27286,7 +27274,7 @@ function Contact({ scrollRef , callback  }) {
                                 children: "0 / 500"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 68,
+                                lineNumber: 67,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
@@ -27297,7 +27285,7 @@ function Contact({ scrollRef , callback  }) {
                                 maxLength: "500"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 74,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27307,7 +27295,7 @@ function Contact({ scrollRef , callback  }) {
                                         className: "mdc-notched-outline__leading"
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 82,
+                                        lineNumber: 81,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27318,31 +27306,31 @@ function Contact({ scrollRef , callback  }) {
                                             children: "Textarea Label"
                                         }, void 0, false, {
                                             fileName: "Contact.js",
-                                            lineNumber: 84,
+                                            lineNumber: 83,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 83,
+                                        lineNumber: 82,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "mdc-notched-outline__trailing"
                                     }, void 0, false, {
                                         fileName: "Contact.js",
-                                        lineNumber: 88,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "Contact.js",
-                                lineNumber: 81,
+                                lineNumber: 80,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 64,
+                        lineNumber: 63,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27354,7 +27342,7 @@ function Contact({ scrollRef , callback  }) {
                                 children: "Submit"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 96,
+                                lineNumber: 95,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
@@ -27363,29 +27351,29 @@ function Contact({ scrollRef , callback  }) {
                                 children: "favorite"
                             }, void 0, false, {
                                 fileName: "Contact.js",
-                                lineNumber: 97,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "Contact.js",
-                        lineNumber: 92,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Contact.js",
-                lineNumber: 39,
+                lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Contact.js",
-        lineNumber: 29,
+        lineNumber: 28,
         columnNumber: 5
     }, this);
 }
-_s(Contact, "9RXG5ZVNyd2H+3AA7fMKHP+mpEI=");
+_s(Contact, "kJMhZ5z5x0XpDuzGga/NA6SMeWI=");
 _c = Contact;
 var _c;
 $RefreshReg$(_c, "Contact");
@@ -31766,15 +31754,13 @@ const data = [
         demo: ""
     }
 ];
-function Project({ scrollRef , callback  }) {
+function Project({ callback  }) {
     _s();
     const { id  } = (0, _reactRouterDom.useParams)();
     const choice = data.find((item)=>item.id === id);
     (0, _react.useEffect)(()=>{
-        scrollRef.current.scrollTo(0, 0);
-    }, []);
-    (0, _react.useEffect)(()=>{
-        // set the height of Main
+        // 1. set the height of Main based on the height of this div.
+        // 2. scroll to the top of Main.
         callback();
     }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -31785,7 +31771,7 @@ function Project({ scrollRef , callback  }) {
                 children: choice.title
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 32,
+                lineNumber: 30,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31799,12 +31785,12 @@ function Project({ scrollRef , callback  }) {
                     children: "Github repo"
                 }, void 0, false, {
                     fileName: "Project.js",
-                    lineNumber: 35,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 34,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31812,7 +31798,7 @@ function Project({ scrollRef , callback  }) {
                 children: "Now, take a good look at me! I’m one that has spoken to a King, I am: mayhap you’ll never see such another: and to show you I’m not proud, you may shake hands with me!’ And he grinned almost from ear to ear, as he leant forwards (and as nearly as possible fell off the wall in doing so) and offered Alice his hand. She watched him a little anxiously as she took it."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 39,
+                lineNumber: 37,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -31820,7 +31806,7 @@ function Project({ scrollRef , callback  }) {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 47,
+                lineNumber: 45,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -31828,7 +31814,7 @@ function Project({ scrollRef , callback  }) {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 51,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31836,7 +31822,7 @@ function Project({ scrollRef , callback  }) {
                 children: "But the beard seemed to melt away as she touched it, and she found herself sitting quietly under a tree—while the Gnat (for that was the insect she had been talking to) was balancing itself on a twig just over her head, and fanning her with its wings."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 55,
+                lineNumber: 53,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -31844,7 +31830,7 @@ function Project({ scrollRef , callback  }) {
                 alt: ""
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 61,
+                lineNumber: 59,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31852,7 +31838,7 @@ function Project({ scrollRef , callback  }) {
                 children: "However, this was anything but a regular bee: in fact it was an elephant—as Alice soon found out, though the idea quite took her breath away at first."
             }, void 0, false, {
                 fileName: "Project.js",
-                lineNumber: 65,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -31866,12 +31852,12 @@ function Project({ scrollRef , callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 72,
+                            lineNumber: 70,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 71,
+                        lineNumber: 69,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31882,12 +31868,12 @@ function Project({ scrollRef , callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 79,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 78,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31898,12 +31884,12 @@ function Project({ scrollRef , callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 86,
+                            lineNumber: 84,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 85,
+                        lineNumber: 83,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31914,12 +31900,12 @@ function Project({ scrollRef , callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 93,
+                            lineNumber: 91,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 92,
+                        lineNumber: 90,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31930,12 +31916,12 @@ function Project({ scrollRef , callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 100,
+                            lineNumber: 98,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 99,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31946,12 +31932,12 @@ function Project({ scrollRef , callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 107,
+                            lineNumber: 105,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 106,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31962,12 +31948,12 @@ function Project({ scrollRef , callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 114,
+                            lineNumber: 112,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 113,
+                        lineNumber: 111,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -31978,28 +31964,28 @@ function Project({ scrollRef , callback  }) {
                             alt: "Text label"
                         }, void 0, false, {
                             fileName: "Project.js",
-                            lineNumber: 121,
+                            lineNumber: 119,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "Project.js",
-                        lineNumber: 120,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "Project.js",
-                lineNumber: 70,
+                lineNumber: 68,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "Project.js",
-        lineNumber: 31,
+        lineNumber: 29,
         columnNumber: 5
     }, this);
 }
-_s(Project, "NrwAnu+Xu8IMxwuWRtdZQJzKwrE=", false, function() {
+_s(Project, "XT1vicrm+NSYLQxrGm9hA77HN9Y=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
