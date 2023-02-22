@@ -2929,8 +2929,8 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _reactRouterDom = require("react-router-dom");
-var _app = require("./App");
-var _baseCss = require("./base.css");
+var _app = require("./components/App");
+var _baseCss = require("./styles/base.css");
 const container = document.getElementById("container");
 (0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _app.App), {}, void 0, false, {
@@ -2949,7 +2949,7 @@ const container = document.getElementById("container");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","react-router-dom":"fdOAw","./App":"2Ew96","./base.css":"jenSB","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","react-router-dom":"fdOAw","./components/App":"fx3kE","./styles/base.css":"a6Lwk","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ff0ec88c440f832c");
 
@@ -26327,11 +26327,11 @@ const normalizePathname = (pathname)=>pathname.replace(/\/+$/, "").replace(/^\/*
 const normalizeSearch = (search)=>!search || search === "?" ? "" : search.startsWith("?") ? search : "?" + search;
 const normalizeHash = (hash)=>!hash || hash === "#" ? "" : hash.startsWith("#") ? hash : "#" + hash; ///////////////////////////////////////////////////////////////////////////////
 
-},{"react":"21dqq","history":"iE5Zp","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq"}],"2Ew96":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c1db = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react":"21dqq","history":"iE5Zp","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq"}],"fx3kE":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$820c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c1db.prelude(module);
+$parcel$ReactRefreshHelpers$820c.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -26344,12 +26344,12 @@ function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _nav.Nav), {}, void 0, false, {
-                fileName: "App.js",
+                fileName: "components/App.js",
                 lineNumber: 7,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _main.Main), {}, void 0, false, {
-                fileName: "App.js",
+                fileName: "components/App.js",
                 lineNumber: 8,
                 columnNumber: 7
             }, this)
@@ -26360,16 +26360,16 @@ _c = App;
 var _c;
 $RefreshReg$(_c, "App");
 
-  $parcel$ReactRefreshHelpers$c1db.postlude(module);
+  $parcel$ReactRefreshHelpers$820c.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Nav":"8j6Xq","./Main":"gItCV","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"8j6Xq":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$caa2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","./Nav":"2qGmX","./Main":"fq5nN","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"2qGmX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2fc3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$caa2.prelude(module);
+$parcel$ReactRefreshHelpers$2fc3.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -26377,7 +26377,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Nav", ()=>Nav);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
-var _navCss = require("./nav.css");
+var _navCss = require("../styles/nav.css");
 var _s = $RefreshSig$();
 function Nav() {
     _s();
@@ -26390,7 +26390,7 @@ function Nav() {
                 className: `nav-item material-icons md-48 md-light ${loc.pathname == "/" ? "active" : ""}`,
                 children: "home"
             }, void 0, false, {
-                fileName: "Nav.js",
+                fileName: "components/Nav.js",
                 lineNumber: 8,
                 columnNumber: 7
             }, this),
@@ -26400,7 +26400,7 @@ function Nav() {
                 className: `nav-item material-icons md-48 md-light ${loc.pathname == "/work" || loc.pathname.includes("/project") ? "active" : ""}`,
                 children: "work"
             }, void 0, false, {
-                fileName: "Nav.js",
+                fileName: "components/Nav.js",
                 lineNumber: 17,
                 columnNumber: 7
             }, this),
@@ -26410,7 +26410,7 @@ function Nav() {
                 className: `nav-item material-icons md-48 md-light ${loc.pathname == "/about" ? "active" : ""}`,
                 children: "info"
             }, void 0, false, {
-                fileName: "Nav.js",
+                fileName: "components/Nav.js",
                 lineNumber: 28,
                 columnNumber: 7
             }, this),
@@ -26420,13 +26420,13 @@ function Nav() {
                 className: `nav-item material-icons md-48 md-light ${loc.pathname == "/contact" ? "active" : ""}`,
                 children: "email"
             }, void 0, false, {
-                fileName: "Nav.js",
+                fileName: "components/Nav.js",
                 lineNumber: 37,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "Nav.js",
+        fileName: "components/Nav.js",
         lineNumber: 7,
         columnNumber: 5
     }, this);
@@ -26440,12 +26440,12 @@ _c = Nav;
 var _c;
 $RefreshReg$(_c, "Nav");
 
-  $parcel$ReactRefreshHelpers$caa2.postlude(module);
+  $parcel$ReactRefreshHelpers$2fc3.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","./nav.css":"7vV98","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"7vV98":[function() {},{}],"jpJJj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","../styles/nav.css":"adF6Q","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"adF6Q":[function() {},{}],"jpJJj":[function(require,module,exports) {
 "use strict";
 var Refresh = require("df1acae74ac37d07");
 function debounce(func, delay) {
@@ -26578,11 +26578,11 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"df1acae74ac37d07":"aPBXq"}],"gItCV":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$eef6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"df1acae74ac37d07":"aPBXq"}],"fq5nN":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e44e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$eef6.prelude(module);
+$parcel$ReactRefreshHelpers$e44e.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -26596,7 +26596,7 @@ var _contact = require("./Contact");
 var _project = require("./Project");
 var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
-var _mainCss = require("./main.css");
+var _mainCss = require("../styles/main.css");
 var _s = $RefreshSig$();
 function Main() {
     _s();
@@ -26627,7 +26627,7 @@ function Main() {
                         callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
-                    fileName: "Main.js",
+                    fileName: "components/Main.js",
                     lineNumber: 34,
                     columnNumber: 9
                 }, this),
@@ -26637,7 +26637,7 @@ function Main() {
                         callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
-                    fileName: "Main.js",
+                    fileName: "components/Main.js",
                     lineNumber: 35,
                     columnNumber: 9
                 }, this),
@@ -26647,7 +26647,7 @@ function Main() {
                         callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
-                    fileName: "Main.js",
+                    fileName: "components/Main.js",
                     lineNumber: 36,
                     columnNumber: 9
                 }, this),
@@ -26657,7 +26657,7 @@ function Main() {
                         callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
-                    fileName: "Main.js",
+                    fileName: "components/Main.js",
                     lineNumber: 37,
                     columnNumber: 9
                 }, this),
@@ -26667,18 +26667,18 @@ function Main() {
                         callback: doStuff
                     }, void 0, false, void 0, void 0)
                 }, void 0, false, {
-                    fileName: "Main.js",
+                    fileName: "components/Main.js",
                     lineNumber: 38,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
-            fileName: "Main.js",
+            fileName: "components/Main.js",
             lineNumber: 33,
             columnNumber: 7
         }, this)
     }, void 0, false, {
-        fileName: "Main.js",
+        fileName: "components/Main.js",
         lineNumber: 32,
         columnNumber: 5
     }, this);
@@ -26688,16 +26688,16 @@ _c = Main;
 var _c;
 $RefreshReg$(_c, "Main");
 
-  $parcel$ReactRefreshHelpers$eef6.postlude(module);
+  $parcel$ReactRefreshHelpers$e44e.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Home":"k46Sb","./Work":"7s2mh","./About":"2rsUE","./Contact":"23MUH","./Project":"03vJm","react-router-dom":"fdOAw","react":"21dqq","./main.css":"cvfZG","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"k46Sb":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5e44 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","./Home":"kQG6I","./Work":"dqyiE","./About":"hGILx","./Contact":"f1iMA","./Project":"iHPLt","react-router-dom":"fdOAw","react":"21dqq","../styles/main.css":"cri8N","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"kQG6I":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c88e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5e44.prelude(module);
+$parcel$ReactRefreshHelpers$c88e.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -26705,7 +26705,10 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Home", ()=>Home);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _homeCss = require("./home.css");
+var _homeCss = require("../styles/home.css");
+var _federicoBottosZ3NceSeZqgIUnsplashJpg = require("../assets/federico-bottos-Z3NceSeZqgI-unsplash.jpg");
+var _federicoBottosZ3NceSeZqgIUnsplashJpgDefault = parcelHelpers.interopDefault(_federicoBottosZ3NceSeZqgIUnsplashJpg);
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 function Home({ callback  }) {
     _s();
@@ -26714,170 +26717,147 @@ function Home({ callback  }) {
         // 2. scroll to the top of Main.
         callback();
     }, []);
+    const navigate = (0, _reactRouterDom.useNavigate)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "section-home",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "jumbotron",
+            style: {
+                position: "relative"
+            },
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "jumbotron__row",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: [
-                            " ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                style: {
-                                    //fontSize: "4em",
-                                    fontWeight: "100",
-                                    color: "rgba(0,0,0,0.08)"
-                                },
-                                children: "hire"
-                            }, void 0, false, {
-                                fileName: "Home.js",
-                                lineNumber: 18,
-                                columnNumber: 13
-                            }, this),
-                            " ",
-                            "Jesse Paulsen"
-                        ]
-                    }, void 0, true, {
-                        fileName: "Home.js",
-                        lineNumber: 16,
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _federicoBottosZ3NceSeZqgIUnsplashJpgDefault.default)
+                    }, void 0, false, {
+                        fileName: "components/Home.js",
+                        lineNumber: 19,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
-                    fileName: "Home.js",
-                    lineNumber: 14,
+                    fileName: "components/Home.js",
+                    lineNumber: 18,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "jumbotron__row",
                     style: {
-                        justifyContent: "space-between"
+                        position: "absolute",
+                        // border: "1px solid white",
+                        display: "flex",
+                        flexDirection: "column",
+                        top: "20%",
+                        left: "10%"
                     },
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "my-title",
-                            children: "JavaScript Developer"
-                        }, void 0, false, {
-                            fileName: "Home.js",
-                            lineNumber: 37,
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                            style: {
+                                color: "rgba(255,255,255,1.0)",
+                                // border: "5px dotted white",
+                                paddingBottom: "0.2em"
+                            },
+                            children: [
+                                " ",
+                                "Jesse Paulsen"
+                            ]
+                        }, void 0, true, {
+                            fileName: "components/Home.js",
+                            lineNumber: 31,
                             columnNumber: 11
                         }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SocialLinks, {}, void 0, false, {
-                            fileName: "Home.js",
-                            lineNumber: 38,
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            style: {
+                                color: "rgba(255,255,255,1.0)",
+                                // border: "2px dotted green",
+                                paddingBottom: "0.2em"
+                            },
+                            children: "JavaScript Developer"
+                        }, void 0, false, {
+                            fileName: "components/Home.js",
+                            lineNumber: 41,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            onClick: ()=>navigate("/work"),
+                            children: "See My Work"
+                        }, void 0, false, {
+                            fileName: "components/Home.js",
+                            lineNumber: 50,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
-                    fileName: "Home.js",
-                    lineNumber: 33,
+                    fileName: "components/Home.js",
+                    lineNumber: 21,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
-            fileName: "Home.js",
-            lineNumber: 13,
+            fileName: "components/Home.js",
+            lineNumber: 17,
             columnNumber: 7
         }, this)
     }, void 0, false, {
-        fileName: "Home.js",
-        lineNumber: 12,
+        fileName: "components/Home.js",
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }
-_s(Home, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+_s(Home, "ozcc7agSozDt5Ds+4CzVCamyzlI=", false, function() {
+    return [
+        (0, _reactRouterDom.useNavigate)
+    ];
+});
 _c = Home;
-function SocialLinks() {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "social-icon-links",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                    href: "https://www.linkedin.com/in/jesse-paulsen-71136a132",
-                    target: "_blank",
-                    rel: "noreferrer noopener",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        width: "430.117",
-                        height: "430.117",
-                        viewBox: "0 0 430.117 430.117",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"
-                        }, void 0, false, {
-                            fileName: "Home.js",
-                            lineNumber: 60,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Home.js",
-                        lineNumber: 54,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "Home.js",
-                    lineNumber: 49,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "Home.js",
-                lineNumber: 48,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                    href: "https://github.com/jesseraypaulsen",
-                    target: "_blank",
-                    rel: "noreferrer noopener",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                        xmlns: "http://www.w3.org/2000/svg",
-                        width: "438.549",
-                        height: "438.549",
-                        viewBox: "0 0 438.549 438.549",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                            d: "M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"
-                        }, void 0, false, {
-                            fileName: "Home.js",
-                            lineNumber: 76,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "Home.js",
-                        lineNumber: 70,
-                        columnNumber: 11
-                    }, this)
-                }, void 0, false, {
-                    fileName: "Home.js",
-                    lineNumber: 65,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
-                fileName: "Home.js",
-                lineNumber: 64,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
-        fileName: "Home.js",
-        lineNumber: 47,
-        columnNumber: 5
-    }, this);
-}
-_c1 = SocialLinks;
-var _c, _c1;
+var _c;
 $RefreshReg$(_c, "Home");
-$RefreshReg$(_c1, "SocialLinks");
 
-  $parcel$ReactRefreshHelpers$5e44.postlude(module);
+  $parcel$ReactRefreshHelpers$c88e.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./home.css":"i6MqZ","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"i6MqZ":[function() {},{}],"7s2mh":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$352a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/home.css":"5nAqd","../assets/federico-bottos-Z3NceSeZqgI-unsplash.jpg":"1HoiH","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj","react-router-dom":"fdOAw"}],"5nAqd":[function() {},{}],"1HoiH":[function(require,module,exports) {
+module.exports = require("826420d5f7e8ee81").getBundleURL("UckoE") + "federico-bottos-Z3NceSeZqgI-unsplash.dd7098ad.jpg" + "?" + Date.now();
+
+},{"826420d5f7e8ee81":"gqha7"}],"gqha7":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"dqyiE":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d104 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$352a.prelude(module);
+$parcel$ReactRefreshHelpers$d104.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -26886,7 +26866,7 @@ parcelHelpers.export(exports, "Work", ()=>Work);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRouterDom = require("react-router-dom");
 var _react = require("react");
-var _workCss = require("./work.css");
+var _workCss = require("../styles/work.css");
 var _s = $RefreshSig$();
 function Work({ callback  }) {
     _s();
@@ -26902,7 +26882,7 @@ function Work({ callback  }) {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "Work"
             }, void 0, false, {
-                fileName: "Work.js",
+                fileName: "components/Work.js",
                 lineNumber: 13,
                 columnNumber: 7
             }, this),
@@ -26920,18 +26900,26 @@ function Work({ callback  }) {
                                     src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507",
                                     alt: ""
                                 }, void 0, false, {
-                                    fileName: "Work.js",
+                                    fileName: "components/Work.js",
                                     lineNumber: 21,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "cardContent",
                                     children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                            className: "mdc-typography mdc-typography--overline cardCategory",
+                                            children: "Web Application"
+                                        }, void 0, false, {
+                                            fileName: "components/Work.js",
+                                            lineNumber: 26,
+                                            columnNumber: 15
+                                        }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                             className: "mdc-typography mdc-typography--headline6 cardTitle",
                                             children: "Personal Knowledge Management System"
                                         }, void 0, false, {
-                                            fileName: "Work.js",
+                                            fileName: "components/Work.js",
                                             lineNumber: 29,
                                             columnNumber: 15
                                         }, this),
@@ -26939,24 +26927,24 @@ function Work({ callback  }) {
                                             className: "demo-card__secondary mdc-typography mdc-typography--body2",
                                             children: "A Unique Application. Inspired by Memex and the Zettelkasten. Renders notecards as nodes on a graph."
                                         }, void 0, false, {
-                                            fileName: "Work.js",
+                                            fileName: "components/Work.js",
                                             lineNumber: 32,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "Work.js",
+                                    fileName: "components/Work.js",
                                     lineNumber: 25,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
-                            fileName: "Work.js",
+                            fileName: "components/Work.js",
                             lineNumber: 16,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
-                        fileName: "Work.js",
+                        fileName: "components/Work.js",
                         lineNumber: 15,
                         columnNumber: 9
                     }, this),
@@ -26971,18 +26959,26 @@ function Work({ callback  }) {
                                     src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
                                     alt: ""
                                 }, void 0, false, {
-                                    fileName: "Work.js",
+                                    fileName: "components/Work.js",
                                     lineNumber: 45,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "cardContent",
                                     children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                            className: "mdc-typography mdc-typography--overline cardCategory",
+                                            children: "Web Application"
+                                        }, void 0, false, {
+                                            fileName: "components/Work.js",
+                                            lineNumber: 50,
+                                            columnNumber: 15
+                                        }, this),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                             className: "mdc-typography mdc-typography--headline6 cardTitle",
                                             children: "Personality Test"
                                         }, void 0, false, {
-                                            fileName: "Work.js",
+                                            fileName: "components/Work.js",
                                             lineNumber: 53,
                                             columnNumber: 15
                                         }, this),
@@ -26990,36 +26986,36 @@ function Work({ callback  }) {
                                             className: "demo-card__secondary mdc-typography mdc-typography--body2",
                                             children: "The Five O.C.E.A.N. Traits"
                                         }, void 0, false, {
-                                            fileName: "Work.js",
+                                            fileName: "components/Work.js",
                                             lineNumber: 56,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
-                                    fileName: "Work.js",
+                                    fileName: "components/Work.js",
                                     lineNumber: 49,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
-                            fileName: "Work.js",
+                            fileName: "components/Work.js",
                             lineNumber: 40,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
-                        fileName: "Work.js",
+                        fileName: "components/Work.js",
                         lineNumber: 39,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "Work.js",
+                fileName: "components/Work.js",
                 lineNumber: 14,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "Work.js",
+        fileName: "components/Work.js",
         lineNumber: 12,
         columnNumber: 5
     }, this);
@@ -27029,16 +27025,16 @@ _c = Work;
 var _c;
 $RefreshReg$(_c, "Work");
 
-  $parcel$ReactRefreshHelpers$352a.postlude(module);
+  $parcel$ReactRefreshHelpers$d104.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","react":"21dqq","./work.css":"gdyIn","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"gdyIn":[function() {},{}],"2rsUE":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$4a55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"fdOAw","react":"21dqq","../styles/work.css":"ivoq4","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"ivoq4":[function() {},{}],"hGILx":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$266e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$4a55.prelude(module);
+$parcel$ReactRefreshHelpers$266e.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27046,7 +27042,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "About", ()=>About);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _aboutCss = require("./about.css");
+var _socialLinks = require("./SocialLinks");
+var _aboutCss = require("../styles/about.css");
 var _s = $RefreshSig$();
 function About({ callback  }) {
     _s();
@@ -27062,8 +27059,8 @@ function About({ callback  }) {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "About Me"
             }, void 0, false, {
-                fileName: "About.js",
-                lineNumber: 12,
+                fileName: "components/About.js",
+                lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27071,60 +27068,73 @@ function About({ callback  }) {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("figure", {
                         className: "selfPortrait",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fbarcelona1.jpg?1558558467346",
-                            alt: ""
-                        }, void 0, false, {
-                            fileName: "About.js",
-                            lineNumber: 17,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "About.js",
-                        lineNumber: 16,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _socialLinks.SocialLinks), {}, void 0, false, {
+                                    fileName: "components/About.js",
+                                    lineNumber: 19,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "components/About.js",
+                                lineNumber: 18,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fbarcelona1.jpg?1558558467346",
+                                alt: ""
+                            }, void 0, false, {
+                                fileName: "components/About.js",
+                                lineNumber: 21,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "components/About.js",
+                        lineNumber: 17,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                         children: [
                             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur. Odio? Magnam asperiores impedit fuga",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 27,
+                                fileName: "components/About.js",
+                                lineNumber: 31,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 28,
+                                fileName: "components/About.js",
+                                lineNumber: 32,
                                 columnNumber: 11
                             }, this),
                             "Repudiandae sunt quaerat, similique minus, velit est laborum fugit nostrum non vel temporibus incidunt ab natus nisi. Ad necessitatibus, nulla reiciendis veniam dolore sapiente alias error?",
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 32,
+                                fileName: "components/About.js",
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                fileName: "About.js",
-                                lineNumber: 33,
+                                fileName: "components/About.js",
+                                lineNumber: 37,
                                 columnNumber: 11
                             }, this),
                             "Tempora aperiam nobis asperiores consequatur cumque, sed nisi perferendis laudantium a odit excepturi quo distinctio incidunt molestiae, dicta quia saepe laborum perspiciatis odio alias aspernatur quis. Quam corrupti error recusandae. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem."
                         ]
                     }, void 0, true, {
-                        fileName: "About.js",
-                        lineNumber: 22,
+                        fileName: "components/About.js",
+                        lineNumber: 26,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "About.js",
-                lineNumber: 15,
+                fileName: "components/About.js",
+                lineNumber: 16,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "About.js",
-        lineNumber: 11,
+        fileName: "components/About.js",
+        lineNumber: 12,
         columnNumber: 5
     }, this);
 }
@@ -27133,16 +27143,112 @@ _c = About;
 var _c;
 $RefreshReg$(_c, "About");
 
-  $parcel$ReactRefreshHelpers$4a55.postlude(module);
+  $parcel$ReactRefreshHelpers$266e.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./about.css":"bgXLg","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"bgXLg":[function() {},{}],"23MUH":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$c69d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./SocialLinks":"7NbfB","../styles/about.css":"iuzf6","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"7NbfB":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d929 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$c69d.prelude(module);
+$parcel$ReactRefreshHelpers$d929.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SocialLinks", ()=>SocialLinks);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _socialLinksCss = require("../styles/social-links.css");
+function SocialLinks() {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "social-icon-links",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                    href: "https://www.linkedin.com/in/jesse-paulsen-71136a132",
+                    target: "_blank",
+                    rel: "noreferrer noopener",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        width: "430.117",
+                        height: "430.117",
+                        viewBox: "0 0 430.117 430.117",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M430.117 261.543V420.56H337.93V272.193c0-37.27-13.335-62.707-46.704-62.707-25.473 0-40.632 17.142-47.3 33.724-2.433 5.928-3.06 14.18-3.06 22.477V420.56H148.65s1.242-251.285 0-277.32h92.21v39.31c-.187.293-.43.61-.606.895h.606v-.896c12.25-18.87 34.13-45.825 83.102-45.825 60.673 0 106.157 39.636 106.157 124.818zM52.183 9.558C20.635 9.558 0 30.25 0 57.463c0 26.62 20.038 47.94 50.96 47.94h.615c32.16 0 52.16-21.317 52.16-47.94-.607-27.212-20-47.905-51.552-47.905zM5.477 420.56H97.66V143.24H5.478v277.32z"
+                        }, void 0, false, {
+                            fileName: "components/SocialLinks.js",
+                            lineNumber: 18,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/SocialLinks.js",
+                        lineNumber: 12,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/SocialLinks.js",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "components/SocialLinks.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                    href: "https://github.com/jesseraypaulsen",
+                    target: "_blank",
+                    rel: "noreferrer noopener",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        width: "438.549",
+                        height: "438.549",
+                        viewBox: "0 0 438.549 438.549",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                            d: "M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736 15.166 259.057 5.365 219.27 5.365c-39.78 0-76.47 9.804-110.062 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.853 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.42-1.996 2.474-2.282 3.71-5.14 3.71-8.562 0-.57-.05-5.708-.144-15.417-.098-9.71-.144-18.18-.144-25.406l-6.567 1.136c-4.187.767-9.47 1.092-15.846 1-6.375-.09-12.992-.757-19.843-2-6.854-1.23-13.23-4.085-19.13-8.558-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.9-9.233-8.992-14.56-4.093-5.33-8.232-8.944-12.42-10.847l-1.998-1.43c-1.332-.952-2.568-2.1-3.71-3.43-1.143-1.33-1.998-2.663-2.57-3.997-.57-1.335-.097-2.43 1.428-3.29 1.525-.858 4.28-1.275 8.28-1.275l5.708.853c3.807.763 8.516 3.042 14.133 6.85 5.615 3.807 10.23 8.755 13.847 14.843 4.38 7.807 9.657 13.755 15.846 17.848 6.184 4.093 12.42 6.136 18.7 6.136 6.28 0 11.703-.476 16.273-1.423 4.565-.95 8.848-2.382 12.847-4.284 1.713-12.758 6.377-22.56 13.988-29.41-10.847-1.14-20.6-2.857-29.263-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.98-3.9-12.373-5.852-26.647-5.852-42.825 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.38-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.284 18.794 7.953 23.84 10.995 5.046 3.04 9.09 5.618 12.135 7.708 17.706-4.947 35.977-7.42 54.82-7.42s37.116 2.473 54.822 7.42l10.85-6.85c7.418-4.57 16.18-8.757 26.26-12.564 10.09-3.806 17.803-4.854 23.135-3.14 8.562 21.51 9.325 40.923 2.28 58.24 15.035 16.18 22.558 35.788 22.558 58.818 0 16.178-1.958 30.497-5.853 42.966-3.9 12.47-8.94 22.457-15.125 29.98-6.19 7.52-13.9 13.85-23.13 18.985-9.233 5.14-18.183 8.85-26.84 11.135-8.663 2.286-18.416 4.004-29.264 5.146 9.894 8.563 14.842 22.078 14.842 40.54v60.237c0 3.422 1.19 6.28 3.572 8.562 2.38 2.278 6.136 2.95 11.276 1.994 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.16 41.826-81.126 41.826-128.906-.01-39.77-9.818-76.454-29.414-110.05z"
+                        }, void 0, false, {
+                            fileName: "components/SocialLinks.js",
+                            lineNumber: 34,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "components/SocialLinks.js",
+                        lineNumber: 28,
+                        columnNumber: 11
+                    }, this)
+                }, void 0, false, {
+                    fileName: "components/SocialLinks.js",
+                    lineNumber: 23,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "components/SocialLinks.js",
+                lineNumber: 22,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "components/SocialLinks.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = SocialLinks;
+var _c;
+$RefreshReg$(_c, "SocialLinks");
+
+  $parcel$ReactRefreshHelpers$d929.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../styles/social-links.css":"jtsTo","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"jtsTo":[function() {},{}],"iuzf6":[function() {},{}],"f1iMA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1e2a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1e2a.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27153,7 +27259,7 @@ var _react = require("react");
 var _textfield = require("@material/textfield");
 var _characterCounter = require("@material/textfield/character-counter");
 var _ripple = require("@material/ripple");
-var _contactCss = require("./contact.css");
+var _contactCss = require("../styles/contact.css");
 var _s = $RefreshSig$();
 function Contact({ callback  }) {
     _s();
@@ -27181,7 +27287,7 @@ function Contact({ callback  }) {
                 className: "mdc-typography--headline2 centered section-title",
                 children: "Contact Me"
             }, void 0, false, {
-                fileName: "Contact.js",
+                fileName: "components/Contact.js",
                 lineNumber: 29,
                 columnNumber: 7
             }, this),
@@ -27189,7 +27295,7 @@ function Contact({ callback  }) {
                 className: "contactText",
                 children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem, commodi esse culpa molestiae ut aspernatur."
             }, void 0, false, {
-                fileName: "Contact.js",
+                fileName: "components/Contact.js",
                 lineNumber: 32,
                 columnNumber: 7
             }, this),
@@ -27205,7 +27311,7 @@ function Contact({ callback  }) {
                                 id: "my-name-field",
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 40,
                                 columnNumber: 11
                             }, this),
@@ -27214,20 +27320,20 @@ function Contact({ callback  }) {
                                 htmlFor: "my-name-field",
                                 children: "Name"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 48,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "Contact.js",
+                        fileName: "components/Contact.js",
                         lineNumber: 39,
                         columnNumber: 9
                     }, this),
@@ -27240,7 +27346,7 @@ function Contact({ callback  }) {
                                 id: "my-email-field",
                                 className: "mdc-text-field__input"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 52,
                                 columnNumber: 11
                             }, this),
@@ -27249,20 +27355,20 @@ function Contact({ callback  }) {
                                 htmlFor: "my-email-field",
                                 children: "Email"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 57,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "mdc-line-ripple"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 60,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "Contact.js",
+                        fileName: "components/Contact.js",
                         lineNumber: 51,
                         columnNumber: 9
                     }, this),
@@ -27275,7 +27381,7 @@ function Contact({ callback  }) {
                                 ref: characterCounter,
                                 children: "0 / 500"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 67,
                                 columnNumber: 11
                             }, this),
@@ -27286,7 +27392,7 @@ function Contact({ callback  }) {
                                 cols: "40",
                                 maxLength: "500"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 73,
                                 columnNumber: 11
                             }, this),
@@ -27296,7 +27402,7 @@ function Contact({ callback  }) {
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "mdc-notched-outline__leading"
                                     }, void 0, false, {
-                                        fileName: "Contact.js",
+                                        fileName: "components/Contact.js",
                                         lineNumber: 81,
                                         columnNumber: 13
                                     }, this),
@@ -27307,31 +27413,31 @@ function Contact({ callback  }) {
                                             className: "mdc-floating-label",
                                             children: "Textarea Label"
                                         }, void 0, false, {
-                                            fileName: "Contact.js",
+                                            fileName: "components/Contact.js",
                                             lineNumber: 83,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
-                                        fileName: "Contact.js",
+                                        fileName: "components/Contact.js",
                                         lineNumber: 82,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         className: "mdc-notched-outline__trailing"
                                     }, void 0, false, {
-                                        fileName: "Contact.js",
+                                        fileName: "components/Contact.js",
                                         lineNumber: 87,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 80,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "Contact.js",
+                        fileName: "components/Contact.js",
                         lineNumber: 63,
                         columnNumber: 9
                     }, this),
@@ -27343,7 +27449,7 @@ function Contact({ callback  }) {
                                 className: "mdc-button__label",
                                 children: "Submit"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 95,
                                 columnNumber: 11
                             }, this),
@@ -27352,25 +27458,25 @@ function Contact({ callback  }) {
                                 "aria-hidden": "true",
                                 children: "favorite"
                             }, void 0, false, {
-                                fileName: "Contact.js",
+                                fileName: "components/Contact.js",
                                 lineNumber: 96,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
-                        fileName: "Contact.js",
+                        fileName: "components/Contact.js",
                         lineNumber: 91,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
-                fileName: "Contact.js",
+                fileName: "components/Contact.js",
                 lineNumber: 38,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
-        fileName: "Contact.js",
+        fileName: "components/Contact.js",
         lineNumber: 28,
         columnNumber: 5
     }, this);
@@ -27380,12 +27486,12 @@ _c = Contact;
 var _c;
 $RefreshReg$(_c, "Contact");
 
-  $parcel$ReactRefreshHelpers$c69d.postlude(module);
+  $parcel$ReactRefreshHelpers$1e2a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@material/textfield":"iAIQW","@material/textfield/character-counter":"8ibHT","@material/ripple":"jRAE3","./contact.css":"gWYIh","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"iAIQW":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@material/textfield":"iAIQW","@material/textfield/character-counter":"8ibHT","@material/ripple":"jRAE3","../styles/contact.css":"azYLw","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"iAIQW":[function(require,module,exports) {
 /**
  * @license
  * Copyright 2019 Google Inc.
@@ -31727,11 +31833,11 @@ parcelHelpers.defineInteropFlag(exports);
  */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq"}],"gWYIh":[function() {},{}],"03vJm":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$76ff = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq"}],"azYLw":[function() {},{}],"iHPLt":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5a9a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$76ff.prelude(module);
+$parcel$ReactRefreshHelpers$5a9a.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -31740,20 +31846,31 @@ parcelHelpers.export(exports, "Project", ()=>Project);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
-var _projectCss = require("./project.css");
+var _projectCss = require("../styles/project.css");
 var _s = $RefreshSig$();
 const data = [
     {
         id: "pkm",
         title: "Personal Knowledge Management System",
         repo: "https://github.com/jesseraypaulsen/nodecards",
-        demo: ""
+        demo: "",
+        images: [
+            "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg",
+            "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png",
+            "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg",
+            "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg",
+            "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg",
+            "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png",
+            "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg",
+            "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg"
+        ]
     },
     {
         id: "ocean",
         title: "Personality Test",
         repo: "https://github.com/jesseraypaulsen/personality-test",
-        demo: ""
+        demo: "",
+        images: []
     }
 ];
 function Project({ callback  }) {
@@ -31779,16 +31896,16 @@ function Project({ callback  }) {
                 className: "mdc-typography--headline4",
                 children: choice.title
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 40,
+                fileName: "components/Project.js",
+                lineNumber: 51,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "mdc-typography--overline",
                 children: "Web Development"
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 41,
+                fileName: "components/Project.js",
+                lineNumber: 52,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -31801,59 +31918,59 @@ function Project({ callback  }) {
                     rel: "noopener",
                     children: "Github repo"
                 }, void 0, false, {
-                    fileName: "Project.js",
-                    lineNumber: 43,
+                    fileName: "components/Project.js",
+                    lineNumber: 54,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 42,
+                fileName: "components/Project.js",
+                lineNumber: 53,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "mdc-typography--body1",
                 children: "Now, take a good look at me! I’m one that has spoken to a King, I am: mayhap you’ll never see such another: and to show you I’m not proud, you may shake hands with me!’ And he grinned almost from ear to ear, as he leant forwards (and as nearly as possible fell off the wall in doing so) and offered Alice his hand. She watched him a little anxiously as she took it."
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 47,
+                fileName: "components/Project.js",
+                lineNumber: 58,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 src: "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers5.jpg?1558558462565",
                 alt: ""
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 55,
+                fileName: "components/Project.js",
+                lineNumber: 66,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "mdc-typography--caption",
                 children: "But the beard seemed to melt away as she touched it, and she found herself sitting quietly under a tree—while the Gnat (for that was the insect she had been talking to) was balancing itself on a twig just over her head, and fanning her with its wings."
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 59,
+                fileName: "components/Project.js",
+                lineNumber: 70,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: "mdc-typography--body1",
                 children: "However, this was anything but a regular bee: in fact it was an elephant—as Alice soon found out, though the idea quite took her breath away at first."
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 65,
+                fileName: "components/Project.js",
+                lineNumber: 76,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                 className: "mdc-image-list mdc-image-list--masonry masonry-image-list imageList",
-                children: outputListOfImages()
+                children: outputListOfImages(choice.images)
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 70,
+                fileName: "components/Project.js",
+                lineNumber: 81,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
-        fileName: "Project.js",
-        lineNumber: 39,
+        fileName: "components/Project.js",
+        lineNumber: 50,
         columnNumber: 7
     }, this);
     else {
@@ -31865,13 +31982,13 @@ function Project({ callback  }) {
                     " is an invalid project id"
                 ]
             }, void 0, true, {
-                fileName: "Project.js",
-                lineNumber: 79,
+                fileName: "components/Project.js",
+                lineNumber: 90,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
-            fileName: "Project.js",
-            lineNumber: 78,
+            fileName: "components/Project.js",
+            lineNumber: 89,
             columnNumber: 7
         }, this);
     }
@@ -31883,41 +32000,32 @@ _s(Project, "PeFtQlQQtB1pGcR3UOmcYg/qUPU=", false, function() {
     ];
 });
 _c = Project;
-function outputListOfImages() {
-    return [
-        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
-        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png?1558558462723",
-        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg?1558558462399",
-        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg?1558558462200",
-        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg?1558558462683",
-        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png?1558558462701",
-        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg?1558558480051",
-        "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507"
-    ].map((url, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+function outputListOfImages(imgList) {
+    return imgList.map((url, i)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
             className: "mdc-image-list__item",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "mdc-image-list__image",
                 src: url,
                 alt: "Text label"
             }, void 0, false, {
-                fileName: "Project.js",
-                lineNumber: 97,
+                fileName: "components/Project.js",
+                lineNumber: 99,
                 columnNumber: 7
             }, this)
         }, void 0, false, {
-            fileName: "Project.js",
-            lineNumber: 96,
+            fileName: "components/Project.js",
+            lineNumber: 98,
             columnNumber: 5
         }, this));
 }
 var _c;
 $RefreshReg$(_c, "Project");
 
-  $parcel$ReactRefreshHelpers$76ff.postlude(module);
+  $parcel$ReactRefreshHelpers$5a9a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./project.css":"ioOt3","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"ioOt3":[function() {},{}],"cvfZG":[function() {},{}],"jenSB":[function() {},{}]},["ckupm","gNHB0","bB7Pu"], "bB7Pu", "parcelRequire2041")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","../styles/project.css":"e96np","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"e96np":[function() {},{}],"cri8N":[function() {},{}],"a6Lwk":[function() {},{}]},["ckupm","gNHB0","bB7Pu"], "bB7Pu", "parcelRequire2041")
 
 //# sourceMappingURL=index.3d214d75.js.map
