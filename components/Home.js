@@ -31,8 +31,7 @@ export function Home({ callback }) {
           <h1
             style={{
               color: "rgba(255,255,255,1.0)",
-              // border: "5px dotted white",
-              paddingBottom: "0.2em",
+              paddingBottom: "0",
             }}
           >
             {" "}
@@ -40,14 +39,19 @@ export function Home({ callback }) {
           </h1>
           <h3
             style={{
-              color: "rgba(255,255,255,1.0)",
-              // border: "2px dotted green",
-              paddingBottom: "0.2em",
+              color: "rgba(255,255,255,.35)",
+              paddingBottom: "2em",
+              paddingLeft: "1em",
             }}
           >
             JavaScript Developer
           </h3>
-          <button onClick={() => navigate("/work")}>See My Work</button>
+          <button
+            onClick={() => navigate("/work")}
+            style={{ alignSelf: "flex-start", marginLeft: "4em" }}
+          >
+            See My Work
+          </button>
         </div>
       </div>
     </div>
