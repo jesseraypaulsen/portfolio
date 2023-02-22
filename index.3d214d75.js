@@ -26752,8 +26752,7 @@ function Home({ callback  }) {
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                             style: {
                                 color: "rgba(255,255,255,1.0)",
-                                // border: "5px dotted white",
-                                paddingBottom: "0.2em"
+                                paddingBottom: "0"
                             },
                             children: [
                                 " ",
@@ -26766,22 +26765,26 @@ function Home({ callback  }) {
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                             style: {
-                                color: "rgba(255,255,255,1.0)",
-                                // border: "2px dotted green",
-                                paddingBottom: "0.2em"
+                                color: "rgba(255,255,255,.35)",
+                                paddingBottom: "2em",
+                                paddingLeft: "1em"
                             },
                             children: "JavaScript Developer"
                         }, void 0, false, {
                             fileName: "components/Home.js",
-                            lineNumber: 41,
+                            lineNumber: 40,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             onClick: ()=>navigate("/work"),
+                            style: {
+                                alignSelf: "flex-start",
+                                marginLeft: "4em"
+                            },
                             children: "See My Work"
                         }, void 0, false, {
                             fileName: "components/Home.js",
-                            lineNumber: 50,
+                            lineNumber: 49,
                             columnNumber: 11
                         }, this)
                     ]
@@ -26816,7 +26819,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/home.css":"5nAqd","../assets/federico-bottos-Z3NceSeZqgI-unsplash.jpg":"1HoiH","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj","react-router-dom":"fdOAw"}],"5nAqd":[function() {},{}],"1HoiH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/home.css":"5nAqd","../assets/federico-bottos-Z3NceSeZqgI-unsplash.jpg":"1HoiH","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"6fPsq","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"jpJJj"}],"5nAqd":[function() {},{}],"1HoiH":[function(require,module,exports) {
 module.exports = require("826420d5f7e8ee81").getBundleURL("UckoE") + "federico-bottos-Z3NceSeZqgI-unsplash.dd7098ad.jpg" + "?" + Date.now();
 
 },{"826420d5f7e8ee81":"gqha7"}],"gqha7":[function(require,module,exports) {
