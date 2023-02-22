@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import "./project.css";
+import "../styles/project.css";
 
 const data = [
   {
@@ -8,12 +8,23 @@ const data = [
     title: "Personal Knowledge Management System",
     repo: "https://github.com/jesseraypaulsen/nodecards",
     demo: "",
+    images: [
+      "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg",
+      "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png",
+      "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg",
+      "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg",
+      "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg",
+      "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png",
+      "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg",
+      "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg",
+    ],
   },
   {
     id: "ocean",
     title: "Personality Test",
     repo: "https://github.com/jesseraypaulsen/personality-test",
     demo: "",
+    images: [],
   },
 ];
 
@@ -68,7 +79,7 @@ export function Project({ callback }) {
           breath away at first.
         </p>
         <ul className="mdc-image-list mdc-image-list--masonry masonry-image-list imageList">
-          {outputListOfImages()}
+          {outputListOfImages(choice.images)}
         </ul>
       </div>
     );
@@ -82,17 +93,8 @@ export function Project({ callback }) {
   }
 }
 
-function outputListOfImages() {
-  return [
-    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg?1558558471249",
-    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png?1558558462723",
-    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers1.jpg?1558558462399",
-    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers7.jpg?1558558462200",
-    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers4.jpg?1558558462683",
-    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers6.png?1558558462701",
-    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers9.jpg?1558558480051",
-    "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507",
-  ].map((url, i) => (
+function outputListOfImages(imgList) {
+  return imgList.map((url, i) => (
     <li className="mdc-image-list__item">
       <img className="mdc-image-list__image" src={url} alt="Text label" />
     </li>

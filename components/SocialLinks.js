@@ -1,48 +1,6 @@
-import { useEffect } from "react";
-import "./home.css";
+import "../styles/social-links.css";
 
-export function Home({ callback }) {
-  useEffect(() => {
-    // 1. set the height of Main based on the height of this div.
-    // 2. scroll to the top of Main.
-    callback();
-  }, []);
-
-  return (
-    <div className="section-home">
-      <div className="jumbotron">
-        <div className="jumbotron__row">
-          {/* <h1 className="font-effect-3d-float">Jesse Paulsen</h1> */}
-          <h1>
-            {" "}
-            <span
-              style={{
-                //fontSize: "4em",
-                fontWeight: "100",
-                color: "rgba(0,0,0,0.08)",
-                //left: "8em",
-                //top: "2em",
-                // position: "absolute",
-              }}
-            >
-              hire
-            </span>{" "}
-            Jesse Paulsen
-          </h1>
-        </div>
-        <div
-          className="jumbotron__row"
-          style={{ justifyContent: "space-between" }}
-        >
-          <div className="my-title">JavaScript Developer</div>
-          <SocialLinks />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function SocialLinks() {
+export function SocialLinks() {
   return (
     <div className="social-icon-links">
       <div>

@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { MDCTextField } from "@material/textfield";
 import { MDCTextFieldCharacterCounter } from "@material/textfield/character-counter";
 import { MDCRipple } from "@material/ripple";
-import "./contact.css";
+import "../styles/contact.css";
 
 export function Contact({ callback }) {
   const nameField = useRef(null);

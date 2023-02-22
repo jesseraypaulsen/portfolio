@@ -5,7 +5,7 @@ import { Contact } from "./Contact";
 import { Project } from "./Project";
 import { Routes, Route } from "react-router-dom";
 import { useRef, useState } from "react";
-import "./main.css";
+import "../styles/main.css";
 
 export function Main() {
   const mainRef = useRef(null);

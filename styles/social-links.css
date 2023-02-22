@@ -1,0 +1,21 @@
+.social-icon-links {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-start; */
+  /* background-color: aliceblue; */
+}
+
+.social-icon-links > div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.social-icon-links > div:first-child {
+  border-right: 0;
+} /* collapsed border. NOTE: if you set the width to a positive value here, then you
+you must also set the style and color values or it will not show. */
+
+.social-icon-links svg {
+  width: 23px;
+  height: 23px;
+}

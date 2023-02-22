@@ -11,6 +11,8 @@ I learned that React Router does not work smoothly with Github Pages. Github Pag
 
 - <span style="color:red">redesign the hero section</span>
 
+  - using a temporary background: prevent tiling, set background size to fill most of the Home component div. Main will already adapt to whatever the height of Home is. So focus on setting the size of Home wrt the background image. Set background width/height to the same as Home's width/height.
+
 - <span style="color:red">snapshots, screencasts for Work > OCEAN, nodecards (desktop)</span>
 
 - make the contact form work
@@ -19,26 +21,9 @@ I learned that React Router does not work smoothly with Github Pages. Github Pag
 
 - after deployment, put up links to live demos on the portfolio
 
----
+<span style="color:green">✔</span><span style="color:green">✔</span><span style="color:green">✔</span><span style="color:green">✔</span><span style="color:green">✔</span><span style="color:green">✔</span><span style="color:green">✔</span><span style="color:green">✔</span><span style="color:green">✔</span><span style="color:green">✔</span>
 
-## Someday/Maybe
+## Done
 
-- what about lifting the states from both Nav and Main up into App? maybe a better structure can start from this.
-
-- nav icons: should light up on hover plus tooltip
-
-## DONE
-
-- animation for transitioning size of Main between nav selections <span style="color:green">✔</span> NOTE: there has to be a better way of doing this, than executing a callback in each section component (passed down from Main).
-
-- bug: if you refresh the page at any point after having selected a section from the menu, the content corresponding to the selected menu item is still displayed and the arrow points to the Home icon. At the very least the arrow should reflect the selected section. Because the Refresh stays at the same URL, and the URL bar drives the main application logic through the Hash Router. Ie, React renders what the URL bar tells it to render. It renders different sections in Main. But the big arrow always starts at Home when the browser refreshes, indepedent of URL. So we need to set the big arrow's initial state to the state of the URL bar. <span style="color:green">✔</span>
-
-- also in Work > Ocean, nodecards -- put in github repo links so we can see each projects README.md with its respective todos list <span style="color:green">✔</span>
-
-  - the Project component needs to render different things for OCEAN test vs nodecards. currently there's no way to distinguish them. The Work component needs 2 datasets that it can decide on before passing the selected data down to Project. <span style="color:green">✔</span>
-
-- bug: background <span style="color:green">✔</span>
-- <s>Main component min-height: 50em; <span style="color:green">✔</span></s>
-
-- <s>jumbotron: push the two rows to the very top and very bottom, letting middle space expand to fill jumbotron's Main container now that its min-height: 50em.</s>
-  - UPDATE: tried turning Main into a flexbox with flex-direction:row. This caused jumbotron to expand and fill Main. Then setting justify-content:space-between on Jumbotron, created the desired effect. However, it broke the layouts in the other sections. So how do we create this effect in a different way? Or is this even an important thing to pursue right now? The parent task, "redesign the hero section," is the larger aim. Looking at the original Hero section from the template this portfolio was largely inspired by, the shifting height of Main is not a bad thing, so long as you have a <span style="background-color:yellow;color:black;">transition animation</span>.
+- fix: if there's a browser refresh after navigating to any section other than Home, the big arrow should point to the icon based on location bar data. the solution entailed simplifying Nav so that it no longer requires storing an extra string in useState. instead it invokes the useLocation hook.
+- feature: height transition effect

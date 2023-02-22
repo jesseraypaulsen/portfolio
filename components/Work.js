@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
-import "./work.css";
+import "../styles/work.css";
 
 export function Work({ callback }) {
   useEffect(() => {
@@ -23,9 +23,9 @@ export function Work({ callback }) {
               alt=""
             />
             <div className="cardContent">
-              {/*<h3 className="mdc-typography mdc-typography--overline cardCategory">
+              <h3 className="mdc-typography mdc-typography--overline cardCategory">
                 Web Application
-              </h3>*/}
+              </h3>
               <h2 className="mdc-typography mdc-typography--headline6 cardTitle">
                 Personal Knowledge Management System
               </h2>
@@ -47,9 +47,9 @@ export function Work({ callback }) {
               alt=""
             />
             <div className="cardContent">
-              {/*<h3 className="mdc-typography mdc-typography--overline cardCategory">
+              <h3 className="mdc-typography mdc-typography--overline cardCategory">
                 Web Application
-              </h3>*/}
+              </h3>
               <h2 className="mdc-typography mdc-typography--headline6 cardTitle">
                 Personality Test
               </h2>
