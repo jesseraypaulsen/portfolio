@@ -46,12 +46,20 @@ export function Home({ callback }) {
           >
             JavaScript Developer
           </h3>
-          <button
+          <span
             onClick={() => navigate("/work")}
-            style={{ alignSelf: "flex-start", marginLeft: "4em" }}
+            style={{
+              alignSelf: "flex-start",
+              marginLeft: "4em",
+              border: "solid 2px #fff",
+              color: "rgba(255,255,255,1.0)",
+              padding: "1em",
+              borderRadius: "1em",
+              cursor: "pointer",
+            }}
           >
             See My Work
-          </button>
+          </span>
         </div>
       </div>
     </div>
