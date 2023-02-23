@@ -7,7 +7,7 @@ const data = [
     id: "pkm",
     title: "Personal Knowledge Management System",
     repo: "https://github.com/jesseraypaulsen/nodecards",
-    demo: "",
+    demo: "https://nodecards-git-main-jesseraypaulsen.vercel.app/",
     images: [
       "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers8.jpg",
       "https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers2.png",
@@ -23,7 +23,7 @@ const data = [
     id: "ocean",
     title: "Personality Test",
     repo: "https://github.com/jesseraypaulsen/personality-test",
-    demo: "",
+    demo: "https://personality-test-beta.vercel.app/",
     images: [],
   },
 ];
@@ -53,6 +53,11 @@ export function Project({ callback }) {
         <p style={{ marginBottom: "1em" }}>
           <a href={choice.repo} target="_blank" rel="noopener">
             Github repo
+          </a>
+        </p>
+        <p style={{ marginBottom: "1em" }}>
+          <a href={choice.demo} target="_blank" rel="noopener">
+            Live Demo
           </a>
         </p>
         <p className="mdc-typography--body1">
