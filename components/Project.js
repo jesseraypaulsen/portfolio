@@ -5,7 +5,7 @@ import "../styles/project.css";
 const data = [
   {
     id: "pkm",
-    title: "Personal Knowledge Management System",
+    title: "Nodecards",
     repo: "https://github.com/jesseraypaulsen/nodecards",
     demo: "https://nodecards-git-main-jesseraypaulsen.vercel.app/",
     images: [

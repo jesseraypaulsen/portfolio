@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import "../styles/work.css";
+//import pkmScreencast from "../assets/pkm-screencast.mp4";
+//const pkmScreencast = new URL("../assets/pkm-screencast.webm", import.meta.url);
+const pkmScreencast = new URL("../assets/pkm-screencast.mp4", import.meta.url);
 
 export function Work({ callback }) {
   useEffect(() => {
@@ -18,20 +21,30 @@ export function Work({ callback }) {
             className="mdc-card__primary-action"
             tabIndex="0"
           >
-            <img
+            {/* <img
               src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fflowers3.jpg?1558559904507"
               alt=""
-            />
+            /> */}
+            <video
+              src={pkmScreencast}
+              height="100%"
+              width="100%"
+              autoPlay
+              muted
+              loop
+            ></video>
             <div className="cardContent">
               <h3 className="mdc-typography mdc-typography--overline cardCategory">
                 Web Application
               </h3>
               <h2 className="mdc-typography mdc-typography--headline6 cardTitle">
-                Personal Knowledge Management System
+                Nodecards
               </h2>
               <div className="demo-card__secondary mdc-typography mdc-typography--body2">
-                A Unique Application. Inspired by Memex and the Zettelkasten.
-                Renders notecards as nodes on a graph.
+                It extends a web-based graph renderer, and transforms it into a
+                personal knowledge management system, where nodes become
+                notecards that are distributed over 2d space and connected to
+                each other with visible links.
               </div>
             </div>
           </Link>
