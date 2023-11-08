@@ -1,26 +1,59 @@
-/* Work.js */
-.cardContent {
-  padding: 16px;
+.cardList {
+  display: flex;
+  flex-direction: column;
 }
 
-.cardCategory {
-  margin: 0;
+.cardContent {
+  padding: 1.6em;
 }
 
 .cardTitle {
   margin: 0 0 16px;
-}
-
-.cardList {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0 auto -16px;
-  max-width: 1200px;
+  font-family: "Patua One", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.0125em;
+  font-weight: 500;
 }
 
 .card {
-  flex: 1;
-  flex-basis: 400px;
-  margin: 0 16px 16px 0;
+  display: flex;
+  margin: 0 0.5em 1.2em 0.5em;
+  color: #898989;
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 0.85rem;
+  border-radius: 0.3em;
+  box-shadow:
+    0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  /* padding: 1em; */
 }
+
+.external-links {
+  display: flex;
+  justify-content: flex-start;
+  /* padding: 1.6em; */
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.external-links > span {
+  padding: 0.3rem;
+}
+
+span a {
+  text-decoration: none;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+span.demo a,
+a:visited {
+  color: blue;
+}
+
+span.github a,
+a:visited {
+  color: green;
+}
+

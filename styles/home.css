@@ -3,13 +3,15 @@
   flex-direction: row;
   /* padding: 2.5em; */
   margin: 0 auto;
-  background-color: #ebebeb;
+  /* background-color: #ebebeb; */
   justify-content: space-between;
+  min-height: 40em;
 }
 
-/* .jumbotron .jumbotron__row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: solid 3px white;
-} */
+.jumbotron .cover-image {
+  /* max-width: 70em; */
+  margin-left: 181.5%;
+  /* position: absolute;
+  left: 50%; */
+  height: 40em;
+}

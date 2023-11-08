@@ -1,27 +1,32 @@
 nav {
   padding-top: 1.5em;
-  text-align: center;
+  /* text-align: center; */
+  /* border: 1px solid black; */
+  /* margin-left: 48em; */
+  margin: auto;
+  max-width: 33em;
+  position: relative;
 }
 
 .nav-item {
   position: relative;
-  padding: 0 .3em;
+  padding: 0 0.3em;
   text-decoration: none;
 }
 
 /* https://css-tricks.com/snippets/css/css-triangle */
 .nav-item::after {
-    display: block;
-    content: "";
-    position: absolute;
-    border-bottom: solid 0 #fff;
-    border-left: solid 0.5em transparent;
-    border-right: solid 0.5em transparent;
-    bottom: -0.75em;
-    -moz-transition: border-bottom-width .25s ease-in-out;
-    -webkit-transition: border-bottom-width .25s ease-in-out;
-    -ms-transition: border-bottom-width .25s ease-in-out;
-    transition: border-bottom-width .25s ease-in-out;
+  display: block;
+  content: "";
+  position: absolute;
+  border-bottom: solid 0 #fff;
+  border-left: solid 0.5em transparent;
+  border-right: solid 0.5em transparent;
+  bottom: -0.75em;
+  -moz-transition: border-bottom-width 0.25s ease-in-out;
+  -webkit-transition: border-bottom-width 0.25s ease-in-out;
+  -ms-transition: border-bottom-width 0.25s ease-in-out;
+  transition: border-bottom-width 0.25s ease-in-out;
 }
 
 .nav-item.active::after {

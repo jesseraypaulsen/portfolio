@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { SocialLinks } from "./SocialLinks";
 import "../styles/about.css";
+import picture from "../assets/from-pic-sum-but-kinda-lookalike-me.jpg";
 
 export function About({ callback }) {
   useEffect(() => {
@@ -10,18 +11,13 @@ export function About({ callback }) {
   }, []);
   return (
     <div className="section-about">
-      <h1 className="mdc-typography--headline2 centered section-title">
-        About Me
-      </h1>
+
       <div className="aboutMe">
         <figure className="selfPortrait">
           <p>
             <SocialLinks />
           </p>
-          <img
-            src="https://cdn.glitch.com/31357884-a11a-4a7b-9fe5-0322583e8062%2Fbarcelona1.jpg?1558558467346"
-            alt=""
-          />
+          <img src={picture} />
         </figure>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta

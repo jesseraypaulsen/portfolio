@@ -1,7 +1,7 @@
 /* About.js */
 .aboutMe {
   display: flex;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   align-items: center;
   flex-direction: column;
@@ -17,4 +17,8 @@
 
 .aboutMe > * {
   flex: 1;
+}
+
+.section-about {
+  padding: 2em;
 }

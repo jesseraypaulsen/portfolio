@@ -9,5 +9,5 @@ ReactDOM.render(
   <HashRouter>
     <App />
   </HashRouter>,
-  container
+  container,
 );

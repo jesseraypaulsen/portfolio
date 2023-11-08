@@ -4,7 +4,9 @@ import "../styles/nav.css";
 export function Nav() {
   const loc = useLocation();
   return (
+    <>
     <nav>
+      {/* <span style={{display:"inline-block", backgroundColor: "yellow"}}>Jesse Paulsen</span> */}
       <Link
         aria-label="home"
         to="/"
@@ -14,7 +16,7 @@ export function Nav() {
       >
         home
       </Link>
-      <Link
+      {/* <Link
         aria-label="work"
         to="/work"
         className={`nav-item material-icons md-48 md-light ${
@@ -24,7 +26,7 @@ export function Nav() {
         }`}
       >
         work
-      </Link>
+      </Link> */}
       <Link
         aria-label="about"
         to="/about"
@@ -34,7 +36,7 @@ export function Nav() {
       >
         info
       </Link>
-      <Link
+      {/* <Link
         aria-label="contact"
         to="/contact"
         className={`nav-item material-icons md-48 md-light ${
@@ -42,7 +44,11 @@ export function Nav() {
         }`}
       >
         email
-      </Link>
+      </Link> */}
+            <span style={{display:"inline-block", backgroundColor: "yellow", fontFamily: "'Abril Fatface', serif", fontSize: "2em", position: "absolute", top: "1em", right: ".5em"}}>Jesse Paulsen</span>
+            <span style={{display:"inline-block", backgroundColor: "cyan", fontFamily: "'Rancho', serif", fontSize: "1em", position: "absolute", top: ".5em", right: ".5em", padding: ".3em"}}>Web Development Professional</span>
+
     </nav>
+    </>
   );
 }

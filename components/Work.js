@@ -13,7 +13,9 @@ export function Work({ callback }) {
   }, []);
   return (
     <div className="section-work">
-      <h1 className="mdc-typography--headline2 centered section-title">Work</h1>
+      <h1 className="mdc-typography--headline2 centered section-title">
+        Jesse Paulsen
+      </h1>
       <ul className="cardList">
         <li className="mdc-card card">
           <Link
@@ -41,10 +43,10 @@ export function Work({ callback }) {
                 Nodecards
               </h2>
               <div className="demo-card__secondary mdc-typography mdc-typography--body2">
-                It extends a web-based graph renderer, and transforms it into a
-                personal knowledge management system, where nodes become
-                notecards that are distributed over 2d space and connected to
-                each other with visible links.
+                This application re-purposes a graph rendering library into a
+                tiny personal knowledge management system, where nodes become
+                notecards distributed over 2-D space and connected to each other
+                with visible links.
               </div>
             </div>
           </Link>
