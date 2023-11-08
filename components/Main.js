@@ -28,10 +28,10 @@ export function Main() {
         "mainRef.current.firstElementChild.clientHeight ",
         mainRef.current.firstElementChild.clientHeight,
       );
-    }, 50); // delay for the work section, otherwise height is wrong
+    }, 500); // delay for the work section, otherwise height is wrong
   };
   return (
-    <div className="main" ref={mainRef} style={{ height }}>
+    <div className="main" ref={mainRef} style={{ height, overflow: "hidden" }}>
       <Routes>
         <Route path="/" element={<Home callback={doStuff} />} />
         <Route path="work" element={<Work callback={doStuff} />} />
