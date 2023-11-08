@@ -45,8 +45,8 @@ export function Nav() {
       >
         email
       </Link> */}
-            <span style={{display:"inline-block", backgroundColor: "yellow", fontFamily: "'Abril Fatface', serif", fontSize: "2em", position: "absolute", top: "1em", right: ".5em"}}>Jesse Paulsen</span>
-            <span style={{display:"inline-block", backgroundColor: "cyan", fontFamily: "'Rancho', serif", fontSize: "1em", position: "absolute", top: ".5em", right: ".5em", padding: ".3em"}}>Web Development Professional</span>
+            <span style={{display:"inline-block", backgroundColor: "yellow", fontFamily: "'Abril Fatface', serif", fontSize: "2em", position: "absolute", top: "1.6em", right: ".5em"}}>Jesse Paulsen</span>
+            <span style={{display:"inline-block", backgroundColor: "cyan", fontFamily: "'Rancho', serif", fontSize: "1em", position: "absolute", top: "1.7em", right: ".5em", padding: ".3em"}}>Web Development Professional</span>
 
     </nav>
     </>
