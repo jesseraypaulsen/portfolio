@@ -17,18 +17,14 @@ export function Main() {
      component and apply it to all sub-components. But HashRouter and useLocation do not work 
      together. */
     mainRef.current.scrollTo(0, 0);
-
+    setHeight(mainRef.current.firstElementChild.clientHeight + "px");
     /* explicitly change the height of Main based on the height of the currently rendered section, so that 
     the height transition animation will work */
-    setTimeout(() => {
-      // setHeight(mainRef.current.firstElementChild.clientHeight + 50 + "px");
-      setHeight(mainRef.current.firstElementChild.clientHeight + "px");
+    // setTimeout(() => {
+    //   // setHeight(mainRef.current.firstElementChild.clientHeight + 50 + "px");
+    //   setHeight(mainRef.current.firstElementChild.clientHeight + "px");
 
-      console.log(
-        "mainRef.current.firstElementChild.clientHeight ",
-        mainRef.current.firstElementChild.clientHeight,
-      );
-    }, 500); // delay for the work section, otherwise height is wrong
+    // }, 500); // delay for the work section, otherwise height is wrong
   };
   return (
     <div className="main" ref={mainRef} style={{ height, overflow: "hidden" }}>

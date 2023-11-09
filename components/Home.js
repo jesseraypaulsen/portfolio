@@ -1,25 +1,25 @@
-import { useEffect } from "react";
+//import { useEffect } from "react";
 import "../styles/work.css";
 import { ExternalLinks } from "./ExternalLinks"
 
 export function Home({ callback }) {
-  useEffect(() => {
-    // 1. set the height of Main based on the height of this div.
-    // 2. scroll to the top of Main.
-    callback();
-  }, []);
+  // useEffect(() => {
+  //   // 1. set the height of Main based on the height of this div.
+  //   // 2. scroll to the top of Main.
+  //   callback();
+  // }, []);
   return (
     <div>
       <h3 style={{padding: "1rem",   fontFamily: "Verdana, sans-serif", color: "lightgrey"
 }}>
         Projects
         </h3>
-      {/* <h1 style={{padding:"1rem", marginLeft: "auto", width: "5em"}}>Jesse Paulsen</h1> */}
 
       <ul className="cardList">
 
         <li className="card">
 
+          <img src="https://picsum.photos/200/100" style={{ aspectRatio: "auto"}} onLoad={() => callback()}/>
           <div className="cardContent">
 
             <h2 className="cardTitle">
@@ -35,14 +35,9 @@ export function Home({ callback }) {
             </p>
               
 <ExternalLinks demo="https://nodecards-git-main-jesseraypaulsen.vercel.app/" code="nodecards" />
-
-
-
-
           </div>
           
 
-            <img src="https://picsum.photos/200/200"/>
             
 
           
@@ -51,14 +46,15 @@ export function Home({ callback }) {
 
         <li className="card">
           
-            <img src="https://picsum.photos/200/200"/>
+            <img src="https://picsum.photos/200/100"/>
           
 
           <div className="cardContent">
-
-            <h2 className="cardTitle">
-              Personality Test
-            </h2>
+            <div>
+              <h2 className="cardTitle">
+                Personality Test
+              </h2>
+            </div>
 
             <div>
 
@@ -66,11 +62,11 @@ export function Home({ callback }) {
                 A Personality Test that evaluates for the Big 5 traits of Openness, Conscientiousness, Extraversion, 
                 Agreeableness, Neuroticism.
               </p>
-            <ExternalLinks demo="https://personality-test-beta.vercel.app/" code="personality-test" />
             
 
             </div>
 
+            <ExternalLinks demo="https://personality-test-beta.vercel.app/" code="personality-test" />
           </div>
 
 

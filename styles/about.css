@@ -7,18 +7,16 @@
   flex-direction: column;
 }
 
-.aboutMe figure {
-  margin: 0;
-}
 
 .aboutMe img {
   width: 100%;
+  margin-bottom: 2em;
 }
 
 .aboutMe > * {
-  flex: 1;
+  /* flex: 1; */
 }
 
 .section-about {
-  padding: 2em;
+  padding: 1.5em;
 }
