@@ -5,12 +5,6 @@ import picture from "../assets/from-pic-sum-but-kinda-lookalike-me.jpg";
 
 export function About({ callback }) {
 
-  // useEffect(() => {
-  //   // 1. set the height of Main based on the height of this div.
-  //   // 2. scroll to the top of Main.
-  //   callback();
-  // }, []);
-  
   return (
     <div className="section-about">
 

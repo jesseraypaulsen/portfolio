@@ -1,18 +1,30 @@
-//import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/work.css";
 import { ExternalLinks } from "./ExternalLinks"
 
 export function Home({ callback }) {
-  // useEffect(() => {
-  //   // 1. set the height of Main based on the height of this div.
-  //   // 2. scroll to the top of Main.
-  //   callback();
-  // }, []);
+
+  const [imagesLoaded, setImagesLoaded] = useState([])
+  
+  const imageLoaded = () => {
+    setImagesLoaded((prev) => [
+      ...prev,
+      true
+    ])
+  }
+
+  useEffect(() => {
+    
+    // wait until both images have loaded before sizing the container in Main
+    if (imagesLoaded.length == 2) callback();
+
+  }, [imagesLoaded])
+  
+
   return (
     <div>
-      <h3 style={{padding: "1rem",   fontFamily: "Verdana, sans-serif", color: "lightgrey"
-}}>
-        Projects
+      <h3 style={{padding: "1rem",   fontFamily: "Verdana, sans-serif", color: "lightgrey" }}>
+        Projects 
         </h3>
 
       <ul className="cardList">
@@ -20,6 +32,7 @@ export function Home({ callback }) {
         <li className="card">
 
           <img src="https://picsum.photos/200/100" style={{ aspectRatio: "auto"}} onLoad={() => callback()}/>
+
           <div className="cardContent">
 
             <h2 className="cardTitle">
@@ -34,7 +47,7 @@ export function Home({ callback }) {
               
             </p>
               
-<ExternalLinks demo="https://nodecards-git-main-jesseraypaulsen.vercel.app/" code="nodecards" />
+            <ExternalLinks demo="https://nodecards-git-main-jesseraypaulsen.vercel.app/" code="nodecards" />
           </div>
           
 
@@ -46,7 +59,7 @@ export function Home({ callback }) {
 
         <li className="card">
           
-            <img src="https://picsum.photos/200/100"/>
+            <img src="https://picsum.photos/200/100" onLoad={() => imageLoaded()}/>
           
 
           <div className="cardContent">

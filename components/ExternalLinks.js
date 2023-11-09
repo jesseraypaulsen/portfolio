@@ -1,7 +1,7 @@
 export const ExternalLinks = ({demo, code}) => {
   return <div class="external-links">
 
-<span class="github">
+<span className="github">
 
   <a href={`https://github.com/jesseraypaulsen/${code}`} target="_blank" rel="noopener">
   Github <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
@@ -11,7 +11,7 @@ export const ExternalLinks = ({demo, code}) => {
 
 </span>
 
-<span class="demo">
+<span className="demo">
 
   <a href={demo} target="_blank" rel="noopener">
   Demo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">

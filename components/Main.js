@@ -16,18 +16,20 @@ export function Main() {
      Solutions on stackoverflow all rely on useLocation to call scrollTo once in the parent 
      component and apply it to all sub-components. But HashRouter and useLocation do not work 
      together. */
+
     mainRef.current.scrollTo(0, 0);
+
     setHeight(mainRef.current.firstElementChild.clientHeight + "px");
+
     /* explicitly change the height of Main based on the height of the currently rendered section, so that 
     the height transition animation will work */
     // setTimeout(() => {
-    //   // setHeight(mainRef.current.firstElementChild.clientHeight + 50 + "px");
     //   setHeight(mainRef.current.firstElementChild.clientHeight + "px");
-
     // }, 500); // delay for the work section, otherwise height is wrong
   };
   return (
     <div className="main" ref={mainRef} style={{ height, overflow: "hidden" }}>
+
       <Routes>
         <Route path="/" element={<Home callback={doStuff} />} />
         <Route path="work" element={<Work callback={doStuff} />} />
