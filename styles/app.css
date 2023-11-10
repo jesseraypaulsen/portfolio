@@ -1,0 +1,10 @@
+.loading {
+  display: block;
+  max-width: 36rem;
+  margin: 5rem auto;
+  text-align: center;
+}
+
+.loaded {
+  display: none;
+}

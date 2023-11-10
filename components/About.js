@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { SocialLinks } from "./SocialLinks";
 import "../styles/about.css";
 import picture from "../assets/from-pic-sum-but-kinda-lookalike-me.jpg";

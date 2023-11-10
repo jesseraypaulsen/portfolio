@@ -7,6 +7,7 @@ export function Home({ callback }) {
   const [imagesLoaded, setImagesLoaded] = useState([])
   
   const imageLoaded = () => {
+
     setImagesLoaded((prev) => [
       ...prev,
       true
@@ -22,7 +23,7 @@ export function Home({ callback }) {
   
 
   return (
-    <div>
+    <div style={{opacity:"1"}}>
       <h3 style={{padding: "1rem",   fontFamily: "Verdana, sans-serif", color: "lightgrey" }}>
         Projects 
         </h3>
@@ -31,7 +32,7 @@ export function Home({ callback }) {
 
         <li className="card">
 
-          <img src="https://picsum.photos/200/100" style={{ aspectRatio: "auto"}} onLoad={() => callback()}/>
+          <img src="https://picsum.photos/200/100" style={{ aspectRatio: "auto"}} onLoad={() => imageLoaded()}/>
 
           <div className="cardContent">
 
@@ -48,18 +49,14 @@ export function Home({ callback }) {
             </p>
               
             <ExternalLinks demo="https://nodecards-git-main-jesseraypaulsen.vercel.app/" code="nodecards" />
+
           </div>
-          
-
-            
-
-          
         
         </li>
 
         <li className="card">
           
-            <img src="https://picsum.photos/200/100" onLoad={() => imageLoaded()}/>
+          <img src="https://picsum.photos/200/100" onLoad={() => imageLoaded()}/>
           
 
           <div className="cardContent">
@@ -80,6 +77,7 @@ export function Home({ callback }) {
             </div>
 
             <ExternalLinks demo="https://personality-test-beta.vercel.app/" code="personality-test" />
+
           </div>
 
 

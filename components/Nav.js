@@ -1,12 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import "../styles/nav.css";
 
-export function Nav() {
+export function Nav({ loadStatus }) {
   const loc = useLocation();
   return (
     <>
     <nav>
-      {/* <span style={{display:"inline-block", backgroundColor: "yellow"}}>Jesse Paulsen</span> */}
       <Link
         aria-label="home"
         to="/"
