@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "../styles/nav.css";
 
-export function Nav({ loadStatus }) {
+export function Nav() {
   const loc = useLocation();
   return (
     <>

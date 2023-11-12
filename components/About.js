@@ -1,15 +1,40 @@
 import { SocialLinks } from "./SocialLinks";
 import "../styles/about.css";
-import picture from "../assets/from-pic-sum-but-kinda-lookalike-me.jpg";
+import me from "../assets/from-pic-sum-but-kinda-lookalike-me.jpg";
+import { useState, useEffect } from 'react';
 
-export function About({ callback }) {
+export function About({ doStuff, setAboutImageFlag, aboutImageLoaded }) {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  const [opacity, setOpacity] = useState("0")
+
+  const effects = () => {
+
+    doStuff();
+
+    setTimeout(() => {
+      setOpacity("1")
+    }, 500)
+
+  }
+
+  useEffect(() => {
+    setAboutImageFlag()
+    effects()
+  }, [imageLoaded])
+
+  useEffect(() => {
+
+    if (aboutImageLoaded) effects();
+
+  }, [])
+
 
   return (
-    <div className="section-about">
+    <div className="section-about" style={{ opacity, transition: "opacity 0.25s ease-in-out" }}>
 
       <div className="aboutMe">
 
-        <img src={picture} onLoad={callback()}/>
+        <img src={me} onLoad={() => setImageLoaded(true)}/>
         
         <p>
           Hello I'm Jesse. Thank you for your time and consideration.

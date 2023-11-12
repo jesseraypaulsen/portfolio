@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import "../styles/work.css";
 import { ExternalLinks } from "./ExternalLinks"
+import firstProject from "../assets/204-200x100.jpg"
+import secondProject from "../assets/350-200x100.jpg"
 
-export function Home({ callback }) {
+export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
 
   const [imagesLoaded, setImagesLoaded] = useState([])
+  const [opacity, setOpacity] = useState("0")
   
   const imageLoaded = () => {
 
@@ -14,16 +17,36 @@ export function Home({ callback }) {
     ])
   }
 
+  const effects = () => {
+
+    doStuff()
+
+    setTimeout(() => {
+      setOpacity('1')
+    }, 500)
+
+  }
+
   useEffect(() => {
     
     // wait until both images have loaded before sizing the container in Main
-    if (imagesLoaded.length == 2) callback();
+    if (imagesLoaded.length == 2) {
+      setHomeImagesFlag()
+    }
 
   }, [imagesLoaded])
+
+  useEffect(() => {
+    if (homeImagesLoaded) effects()
+  }, [])
+
+  useEffect(() => {
+    effects()
+  }, [homeImagesLoaded])
   
 
   return (
-    <div style={{opacity:"1"}}>
+    <div style={{ opacity, transition: "opacity 0.25s ease-in-out" }}>
       <h3 style={{padding: "1rem",   fontFamily: "Verdana, sans-serif", color: "lightgrey" }}>
         Projects 
         </h3>
@@ -32,7 +55,7 @@ export function Home({ callback }) {
 
         <li className="card">
 
-          <img src="https://picsum.photos/200/100" style={{ aspectRatio: "auto"}} onLoad={() => imageLoaded()}/>
+          <img src={firstProject} style={{ aspectRatio: "auto"}} onLoad={() => imageLoaded()}/>
 
           <div className="cardContent">
 
@@ -56,7 +79,7 @@ export function Home({ callback }) {
 
         <li className="card">
           
-          <img src="https://picsum.photos/200/100" onLoad={() => imageLoaded()}/>
+          <img src={secondProject} onLoad={() => imageLoaded()}/>
           
 
           <div className="cardContent">
