@@ -26364,6 +26364,7 @@ parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _nav = require("./Nav");
 var _main = require("./Main");
+var _loading = require("./Loading");
 var _react = require("react");
 var _appCss = require("../styles/app.css");
 var _s = $RefreshSig$();
@@ -26381,7 +26382,7 @@ function App() {
         children: [
             homeImagesLoaded || aboutImageLoaded ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _nav.Nav), {}, void 0, false, {
                 fileName: "components/App.js",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 47
             }, this) : null,
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _main.Main), {
@@ -26391,15 +26392,19 @@ function App() {
                 aboutImageLoaded: aboutImageLoaded
             }, void 0, false, {
                 fileName: "components/App.js",
-                lineNumber: 22,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: homeImagesLoaded || aboutImageLoaded ? "loaded" : "loading",
-                children: "Loading..."
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _loading.Loading), {}, void 0, false, {
+                    fileName: "components/App.js",
+                    lineNumber: 29,
+                    columnNumber: 84
+                }, this)
             }, void 0, false, {
                 fileName: "components/App.js",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 7
             }, this)
         ]
@@ -26415,7 +26420,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./Nav":"2qGmX","./Main":"fq5nN","react":"21dqq","../styles/app.css":"dGOV4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2qGmX":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./Nav":"2qGmX","./Main":"fq5nN","react":"21dqq","../styles/app.css":"dGOV4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Loading":"3igNh"}],"2qGmX":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2fc3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -26750,6 +26755,7 @@ var _204200X100Jpg = require("../assets/204-200x100.jpg");
 var _204200X100JpgDefault = parcelHelpers.interopDefault(_204200X100Jpg);
 var _350200X100Jpg = require("../assets/350-200x100.jpg");
 var _350200X100JpgDefault = parcelHelpers.interopDefault(_350200X100Jpg);
+var _loading = require("./Loading");
 var _s = $RefreshSig$();
 function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
     _s();
@@ -26796,7 +26802,7 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                 children: "Projects"
             }, void 0, false, {
                 fileName: "components/Home.js",
-                lineNumber: 50,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -26813,7 +26819,7 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                 onLoad: ()=>imageLoaded()
                             }, void 0, false, {
                                 fileName: "components/Home.js",
-                                lineNumber: 58,
+                                lineNumber: 59,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26824,7 +26830,7 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                         children: "Nodecards"
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 62,
+                                        lineNumber: 63,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -26840,14 +26846,14 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                                 children: "XState"
                                             }, void 0, false, {
                                                 fileName: "components/Home.js",
-                                                lineNumber: 70,
+                                                lineNumber: 71,
                                                 columnNumber: 64
                                             }, this),
                                             "."
                                         ]
                                     }, void 0, true, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 66,
+                                        lineNumber: 67,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _externalLinks.ExternalLinks), {
@@ -26855,19 +26861,19 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                         code: "nodecards"
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 74,
+                                        lineNumber: 75,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "components/Home.js",
-                                lineNumber: 60,
+                                lineNumber: 61,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/Home.js",
-                        lineNumber: 56,
+                        lineNumber: 57,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -26878,7 +26884,7 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                 onLoad: ()=>imageLoaded()
                             }, void 0, false, {
                                 fileName: "components/Home.js",
-                                lineNumber: 82,
+                                lineNumber: 83,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26890,12 +26896,12 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                             children: "Personality Test"
                                         }, void 0, false, {
                                             fileName: "components/Home.js",
-                                            lineNumber: 87,
+                                            lineNumber: 88,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 86,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26903,12 +26909,12 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                             children: "A Personality Test that evaluates for the Big 5 traits of Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism."
                                         }, void 0, false, {
                                             fileName: "components/Home.js",
-                                            lineNumber: 94,
+                                            lineNumber: 95,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 92,
+                                        lineNumber: 93,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _externalLinks.ExternalLinks), {
@@ -26916,31 +26922,31 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                         code: "personality-test"
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 102,
+                                        lineNumber: 103,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "components/Home.js",
-                                lineNumber: 85,
+                                lineNumber: 86,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/Home.js",
-                        lineNumber: 80,
+                        lineNumber: 81,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/Home.js",
-                lineNumber: 54,
+                lineNumber: 55,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/Home.js",
-        lineNumber: 49,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }
@@ -26954,7 +26960,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/work.css":"ivoq4","./ExternalLinks":"78jpU","../assets/204-200x100.jpg":"8hLnN","../assets/350-200x100.jpg":"4WRTC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ivoq4":[function() {},{}],"78jpU":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/work.css":"ivoq4","./ExternalLinks":"78jpU","../assets/204-200x100.jpg":"8hLnN","../assets/350-200x100.jpg":"4WRTC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Loading":"3igNh"}],"ivoq4":[function() {},{}],"78jpU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ee2f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27104,7 +27110,97 @@ exports.getOrigin = getOrigin;
 },{}],"4WRTC":[function(require,module,exports) {
 module.exports = require("894654d8d2bca863").getBundleURL("UckoE") + "350-200x100.2c5b24b9.jpg" + "?" + Date.now();
 
-},{"894654d8d2bca863":"lgJ39"}],"hGILx":[function(require,module,exports) {
+},{"894654d8d2bca863":"lgJ39"}],"3igNh":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b77e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b77e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Loading", ()=>Loading);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _loadingCss = require("../styles/loading.css");
+const Loading = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        class: "lds-spinner",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 8,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 9,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 10,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 11,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 12,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 13,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 14,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 15,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 16,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 17,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 18,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 19,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "components/Loading.js",
+        lineNumber: 7,
+        columnNumber: 3
+    }, undefined);
+_c = Loading;
+var _c;
+$RefreshReg$(_c, "Loading");
+
+  $parcel$ReactRefreshHelpers$b77e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../styles/loading.css":"4l6Nn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4l6Nn":[function() {},{}],"hGILx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$266e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
