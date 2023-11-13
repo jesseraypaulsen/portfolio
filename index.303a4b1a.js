@@ -191,51 +191,6 @@ n.addEventListener("hashchange",function(){v(a()[1])!==v(f)&&i()});var u=r.Pop,s
 try{l.pushState(s,"",f)}catch(e){// They are going to lose state here, but there is no real
 // way to warn them about it since the page will refresh...
 n.location.assign(f)}C(o)}},replace:function e(t,n){var a=r.Replace,o=x(t,n);if(E(a,o,function(){e(t,n)})){var i=S(o,c),u=i[0],s=i[1];// TODO: Support forced reloading
-l.replaceState(u,"",s),C(a)}},go:_,back:function(){_(-1)},forward:function(){_(1)},listen:function(e){return b.push(e)},block:function(e){var t=w.push(e);return 1===w.length&&n.addEventListener(h,m),function(){t(),w.length||n.removeEventListener(h,m)}}}}({window:l}));let o=a.current,[i,u]=(0,f.useState)({action:o.action,location:o.location});return(0,f.useLayoutEffect)(()=>o.listen(u),[o]),/*#__PURE__*/(0,f.createElement)(E,{basename:t,children:n,location:i.location,navigationType:i.action,navigator:o})},{children:/*#__PURE__*/(0,s.jsx)(function(){let[e,t]=(0,f.useState)(!1),[n,r]=(0,f.useState)(!1);return/*#__PURE__*/(0,s.jsxs)(s.Fragment,{children:[e?/*#__PURE__*/(0,s.jsx)(A,{}):null,/*#__PURE__*/(0,s.jsx)(K,{setHomeImagesFlag:()=>{e||t(!0)},homeImagesLoaded:e,setAboutImageFlag:()=>{n||r(!0)},aboutImageLoaded:n}),/*#__PURE__*/(0,s.jsx)("div",{className:e?"loaded":"loading",children:"Loading..."})]})}/* https://codesandbox.io/s/react-image-preload-ptosn?file=/src/App.js
+l.replaceState(u,"",s),C(a)}},go:_,back:function(){_(-1)},forward:function(){_(1)},listen:function(e){return b.push(e)},block:function(e){var t=w.push(e);return 1===w.length&&n.addEventListener(h,m),function(){t(),w.length||n.removeEventListener(h,m)}}}}({window:l}));let o=a.current,[i,u]=(0,f.useState)({action:o.action,location:o.location});return(0,f.useLayoutEffect)(()=>o.listen(u),[o]),/*#__PURE__*/(0,f.createElement)(E,{basename:t,children:n,location:i.location,navigationType:i.action,navigator:o})},{children:/*#__PURE__*/(0,s.jsx)(function(){let[e,t]=(0,f.useState)(!1),[n,r]=(0,f.useState)(!1);return/*#__PURE__*/(0,s.jsxs)(s.Fragment,{children:[e||n?/*#__PURE__*/(0,s.jsx)(A,{}):null,/*#__PURE__*/(0,s.jsx)(K,{setHomeImagesFlag:()=>{e||t(!0)},homeImagesLoaded:e,setAboutImageFlag:()=>{n||r(!0)},aboutImageLoaded:n}),/*#__PURE__*/(0,s.jsx)("div",{className:e||n?"loaded":"loading",children:"Loading..."})]})},{})}),Y);//# sourceMappingURL=index.303a4b1a.js.map
 
-import { IMAGES } from "./Images"
-
-
-const IMAGES = []
-
-const App = () => {
-  const [imgsLoaded, setImgsLoaded] = useState(false)
-
-  useEffect(() => {
-    const loadImage = image => {
-      return new Promise((resolve, reject) => {
-        const loadImg = new Image()
-        loadImg.src = image.url
-        // wait 2 seconds to simulate loading time
-        loadImg.onload = () =>
-          setTimeout(() => {
-            resolve(image.url)
-          }, 2000)
-
-        loadImg.onerror = err => reject(err)
-      })
-    }
-
-    Promise.all(IMAGES.map(image => loadImage(image)))
-      .then(() => setImgsLoaded(true))
-      .catch(err => console.log("Failed to load images", err))
-  }, [])
-
-  return (
-    <>
-      <main className="images">
-        {imgsLoaded ? (
-          IMAGES.map(image => (
-            <img key={image.id} src={image.url} alt="Human" />
-          ))
-        ) : (
-          <h1>Loading images...</h1>
-        )}
-      </main>
-    </>
-  )
-}
-
-*/,{})}),Y);//# sourceMappingURL=index.a37c3417.js.map
-
-//# sourceMappingURL=index.a37c3417.js.map
+//# sourceMappingURL=index.303a4b1a.js.map
