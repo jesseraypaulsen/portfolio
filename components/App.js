@@ -1,5 +1,6 @@
 import { Nav } from "./Nav";
 import { Main } from "./Main";
+import { Loading } from "./Loading"
 import { useState } from 'react';
 import "../styles/app.css";
 
@@ -25,7 +26,7 @@ export function App() {
         setAboutImageFlag={setAboutImageFlag} 
         aboutImageLoaded={aboutImageLoaded} 
       />
-      <div className={homeImagesLoaded || aboutImageLoaded ? "loaded" : "loading"}>Loading...</div>
+      <div className={homeImagesLoaded || aboutImageLoaded ? "loaded" : "loading"}><Loading /></div>
     </>
   );
 }

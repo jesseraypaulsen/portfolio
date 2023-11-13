@@ -3,6 +3,7 @@ import "../styles/work.css";
 import { ExternalLinks } from "./ExternalLinks"
 import firstProject from "../assets/204-200x100.jpg"
 import secondProject from "../assets/350-200x100.jpg"
+import { Loading } from "./Loading"
 
 export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
 
