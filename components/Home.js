@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "../styles/work.css";
 import { ExternalLinks } from "./ExternalLinks"
-import firstProject from "../assets/204-200x100.jpg"
+//import firstProject from "../assets/204-200x100.jpg"
 //import secondProject from "../assets/350-200x100.jpg"
+import firstProject from "../assets/screenshot_13.png"
 import { ProjectThumbnail } from "./ProjectThumbnail";
-import { Loading } from "./Loading"
 
 export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
 
@@ -55,13 +55,13 @@ export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
 
       <ul className="cardList">
 
-        <li className="card">
+        <li className="card" style={{position:"relative"}}>
 
           <img src={firstProject} style={{ aspectRatio: "auto"}} onLoad={() => imageLoaded()}/>
 
           <div className="cardContent">
 
-            <h2 className="cardTitle">
+            <h2 className="cardTitle" style={{position:"absolute", top: ".2em"}}>
               Nodecards
             </h2>
 
