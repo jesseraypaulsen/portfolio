@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "../styles/work.css";
 import { ExternalLinks } from "./ExternalLinks"
 import firstProject from "../assets/204-200x100.jpg"
-import secondProject from "../assets/350-200x100.jpg"
+//import secondProject from "../assets/350-200x100.jpg"
+import { ProjectThumbnail } from "./ProjectThumbnail";
 import { Loading } from "./Loading"
 
 export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
@@ -31,7 +32,7 @@ export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
   useEffect(() => {
     
     // wait until both images have loaded before sizing the container in Main
-    if (imagesLoaded.length == 2) {
+    if (imagesLoaded.length == 4) {
       setHomeImagesFlag()
     }
 
@@ -68,7 +69,7 @@ export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
               {/* It extends a web-based graph renderer, and transforms it into a personal knowledge management system, where nodes become notecards that are distributed over 2d space and connected to each other with visible links. */}
               This app re-purposes a graph rendering library into a
               note-taking system, where nodes expand into
-              notecards. The complex UI behavior is managed in <a href="https://xstate.js.org/" target="_blank" rel="noopener" style={{color:"grey"}}>XState</a>.
+              notecards. It's built with Vanilla JavaScript. The complex UI behavior is managed in <a href="https://xstate.js.org/" target="_blank" rel="noopener" style={{color:"grey"}}>XState</a>.
               
             </p>
               
@@ -80,8 +81,8 @@ export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
 
         <li className="card">
           
-          <img src={secondProject} onLoad={() => imageLoaded()}/>
-          
+          {/*<img src={secondProject} onLoad={() => imageLoaded()}/>*/}
+          <ProjectThumbnail imageLoaded={imageLoaded} />
 
           <div className="cardContent">
             <div>
@@ -93,8 +94,7 @@ export function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
             <div>
 
               <p>
-                A Personality Test that evaluates for the Big 5 traits of Openness, Conscientiousness, Extraversion, 
-                Agreeableness, Neuroticism.
+                A Personality Test that evaluates for the Big 5 Personality traits. It's built with ReactJS and Material UI.
               </p>
             
 
