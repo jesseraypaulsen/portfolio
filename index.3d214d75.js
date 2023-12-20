@@ -26751,11 +26751,11 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _workCss = require("../styles/work.css");
 var _externalLinks = require("./ExternalLinks");
-var _204200X100Jpg = require("../assets/204-200x100.jpg");
-var _204200X100JpgDefault = parcelHelpers.interopDefault(_204200X100Jpg);
-var _350200X100Jpg = require("../assets/350-200x100.jpg");
-var _350200X100JpgDefault = parcelHelpers.interopDefault(_350200X100Jpg);
-var _loading = require("./Loading");
+//import firstProject from "../assets/204-200x100.jpg"
+//import secondProject from "../assets/350-200x100.jpg"
+var _screenshot13Png = require("../assets/screenshot_13.png");
+var _screenshot13PngDefault = parcelHelpers.interopDefault(_screenshot13Png);
+var _projectThumbnail = require("./ProjectThumbnail");
 var _s = $RefreshSig$();
 function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
     _s();
@@ -26775,7 +26775,7 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
     };
     (0, _react.useEffect)(()=>{
         // wait until both images have loaded before sizing the container in Main
-        if (imagesLoaded.length == 2) setHomeImagesFlag();
+        if (imagesLoaded.length == 4) setHomeImagesFlag();
     }, [
         imagesLoaded
     ]);
@@ -26802,7 +26802,7 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                 children: "Projects"
             }, void 0, false, {
                 fileName: "components/Home.js",
-                lineNumber: 51,
+                lineNumber: 52,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
@@ -26810,16 +26810,19 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "card",
+                        style: {
+                            position: "relative"
+                        },
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: (0, _204200X100JpgDefault.default),
+                                src: (0, _screenshot13PngDefault.default),
                                 style: {
                                     aspectRatio: "auto"
                                 },
                                 onLoad: ()=>imageLoaded()
                             }, void 0, false, {
                                 fileName: "components/Home.js",
-                                lineNumber: 59,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26827,15 +26830,19 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                         className: "cardTitle",
+                                        style: {
+                                            position: "absolute",
+                                            top: ".2em"
+                                        },
                                         children: "Nodecards"
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 63,
+                                        lineNumber: 64,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                         children: [
-                                            "This app re-purposes a graph rendering library into a note-taking system, where nodes expand into notecards. The complex UI behavior is managed in ",
+                                            "This app re-purposes a graph rendering library into a note-taking system, where nodes expand into notecards. It's built with Vanilla JavaScript. The complex UI behavior is managed in ",
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                                 href: "https://xstate.js.org/",
                                                 target: "_blank",
@@ -26846,14 +26853,14 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                                 children: "XState"
                                             }, void 0, false, {
                                                 fileName: "components/Home.js",
-                                                lineNumber: 71,
-                                                columnNumber: 64
+                                                lineNumber: 72,
+                                                columnNumber: 100
                                             }, this),
                                             "."
                                         ]
                                     }, void 0, true, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 67,
+                                        lineNumber: 68,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _externalLinks.ExternalLinks), {
@@ -26861,30 +26868,29 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                         code: "nodecards"
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 75,
+                                        lineNumber: 76,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "components/Home.js",
-                                lineNumber: 61,
+                                lineNumber: 62,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/Home.js",
-                        lineNumber: 57,
+                        lineNumber: 58,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         className: "card",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                src: (0, _350200X100JpgDefault.default),
-                                onLoad: ()=>imageLoaded()
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _projectThumbnail.ProjectThumbnail), {
+                                imageLoaded: imageLoaded
                             }, void 0, false, {
                                 fileName: "components/Home.js",
-                                lineNumber: 83,
+                                lineNumber: 85,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26896,25 +26902,25 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                             children: "Personality Test"
                                         }, void 0, false, {
                                             fileName: "components/Home.js",
-                                            lineNumber: 88,
+                                            lineNumber: 89,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 87,
+                                        lineNumber: 88,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                            children: "A Personality Test that evaluates for the Big 5 traits of Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism."
+                                            children: "A Personality Test that evaluates for the Big 5 Personality traits. It's built with ReactJS and Material UI."
                                         }, void 0, false, {
                                             fileName: "components/Home.js",
-                                            lineNumber: 95,
+                                            lineNumber: 96,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "components/Home.js",
-                                        lineNumber: 93,
+                                        lineNumber: 94,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _externalLinks.ExternalLinks), {
@@ -26928,25 +26934,25 @@ function Home({ doStuff, setHomeImagesFlag, homeImagesLoaded }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "components/Home.js",
-                                lineNumber: 86,
+                                lineNumber: 87,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "components/Home.js",
-                        lineNumber: 81,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "components/Home.js",
-                lineNumber: 55,
+                lineNumber: 56,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "components/Home.js",
-        lineNumber: 50,
+        lineNumber: 51,
         columnNumber: 5
     }, this);
 }
@@ -26960,7 +26966,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/work.css":"ivoq4","./ExternalLinks":"78jpU","../assets/204-200x100.jpg":"8hLnN","../assets/350-200x100.jpg":"4WRTC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Loading":"3igNh"}],"ivoq4":[function() {},{}],"78jpU":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/work.css":"ivoq4","./ExternalLinks":"78jpU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ProjectThumbnail":"3xXCZ","../assets/screenshot_13.png":"cJ6pt"}],"ivoq4":[function() {},{}],"78jpU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ee2f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27069,10 +27075,113 @@ $RefreshReg$(_c, "ExternalLinks");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8hLnN":[function(require,module,exports) {
-module.exports = require("34b89c203cd7fdd9").getBundleURL("UckoE") + "204-200x100.9683070a.jpg" + "?" + Date.now();
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3xXCZ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b8c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b8c.prelude(module);
 
-},{"34b89c203cd7fdd9":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ProjectThumbnail", ()=>ProjectThumbnail);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _projectCss = require("../styles/project.css");
+var _screenshot9Png = require("../assets/screenshot_9.png");
+var _screenshot9PngDefault = parcelHelpers.interopDefault(_screenshot9Png);
+var _screenshot10Png = require("../assets/screenshot_10.png");
+var _screenshot10PngDefault = parcelHelpers.interopDefault(_screenshot10Png);
+var _screenshot11Png = require("../assets/screenshot_11.png");
+var _screenshot11PngDefault = parcelHelpers.interopDefault(_screenshot11Png);
+const ProjectThumbnail = ({ imageLoaded })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "thumbnail-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SmartPhone, {
+                image: (0, _screenshot9PngDefault.default),
+                imageLoaded: imageLoaded
+            }, void 0, false, {
+                fileName: "components/ProjectThumbnail.js",
+                lineNumber: 9,
+                columnNumber: 3
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SmartPhone, {
+                image: (0, _screenshot10PngDefault.default),
+                imageLoaded: imageLoaded
+            }, void 0, false, {
+                fileName: "components/ProjectThumbnail.js",
+                lineNumber: 10,
+                columnNumber: 3
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(SmartPhone, {
+                image: (0, _screenshot11PngDefault.default),
+                imageLoaded: imageLoaded
+            }, void 0, false, {
+                fileName: "components/ProjectThumbnail.js",
+                lineNumber: 11,
+                columnNumber: 3
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "components/ProjectThumbnail.js",
+        lineNumber: 8,
+        columnNumber: 54
+    }, undefined);
+_c = ProjectThumbnail;
+const SmartPhone = ({ image, imageLoaded })=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "smartphone",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "top-edge",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                    fileName: "components/ProjectThumbnail.js",
+                    lineNumber: 17,
+                    columnNumber: 5
+                }, undefined)
+            }, void 0, false, {
+                fileName: "components/ProjectThumbnail.js",
+                lineNumber: 16,
+                columnNumber: 3
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: image,
+                onLoad: imageLoaded
+            }, void 0, false, {
+                fileName: "components/ProjectThumbnail.js",
+                lineNumber: 19,
+                columnNumber: 3
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "bottom-edge",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                    fileName: "components/ProjectThumbnail.js",
+                    lineNumber: 21,
+                    columnNumber: 5
+                }, undefined)
+            }, void 0, false, {
+                fileName: "components/ProjectThumbnail.js",
+                lineNumber: 20,
+                columnNumber: 3
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "components/ProjectThumbnail.js",
+        lineNumber: 15,
+        columnNumber: 46
+    }, undefined);
+_c1 = SmartPhone;
+var _c, _c1;
+$RefreshReg$(_c, "ProjectThumbnail");
+$RefreshReg$(_c1, "SmartPhone");
+
+  $parcel$ReactRefreshHelpers$0b8c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../styles/project.css":"e96np","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/screenshot_9.png":"aIvPd","../assets/screenshot_10.png":"7kCU8","../assets/screenshot_11.png":"cZqtA"}],"e96np":[function() {},{}],"aIvPd":[function(require,module,exports) {
+module.exports = require("8dcb75bff5651bce").getBundleURL("UckoE") + "screenshot_9.16d2ace4.png" + "?" + Date.now();
+
+},{"8dcb75bff5651bce":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
@@ -27107,100 +27216,16 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"4WRTC":[function(require,module,exports) {
-module.exports = require("894654d8d2bca863").getBundleURL("UckoE") + "350-200x100.2c5b24b9.jpg" + "?" + Date.now();
+},{}],"7kCU8":[function(require,module,exports) {
+module.exports = require("3f737a093ecf7a97").getBundleURL("UckoE") + "screenshot_10.5aacb823.png" + "?" + Date.now();
 
-},{"894654d8d2bca863":"lgJ39"}],"3igNh":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$b77e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$b77e.prelude(module);
+},{"3f737a093ecf7a97":"lgJ39"}],"cZqtA":[function(require,module,exports) {
+module.exports = require("5f23a6d7ca658f5b").getBundleURL("UckoE") + "screenshot_11.b8306e55.png" + "?" + Date.now();
 
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Loading", ()=>Loading);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _loadingCss = require("../styles/loading.css");
-const Loading = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        class: "lds-spinner",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 8,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 9,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 10,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 11,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 12,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 13,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 14,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 15,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 16,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 17,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 18,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
-                fileName: "components/Loading.js",
-                lineNumber: 19,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "components/Loading.js",
-        lineNumber: 7,
-        columnNumber: 3
-    }, undefined);
-_c = Loading;
-var _c;
-$RefreshReg$(_c, "Loading");
+},{"5f23a6d7ca658f5b":"lgJ39"}],"cJ6pt":[function(require,module,exports) {
+module.exports = require("ae84e5c677b47bc1").getBundleURL("UckoE") + "screenshot_13.c4291473.png" + "?" + Date.now();
 
-  $parcel$ReactRefreshHelpers$b77e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../styles/loading.css":"4l6Nn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4l6Nn":[function() {},{}],"hGILx":[function(require,module,exports) {
+},{"ae84e5c677b47bc1":"lgJ39"}],"hGILx":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$266e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27255,7 +27280,7 @@ function About({ doStuff, setAboutImageFlag, aboutImageLoaded }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                        children: "Hello I'm Jesse. Thank you for your time and consideration. Tempora aperiam nobis asperiores consequatur cumque, sed nisi perferendis laudantium a odit excepturi quo distinctio incidunt molestiae, dicta quia saepe laborum perspiciatis odio alias aspernatur quis. Quam corrupti error recusandae. Dicta cupiditate, pariatur autem deserunt numquam dignissimos amet fuga cumque possimus maiores quaerat, alias rem."
+                        children: "Welcome. I'm Jesse. I build web applications. Thank you for taking the time to look at my portfolio."
                     }, void 0, false, {
                         fileName: "components/About.js",
                         lineNumber: 39,
@@ -27269,7 +27294,7 @@ function About({ doStuff, setAboutImageFlag, aboutImageLoaded }) {
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _socialLinks.SocialLinks), {}, void 0, false, {
                 fileName: "components/About.js",
-                lineNumber: 51,
+                lineNumber: 45,
                 columnNumber: 7
             }, this)
         ]
@@ -27442,6 +27467,96 @@ $RefreshReg$(_c, "SocialLinks");
 },{"react/jsx-dev-runtime":"iTorj","../styles/social-links.css":"jtsTo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtsTo":[function() {},{}],"iuzf6":[function() {},{}],"cNaId":[function(require,module,exports) {
 module.exports = require("81bec7847f9559a9").getBundleURL("UckoE") + "from-pic-sum-but-kinda-lookalike-me.14a5cd08.jpg" + "?" + Date.now();
 
-},{"81bec7847f9559a9":"lgJ39"}],"cri8N":[function() {},{}],"dGOV4":[function() {},{}],"a6Lwk":[function() {},{}]},["3smKr","1xC6H","bB7Pu"], "bB7Pu", "parcelRequire2041")
+},{"81bec7847f9559a9":"lgJ39"}],"cri8N":[function() {},{}],"dGOV4":[function() {},{}],"3igNh":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b77e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b77e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Loading", ()=>Loading);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _loadingCss = require("../styles/loading.css");
+const Loading = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        class: "lds-spinner",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 8,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 9,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 10,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 11,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 12,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 13,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 14,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 15,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 16,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 17,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 18,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
+                fileName: "components/Loading.js",
+                lineNumber: 19,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "components/Loading.js",
+        lineNumber: 7,
+        columnNumber: 3
+    }, undefined);
+_c = Loading;
+var _c;
+$RefreshReg$(_c, "Loading");
+
+  $parcel$ReactRefreshHelpers$b77e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../styles/loading.css":"4l6Nn","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4l6Nn":[function() {},{}],"a6Lwk":[function() {},{}]},["3smKr","1xC6H","bB7Pu"], "bB7Pu", "parcelRequire2041")
 
 //# sourceMappingURL=index.3d214d75.js.map

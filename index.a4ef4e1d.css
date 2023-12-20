@@ -92,6 +92,113 @@ span.github a, a:visited {
   color: green;
 }
 
+.thumbnail-container {
+  justify-content: space-around;
+  gap: 1em;
+  display: flex;
+}
+
+.smartphone {
+  background-color: #1976d2;
+  border: .1em solid #000;
+  border-radius: .3em;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+}
+
+.smartphone img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.smartphone .top-edge, .bottom-edge {
+  background-color: #000;
+}
+
+.smartphone .top-edge {
+  height: .75em;
+}
+
+.smartphone .top-edge div {
+  background-color: #fff;
+  border-radius: .3em;
+  width: 1.2em;
+  height: .3em;
+  margin: .3em auto 0;
+}
+
+.smartphone .bottom-edge {
+  height: 1.65em;
+}
+
+.smartphone .bottom-edge div {
+  background-color: #fff;
+  border-radius: .65em;
+  width: .8em;
+  height: .8em;
+  margin: .5em auto 0;
+}
+
+.social-icon-links {
+  flex-direction: column;
+  margin: 2em 0;
+  display: flex;
+}
+
+.social-icon-links > div {
+  padding: 10px;
+}
+
+.social-icon-links > div:first-child {
+  border-right: 0;
+}
+
+.social-icon-links svg {
+  width: 23px;
+  height: 23px;
+}
+
+a, a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+.aboutMe {
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  display: flex;
+}
+
+.aboutMe img {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.section-about {
+  padding: 1.5em;
+}
+
+.main {
+  background: #fff;
+  max-width: 36rem;
+  margin: 30px auto 0;
+  transition: height .5s ease-in-out;
+  box-shadow: 0 1px #00000040;
+}
+
+.loading {
+  text-align: center;
+  max-width: 36rem;
+  margin: 14rem auto;
+  display: block;
+}
+
+.loaded {
+  display: none;
+}
+
 .lds-spinner {
   color: official;
   width: 80px;
@@ -185,65 +292,6 @@ span.github a, a:visited {
   100% {
     opacity: 0;
   }
-}
-
-.social-icon-links {
-  flex-direction: column;
-  margin: 2em 0;
-  display: flex;
-}
-
-.social-icon-links > div {
-  padding: 10px;
-}
-
-.social-icon-links > div:first-child {
-  border-right: 0;
-}
-
-.social-icon-links svg {
-  width: 23px;
-  height: 23px;
-}
-
-a, a:visited {
-  color: #000;
-  text-decoration: none;
-}
-
-.aboutMe {
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 auto;
-  display: flex;
-}
-
-.aboutMe img {
-  width: 100%;
-  margin-bottom: 2em;
-}
-
-.section-about {
-  padding: 1.5em;
-}
-
-.main {
-  background: #fff;
-  max-width: 36rem;
-  margin: 30px auto 0;
-  transition: height .5s ease-in-out;
-  box-shadow: 0 1px #00000040;
-}
-
-.loading {
-  text-align: center;
-  max-width: 36rem;
-  margin: 14rem auto;
-  display: block;
-}
-
-.loaded {
-  display: none;
 }
 
 * {
